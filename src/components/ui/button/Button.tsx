@@ -11,8 +11,15 @@ import React from "react";
  * Button component with support for variants, sizes, loading states, and icons.
  * This is a polymorphic component that can be rendered as a button, link, or any other element.
  */
-export const Button = React.forwardRef(
+type ButtonComponent = {
   <E extends React.ElementType = "button">(
+    props: PolymorphicButtonProps<E> & { ref?: PolymorphicRef<E> }
+  ): React.ReactNode;
+  displayName?: string;
+};
+
+export const Button: ButtonComponent = React.forwardRef(
+  (
     {
       as,
       className,
@@ -24,8 +31,9 @@ export const Button = React.forwardRef(
       children,
       disabled,
       ...props
-    }: PolymorphicButtonProps<E>,
-    ref: PolymorphicRef<E>
+    }: PolymorphicButtonProps<React.ElementType>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ref: React.Ref<any>
   ) => {
     const Component = as || "button";
 
@@ -53,6 +61,6 @@ export const Button = React.forwardRef(
       </Component>
     );
   }
-);
+) as ButtonComponent;
 
 Button.displayName = "Button";

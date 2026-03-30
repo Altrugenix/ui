@@ -3,7 +3,7 @@ import { Modal } from "@/components/ui/modal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import React from "react";
+
 
 const meta: Meta<typeof Modal> = {
   title: "UI/Modal",
