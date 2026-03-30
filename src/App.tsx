@@ -25,6 +25,17 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Modal } from "@/components/ui/modal";
+import { Alert } from "@/components/composites/alert";
+import { ProgressBar } from "@/components/composites/progress-bar";
+import { Tabs } from "@/components/composites/tabs";
+import { Breadcrumbs } from "@/components/composites/breadcrumbs";
+import { Pagination } from "@/components/composites/pagination";
+import { Stepper } from "@/components/composites/stepper";
+import { Spinner } from "@/components/composites/spinner";
+import { Skeleton } from "@/components/composites/skeleton";
+import { Divider } from "@/components/layout/divider";
+import { Tooltip } from "@/components/overlays/tooltip";
+import { Drawer } from "@/components/navigation/drawer";
 import {
   Bell,
   Moon,
@@ -35,12 +46,18 @@ import {
   CheckCircle2,
   Type,
   ToggleLeft,
+  ShieldAlert,
+  BarChart3,
+  Layers,
+  PanelRight,
 } from "lucide-react";
 
 const DemoApp = () => {
   const { toast } = useToast();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const [currentPage, setCurrentPage] = useState(3);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -115,13 +132,17 @@ const DemoApp = () => {
             <Button
               size="lg"
               className="h-14 rounded-full px-10 text-lg shadow-lg shadow-primary/20"
+              as="a"
+              href="https://altrugenix.github.io/storybook"
             >
-              Download Package
+              Get Started
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="h-14 rounded-full px-10 text-lg"
+              as="a"
+              href="https://altrugenix.github.io/storybook"
             >
               Documentation
             </Button>
@@ -323,6 +344,163 @@ const DemoApp = () => {
                 <Button variant="outline" onClick={() => setIsModalOpen(true)}>
                   Open Sample Modal
                 </Button>
+                <Button variant="outline" onClick={() => setIsDrawerOpen(true)}>
+                  Open Drawer Panel
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Phase 3 Composite Components */}
+        <Divider label="Composite Components" />
+
+        <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* Feedback Components */}
+          <Card hover className="md:col-span-2">
+            <CardHeader>
+              <div className="mb-2 w-fit rounded-lg bg-red-500/10 p-2">
+                <ShieldAlert className="h-5 w-5 text-red-500" />
+              </div>
+              <CardTitle>Feedback Components</CardTitle>
+              <CardDescription>
+                Alerts, progress indicators, and loading states.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <Alert variant="info" title="Information">
+                This is an informational alert for users.
+              </Alert>
+              <Alert variant="success" title="Operation Successful">
+                Your changes have been saved.
+              </Alert>
+              <Alert variant="warning" title="Warning">
+                Please review before continuing.
+              </Alert>
+              <Alert variant="destructive" title="Error Detected">
+                Something went wrong. Please try again.
+              </Alert>
+
+              <div className="space-y-4 border-t pt-4">
+                <ProgressBar value={75} label="Upload Progress" showValue variant="default" />
+                <ProgressBar value={100} label="Complete" showValue variant="success" size="sm" />
+                <ProgressBar value={40} label="Storage" showValue variant="warning" size="lg" />
+              </div>
+
+              <div className="flex items-center gap-8 border-t pt-4">
+                <Spinner size="sm" label="Small" />
+                <Spinner size="md" label="Loading" />
+                <Spinner size="lg" />
+              </div>
+
+              <div className="space-y-3 border-t pt-4">
+                <h4 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+                  Skeleton Loaders
+                </h4>
+                <div className="flex items-center gap-4">
+                  <Skeleton variant="circular" width={48} height={48} />
+                  <div className="flex-1 space-y-2">
+                    <Skeleton variant="text" width="60%" />
+                    <Skeleton variant="text" />
+                  </div>
+                </div>
+                <Skeleton variant="rounded" height={120} className="w-full" />
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Navigation Molecules */}
+          <Card hover>
+            <CardHeader>
+              <div className="mb-2 w-fit rounded-lg bg-purple-500/10 p-2">
+                <Layers className="h-5 w-5 text-purple-500" />
+              </div>
+              <CardTitle>Navigation</CardTitle>
+              <CardDescription>
+                Breadcrumbs, pagination, and step indicators.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <Breadcrumbs
+                items={[
+                  { label: "Home" },
+                  { label: "Products" },
+                  { label: "Detail" },
+                ]}
+              />
+
+              <Pagination
+                currentPage={currentPage}
+                totalPages={10}
+                onPageChange={setCurrentPage}
+              />
+
+              <Stepper
+                activeStep={1}
+                steps={[
+                  { label: "Account", description: "Create account" },
+                  { label: "Profile", description: "Set up profile" },
+                  { label: "Complete", description: "All done" },
+                ]}
+              />
+            </CardContent>
+          </Card>
+
+          {/* Tabs */}
+          <Card hover className="lg:col-span-2">
+            <CardHeader>
+              <div className="mb-2 w-fit rounded-lg bg-teal-500/10 p-2">
+                <BarChart3 className="h-5 w-5 text-teal-500" />
+              </div>
+              <CardTitle>Tabs & Overlays</CardTitle>
+              <CardDescription>
+                Tabbed content, tooltips, and slide panels.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <Tabs
+                variant="underline"
+                items={[
+                  {
+                    label: "Overview",
+                    value: "overview",
+                    content: (
+                      <p className="text-sm text-muted-foreground">
+                        This is the overview tab content. Tabs support default, pills, and underline variants.
+                      </p>
+                    ),
+                  },
+                  {
+                    label: "Analytics",
+                    value: "analytics",
+                    content: (
+                      <p className="text-sm text-muted-foreground">
+                        Analytics content goes here. Each tab panel is lazily rendered.
+                      </p>
+                    ),
+                  },
+                  {
+                    label: "Settings",
+                    value: "settings",
+                    content: (
+                      <p className="text-sm text-muted-foreground">
+                        Settings content with form fields could go here.
+                      </p>
+                    ),
+                  },
+                ]}
+              />
+
+              <div className="flex items-center gap-4 border-t pt-4">
+                <Tooltip content="I'm a tooltip!">
+                  <Button variant="outline" size="sm">Hover me</Button>
+                </Tooltip>
+                <Tooltip content="Right side tooltip" side="right">
+                  <Button variant="ghost" size="sm">Right tooltip</Button>
+                </Tooltip>
+                <Button variant="outline" size="sm" onClick={() => setIsDrawerOpen(true)}>
+                  <PanelRight className="mr-2 h-4 w-4" /> Open Drawer
+                </Button>
               </div>
             </CardContent>
           </Card>
@@ -347,6 +525,24 @@ const DemoApp = () => {
           </div>
         </div>
       </Modal>
+
+      {/* Drawer */}
+      <Drawer
+        isOpen={isDrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}
+        title="Drawer Panel"
+      >
+        <div className="space-y-4">
+          <p className="text-sm text-muted-foreground">
+            This is a slide-out drawer panel. It supports left/right positioning,
+            keyboard dismiss, and backdrop click to close.
+          </p>
+          <Input label="Quick Note" placeholder="Write something..." />
+          <Button className="w-full" onClick={() => setIsDrawerOpen(false)}>
+            Save & Close
+          </Button>
+        </div>
+      </Drawer>
 
       {/* Footer */}
       <footer className="mt-24 border-t py-12">
