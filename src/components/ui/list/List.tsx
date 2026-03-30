@@ -1,0 +1,74 @@
+import React from "react";
+import { cn } from "@/lib/utils/cn";
+
+/* ─── List ─── */
+export interface ListProps extends React.HTMLAttributes<HTMLUListElement> {
+  /** Whether to show dividers between items */
+  divided?: boolean;
+  /** Render as ordered list */
+  ordered?: boolean;
+}
+
+export const List = React.forwardRef<HTMLUListElement, ListProps>(
+  ({ className, divided = false, ordered = false, children, ...props }, ref) => {
+    const Component = ordered ? "ol" : "ul";
+    return (
+      <Component
+        ref={ref as React.Ref<HTMLUListElement>}
+        className={cn(
+          "w-full",
+          divided && "[&>li+li]:border-t",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </Component>
+    );
+  }
+);
+List.displayName = "List";
+
+/* ─── ListItem ─── */
+export interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
+  /** Left element (icon, avatar, etc.) */
+  leading?: React.ReactNode;
+  /** Right element (badge, action, etc.) */
+  trailing?: React.ReactNode;
+  /** Secondary text below the main content */
+  secondary?: React.ReactNode;
+  /** Whether the item is interactive (clickable) */
+  interactive?: boolean;
+}
+
+export const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(
+  (
+    { className, leading, trailing, secondary, interactive, children, ...props },
+    ref
+  ) => {
+    return (
+      <li
+        ref={ref}
+        className={cn(
+          "flex items-center gap-3 px-4 py-3",
+          interactive &&
+            "cursor-pointer transition-colors hover:bg-accent hover:text-accent-foreground",
+          className
+        )}
+        {...props}
+      >
+        {leading && <span className="shrink-0">{leading}</span>}
+        <div className="flex-1 min-w-0">
+          <div className="text-sm font-medium truncate">{children}</div>
+          {secondary && (
+            <p className="mt-0.5 text-xs text-muted-foreground truncate">
+              {secondary}
+            </p>
+          )}
+        </div>
+        {trailing && <span className="shrink-0">{trailing}</span>}
+      </li>
+    );
+  }
+);
+ListItem.displayName = "ListItem";
