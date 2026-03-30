@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/theme/ThemeProvider";
 import { ToastProvider, useToast } from "@/components/ui/toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardHeader,
@@ -76,10 +77,10 @@ const DemoApp = () => {
 
       <main className="container space-y-24 py-12">
         {/* Hero Section */}
-        <section className="animate-in fade-in slide-in-from-bottom-8 flex flex-col items-center space-y-8 text-center duration-1000">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
-            <CheckCircle2 className="h-3 w-3" /> Production Ready
-          </div>
+        <section className="flex flex-col items-center space-y-8 text-center duration-1000 animate-in fade-in slide-in-from-bottom-8">
+          <Badge className="gap-2 rounded-full border-orange-500/20 bg-orange-500/10 px-3 py-1 font-bold uppercase tracking-wider text-orange-500 hover:bg-orange-500/20 shadow-none">
+            <CheckCircle2 className="h-3 w-3" /> In Development
+          </Badge>
           <h1 className="max-w-4xl text-5xl font-extrabold leading-[1.1] tracking-tight md:text-7xl">
             Build stunning interfaces with{" "}
             <span className="bg-gradient-to-r from-primary to-sky-500 bg-clip-text text-primary text-transparent">
