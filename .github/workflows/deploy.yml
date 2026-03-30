@@ -49,7 +49,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           # By default, this action publishes the contents of the publish_dir to the 'gh-pages' branch of THIS repository.
           # If you want to deploy to a DIFFERENT repository, you'll need to specify these arguments:
