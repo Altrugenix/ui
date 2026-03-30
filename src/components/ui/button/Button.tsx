@@ -25,6 +25,8 @@ export const Button: ButtonComponent = React.forwardRef(
       className,
       variant,
       size,
+      radius,
+      fullWidth,
       isLoading,
       leftIcon,
       rightIcon,
@@ -41,7 +43,7 @@ export const Button: ButtonComponent = React.forwardRef(
       <Component
         ref={ref}
         disabled={isLoading || disabled}
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, radius, fullWidth, className }))}
         {...props}
       >
         {isLoading && (

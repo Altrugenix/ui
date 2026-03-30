@@ -22,6 +22,8 @@ export type PolymorphicButtonProps<E extends React.ElementType> = {
   className?: string;
   variant?: "primary" | "secondary" | "outline" | "ghost" | "link" | "destructive";
   size?: "sm" | "md" | "lg" | "icon";
+  radius?: "none" | "sm" | "md" | "lg" | "full";
+  fullWidth?: boolean;
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
@@ -34,6 +36,8 @@ export type PolymorphicButtonProps<E extends React.ElementType> = {
     className?: string;
     variant?: "primary" | "secondary" | "outline" | "ghost" | "link" | "destructive";
     size?: "sm" | "md" | "lg" | "icon";
+    radius?: "none" | "sm" | "md" | "lg" | "full";
+    fullWidth?: boolean;
     isLoading?: boolean;
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
