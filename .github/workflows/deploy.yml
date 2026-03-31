@@ -28,14 +28,15 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Build React App
-        run: yarn build
+      - name: Build Demo App
+        run: yarn build:demo
 
       - name: Build Storybook
-        run: yarn build-storybook
+        run: yarn build:storybook
 
-      - name: Move Storybook to dist
+      - name: Prepare the Production Files
         run: |
+          mv apps/demo/dist ./dist
           mkdir -p dist/storybook
           mv storybook-static/* dist/storybook/
 
