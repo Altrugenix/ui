@@ -1,62 +1,46 @@
 import { useState, useMemo, useEffect } from "react";
-import { ThemeProvider } from "@/theme/ThemeProvider";
-import { cn } from "@/lib/utils/cn";
-import { ToastProvider, useToast } from "@/components/ui/toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { Avatar } from "@/components/ui/avatar";
-import { Heading, Text } from "@/components/ui/typography";
-import { Divider } from "@/components/ui/layout";
-import { ProgressBar } from "@/components/ui/progress";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Modal } from "@/components/overlays/modal";
-import { Drawer } from "@/components/overlays/drawer";
-import { CommandPalette } from "@/components/navigation/command-palette";
-import { ThemeToggle, useTheme } from "@/components/ui/theme-toggle";
-import { DatePicker } from "@/components/ui/date-picker";
-import { FileUpload } from "@/components/ui/file-upload";
-import { RichTextEditor } from "@/components/ui/rich-text-editor";
-import { BarChart } from "@/components/ui/charts";
-import { CalendarView } from "@/components/ui/calendar-view";
-import { KanbanBoard } from "@/components/ui/kanban";
-import { VirtualList } from "@/components/ui/virtual-list";
 import {
-  useInfiniteScroll,
-  InfiniteScrollObserver,
-  useClipboard,
-  useMediaQuery,
-} from "@/hooks";
-import { DataGrid } from "@/components/ui/table";
-import {
+  ThemeProvider,
+  useTheme,
+  useToast,
+  ToastProvider,
+  Button,
+  Heading,
+  Text,
+  Divider,
+  ProgressBar,
+  Skeleton,
+  Modal,
+  Drawer,
+  CommandPalette,
+  DatePicker,
+  FileUpload,
+  RichTextEditor,
+  BarChart,
+  CalendarView,
+  KanbanBoard,
+  VirtualList,
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
   CardContent,
-} from "@/components/ui/card";
+  Avatar,
+  Badge,
+  cn,
+} from "@/components/ui";
+import { useInfiniteScroll, InfiniteScrollObserver } from "@/hooks";
 import {
   Search,
   Plus,
   Layout,
-  Code,
   Box,
   Layers,
-  Database,
-  BarChart3,
-  CalendarDays,
-  FileText,
-  Mail,
   Settings,
   User,
-  ExternalLink,
-  ChevronRight,
   Zap,
-  Globe,
-  Lock,
   Sun,
   Moon,
-  Github,
   ToggleLeft,
 } from "lucide-react";
 
@@ -67,14 +51,31 @@ interface PerformanceRecord {
   load: number;
 }
 
+interface ActivityItem {
+  id: string;
+  user: string;
+  action: string;
+  time: string;
+}
+
+interface ThemeTokens {
+  colors?: {
+    primary?: string;
+    secondary?: string;
+    ring?: string;
+  };
+  radius?: string;
+}
+
 const ActivityFeed = () => {
   const { items, loading, hasMore, loadMore } = useInfiniteScroll({
-    fetchData: async (page) => {
-      await new Promise((r) => setTimeout(r, 1000));
-      return Array.from({ length: 5 }).map((_, i) => ({
-        id: `activity-${page}-${i}`,
-        user: `User ${page * 5 + i}`,
-        action: i % 2 === 0 ? "shared a file" : "completed a task",
+    fetchData: async (page: number) => {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      return Array.from({ length: 10 }).map((_, i) => ({
+        id: `feed-${page}-${i}`,
+        user: `User ${Math.floor(Math.random() * 100)}`,
+        action: "updated a component",
         time: "Just now",
       }));
     },
@@ -82,32 +83,25 @@ const ActivityFeed = () => {
 
   return (
     <>
-      {items.map((item) => (
-        <Card
-          key={item.id}
-          className="flex items-center gap-4 p-4 animate-in fade-in slide-in-from-bottom-2"
-        >
-          <Avatar fallback={item.user[0]} className="h-10 w-10 text-xs" />
-          <div className="flex-1">
-            <p className="text-sm font-semibold">{item.user}</p>
-            <p className="text-xs text-muted-foreground">{item.action}</p>
+      <div className="space-y-6">
+        {items.map((item: ActivityItem) => (
+          <div key={item.id} className="flex gap-4">
+            <Avatar className="h-10 w-10" />
+            <div className="space-y-1">
+              <p className="text-sm">
+                <span className="font-bold">{item.user}</span> {item.action}
+              </p>
+              <p className="text-xs text-muted-foreground">{item.time}</p>
+            </div>
           </div>
-          <span className="text-[10px] text-muted-foreground">{item.time}</span>
-        </Card>
-      ))}
-      {loading && (
-        <div className="space-y-4">
-          {[1, 2].map((i) => (
-            <Card key={i} className="flex items-center gap-4 p-4 opacity-50">
-              <Skeleton className="h-10 w-10 rounded-full" />
-              <div className="flex-1 space-y-2">
-                <Skeleton className="h-4 w-24" />
-                <Skeleton className="h-3 w-40" />
-              </div>
-            </Card>
-          ))}
-        </div>
-      )}
+        ))}
+        {loading && (
+          <div className="space-y-4">
+            <Skeleton className="h-12 w-full" />
+            <Skeleton className="h-12 w-full" />
+          </div>
+        )}
+      </div>
       <InfiniteScrollObserver
         onIntersect={loadMore}
         enabled={hasMore && !loading}
@@ -120,8 +114,8 @@ const DemoAppContent = ({
   setTokens,
   tokens,
 }: {
-  setTokens: (t: any) => void;
-  tokens: any;
+  setTokens: (t: ThemeTokens | undefined) => void;
+  tokens: ThemeTokens | undefined;
 }) => {
   const { toast } = useToast();
   const { isDark, toggleTheme } = useTheme();
@@ -504,7 +498,7 @@ const DemoAppContent = ({
 };
 
 export default function App() {
-  const [tokens, setTokens] = useState(undefined);
+  const [tokens, setTokens] = useState<ThemeTokens | undefined>(undefined);
   return (
     <ThemeProvider tokens={tokens}>
       <ToastProvider>

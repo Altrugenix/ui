@@ -9,20 +9,33 @@ export interface ListProps extends React.HTMLAttributes<HTMLUListElement> {
   ordered?: boolean;
 }
 
-export const List = React.forwardRef<HTMLUListElement, ListProps>(
+type ListElement = HTMLOListElement | HTMLUListElement;
+
+export const List = React.forwardRef<ListElement, ListProps>(
   (
     { className, divided = false, ordered = false, children, ...props },
     ref
   ) => {
-    const Component = ordered ? "ol" : "ul";
+    if (ordered) {
+      return (
+        <ol
+          ref={ref as React.Ref<HTMLOListElement>}
+          className={cn("w-full", divided && "[&>li+li]:border-t", className)}
+          {...props}
+        >
+          {children}
+        </ol>
+      );
+    }
+
     return (
-      <Component
+      <ul
         ref={ref as React.Ref<HTMLUListElement>}
         className={cn("w-full", divided && "[&>li+li]:border-t", className)}
         {...props}
       >
         {children}
-      </Component>
+      </ul>
     );
   }
 );

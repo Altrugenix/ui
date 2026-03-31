@@ -39,7 +39,7 @@ export function useInfiniteScroll<T>({
   // Initial load
   useEffect(() => {
     loadMore();
-  }, []);
+  }, [loadMore]);
 
   return { items, loading, hasMore, loadMore, error };
 }
