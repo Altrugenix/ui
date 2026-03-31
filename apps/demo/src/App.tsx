@@ -43,8 +43,8 @@ import {
   ListItem,
   Link,
   Textarea,
-} from "@/components/ui";
-import { useInfiniteScroll, InfiniteScrollObserver } from "@/hooks";
+} from "@altrugenix/ui";
+import { useInfiniteScroll, InfiniteScrollObserver } from "@altrugenix/ui";
 import {
   Search,
   Plus,
