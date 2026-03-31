@@ -162,7 +162,7 @@ const DemoAppContent = ({
   const timelineItems: TimelineItem[] = [
     {
       title: "Project Initialized",
-      description: "Started the new Altrugenix UI development.",
+      description: "Started the new Altrugenix development.",
       date: "Oct 1, 2023",
       icon: <Layers className="h-3 w-3" />,
     },
@@ -343,10 +343,21 @@ const DemoAppContent = ({
             meticulously crafted for enterprise-grade SaaS platforms.
           </Text>
           <div className="flex items-center justify-center gap-4 pt-6">
-            <Button size="lg" className="rounded-full px-8">
+            <Button
+              size="lg"
+              className="rounded-full px-8"
+              as="a"
+              href="https://github.com/altrugenix/ui"
+            >
               Get Started
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8">
+            <Button
+              size="lg"
+              variant="outline"
+              className="rounded-full px-8"
+              as="a"
+              href="/storybook"
+            >
               Documentation
             </Button>
           </div>
@@ -746,7 +757,7 @@ const DemoAppContent = ({
           <div className="col-span-2 space-y-4">
             <div className="flex items-center gap-2">
               <Layers className="h-6 w-6 text-primary" />
-              <span className="text-lg font-bold">Altrugenix UI</span>
+              <span className="text-lg font-bold">Altrugenix</span>
             </div>
             <Text className="max-w-xs text-sm text-muted-foreground">
               The high-performance design system for modern web application
@@ -812,7 +823,7 @@ const DemoAppContent = ({
         title="Get Started"
       >
         <div className="space-y-4 py-6">
-          <Text>Create your account to start building with Altrugenix UI.</Text>
+          <Text>Create your account to start building with Altrugenix.</Text>
           <Input
             label="Email Address"
             type="email"

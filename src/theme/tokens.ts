@@ -1,5 +1,5 @@
 /**
- * Core design tokens for Altrugenix UI.
+ * Core design tokens for Altrugenix.
  * These are the foundation of the design system.
  */
 

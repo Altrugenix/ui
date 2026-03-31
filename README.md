@@ -1,4 +1,4 @@
-# Altrugenix UI
+# Altrugenix
 
 A premium, scalable, and production-ready UI component library built with React, TypeScript, and Tailwind CSS.
 

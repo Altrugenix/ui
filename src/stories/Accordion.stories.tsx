@@ -26,7 +26,7 @@ const items = [
     value: "2",
     trigger: "Is it styled?",
     content:
-      "Yes. It comes with default styles that match the Altrugenix UI design system.",
+      "Yes. It comes with default styles that match the Altrugenix design system.",
   },
   {
     value: "3",
