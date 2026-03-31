@@ -1,6 +1,7 @@
 {
   "name": "@altrugenix/ui",
   "version": "1.0.0",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/altrugenix-ui.umd.cjs",
   "module": "./dist/altrugenix-ui.js",
