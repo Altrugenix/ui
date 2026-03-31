@@ -30,7 +30,8 @@ export const FormField: React.FC<FormFieldProps> = ({
   children,
 }) => {
   const generatedId = useId();
-  const fieldId = (children.props as Record<string, unknown>).id as string || generatedId;
+  const fieldId =
+    ((children.props as Record<string, unknown>).id as string) || generatedId;
   const errorId = `${fieldId}-error`;
   const helperId = `${fieldId}-helper`;
   const describedBy = error ? errorId : helperText ? helperId : undefined;

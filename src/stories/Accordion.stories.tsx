@@ -25,12 +25,14 @@ const items = [
   {
     value: "2",
     trigger: "Is it styled?",
-    content: "Yes. It comes with default styles that match the Altrugenix UI design system.",
+    content:
+      "Yes. It comes with default styles that match the Altrugenix UI design system.",
   },
   {
     value: "3",
     trigger: "Is it animated?",
-    content: "Yes. It uses CSS transitions for smooth expand and collapse animations.",
+    content:
+      "Yes. It uses CSS transitions for smooth expand and collapse animations.",
   },
 ];
 

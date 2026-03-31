@@ -1,5 +1,5 @@
-import React, { useId } from 'react';
-import { cn } from '@/lib/utils/cn';
+import React, { useId } from "react";
+import { cn } from "@/lib/utils/cn";
 
 export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: React.ReactNode;
@@ -17,8 +17,8 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
           id={radioId}
           ref={ref}
           className={cn(
-            "peer aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none bg-background checked:border-primary",
-            "after:content-[''] after:hidden checked:after:block after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:h-2.5 after:w-2.5 after:rounded-full after:bg-primary relative",
+            "peer aspect-square h-4 w-4 appearance-none rounded-full border border-primary bg-background text-primary ring-offset-background checked:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+            "relative after:absolute after:left-1/2 after:top-1/2 after:hidden after:h-2.5 after:w-2.5 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:bg-primary after:content-[''] checked:after:block",
             className
           )}
           {...props}
@@ -35,4 +35,4 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
     );
   }
 );
-Radio.displayName = 'Radio';
+Radio.displayName = "Radio";

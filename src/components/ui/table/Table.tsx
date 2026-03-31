@@ -1,20 +1,18 @@
 import React from "react";
 import { cn } from "@/lib/utils/cn";
 
-/* ─── Table Root ─── */
-export interface TableProps extends React.TableHTMLAttributes<HTMLTableElement> {}
-
-export const Table = React.forwardRef<HTMLTableElement, TableProps>(
-  ({ className, ...props }, ref) => (
-    <div className="relative w-full overflow-auto">
-      <table
-        ref={ref}
-        className={cn("w-full caption-bottom text-sm", className)}
-        {...props}
-      />
-    </div>
-  )
-);
+export const Table = React.forwardRef<
+  HTMLTableElement,
+  React.TableHTMLAttributes<HTMLTableElement>
+>(({ className, ...props }, ref) => (
+  <div className="relative w-full overflow-auto">
+    <table
+      ref={ref}
+      className={cn("w-full caption-bottom text-sm", className)}
+      {...props}
+    />
+  </div>
+));
 Table.displayName = "Table";
 
 /* ─── Table Header ─── */
@@ -94,10 +92,7 @@ export const TableCell = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <td
     ref={ref}
-    className={cn(
-      "p-4 align-middle [&:has([role=checkbox])]:pr-0",
-      className
-    )}
+    className={cn("p-4 align-middle [&:has([role=checkbox])]:pr-0", className)}
     {...props}
   />
 ));

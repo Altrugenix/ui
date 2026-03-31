@@ -25,7 +25,10 @@ export const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(
       <div
         ref={ref}
         role="status"
-        className={cn("flex flex-col items-center justify-center gap-2", className)}
+        className={cn(
+          "flex flex-col items-center justify-center gap-2",
+          className
+        )}
         {...props}
       >
         <Loader2

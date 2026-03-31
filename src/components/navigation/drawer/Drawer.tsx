@@ -70,9 +70,7 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
         >
           {/* Header */}
           <div className="flex items-center justify-between border-b px-6 py-4">
-            {title && (
-              <h2 className="text-lg font-semibold">{title}</h2>
-            )}
+            {title && <h2 className="text-lg font-semibold">{title}</h2>}
             <button
               onClick={onClose}
               className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"

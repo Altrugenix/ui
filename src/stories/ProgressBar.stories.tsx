@@ -61,7 +61,12 @@ export const AllVariants: Story = {
       <ProgressBar value={25} label="Default" showValue />
       <ProgressBar value={50} label="Success" showValue variant="success" />
       <ProgressBar value={75} label="Warning" showValue variant="warning" />
-      <ProgressBar value={90} label="Destructive" showValue variant="destructive" />
+      <ProgressBar
+        value={90}
+        label="Destructive"
+        showValue
+        variant="destructive"
+      />
     </div>
   ),
 };

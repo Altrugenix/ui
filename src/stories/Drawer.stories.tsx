@@ -26,7 +26,8 @@ const DrawerDemo = ({ side = "right" }: { side?: "left" | "right" }) => {
       >
         <div className="space-y-4">
           <p className="text-sm text-muted-foreground">
-            This drawer slides in from the {side}. Press Escape or click the backdrop to close.
+            This drawer slides in from the {side}. Press Escape or click the
+            backdrop to close.
           </p>
           <Input label="Name" placeholder="Enter name..." />
           <Button className="w-full" onClick={() => setOpen(false)}>

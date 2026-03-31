@@ -9,7 +9,7 @@ import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import prettier from 'eslint-config-prettier'
 
-export default defineConfig([globalIgnores(['dist']), {
+export default defineConfig([globalIgnores(['dist', 'node_modules', 'storybook-static']), {
   files: ['**/*.{ts,tsx}'],
   extends: [
     js.configs.recommended,

@@ -16,10 +16,8 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const variantStyles = {
-  default:
-    "bg-background text-foreground border-border",
-  success:
-    "border-success/50 bg-success/10 text-success [&>svg]:text-success",
+  default: "bg-background text-foreground border-border",
+  success: "border-success/50 bg-success/10 text-success [&>svg]:text-success",
   warning:
     "border-warning/50 bg-warning/10 text-warning-foreground [&>svg]:text-warning",
   destructive:
@@ -36,7 +34,10 @@ const iconMap = {
 };
 
 export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
-  ({ className, variant = "default", title, onClose, children, ...props }, ref) => {
+  (
+    { className, variant = "default", title, onClose, children, ...props },
+    ref
+  ) => {
     const IconComponent = iconMap[variant];
 
     return (

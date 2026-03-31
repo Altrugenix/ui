@@ -1,5 +1,5 @@
-import React, { useId } from 'react';
-import { cn } from '@/lib/utils/cn';
+import React, { useId } from "react";
+import { cn } from "@/lib/utils/cn";
 
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
@@ -18,24 +18,36 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
     return (
       <div className="w-full space-y-1.5">
         {label && (
-          <label htmlFor={textareaId} className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+          <label
+            htmlFor={textareaId}
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
             {label}
           </label>
         )}
         <textarea
           className={cn(
-            "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200",
-            (error || errorText) && "border-destructive focus-visible:ring-destructive",
+            "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background transition-all duration-200 placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+            (error || errorText) &&
+              "border-destructive focus-visible:ring-destructive",
             className
           )}
           ref={ref}
           id={textareaId}
           aria-invalid={!!error || !!errorText}
-          aria-describedby={errorText ? errorId : helperText ? helperId : undefined}
+          aria-describedby={
+            errorText ? errorId : helperText ? helperId : undefined
+          }
           {...props}
         />
         {(errorText || helperText) && (
-          <p id={errorText ? errorId : helperId} className={cn("text-xs font-medium", errorText ? "text-destructive" : "text-muted-foreground")}>
+          <p
+            id={errorText ? errorId : helperId}
+            className={cn(
+              "text-xs font-medium",
+              errorText ? "text-destructive" : "text-muted-foreground"
+            )}
+          >
             {errorText || helperText}
           </p>
         )}
@@ -43,4 +55,4 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
     );
   }
 );
-Textarea.displayName = 'Textarea';
+Textarea.displayName = "Textarea";

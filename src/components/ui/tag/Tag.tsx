@@ -3,7 +3,13 @@ import { cn } from "@/lib/utils/cn";
 import { X } from "lucide-react";
 
 export interface TagProps extends React.HTMLAttributes<HTMLSpanElement> {
-  variant?: "default" | "secondary" | "outline" | "success" | "warning" | "destructive";
+  variant?:
+    | "default"
+    | "secondary"
+    | "outline"
+    | "success"
+    | "warning"
+    | "destructive";
   /** Show a remove button */
   onRemove?: () => void;
   /** Left icon or avatar */
@@ -20,7 +26,10 @@ const variantStyles = {
 };
 
 export const Tag = React.forwardRef<HTMLSpanElement, TagProps>(
-  ({ className, variant = "default", onRemove, icon, children, ...props }, ref) => {
+  (
+    { className, variant = "default", onRemove, icon, children, ...props },
+    ref
+  ) => {
     return (
       <span
         ref={ref}

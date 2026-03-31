@@ -1,15 +1,39 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { cn } from "@/lib/utils/cn";
 
 export interface PopoverProps extends React.HTMLAttributes<HTMLDivElement> {
   trigger: React.ReactNode;
   align?: "left" | "center" | "right";
   side?: "top" | "bottom";
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
 export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
-  ({ className, trigger, align = "center", side = "bottom", children, ...props }, ref) => {
-    const [isOpen, setIsOpen] = useState(false);
+  (
+    {
+      className,
+      trigger,
+      align = "center",
+      side = "bottom",
+      open,
+      onOpenChange,
+      children,
+      ...props
+    },
+    ref
+  ) => {
+    const [internalOpen, setInternalOpen] = useState(false);
+    const isOpen = open !== undefined ? open : internalOpen;
+
+    const setIsOpen = useCallback(
+      (val: boolean) => {
+        setInternalOpen(val);
+        onOpenChange?.(val);
+      },
+      [onOpenChange]
+    );
+
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -21,9 +45,12 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
           setIsOpen(false);
         }
       };
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
+      if (isOpen) {
+        document.addEventListener("mousedown", handleClickOutside);
+      }
+      return () =>
+        document.removeEventListener("mousedown", handleClickOutside);
+    }, [isOpen, setIsOpen]);
 
     const alignStyles = {
       left: "left-0",

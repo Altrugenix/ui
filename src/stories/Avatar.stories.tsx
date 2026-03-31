@@ -33,7 +33,11 @@ export const BrokenImage: Story = {
 export const Group: Story = {
   render: () => (
     <div className="flex -space-x-2">
-      <Avatar src="https://github.com/shadcn.png" fallback="CN" className="border-2 border-background" />
+      <Avatar
+        src="https://github.com/shadcn.png"
+        fallback="CN"
+        className="border-2 border-background"
+      />
       <Avatar fallback="AB" className="border-2 border-background" />
       <Avatar fallback="QR" className="border-2 border-background" />
     </div>

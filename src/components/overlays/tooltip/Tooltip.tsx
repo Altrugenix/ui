@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils/cn";
 
-export interface TooltipProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "content"> {
+export interface TooltipProps extends Omit<
+  React.HTMLAttributes<HTMLDivElement>,
+  "content"
+> {
   /** The content to display in the tooltip */
   content: React.ReactNode;
   /** Side to show the tooltip */

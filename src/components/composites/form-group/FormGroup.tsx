@@ -18,11 +18,7 @@ const spacingMap = {
 export const FormGroup = React.forwardRef<HTMLFormElement, FormGroupProps>(
   ({ className, spacing = "md", children, ...props }, ref) => {
     return (
-      <form
-        ref={ref}
-        className={cn(spacingMap[spacing], className)}
-        {...props}
-      >
+      <form ref={ref} className={cn(spacingMap[spacing], className)} {...props}>
         {children}
       </form>
     );

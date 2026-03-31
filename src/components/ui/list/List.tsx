@@ -10,16 +10,15 @@ export interface ListProps extends React.HTMLAttributes<HTMLUListElement> {
 }
 
 export const List = React.forwardRef<HTMLUListElement, ListProps>(
-  ({ className, divided = false, ordered = false, children, ...props }, ref) => {
+  (
+    { className, divided = false, ordered = false, children, ...props },
+    ref
+  ) => {
     const Component = ordered ? "ol" : "ul";
     return (
       <Component
         ref={ref as React.Ref<HTMLUListElement>}
-        className={cn(
-          "w-full",
-          divided && "[&>li+li]:border-t",
-          className
-        )}
+        className={cn("w-full", divided && "[&>li+li]:border-t", className)}
         {...props}
       >
         {children}
@@ -43,7 +42,15 @@ export interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
 
 export const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(
   (
-    { className, leading, trailing, secondary, interactive, children, ...props },
+    {
+      className,
+      leading,
+      trailing,
+      secondary,
+      interactive,
+      children,
+      ...props
+    },
     ref
   ) => {
     return (
@@ -58,10 +65,10 @@ export const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(
         {...props}
       >
         {leading && <span className="shrink-0">{leading}</span>}
-        <div className="flex-1 min-w-0">
-          <div className="text-sm font-medium truncate">{children}</div>
+        <div className="min-w-0 flex-1">
+          <div className="truncate text-sm font-medium">{children}</div>
           {secondary && (
-            <p className="mt-0.5 text-xs text-muted-foreground truncate">
+            <p className="mt-0.5 truncate text-xs text-muted-foreground">
               {secondary}
             </p>
           )}

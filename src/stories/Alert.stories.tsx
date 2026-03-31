@@ -60,11 +60,21 @@ export const Closable: Story = {
 export const AllVariants: Story = {
   render: () => (
     <div className="space-y-4">
-      <Alert variant="default" title="Default">Neutral information.</Alert>
-      <Alert variant="info" title="Info">Informational note.</Alert>
-      <Alert variant="success" title="Success">Operation completed.</Alert>
-      <Alert variant="warning" title="Warning">Proceed with caution.</Alert>
-      <Alert variant="destructive" title="Error">Action failed.</Alert>
+      <Alert variant="default" title="Default">
+        Neutral information.
+      </Alert>
+      <Alert variant="info" title="Info">
+        Informational note.
+      </Alert>
+      <Alert variant="success" title="Success">
+        Operation completed.
+      </Alert>
+      <Alert variant="warning" title="Warning">
+        Proceed with caution.
+      </Alert>
+      <Alert variant="destructive" title="Error">
+        Action failed.
+      </Alert>
     </div>
   ),
 };

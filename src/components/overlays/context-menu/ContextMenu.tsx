@@ -13,14 +13,11 @@ export const ContextMenu = React.forwardRef<HTMLDivElement, ContextMenuProps>(
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const menuRef = useRef<HTMLDivElement>(null);
 
-    const handleContextMenu = useCallback(
-      (e: React.MouseEvent) => {
-        e.preventDefault();
-        setPosition({ x: e.clientX, y: e.clientY });
-        setIsOpen(true);
-      },
-      []
-    );
+    const handleContextMenu = useCallback((e: React.MouseEvent) => {
+      e.preventDefault();
+      setPosition({ x: e.clientX, y: e.clientY });
+      setIsOpen(true);
+    }, []);
 
     useEffect(() => {
       const handleClickOutside = (event: MouseEvent) => {
@@ -44,7 +41,12 @@ export const ContextMenu = React.forwardRef<HTMLDivElement, ContextMenuProps>(
     }, []);
 
     return (
-      <div ref={ref} onContextMenu={handleContextMenu} className={cn(className)} {...props}>
+      <div
+        ref={ref}
+        onContextMenu={handleContextMenu}
+        className={cn(className)}
+        {...props}
+      >
         {children}
         {isOpen && (
           <div

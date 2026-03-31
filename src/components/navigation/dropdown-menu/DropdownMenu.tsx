@@ -24,11 +24,16 @@ export const DropdownMenu = React.forwardRef<HTMLDivElement, DropdownMenuProps>(
       };
 
       document.addEventListener("mousedown", handleClickOutside);
-      return () => document.removeEventListener("mousedown", handleClickOutside);
+      return () =>
+        document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
     return (
-      <div ref={containerRef} className={cn("relative inline-block", className)} {...props}>
+      <div
+        ref={containerRef}
+        className={cn("relative inline-block", className)}
+        {...props}
+      >
         <div
           onClick={() => setIsOpen(!isOpen)}
           className="cursor-pointer"
@@ -56,8 +61,7 @@ export const DropdownMenu = React.forwardRef<HTMLDivElement, DropdownMenuProps>(
 );
 DropdownMenu.displayName = "DropdownMenu";
 
-export interface DropdownMenuItemProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface DropdownMenuItemProps extends React.HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
   destructive?: boolean;
 }

@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
-
 const meta: Meta<typeof Modal> = {
   title: "UI/Modal",
   component: Modal,

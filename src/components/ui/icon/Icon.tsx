@@ -1,6 +1,6 @@
-import React from 'react';
-import { cn } from '@/lib/utils/cn';
-import * as LucideIcons from 'lucide-react';
+import React from "react";
+import { cn } from "@/lib/utils/cn";
+import * as LucideIcons from "lucide-react";
 
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
   name: keyof typeof LucideIcons;
@@ -9,7 +9,7 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
 
 export const Icon = React.forwardRef<SVGSVGElement, IconProps>(
   ({ className, name, size = 24, ...props }, ref) => {
-    const LucideIcon = (LucideIcons as any)[name] as React.ElementType;
+    const LucideIcon = LucideIcons[name] as React.ElementType;
 
     if (!LucideIcon) {
       return null;
@@ -25,4 +25,4 @@ export const Icon = React.forwardRef<SVGSVGElement, IconProps>(
     );
   }
 );
-Icon.displayName = 'Icon';
+Icon.displayName = "Icon";

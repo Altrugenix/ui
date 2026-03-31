@@ -21,17 +21,23 @@ const tabItems = [
   {
     label: "Overview",
     value: "overview",
-    content: <p className="text-sm text-muted-foreground">Overview content panel.</p>,
+    content: (
+      <p className="text-sm text-muted-foreground">Overview content panel.</p>
+    ),
   },
   {
     label: "Analytics",
     value: "analytics",
-    content: <p className="text-sm text-muted-foreground">Analytics content panel.</p>,
+    content: (
+      <p className="text-sm text-muted-foreground">Analytics content panel.</p>
+    ),
   },
   {
     label: "Settings",
     value: "settings",
-    content: <p className="text-sm text-muted-foreground">Settings content panel.</p>,
+    content: (
+      <p className="text-sm text-muted-foreground">Settings content panel.</p>
+    ),
   },
 ];
 
@@ -64,13 +70,17 @@ export const WithIcons: Story = {
         label: "Profile",
         value: "profile",
         icon: <User className="h-4 w-4" />,
-        content: <p className="text-sm text-muted-foreground">Profile settings.</p>,
+        content: (
+          <p className="text-sm text-muted-foreground">Profile settings.</p>
+        ),
       },
       {
         label: "Analytics",
         value: "analytics",
         icon: <BarChart className="h-4 w-4" />,
-        content: <p className="text-sm text-muted-foreground">Analytics data.</p>,
+        content: (
+          <p className="text-sm text-muted-foreground">Analytics data.</p>
+        ),
       },
       {
         label: "Settings",

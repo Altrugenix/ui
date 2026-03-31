@@ -14,7 +14,16 @@ export const Default: Story = {
   args: {
     label: "Framework",
     placeholder: "Search frameworks...",
-    options: ["React", "Vue", "Angular", "Svelte", "Next.js", "Nuxt", "Solid", "Remix"],
+    options: [
+      "React",
+      "Vue",
+      "Angular",
+      "Svelte",
+      "Next.js",
+      "Nuxt",
+      "Solid",
+      "Remix",
+    ],
   },
 };
 

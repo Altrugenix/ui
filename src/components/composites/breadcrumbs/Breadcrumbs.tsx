@@ -17,7 +17,12 @@ export interface BreadcrumbsProps extends React.HTMLAttributes<HTMLElement> {
 export const Breadcrumbs = React.forwardRef<HTMLElement, BreadcrumbsProps>(
   ({ className, items, separator, ...props }, ref) => {
     return (
-      <nav ref={ref} aria-label="Breadcrumb" className={cn(className)} {...props}>
+      <nav
+        ref={ref}
+        aria-label="Breadcrumb"
+        className={cn(className)}
+        {...props}
+      >
         <ol className="flex items-center gap-1.5 text-sm">
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
@@ -36,7 +41,7 @@ export const Breadcrumbs = React.forwardRef<HTMLElement, BreadcrumbsProps>(
                     className={cn(
                       "transition-colors hover:text-foreground",
                       isLast
-                        ? "font-medium text-foreground pointer-events-none"
+                        ? "pointer-events-none font-medium text-foreground"
                         : "text-muted-foreground"
                     )}
                     aria-current={isLast ? "page" : undefined}

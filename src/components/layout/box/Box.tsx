@@ -21,7 +21,10 @@ const paddingMap = {
  * Use it to apply spacing, padding, and styling to a block of content.
  */
 export const Box = React.forwardRef<HTMLElement, BoxProps>(
-  ({ className, as: Component = "div", padding = "none", children, ...props }, ref) => {
+  (
+    { className, as: Component = "div", padding = "none", children, ...props },
+    ref
+  ) => {
     return (
       <Component
         ref={ref}

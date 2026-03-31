@@ -20,7 +20,13 @@ export interface ButtonBaseProps extends VariantProps<typeof buttonVariants> {
 export type PolymorphicButtonProps<E extends React.ElementType> = {
   as?: E;
   className?: string;
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "link" | "destructive";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "outline"
+    | "ghost"
+    | "link"
+    | "destructive";
   size?: "sm" | "md" | "lg" | "icon";
   radius?: "none" | "sm" | "md" | "lg" | "full";
   fullWidth?: boolean;
@@ -34,7 +40,13 @@ export type PolymorphicButtonProps<E extends React.ElementType> = {
   keyof {
     as?: E;
     className?: string;
-    variant?: "primary" | "secondary" | "outline" | "ghost" | "link" | "destructive";
+    variant?:
+      | "primary"
+      | "secondary"
+      | "outline"
+      | "ghost"
+      | "link"
+      | "destructive";
     size?: "sm" | "md" | "lg" | "icon";
     radius?: "none" | "sm" | "md" | "lg" | "full";
     fullWidth?: boolean;

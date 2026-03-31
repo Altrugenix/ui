@@ -16,7 +16,10 @@ export interface StepperProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
-  ({ className, steps, activeStep, orientation = "horizontal", ...props }, ref) => {
+  (
+    { className, steps, activeStep, orientation = "horizontal", ...props },
+    ref
+  ) => {
     const isHorizontal = orientation === "horizontal";
 
     return (
@@ -64,18 +67,14 @@ export const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
                           : "border-muted-foreground/30 bg-background text-muted-foreground"
                     )}
                   >
-                    {isCompleted ? (
-                      <Check className="h-4 w-4" />
-                    ) : (
-                      index + 1
-                    )}
+                    {isCompleted ? <Check className="h-4 w-4" /> : index + 1}
                   </div>
 
                   {/* Connector line (horizontal) */}
                   {isHorizontal && index < steps.length - 1 && (
                     <div
                       className={cn(
-                        "mx-2 h-0.5 flex-1 min-w-[2rem] transition-colors duration-300",
+                        "mx-2 h-0.5 min-w-[2rem] flex-1 transition-colors duration-300",
                         isCompleted ? "bg-primary" : "bg-muted-foreground/20"
                       )}
                     />
@@ -83,11 +82,7 @@ export const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
                 </div>
 
                 {/* Labels */}
-                <div
-                  className={cn(
-                    isHorizontal ? "mt-2 text-center" : ""
-                  )}
-                >
+                <div className={cn(isHorizontal ? "mt-2 text-center" : "")}>
                   <p
                     className={cn(
                       "text-sm font-medium",

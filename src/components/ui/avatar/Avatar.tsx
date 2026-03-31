@@ -1,5 +1,5 @@
-import React from 'react';
-import { cn } from '@/lib/utils/cn';
+import React from "react";
+import { cn } from "@/lib/utils/cn";
 
 export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   src?: string;
@@ -14,7 +14,10 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
     return (
       <div
         ref={ref}
-        className={cn("relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full font-medium", className)}
+        className={cn(
+          "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full font-medium",
+          className
+        )}
         {...props}
       >
         {src && !hasError ? (
@@ -25,7 +28,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
             onError={() => setHasError(true)}
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center rounded-full bg-muted text-muted-foreground uppercase">
+          <div className="flex h-full w-full items-center justify-center rounded-full bg-muted uppercase text-muted-foreground">
             {fallback || alt?.slice(0, 2) || "U"}
           </div>
         )}
@@ -33,4 +36,4 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
     );
   }
 );
-Avatar.displayName = 'Avatar';
+Avatar.displayName = "Avatar";

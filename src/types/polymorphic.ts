@@ -18,7 +18,10 @@ export type PolymorphicPropsWithRef<
   Props = object,
 > = Props & AsProp<T> & React.ComponentPropsWithRef<T>;
 
-export type PolymorphicComponent<T extends React.ElementType, Props = object> = {
+export type PolymorphicComponent<
+  T extends React.ElementType,
+  Props = object,
+> = {
   <E extends React.ElementType = T>(
     props: PolymorphicPropsWithRef<E, Props>
   ): React.ReactElement | null;

@@ -22,20 +22,13 @@ export const Default: Story = {
 
 export const TwoLevels: Story = {
   args: {
-    items: [
-      { label: "Dashboard", href: "/" },
-      { label: "Settings" },
-    ],
+    items: [{ label: "Dashboard", href: "/" }, { label: "Settings" }],
   },
 };
 
 export const CustomSeparator: Story = {
   args: {
-    items: [
-      { label: "Home" },
-      { label: "Docs" },
-      { label: "Components" },
-    ],
+    items: [{ label: "Home" }, { label: "Docs" }, { label: "Components" }],
     separator: "/",
   },
 };

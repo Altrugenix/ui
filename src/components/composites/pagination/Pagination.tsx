@@ -54,7 +54,14 @@ function generatePages(
 
 export const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
   (
-    { className, currentPage, totalPages, onPageChange, siblingCount = 1, ...props },
+    {
+      className,
+      currentPage,
+      totalPages,
+      onPageChange,
+      siblingCount = 1,
+      ...props
+    },
     ref
   ) => {
     const pages = generatePages(currentPage, totalPages, siblingCount);

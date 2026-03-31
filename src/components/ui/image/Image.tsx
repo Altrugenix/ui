@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { cn } from '@/lib/utils/cn';
+import React, { useState } from "react";
+import { cn } from "@/lib/utils/cn";
 
 export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   fallback?: string;
@@ -34,4 +34,4 @@ export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
     );
   }
 );
-Image.displayName = 'Image';
+Image.displayName = "Image";

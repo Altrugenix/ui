@@ -9,7 +9,14 @@ const meta: Meta<typeof Tag> = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["default", "secondary", "outline", "success", "warning", "destructive"],
+      options: [
+        "default",
+        "secondary",
+        "outline",
+        "success",
+        "warning",
+        "destructive",
+      ],
     },
   },
 };
@@ -53,9 +60,15 @@ export const AllVariants: Story = {
 export const RemovableGroup: Story = {
   render: () => (
     <div className="flex flex-wrap gap-2">
-      <Tag variant="default" onRemove={() => {}}>React</Tag>
-      <Tag variant="success" onRemove={() => {}}>TypeScript</Tag>
-      <Tag variant="warning" onRemove={() => {}}>Tailwind</Tag>
+      <Tag variant="default" onRemove={() => {}}>
+        React
+      </Tag>
+      <Tag variant="success" onRemove={() => {}}>
+        TypeScript
+      </Tag>
+      <Tag variant="warning" onRemove={() => {}}>
+        Tailwind
+      </Tag>
     </div>
   ),
 };
