@@ -58,6 +58,14 @@ jobs:
       - name: Publish to NPM
         run: |
           cd packages/ui
-          npm publish
+          VERSION=$(node -p "require('./package.json').version")
+          if [[ $VERSION =~ -([a-z]+) ]]; then
+            TAG=${BASH_REMATCH[1]}
+            echo "Publishing with tag: $TAG"
+            npm publish --tag $TAG
+          else
+            echo "Publishing with default tag (latest)"
+            npm publish
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
