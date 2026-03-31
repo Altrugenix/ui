@@ -1,0 +1,63 @@
+name: Build and Publish to NPM
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+          
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        
+      - name: Lint
+        run: yarn lint
+        
+      - name: Test
+        run: yarn test
+        
+      - name: Build Library
+        run: yarn build:lib
+        
+      - name: Build Demo
+        run: yarn build:demo
+
+  publish:
+    needs: build-and-test
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+          
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        
+      - name: Build Library
+        run: yarn build:lib
+        
+      - name: Publish to NPM
+        run: |
+          cd packages/ui
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
