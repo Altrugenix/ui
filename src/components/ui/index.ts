@@ -9,3 +9,4 @@ export * from "./rich-text-editor";
 export * from "./charts";
 export * from "./calendar-view";
 export * from "./kanban";
+export * from "./virtual-list";

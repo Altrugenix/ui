@@ -3,10 +3,30 @@ import React, { createContext, useEffect, useState } from "react";
 
 type Theme = "dark" | "light" | "system";
 
+interface ThemeTokens {
+  colors?: {
+    primary?: string;
+    secondary?: string;
+    background?: string;
+    foreground?: string;
+    muted?: string;
+    accent?: string;
+    destructive?: string;
+    border?: string;
+    input?: string;
+    ring?: string;
+    success?: string;
+    warning?: string;
+    info?: string;
+  };
+  radius?: string;
+}
+
 interface ThemeProviderProps {
   children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
+  tokens?: ThemeTokens;
 }
 
 interface ThemeProviderState {
@@ -26,6 +46,7 @@ export function ThemeProvider({
   children,
   defaultTheme = "system",
   storageKey = "Altrugenix-ui-theme",
+  tokens,
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
@@ -44,11 +65,22 @@ export function ThemeProvider({
         : "light";
 
       root.classList.add(systemTheme);
-      return;
+    } else {
+      root.classList.add(theme);
     }
 
-    root.classList.add(theme);
-  }, [theme]);
+    // Apply token overrides
+    if (tokens) {
+      if (tokens.colors) {
+        Object.entries(tokens.colors).forEach(([key, value]) => {
+          if (value) root.style.setProperty(`--${key}`, value);
+        });
+      }
+      if (tokens.radius) {
+        root.style.setProperty("--radius", tokens.radius);
+      }
+    }
+  }, [theme, tokens]);
 
   const value = {
     theme,

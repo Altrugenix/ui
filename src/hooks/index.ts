@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 
+export * from "./useInfiniteScroll";
+
 /**
  * Hook to manage a simple boolean state (open/close).
  */
