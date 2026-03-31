@@ -27,8 +27,7 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@altrugenix/ui": ["../../packages/ui/src/index.ts"]
+      "~/*": ["./src/*"]
     }
   },
   "include": ["src"]

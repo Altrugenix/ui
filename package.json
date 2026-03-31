@@ -8,8 +8,14 @@
   "scripts": {
     "build": "yarn workspace @altrugenix/ui build",
     "dev:ui": "yarn workspace @altrugenix/ui dev",
+    "build:lib": "yarn workspace @altrugenix/ui build",
     "dev:demo": "yarn workspace altrugenix-demo dev",
+    "build:demo": "yarn workspace altrugenix-demo build",
     "lint": "yarn workspaces run lint",
-    "test": "yarn workspaces run test"
+    "test": "yarn workspaces run test",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
+  },
+  "dependencies": {
+    "prettier": "^3.8.1"
   }
 }

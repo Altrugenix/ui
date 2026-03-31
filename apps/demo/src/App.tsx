@@ -95,7 +95,7 @@ const ActivityFeed = () => {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
       return Array.from({ length: 10 }).map((_, i) => ({
-        id: `feed-${page}-${i}`,
+        id: `feed-${page}-${i}-${Date.now()}`,
         user: `User ${Math.floor(Math.random() * 100)}`,
         action: "updated a component",
         time: "Just now",
@@ -113,7 +113,7 @@ const ActivityFeed = () => {
               <p className="text-sm">
                 <span className="font-bold">{item.user}</span> {item.action}
               </p>
-              <p className="text-xs text-muted-foreground">{item.time}</p>
+              <p className="text-muted-foreground text-xs">{item.time}</p>
             </div>
           </div>
         ))}
@@ -273,12 +273,12 @@ const DemoAppContent = ({
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-500">
-      <header className="sticky top-0 z-50 border-b bg-background/80 shadow-sm backdrop-blur-md">
+    <div className="bg-background text-foreground min-h-screen transition-colors duration-500">
+      <header className="bg-background/80 sticky top-0 z-50 border-b shadow-sm backdrop-blur-md">
         <div className="container mx-auto flex h-16 items-center justify-between px-6">
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg shadow-primary/20">
+              <div className="bg-primary text-primary-foreground shadow-primary/20 flex h-8 w-8 items-center justify-center rounded-lg shadow-lg">
                 <Layers className="h-5 w-5" />
               </div>
               <span className="text-xl font-bold tracking-tight">
@@ -309,7 +309,7 @@ const DemoAppContent = ({
                 Crimson
               </Button>
             </div>
-            <div className="mx-2 h-4 w-px bg-border" />
+            <div className="bg-border mx-2 h-4 w-px" />
             <Button
               variant="ghost"
               size="icon"
@@ -336,9 +336,9 @@ const DemoAppContent = ({
             className="mx-auto max-w-4xl text-6xl font-black leading-tight lg:text-7xl"
           >
             Design System for{" "}
-            <span className="italic text-primary">Winners</span>
+            <span className="text-primary italic">Winners</span>
           </Heading>
-          <Text className="mx-auto max-w-2xl text-xl text-muted-foreground">
+          <Text className="text-muted-foreground mx-auto max-w-2xl text-xl">
             A comprehensive set of high-performance React components
             meticulously crafted for enterprise-grade SaaS platforms.
           </Text>
@@ -368,13 +368,13 @@ const DemoAppContent = ({
           <div className="space-y-8">
             <div className="space-y-4">
               <Heading level={3}>Typography</Heading>
-              <div className="space-y-2 rounded-xl border bg-muted/5 p-6">
+              <div className="bg-muted/5 space-y-2 rounded-xl border p-6">
                 <Heading level={1}>Heading 1</Heading>
                 <Heading level={2}>Heading 2</Heading>
                 <Heading level={3}>Heading 3</Heading>
                 <Heading level={4}>Heading 4</Heading>
                 <Text>Standard body text for long content.</Text>
-                <Text className="text-sm text-muted-foreground">
+                <Text className="text-muted-foreground text-sm">
                   Small text for metadata and captions.
                 </Text>
                 <Link href="#" className="mt-4 flex items-center gap-1">
@@ -384,7 +384,7 @@ const DemoAppContent = ({
             </div>
             <div className="space-y-4">
               <Heading level={3}>Buttons & Badges</Heading>
-              <div className="flex flex-wrap items-center gap-4 rounded-xl border bg-muted/5 p-6">
+              <div className="bg-muted/5 flex flex-wrap items-center gap-4 rounded-xl border p-6">
                 <Button>Primary</Button>
                 <Button variant="secondary">Secondary</Button>
                 <Button variant="outline">Outline</Button>
@@ -585,7 +585,7 @@ const DemoAppContent = ({
                     )}
                   >
                     <div className="flex items-center gap-4">
-                      <span className="w-8 font-mono text-xs text-muted-foreground">
+                      <span className="text-muted-foreground w-8 font-mono text-xs">
                         #{item.id}
                       </span>
                       <span className="text-sm font-semibold">
@@ -594,7 +594,7 @@ const DemoAppContent = ({
                     </div>
                     <div className="flex items-center gap-6">
                       <div className="flex w-32 flex-col gap-1">
-                        <div className="flex justify-between text-[10px] italic text-muted-foreground">
+                        <div className="text-muted-foreground flex justify-between text-[10px] italic">
                           <span>CPU Load</span>
                           <span>{item.load}%</span>
                         </div>
@@ -726,7 +726,7 @@ const DemoAppContent = ({
           </section>
         </section>
 
-        <section className="mt-20 flex flex-col items-center justify-center space-y-6 rounded-3xl border border-primary/10 bg-primary/5 p-12 text-center">
+        <section className="border-primary/10 bg-primary/5 mt-20 flex flex-col items-center justify-center space-y-6 rounded-3xl border p-12 text-center">
           <Heading level={2}>Ready to Build Something Great?</Heading>
           <Text className="max-w-xl">
             Start using Altrugenix today and transform your development workflow
@@ -735,7 +735,7 @@ const DemoAppContent = ({
           <div className="flex gap-4">
             <Button
               size="lg"
-              className="rounded-full shadow-lg shadow-primary/20"
+              className="shadow-primary/20 rounded-full shadow-lg"
               onClick={() => setIsModalOpen(true)}
             >
               Get Started Now
@@ -752,14 +752,14 @@ const DemoAppContent = ({
         </section>
       </main>
 
-      <footer className="mt-20 border-t bg-muted/5 py-12">
+      <footer className="bg-muted/5 mt-20 border-t py-12">
         <div className="container mx-auto grid gap-8 px-6 md:grid-cols-4">
           <div className="col-span-2 space-y-4">
             <div className="flex items-center gap-2">
-              <Layers className="h-6 w-6 text-primary" />
+              <Layers className="text-primary h-6 w-6" />
               <span className="text-lg font-bold">Altrugenix</span>
             </div>
-            <Text className="max-w-xs text-sm text-muted-foreground">
+            <Text className="text-muted-foreground max-w-xs text-sm">
               The high-performance design system for modern web application
               developers.
             </Text>
@@ -771,19 +771,19 @@ const DemoAppContent = ({
             <div className="flex flex-col gap-2">
               <Link
                 href="#"
-                className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                className="text-muted-foreground hover:text-primary text-sm transition-colors"
               >
                 Components
               </Link>
               <Link
                 href="#"
-                className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                className="text-muted-foreground hover:text-primary text-sm transition-colors"
               >
                 Templates
               </Link>
               <Link
                 href="#"
-                className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                className="text-muted-foreground hover:text-primary text-sm transition-colors"
               >
                 Themes
               </Link>
@@ -796,19 +796,19 @@ const DemoAppContent = ({
             <div className="flex flex-col gap-2">
               <Link
                 href="#"
-                className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                className="text-muted-foreground hover:text-primary text-sm transition-colors"
               >
                 About Us
               </Link>
               <Link
                 href="#"
-                className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                className="text-muted-foreground hover:text-primary text-sm transition-colors"
               >
                 Contact
               </Link>
               <Link
                 href="#"
-                className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                className="text-muted-foreground hover:text-primary text-sm transition-colors"
               >
                 GitHub
               </Link>
@@ -828,7 +828,7 @@ const DemoAppContent = ({
             label="Email Address"
             type="email"
             placeholder="you@example.com"
-            leftAddon={<Mail className="h-4 w-4 text-muted-foreground" />}
+            leftAddon={<Mail className="text-muted-foreground h-4 w-4" />}
           />
           <Button className="mt-4 w-full">Create Account</Button>
         </div>
@@ -857,7 +857,7 @@ const DemoAppContent = ({
               <Checkbox label="Weekly Reports" />
             </div>
           </div>
-          <div className="flex gap-3 border-t bg-muted/5 p-6">
+          <div className="bg-muted/5 flex gap-3 border-t p-6">
             <Button className="flex-1">Save Changes</Button>
             <Button variant="outline" onClick={() => setIsDrawerOpen(false)}>
               Cancel
