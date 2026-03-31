@@ -38,7 +38,7 @@ jobs:
         run: |
           mv apps/demo/dist ./dist
           mkdir -p dist/storybook
-          mv storybook-static/* dist/storybook/
+          mv packages/ui/storybook-static/* dist/storybook/
 
       - name: Copy CNAME to dist
         run: |
