@@ -9,6 +9,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/altrugenix/ui.git"
+  },
   "exports": {
     ".": {
       "import": "./dist/altrugenix-ui.js",
