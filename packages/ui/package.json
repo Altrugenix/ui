@@ -15,9 +15,9 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/altrugenix-ui.js",
-      "require": "./dist/altrugenix-ui.umd.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/altrugenix-ui.umd.cjs"
     }
   },
   "publishConfig": {

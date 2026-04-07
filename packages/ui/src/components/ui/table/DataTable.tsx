@@ -2,10 +2,10 @@
 
 import * as React from "react";
 import {
-  ColumnDef,
-  ColumnFiltersState,
-  SortingState,
-  VisibilityState,
+  type ColumnDef,
+  type ColumnFiltersState,
+  type SortingState,
+  type VisibilityState,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
@@ -13,12 +13,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import {
-  ChevronDown,
-  ChevronUp,
-  ChevronsUpDown,
-  Filter,
-} from "lucide-react";
+import { ChevronDown, ChevronUp, ChevronsUpDown, Filter } from "lucide-react";
 
 import { cn } from "~/lib/utils/cn";
 import {
@@ -88,9 +83,9 @@ export function DataTable<TData, TValue>({
                 onChange={(event) =>
                   table.getColumn(searchKey)?.setFilterValue(event.target.value)
                 }
-                className="pl-9 h-9"
+                className="h-9 pl-9"
               />
-              <Filter className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground/70" />
+              <Filter className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground/70" />
             </div>
           )}
         </div>

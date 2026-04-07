@@ -5,3 +5,4 @@ export * from "./stack";
 export * from "./divider";
 export * from "./spacer";
 export * from "./box";
+export * from "./app-shell";
