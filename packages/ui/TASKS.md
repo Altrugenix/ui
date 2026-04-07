@@ -6,7 +6,7 @@ This document outlines suggested components to further enhance the Altrugenix UI
 
 These components are critical for an enterprise-ready, premium feel.
 
-- [ ] **Data Table (High-Level Wrapper)**: A complex wrapper for the base `Table` with built-in logic for sorting, filtering, row selection, and column visibility.
+- [x] **Data Table (High-Level Wrapper)**: A complex wrapper for the base `Table` with built-in logic for sorting, filtering, row selection, and column visibility.
 - [ ] **App Shell**: A high-level layout component that orchestrates `Navbar`, `Sidebar`, and `MainContent` with responsive behaviors.
 - [ ] **Skeleton Loaders (Extended)**: Pre-built skeleton variants for standard patterns like `MetricCardSkeleton`, `ListSkeleton`, and `AvatarHeaderSkeleton`.
 - [ ] **Carousel**: A premium slider component for landing pages and product showcases, featuring touch support and Dot-indicators.
