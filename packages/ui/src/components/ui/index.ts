@@ -38,6 +38,10 @@ export * from "./table";
 export * from "./timeline";
 export * from "./autocomplete";
 
+// Feedback & Micro-interactions
+export * from "../feedback";
+export * from "../effects";
+
 // Overlays & Navigation
 export * from "./toast";
 export * from "./modal";

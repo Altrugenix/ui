@@ -16,11 +16,11 @@ These components are critical for an enterprise-ready, premium feel.
 
 Small details that make the UI feel alive and state-of-the-art.
 
-- [ ] **Shiny Button**: A premium "Call to Action" button with a moving light reflection effect and elegant transitions.
-- [ ] **Confetti**: A utility to trigger a celebration effect on successful user actions (e.g., form submission).
-- [ ] **Marquee**: A smooth, infinitely scrolling container for logos, reviews, or tickers.
-- [ ] **Reveal / Scroll Animation**: High-level wrappers for `framer-motion` to easily add entry animations to any component as it enters the viewport.
-- [ ] **Typing Animation**: A utility to simulate a typing effect for headings or hero sections.
+- [x] **Shiny Button**: A premium "Call to Action" button with a moving light reflection effect and elegant transitions.
+- [x] **Confetti**: A utility to trigger a celebration effect on successful user actions (e.g., form submission).
+- [x] **Marquee**: A smooth, infinitely scrolling container for logos, reviews, or tickers.
+- [x] **Reveal / Scroll Animation**: High-level wrappers for `framer-motion` to easily add entry animations to any component as it enters the viewport.
+- [x] **Typing Animation**: A utility to simulate a typing effect for headings or hero sections.
 
 ## 📊 Specialized Data & Media
 
