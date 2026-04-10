@@ -1,5 +1,4 @@
-import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Marquee } from "../components/layout/marquee";
 
 const meta: Meta<typeof Marquee> = {
@@ -15,8 +14,18 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const logos = [
-  "Google", "Microsoft", "Amazon", "Apple", "Netflix", "Meta", "Tesla", "Adobe", 
-  "Logitech", "Intel", "NVIDIA", "Advanced Micro Devices"
+  "Google",
+  "Microsoft",
+  "Amazon",
+  "Apple",
+  "Netflix",
+  "Meta",
+  "Tesla",
+  "Adobe",
+  "Logitech",
+  "Intel",
+  "NVIDIA",
+  "Advanced Micro Devices",
 ];
 
 export const Default: Story = {
@@ -25,7 +34,10 @@ export const Default: Story = {
     children: (
       <>
         {logos.map((logo) => (
-          <div key={logo} className="mx-8 text-2xl font-bold opacity-30 hover:opacity-100 transition-opacity whitespace-nowrap">
+          <div
+            key={logo}
+            className="mx-8 whitespace-nowrap text-2xl font-bold opacity-30 transition-opacity hover:opacity-100"
+          >
             {logo}
           </div>
         ))}
@@ -41,7 +53,10 @@ export const SlowRight: Story = {
     children: (
       <>
         {logos.map((logo) => (
-          <div key={logo} className="mx-8 text-3xl font-black opacity-20 whitespace-nowrap uppercase italic tracking-widest text-primary">
+          <div
+            key={logo}
+            className="mx-8 whitespace-nowrap text-3xl font-black uppercase italic tracking-widest text-primary opacity-20"
+          >
             {logo}
           </div>
         ))}
@@ -53,7 +68,7 @@ export const SlowRight: Story = {
 export const Vertical: Story = {
   decorators: [
     (Story) => (
-      <div className="h-[400px] flex items-center justify-center bg-slate-50">
+      <div className="flex h-[400px] items-center justify-center bg-slate-50">
         <Story />
       </div>
     ),
@@ -61,7 +76,8 @@ export const Vertical: Story = {
   args: {
     vertical: true,
     speed: 20,
-    className: "h-full justify-center w-fit mx-auto border-x border-slate-200 px-4",
+    className:
+      "h-full justify-center w-fit mx-auto border-x border-slate-200 px-4",
     children: (
       <>
         {logos.slice(0, 6).map((logo) => (

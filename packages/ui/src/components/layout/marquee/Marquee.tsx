@@ -35,7 +35,7 @@ export const Marquee: React.FC<MarqueeProps> = ({
     <div
       className={cn(
         "group flex overflow-hidden",
-        vertical ? "flex-col h-full" : "flex-row w-full",
+        vertical ? "h-full flex-col" : "w-full flex-row",
         className
       )}
       style={{ gap }}
@@ -44,10 +44,14 @@ export const Marquee: React.FC<MarqueeProps> = ({
         <motion.div
           key={i}
           animate={{
-            [vertical ? "y" : "x"]: 
-              direction === "left" && !vertical ? ["0%", "-100%"] : 
-              direction === "right" && !vertical ? ["-100%", "0%"] : 
-              direction === "left" && vertical ? ["0%", "-100%"] : ["-100%", "0%"],
+            [vertical ? "y" : "x"]:
+              direction === "left" && !vertical
+                ? ["0%", "-100%"]
+                : direction === "right" && !vertical
+                  ? ["-100%", "0%"]
+                  : direction === "left" && vertical
+                    ? ["0%", "-100%"]
+                    : ["-100%", "0%"],
           }}
           transition={{
             duration: speed,
@@ -56,7 +60,7 @@ export const Marquee: React.FC<MarqueeProps> = ({
           }}
           className={cn(
             "flex shrink-0 items-center justify-around",
-            vertical ? "flex-col min-h-full" : "flex-row min-w-full",
+            vertical ? "min-h-full flex-col" : "min-w-full flex-row",
             pauseOnHover && "group-hover:[animation-play-state:paused]"
           )}
           style={{ gap }}

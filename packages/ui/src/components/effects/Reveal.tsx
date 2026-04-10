@@ -20,7 +20,7 @@ export interface RevealProps {
 }
 
 /**
- * Reveal - High-level wrapper for `framer-motion` to easily add entry animations 
+ * Reveal - High-level wrapper for `framer-motion` to easily add entry animations
  * to any component as it enters the viewport.
  */
 export const Reveal: React.FC<RevealProps> = ({
@@ -54,8 +54,8 @@ export const Reveal: React.FC<RevealProps> = ({
   };
 
   return (
-    <div 
-      ref={ref} 
+    <div
+      ref={ref}
       className={cn("relative overflow-hidden", className)}
       style={{ width }}
     >

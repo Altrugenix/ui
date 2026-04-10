@@ -30,7 +30,7 @@ export const TypingAnimation: React.FC<TypingAnimationProps> = ({
 }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
-  const [isFinished, setIsFinished] = useState(false);
+  const isFinished = index >= text.length;
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
@@ -42,27 +42,28 @@ export const TypingAnimation: React.FC<TypingAnimationProps> = ({
       return () => clearTimeout(timeout);
     }
 
-    if (index < text.length) {
+    if (!isFinished) {
       timeout = setTimeout(() => {
         setDisplayedText((prev) => prev + text[index]);
         setIndex((prev) => prev + 1);
       }, speed);
-    } else {
-      setIsFinished(true);
-      if (repeat) {
-        timeout = setTimeout(() => {
-          setDisplayedText("");
-          setIndex(0);
-          setIsFinished(false);
-        }, 2000);
-      }
+    } else if (repeat) {
+      timeout = setTimeout(() => {
+        setDisplayedText("");
+        setIndex(0);
+      }, 2000);
     }
 
     return () => clearTimeout(timeout);
   }, [index, text, speed, repeat, delay, isFinished]);
 
   return (
-    <div className={cn("inline-flex items-center text-lg md:text-xl font-medium", className)}>
+    <div
+      className={cn(
+        "inline-flex items-center text-lg font-medium md:text-xl",
+        className
+      )}
+    >
       <span>{displayedText}</span>
       {cursor && (!isFinished || repeat) && (
         <motion.span

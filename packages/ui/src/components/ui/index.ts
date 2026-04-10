@@ -37,6 +37,10 @@ export * from "./rich-text-editor";
 export * from "./table";
 export * from "./timeline";
 export * from "./autocomplete";
+export * from "./metric-card";
+export * from "./image-viewer";
+export * from "./video-player";
+export * from "./color-picker";
 
 // Feedback & Micro-interactions
 export * from "../feedback";

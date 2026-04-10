@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ShinyButton } from "../components/ui/button";
 
 const meta: Meta<typeof ShinyButton> = {
@@ -8,7 +8,14 @@ const meta: Meta<typeof ShinyButton> = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["primary", "secondary", "outline", "ghost", "danger", "success"],
+      options: [
+        "primary",
+        "secondary",
+        "outline",
+        "ghost",
+        "danger",
+        "success",
+      ],
     },
     size: {
       control: "select",

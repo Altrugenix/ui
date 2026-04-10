@@ -18,7 +18,8 @@
     "dev:storybook": "yarn workspace @altrugenix/ui storybook",
     "lint": "yarn workspaces run lint",
     "test": "yarn workspaces run test",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "build:all": "yarn build:lib && yarn build:demo && yarn build:storybook"
   },
   "dependencies": {
     "prettier": "^3.8.1"

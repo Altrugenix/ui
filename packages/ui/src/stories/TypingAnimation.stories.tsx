@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { TypingAnimation } from "../components/feedback/TypingAnimation";
 
 const meta: Meta<typeof TypingAnimation> = {
@@ -24,7 +24,8 @@ export const HeroSection: Story = {
   args: {
     text: "Altrugenix: The only UI library you'll ever need.",
     speed: 50,
-    className: "text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600",
+    className:
+      "text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600",
   },
 };
 

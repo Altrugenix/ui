@@ -77,7 +77,7 @@ export function AppShell({
             isOpen={isDrawerOpen}
             onClose={() => toggleDrawer()}
             side="left"
-            className="p-0 overflow-hidden border-none"
+            className="overflow-hidden border-none p-0"
             width="280px"
           >
             <div className="h-full w-full">{sidebar}</div>
@@ -91,11 +91,11 @@ export function AppShell({
         <div className="flex flex-1 flex-col overflow-hidden">
           <main
             className={cn(
-              "flex-1 overflow-y-auto px-4 py-8 md:px-8 focus:outline-none",
+              "flex-1 overflow-y-auto px-4 py-8 focus:outline-none md:px-8",
               mainClassName
             )}
           >
-            <div className="mx-auto max-w-[1200px] animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="mx-auto max-w-[1200px] duration-500 animate-in fade-in slide-in-from-bottom-4">
               {children}
             </div>
           </main>

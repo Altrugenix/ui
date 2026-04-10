@@ -1,5 +1,4 @@
-import React from "react";
-import type { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/react-vite";
 import { Confetti } from "../components/feedback/Confetti";
 import { Button } from "../components/ui/button";
 

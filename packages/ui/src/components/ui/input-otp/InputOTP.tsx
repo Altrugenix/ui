@@ -22,7 +22,7 @@ export interface InputOTPProps {
 }
 
 /**
- * A specialized multi-digit input for One-Time Passwords (OTP). 
+ * A specialized multi-digit input for One-Time Passwords (OTP).
  * Features automatic focus management, backspace handling, and paste support.
  */
 export const InputOTP = ({
@@ -46,17 +46,17 @@ export const InputOTP = ({
 
   const handleChange = (index: number, val: string) => {
     if (disabled) return;
-    
+
     // Extract the last character typed (in case of double input)
     const char = val.slice(-1);
-    
+
     // Construct new value string
     const newArr = currentValue.split("");
     while (newArr.length < length) newArr.push(""); // Pad with blanks
     newArr[index] = char;
-    
+
     const newVal = newArr.join("").slice(0, length);
-    
+
     if (onChange) {
       onChange(newVal);
     } else {
@@ -69,12 +69,19 @@ export const InputOTP = ({
     }
 
     // Trigger onComplete when all digits are populated
-    if (newVal.length === length && !newArr.slice(0, length).includes("") && onComplete) {
+    if (
+      newVal.length === length &&
+      !newArr.slice(0, length).includes("") &&
+      onComplete
+    ) {
       onComplete(newVal);
     }
   };
 
-  const handleKeyDown = (index: number, e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (
+    index: number,
+    e: React.KeyboardEvent<HTMLInputElement>
+  ) => {
     if (disabled) return;
 
     // Handle backspace navigation
@@ -87,13 +94,13 @@ export const InputOTP = ({
     if (disabled) return;
     e.preventDefault();
     const text = e.clipboardData.getData("text").trim().slice(0, length);
-    
+
     if (onChange) {
       onChange(text);
     } else {
       setInternalValue(text);
     }
-    
+
     // Move focus to the appropriate field after paste
     const focusIdx = Math.min(text.length, length - 1);
     inputsRef.current[focusIdx]?.focus();
@@ -104,8 +111,11 @@ export const InputOTP = ({
   };
 
   return (
-    <div 
-      className={cn("flex flex-wrap items-center justify-center gap-2 md:gap-3", className)} 
+    <div
+      className={cn(
+        "flex flex-wrap items-center justify-center gap-2 md:gap-3",
+        className
+      )}
       onPaste={handlePaste}
     >
       {Array.from({ length }).map((_, i) => (
@@ -125,7 +135,9 @@ export const InputOTP = ({
           className={cn(
             "h-12 w-10 px-0 text-center text-xl font-bold selection:bg-transparent md:h-14 md:w-12",
             "border-2 transition-all duration-200 focus:border-primary focus:ring-4 focus:ring-primary/10",
-            currentValue[i] ? "border-primary/50 bg-primary/5 shadow-soft" : "border-muted/50 bg-muted/20",
+            currentValue[i]
+              ? "border-primary/50 bg-primary/5 shadow-soft"
+              : "border-muted/50 bg-muted/20",
             inputClassName
           )}
         />

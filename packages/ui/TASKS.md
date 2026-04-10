@@ -26,10 +26,10 @@ Small details that make the UI feel alive and state-of-the-art.
 
 Components for complex data visualization and media handling.
 
-- [ ] **Metric Card**: A specialized card component designed specifically for dashboard KPIs, including trend indicators (sparklines) and status colors.
-- [ ] **Lightroom / Image Viewer**: A full-screen overlay for viewing images with zoom, pan, and gallery navigation functionality.
-- [ ] **Video Player**: A themed wrapper for `<video>` or YouTube/Vimeo embeds with premium custom controls.
-- [ ] **Color Picker**: A custom, accessible color selection component.
+- [x] **Metric Card**: A specialized card component designed specifically for dashboard KPIs, including trend indicators (sparklines) and status colors.
+- [x] **Lightroom / Image Viewer**: A full-screen overlay for viewing images with zoom, pan, and gallery navigation functionality.
+- [x] **Video Player**: A themed wrapper for `<video>` or YouTube/Vimeo embeds with premium custom controls.
+- [x] **Color Picker**: A custom, accessible color selection component.
 
 ## 🛠️ Utility & System
 

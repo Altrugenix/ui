@@ -10,7 +10,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import prettier from "eslint-config-prettier";
 
 export default defineConfig([
-  globalIgnores(["dist", "node_modules", "storybook-static"]),
+  globalIgnores(["dist", "node_modules", "storybook-static", ".storybook"]),
   {
     files: ["**/*.{ts,tsx}"],
     extends: [

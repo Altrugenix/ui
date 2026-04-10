@@ -22,7 +22,7 @@ export interface CarouselProps {
 }
 
 /**
- * A premium Carousel component with smooth Framer Motion transitions, 
+ * A premium Carousel component with smooth Framer Motion transitions,
  * auto-play support, and dot indicators.
  */
 export const Carousel = ({
@@ -74,7 +74,12 @@ export const Carousel = ({
   if (!items || items.length === 0) return null;
 
   return (
-    <div className={cn("group relative h-full w-full overflow-hidden rounded-xl", className)}>
+    <div
+      className={cn(
+        "group relative h-full w-full overflow-hidden rounded-xl",
+        className
+      )}
+    >
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={index}
@@ -87,7 +92,10 @@ export const Carousel = ({
             x: { type: "spring", stiffness: 300, damping: 30 },
             opacity: { duration: 0.2 },
           }}
-          className={cn("absolute flex h-full w-full items-center justify-center", itemClassName)}
+          className={cn(
+            "absolute flex h-full w-full items-center justify-center",
+            itemClassName
+          )}
         >
           {items[index]}
         </motion.div>

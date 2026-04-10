@@ -17,7 +17,12 @@ type ShinyButtonComponent = {
 
 export const ShinyButton: ShinyButtonComponent = React.forwardRef(
   (
-    { children, className, variant = "primary", ...props }: PolymorphicButtonProps<React.ElementType>,
+    {
+      children,
+      className,
+      variant = "primary",
+      ...props
+    }: PolymorphicButtonProps<React.ElementType>,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ref: React.Ref<any>
   ) => {
@@ -26,31 +31,33 @@ export const ShinyButton: ShinyButtonComponent = React.forwardRef(
         ref={ref}
         variant={variant}
         className={cn(
-          "group relative overflow-hidden transition-all duration-300 active:scale-95 shadow-lg hover:shadow-xl",
+          "group relative overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl active:scale-95",
           className
         )}
         {...props}
       >
-        <span className="relative z-10 flex items-center gap-2">{children}</span>
-        
+        <span className="relative z-10 flex items-center gap-2">
+          {children}
+        </span>
+
         {/* Shiny sweep effect */}
         <motion.span
           initial={{ left: "-100%", opacity: 0 }}
-          whileHover={{ 
-            left: "200%", 
+          whileHover={{
+            left: "200%",
             opacity: 1,
             transition: {
               duration: 0.8,
               ease: "easeInOut",
               repeat: Infinity,
-              repeatDelay: 0.5
-            }
+              repeatDelay: 0.5,
+            },
           }}
-          className="absolute top-0 h-full w-[40px] bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg] pointer-events-none"
+          className="pointer-events-none absolute top-0 h-full w-[40px] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/50 to-transparent"
         />
-        
+
         {/* Subtle glow effect on hover */}
-        <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <span className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </Button>
     );
   }
