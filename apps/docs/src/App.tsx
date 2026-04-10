@@ -27,8 +27,8 @@ interface ThemeTokens {
   radius?: string;
 }
 
-/* ─── Main Demo Content ─── */
-function DemoAppContent({
+/* ─── Main App Content ─── */
+function AppContent({
   setTokens,
   tokens,
 }: {
@@ -52,7 +52,13 @@ function DemoAppContent({
         description: "Enterprise Crimson mode activated.",
       });
     } else {
-      setTokens(undefined);
+      setTokens({
+        colors: {
+          primary: "199 89% 48%",
+          ring: "222.2 84% 4.9%",
+        },
+        radius: "0.5rem",
+      });
       toast({
         type: "success",
         title: "Theme Restored",
@@ -119,7 +125,7 @@ export default function App() {
   return (
     <ThemeProvider tokens={tokens}>
       <ToastProvider>
-        <DemoAppContent setTokens={setTokens} tokens={tokens} />
+        <AppContent setTokens={setTokens} tokens={tokens} />
       </ToastProvider>
     </ThemeProvider>
   );
