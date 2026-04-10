@@ -19,6 +19,10 @@ export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   onValueChange?: (value: string) => void;
   /** Visual variant of the tab list */
   variant?: "default" | "pills" | "underline";
+  /** Orientation of the tab list */
+  orientation?: "horizontal" | "vertical";
+  /** Whether the tab list is scrollable when items overflow */
+  scrollable?: boolean;
 }
 
 export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
@@ -30,6 +34,8 @@ export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
       defaultValue,
       onValueChange,
       variant = "default",
+      orientation = "horizontal",
+      scrollable = false,
       ...props
     },
     ref
@@ -52,11 +58,11 @@ export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
 
     const listStyles = {
       default:
-        "inline-flex h-10 items-center justify-start rounded-md bg-muted p-1 text-muted-foreground",
+        "inline-flex h-auto items-center justify-start rounded-md bg-muted p-1 text-muted-foreground",
       pills:
-        "inline-flex h-10 items-center justify-start gap-1 text-muted-foreground",
+        "inline-flex h-auto items-center justify-start gap-1 text-muted-foreground",
       underline:
-        "inline-flex h-10 items-center justify-start gap-4 border-b text-muted-foreground",
+        "inline-flex h-auto items-center justify-start gap-4 border-b text-muted-foreground",
     };
 
     const triggerStyles = {
@@ -81,8 +87,27 @@ export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
     };
 
     return (
-      <div ref={ref} className={cn("w-full", className)} {...props}>
-        <div className={cn(listStyles[variant])} role="tablist">
+      <div
+        ref={ref}
+        className={cn(
+          "w-full",
+          orientation === "vertical" ? "flex gap-6" : "flex-col",
+          className
+        )}
+        {...props}
+      >
+        <div
+          className={cn(
+            listStyles[variant],
+            orientation === "vertical" &&
+              "h-auto w-auto min-w-[120px] flex-col",
+            scrollable &&
+              (orientation === "horizontal"
+                ? "scrollbar-hide overflow-x-auto"
+                : "overflow-y-auto")
+          )}
+          role="tablist"
+        >
           {items.map((item) => (
             <button
               key={item.value}
@@ -93,19 +118,31 @@ export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
               onClick={() => handleTabClick(item.value)}
               className={cn(
                 triggerStyles[variant],
+                orientation === "vertical" && "w-full justify-start",
                 activeValue === item.value
                   ? activeTriggerStyles[variant]
                   : inactiveTriggerStyles[variant]
               )}
             >
               {item.icon && (
-                <span className="mr-2 inline-flex">{item.icon}</span>
+                <span
+                  className={cn(
+                    "inline-flex",
+                    orientation === "horizontal" ? "mr-2" : "mr-3"
+                  )}
+                >
+                  {item.icon}
+                </span>
               )}
               {item.label}
             </button>
           ))}
         </div>
-        <div role="tabpanel" id={`tabpanel-${activeValue}`} className="mt-4">
+        <div
+          role="tabpanel"
+          id={`tabpanel-${activeValue}`}
+          className={cn(orientation === "horizontal" ? "mt-4" : "flex-1")}
+        >
           {activeContent}
         </div>
       </div>

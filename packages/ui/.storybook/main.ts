@@ -2,6 +2,8 @@ import { fileURLToPath } from "node:url";
 import { dirname } from "node:path";
 import type { StorybookConfig } from "@storybook/react-vite";
 
+import { mergeConfig } from "vite";
+
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
@@ -12,6 +14,18 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-onboarding"),
   ],
   framework: getAbsolutePath("@storybook/react-vite"),
+  viteFinal: async (config) => {
+    return mergeConfig(config, {
+      build: {
+        chunkSizeWarningLimit: 2000,
+        rolldownOptions: {
+          checks: {
+            pluginTimings: false,
+          },
+        },
+      },
+    } as any);
+  },
 };
 export default config;
 

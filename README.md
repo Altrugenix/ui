@@ -35,7 +35,7 @@ yarn install
 
 ### Development
 
-Run the development server for the demo app:
+Run the development server for the docs app:
 
 ```bash
 yarn dev

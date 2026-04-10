@@ -19,9 +19,13 @@ export * from "./input-otp";
 
 // Layout & Structure
 export * from "../layout/divider/Divider";
+export * from "../layout/sheet";
+export * from "./aspect-ratio";
 export * from "./card";
 export * from "./list";
 export * from "./accordion";
+export * from "./typography";
+export * from "./css-baseline";
 
 // Composites & Complex UI
 export * from "../composites/progress-bar/ProgressBar";
@@ -41,6 +45,18 @@ export * from "./metric-card";
 export * from "./image-viewer";
 export * from "./video-player";
 export * from "./color-picker";
+export * from "./circular-progress";
+export * from "./snackbar";
+export * from "./rating";
+export * from "./toggle";
+export * from "./speed-dial";
+export * from "./chip";
+export * from "./backdrop";
+export * from "./image-list";
+export * from "./transfer-list";
+export * from "../composites/stepper";
+export * from "../composites/breadcrumbs";
+export * from "../composites/tabs";
 
 // Feedback & Micro-interactions
 export * from "../feedback";
@@ -53,6 +69,7 @@ export * from "../navigation/drawer/Drawer";
 export * from "../navigation/command-palette";
 
 // Theme & Utils
+export * from "../utilities";
 export { ThemeProvider } from "../../theme/ThemeProvider";
 export { useTheme } from "../../theme/useTheme";
 export { cn } from "../../lib/utils/cn";

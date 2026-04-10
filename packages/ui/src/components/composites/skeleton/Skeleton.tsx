@@ -4,6 +4,8 @@ import { cn } from "~/lib/utils/cn";
 export interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Shape variant */
   variant?: "text" | "circular" | "rectangular" | "rounded";
+  /** Animation type */
+  animation?: "pulse" | "wave" | "none";
   /** Width — accepts any CSS value */
   width?: string | number;
   /** Height — accepts any CSS value */
@@ -11,13 +13,24 @@ export interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 /**
- * Skeleton loading placeholder with a shimmer animation.
+ * Skeleton loading placeholder with customizable shapes and animation modes.
  */
 export const Skeleton = React.forwardRef<HTMLDivElement, SkeletonProps>(
-  ({ className, variant = "text", width, height, style, ...props }, ref) => {
+  (
+    {
+      className,
+      variant = "text",
+      animation = "pulse",
+      width,
+      height,
+      style,
+      ...props
+    },
+    ref
+  ) => {
     const variantStyles = {
-      text: "h-4 w-full rounded-md",
-      circular: "rounded-full",
+      text: "h-3 w-full rounded mt-2 mb-2",
+      circular: "rounded-full shrink-0",
       rectangular: "rounded-none",
       rounded: "rounded-lg",
     };
@@ -26,7 +39,10 @@ export const Skeleton = React.forwardRef<HTMLDivElement, SkeletonProps>(
       <div
         ref={ref}
         className={cn(
-          "animate-pulse bg-muted",
+          "relative overflow-hidden bg-muted",
+          animation === "pulse" && "animate-pulse",
+          animation === "wave" &&
+            "after:absolute after:inset-0 after:-translate-x-full after:animate-shimmer after:bg-gradient-to-r after:from-transparent after:via-foreground/5 after:to-transparent",
           variantStyles[variant],
           className
         )}

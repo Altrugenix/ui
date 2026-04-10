@@ -7,3 +7,5 @@ export * from "./stack";
 export * from "./spacer";
 export * from "./container";
 export * from "./app-shell";
+export * from "./sheet";
+export * from "./paper";

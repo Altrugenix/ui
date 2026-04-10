@@ -27,8 +27,8 @@ jobs:
       - name: Build UI Library
         run: yarn build:lib
 
-      - name: Build Demo App
-        run: yarn build:demo
+      - name: Build Docs App
+        run: yarn build:docs
 
       - name: Build Storybook
         run: yarn build:storybook

@@ -1,42 +1,75 @@
 # Altrugenix UI Component Roadmap
 
-This document outlines suggested components to further enhance the Altrugenix UI library, focusing on premium aesthetics, advanced data handling, and micro-interactions.
+This document identifies components that are currently missing Storybook documentation. The goal is to ensure 100% coverage for all UI primitives.
 
-## 🚀 High Priority (Premium Essentials)
+## 📝 Missing Storybook Stories
 
-These components are critical for an enterprise-ready, premium feel.
+- [x] **Calendar View**: Add interactive story for the complex calendar component.
+- [x] **Carousel**: Implement slider demonstration with touch support and dot-indicators.
+- [x] **Charts**: Create stories for available chart variants (e.g., BarChart).
+- [x] **Color Picker**: Demonstrate hex selection and preset palettes.
+- [x] **Date Picker**: Add stories for single and range date selection.
+- [x] **File Upload**: Showcase drag-and-drop and file selection states.
+- [x] **Heading**: Demonstrate different levels (H1-H6) and variants.
+- [x] **Icon**: Create a gallery/listing of available icons.
+- [x] **Image**: Showcase lazy loading and fallback behaviors.
+- [x] **Image Viewer (Lightroom)**: Demonstrate zoom, pan, and gallery interaction.
+- [x] **Input OTP**: Add stories for various lengths and validation states.
+- [x] **Kanban**: Implementing an interactive board demonstration.
+- [x] **Link**: Showcase standard and themed link styles.
+- [x] **Metric Card**: Demonstrate KPI cards with trends and sparklines.
+- [x] **Rich Text Editor**: Add interactive editor story.
+- [x] **Text**: Show off typography tokens and utility variants.
+- [x] **Video Player**: Demonstrate custom controls and progress tracking.
+- [x] **Virtual List**: Show handling of large datasets with virtualization.
 
-- [x] **Data Table (High-Level Wrapper)**: A complex wrapper for the base `Table` with built-in logic for sorting, filtering, row selection, and column visibility.
-- [x] **App Shell**: A high-level layout component that orchestrates `Navbar`, `Sidebar`, and `MainContent` with responsive behaviors.
-- [x] **Skeleton Loaders (Extended)**: Pre-built skeleton variants for standard patterns like `MetricCardSkeleton`, `ListSkeleton`, and `AvatarHeaderSkeleton`.
-- [x] **Carousel**: A premium slider component for landing pages and product showcases, featuring touch support and Dot-indicators.
-- [x] **Input OTP**: A specialized input for one-time passwords, commonly used in security and authentication flows.
+## 🧱 Missing Core Components (Joy UI Inspired)
 
-## ✨ Interactive & Visual Polish (The "Wow" Factor)
+High-quality primitives to round out the library's versatility.
 
-Small details that make the UI feel alive and state-of-the-art.
+- [x] **IconButton**: A specialized button variant optimized for single-icon use cases with proper padding and hover states.
+- [x] **ButtonGroup**: A layout component to group multiple buttons into a single visually cohesive unit.
+- [x] **AvatarGroup**: A component for stacking multiple avatars (overlapping) with a limit indicator (e.g., +3).
+- [x] **ListItemButton & Decorator**: Advanced primitives for the `List` component to handle interactive items and lead/tail icons.
+- [x] **Sheet**: A foundational surface component for grouping content with specific elevations and backgrounds.
+- [x] **Circular Progress**: A circular indeterminate or determinate loading indicator.
+- [x] **Aspect Ratio**: A utility wrapper to force a specific ratio on its children (e.g., 16/9 for video/images).
+- [x] **Snackbar**: A specialized "Toast" variant for bottom/top persistent notifications.
+- [x] **Typography Wrapper**: A high-level component to manage consistent text styles (Size, Weight, Color) across the app.
+- [x] **CssBaseline / GlobalStyles**: Utilities for consistent global resets and styles across different environments.
 
-- [x] **Shiny Button**: A premium "Call to Action" button with a moving light reflection effect and elegant transitions.
-- [x] **Confetti**: A utility to trigger a celebration effect on successful user actions (e.g., form submission).
-- [x] **Marquee**: A smooth, infinitely scrolling container for logos, reviews, or tickers.
-- [x] **Reveal / Scroll Animation**: High-level wrappers for `framer-motion` to easily add entry animations to any component as it enters the viewport.
-- [x] **Typing Animation**: A utility to simulate a typing effect for headings or hero sections.
+## 🧠 Headless & Accessibility Utilities (Base UI Inspired)
 
-## 📊 Specialized Data & Media
+Low-level primitives focused on behavior and accessibility.
 
-Components for complex data visualization and media handling.
+- [x] **TextareaAutosize**: A specialized textarea component that automatically adjusts its height based on the content.
+- [ ] **Popper / Floating Utility**: A low-level positioning engine for popovers, tooltips, and menus (potentially leveraging Floating UI).
+- [x] **Portal**: A utility to render component children into a DOM node at the end of `document.body`.
+- [x] **ClickAwayListener**: A utility component to detect and handle click events outside its child element.
+- [x] **FocusTrap**: A critical accessibility component that traps focus within a specific container (e.g., inside a Modal or Drawer).
+- [x] **VisuallyHidden**: A utility to hide content from the screen while remaining accessible to screen readers.
 
-- [x] **Metric Card**: A specialized card component designed specifically for dashboard KPIs, including trend indicators (sparklines) and status colors.
-- [x] **Lightroom / Image Viewer**: A full-screen overlay for viewing images with zoom, pan, and gallery navigation functionality.
-- [x] **Video Player**: A themed wrapper for `<video>` or YouTube/Vimeo embeds with premium custom controls.
-- [x] **Color Picker**: A custom, accessible color selection component.
+## 🌟 Advanced Inputs & Refined Layouts (MUI Inspired)
 
-## 🛠️ Utility & System
+Enterprise-grade components for complex data and mobile-first interactions.
 
-- [ ] **Resizable Panel (Splitter)**: Dragable dividers to resize sidebars or split-pane views.
-- [ ] **Infinite Scroll**: A helper component/hook to facilitate loading more data as the user scrolls.
-- [ ] **Presence Helper**: Improved wrappers for handling Framer Motion `AnimatePresence` across complex layouts.
+- [x] **ToggleButton & ToggleButtonGroup**: A set of mutually exclusive buttons for mode switching or data filtering.
+- [x] **Rating**: An interactive star or icon-based rating component with support for halves and read-only states.
+- [x] **Transfer List**: A dual-list selection component for moving items between two sets (e.g., "Available" vs "Selected").
+- [x] **Speed Dial**: A floating action button that displays a series of quick-access actions upon hover or click.
+- [x] **Backdrop**: A standalone utility component for dimming the background behind active elements.
+- [x] **Image List**: A specialized grid layout optimized for displaying collections of images with captions.
+- [x] **Data Grid (High-Performance)**: A virtualization-powered grid for handling thousands of rows with advanced Excel-like features.
+- [x] **Time & DateTime Picker**: Complementary pickers for selecting time or combined date/time values.
+
+## 🎬 Animation & System Utilities
+
+Standardized behaviors for consistent UI motion and environment handling.
+
+- [x] **Animation Wrappers**: Reusable `framer-motion` components for `Grow`, `Fade`, `Slide`, `Zoom`, and `Collapse`.
+- [x] **NoSsr Wrapper**: A utility component to ensure its children are only rendered on the client side (Vite/Next.js).
+- [x] **Elevation / Paper**: A high-level layout component that abstracts shadows and borders into standardized depth levels.
 
 ---
 
-_Note: The existing base components are very solid. These additions will bridge the gap between a standard UI kit and a premium, state-of-the-art Design System._
+_Note: Use `yarn storybook` to verify implementations._

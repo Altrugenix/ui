@@ -77,7 +77,7 @@ export const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(
         )}
         {...props}
       >
-        {leading && <span className="shrink-0">{leading}</span>}
+        {leading && <ListItemDecorator>{leading}</ListItemDecorator>}
         <div className="min-w-0 flex-1">
           <div className="truncate text-sm font-medium">{children}</div>
           {secondary && (
@@ -86,9 +86,61 @@ export const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(
             </p>
           )}
         </div>
-        {trailing && <span className="shrink-0">{trailing}</span>}
+        {trailing && <ListItemDecorator>{trailing}</ListItemDecorator>}
       </li>
     );
   }
 );
 ListItem.displayName = "ListItem";
+
+/* ─── ListItemButton ─── */
+export interface ListItemButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  as?: React.ElementType;
+}
+
+/**
+ * An interactive button component for list items.
+ */
+export const ListItemButton = React.forwardRef<
+  HTMLButtonElement,
+  ListItemButtonProps
+>(({ className, as: Component = "button", children, ...props }, ref) => {
+  return (
+    <Component
+      ref={ref}
+      className={cn(
+        "flex w-full select-none items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-accent/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </Component>
+  );
+});
+ListItemButton.displayName = "ListItemButton";
+
+/* ─── ListItemDecorator ─── */
+export type ListItemDecoratorProps = React.HTMLAttributes<HTMLSpanElement>;
+
+/**
+ * A wrapper for icons or other decorative elements in a list item.
+ */
+export const ListItemDecorator = React.forwardRef<
+  HTMLSpanElement,
+  ListItemDecoratorProps
+>(({ className, children, ...props }, ref) => {
+  return (
+    <span
+      ref={ref}
+      className={cn(
+        "inline-flex shrink-0 items-center justify-center opacity-80",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </span>
+  );
+});
+ListItemDecorator.displayName = "ListItemDecorator";

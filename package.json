@@ -12,14 +12,14 @@
     "build": "yarn workspace @altrugenix/ui build",
     "dev:ui": "yarn workspace @altrugenix/ui dev",
     "build:lib": "yarn workspace @altrugenix/ui build",
-    "dev:demo": "yarn workspace altrugenix-demo dev",
-    "build:demo": "yarn workspace altrugenix-demo build",
+    "dev:docs": "yarn workspace altrugenix-docs dev",
+    "build:docs": "yarn workspace altrugenix-docs build",
     "build:storybook": "yarn workspace @altrugenix/ui build-storybook",
     "dev:storybook": "yarn workspace @altrugenix/ui storybook",
     "lint": "yarn workspaces run lint",
     "test": "yarn workspaces run test",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "build:all": "yarn build:lib && yarn build:demo && yarn build:storybook"
+    "build:all": "yarn build:lib && yarn build:docs && yarn build:storybook"
   },
   "dependencies": {
     "prettier": "^3.8.1"

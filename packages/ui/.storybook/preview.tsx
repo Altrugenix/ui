@@ -17,7 +17,6 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-
     a11y: {
       test: "todo",
     },
@@ -26,7 +25,7 @@ const preview: Preview = {
     (Story) => (
       <ThemeProvider defaultTheme="light">
         <ToastProvider>
-          <div className="min-h-screen bg-background p-8 font-sans text-foreground antialiased transition-colors duration-300 selection:bg-primary/20">
+          <div className="bg-background p-8 font-sans text-foreground antialiased transition-colors duration-300 selection:bg-primary/20">
             <Story />
           </div>
         </ToastProvider>
