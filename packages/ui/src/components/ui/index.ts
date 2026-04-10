@@ -15,6 +15,7 @@ export * from "./link";
 export * from "./icon";
 export * from "./image";
 export * from "./tag";
+export * from "./input-otp";
 
 // Layout & Structure
 export * from "../layout/divider/Divider";
@@ -24,7 +25,8 @@ export * from "./accordion";
 
 // Composites & Complex UI
 export * from "../composites/progress-bar/ProgressBar";
-export * from "../composites/skeleton/Skeleton";
+export * from "../composites/skeleton";
+export * from "./carousel";
 export * from "./charts";
 export * from "./calendar-view";
 export * from "./kanban";
@@ -35,6 +37,14 @@ export * from "./rich-text-editor";
 export * from "./table";
 export * from "./timeline";
 export * from "./autocomplete";
+export * from "./metric-card";
+export * from "./image-viewer";
+export * from "./video-player";
+export * from "./color-picker";
+
+// Feedback & Micro-interactions
+export * from "../feedback";
+export * from "../effects";
 
 // Overlays & Navigation
 export * from "./toast";
