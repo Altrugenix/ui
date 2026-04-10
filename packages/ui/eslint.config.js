@@ -23,7 +23,18 @@ export default defineConfig([
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parserOptions: {
+        projectService: {
+          allowDefaultProject: ["*.ts", "*.d.ts"],
+        },
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
+    ignores: [
+      "**/tailwind.config.ts",
+      "**/vitest.shims.d.ts",
+      "**/vite.config.ts",
+    ],
   },
   ...storybook.configs["flat/recommended"],
 ]);

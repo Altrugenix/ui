@@ -8,7 +8,6 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
     "outDir": "./dist",
-    "rootDir": "./src",
 
     /* Bundler mode */
     "moduleResolution": "bundler",
