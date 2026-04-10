@@ -66,9 +66,9 @@ Enterprise-grade components for complex data and mobile-first interactions.
 
 Standardized behaviors for consistent UI motion and environment handling.
 
-- [ ] **Animation Wrappers**: Reusable `framer-motion` components for `Grow`, `Fade`, `Slide`, `Zoom`, and `Collapse`.
-- [ ] **NoSsr Wrapper**: A utility component to ensure its children are only rendered on the client side (Vite/Next.js).
-- [ ] **Elevation / Paper**: A high-level layout component that abstracts shadows and borders into standardized depth levels.
+- [x] **Animation Wrappers**: Reusable `framer-motion` components for `Grow`, `Fade`, `Slide`, `Zoom`, and `Collapse`.
+- [x] **NoSsr Wrapper**: A utility component to ensure its children are only rendered on the client side (Vite/Next.js).
+- [x] **Elevation / Paper**: A high-level layout component that abstracts shadows and borders into standardized depth levels.
 
 ---
 
