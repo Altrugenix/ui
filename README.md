@@ -47,6 +47,8 @@ Then install via:
 yarn add @altrugenix/ui
 ```
 
+The package is also available on **NPM** for public use.
+
 ### Development
 
 Run the development server for the docs app:
