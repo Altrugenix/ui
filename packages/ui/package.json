@@ -37,6 +37,9 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@altrugenix/core": "*",
+    "@altrugenix/accordion": "*",
+    "@altrugenix/button": "*",
     "@tanstack/react-table": "^8.21.3",
     "canvas-confetti": "^1.9.4",
     "class-variance-authority": "^0.7.1",

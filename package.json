@@ -9,7 +9,7 @@
     "apps/*"
   ],
   "scripts": {
-    "build": "yarn workspace @altrugenix/ui build",
+    "build": "yarn workspaces run build",
     "dev:ui": "yarn workspace @altrugenix/ui dev",
     "build:lib": "yarn workspace @altrugenix/ui build",
     "dev:docs": "yarn workspace altrugenix-docs dev",

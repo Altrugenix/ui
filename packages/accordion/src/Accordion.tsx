@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 import { ChevronDown } from "lucide-react";
 
 export interface AccordionItem {
@@ -53,7 +53,7 @@ export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
                 {item.trigger}
                 <ChevronDown
                   className={cn(
-                    "h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200",
+                    "text-muted-foreground h-4 w-4 shrink-0 transition-transform duration-200",
                     isOpen && "rotate-180"
                   )}
                 />
@@ -64,7 +64,7 @@ export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
                   isOpen ? "max-h-96 pb-4" : "max-h-0"
                 )}
               >
-                <div className="text-sm text-muted-foreground">
+                <div className="text-muted-foreground text-sm">
                   {item.content}
                 </div>
               </div>

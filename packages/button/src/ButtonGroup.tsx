@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 
 export interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Orientation of the buttons */

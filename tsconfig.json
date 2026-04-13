@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2023",
     "useDefineForClassFields": true,
     "lib": ["ES2023", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "types": ["vite/client"],
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -20,18 +18,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
-      "@altrugenix/core": ["../core/src"],
-      "@altrugenix/accordion": ["../accordion/src"],
-      "@altrugenix/button": ["../button/src"]
+      "@altrugenix/core": ["packages/core/src"],
+      "@altrugenix/accordion": ["packages/accordion/src"],
+      "@altrugenix/button": ["packages/button/src"],
+      "@altrugenix/ui": ["packages/ui/src"]
     }
-  },
-  "include": ["src"]
+  }
 }

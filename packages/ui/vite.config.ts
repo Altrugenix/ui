@@ -30,6 +30,9 @@ export default defineConfig({
   resolve: {
     alias: {
       "~": path.resolve(dirname, "./src"),
+      "@altrugenix/core": path.resolve(dirname, "../core/src"),
+      "@altrugenix/accordion": path.resolve(dirname, "../accordion/src"),
+      "@altrugenix/button": path.resolve(dirname, "../button/src"),
     },
   },
   build: {

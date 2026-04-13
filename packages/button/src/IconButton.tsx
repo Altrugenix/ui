@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 import { buttonVariants } from "./button.styles";
 import {
   type PolymorphicButtonProps,
