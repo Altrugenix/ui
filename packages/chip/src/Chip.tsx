@@ -1,6 +1,6 @@
 import React from "react";
 import { X } from "lucide-react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const chipVariants = cva(
@@ -80,7 +80,7 @@ export const Chip = React.forwardRef<HTMLDivElement, ChipProps>(
               e.stopPropagation();
               onDelete();
             }}
-            className="rounded-full p-0.5 transition-colors hover:bg-foreground/10"
+            className="hover:bg-foreground/10 rounded-full p-0.5 transition-colors"
             aria-label="Delete"
           >
             <X className="h-3 w-3" />

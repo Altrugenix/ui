@@ -27,6 +27,11 @@
       "@altrugenix/core": ["packages/core/src"],
       "@altrugenix/accordion": ["packages/accordion/src"],
       "@altrugenix/button": ["packages/button/src"],
+      "@altrugenix/badge": ["packages/badge/src"],
+      "@altrugenix/avatar": ["packages/avatar/src"],
+      "@altrugenix/chip": ["packages/chip/src"],
+      "@altrugenix/link": ["packages/link/src"],
+      "@altrugenix/icon": ["packages/icon/src"],
       "@altrugenix/ui": ["packages/ui/src"]
     }
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 
 export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   src?: string;
@@ -28,7 +28,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
             onError={() => setHasError(true)}
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center rounded-full bg-muted uppercase text-muted-foreground">
+          <div className="bg-muted text-muted-foreground flex h-full w-full items-center justify-center rounded-full uppercase">
             {fallback || alt?.slice(0, 2) || "U"}
           </div>
         )}

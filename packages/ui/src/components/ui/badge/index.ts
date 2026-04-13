@@ -1,2 +1,1 @@
-export * from "./Badge";
-export * from "./AdvancedBadge";
+export * from "@altrugenix/badge";

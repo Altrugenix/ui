@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 import * as LucideIcons from "lucide-react";
 
 export interface IconProps extends React.SVGProps<SVGSVGElement> {

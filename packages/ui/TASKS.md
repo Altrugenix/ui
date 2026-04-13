@@ -1,75 +1,63 @@
-# Altrugenix UI Component Roadmap
+# Altrugenix Modularization Roadmap
 
-This document identifies components that are currently missing Storybook documentation. The goal is to ensure 100% coverage for all UI primitives.
+The goal is to migrate all UI components from the monolithic `@altrugenix/ui` package into standalone scoped packages. This improves bundle sizes for consumers and enables independent versioning.
 
-## 📝 Missing Storybook Stories
+## 📦 Package Migration Status
 
-- [x] **Calendar View**: Add interactive story for the complex calendar component.
-- [x] **Carousel**: Implement slider demonstration with touch support and dot-indicators.
-- [x] **Charts**: Create stories for available chart variants (e.g., BarChart).
-- [x] **Color Picker**: Demonstrate hex selection and preset palettes.
-- [x] **Date Picker**: Add stories for single and range date selection.
-- [x] **File Upload**: Showcase drag-and-drop and file selection states.
-- [x] **Heading**: Demonstrate different levels (H1-H6) and variants.
-- [x] **Icon**: Create a gallery/listing of available icons.
-- [x] **Image**: Showcase lazy loading and fallback behaviors.
-- [x] **Image Viewer (Lightroom)**: Demonstrate zoom, pan, and gallery interaction.
-- [x] **Input OTP**: Add stories for various lengths and validation states.
-- [x] **Kanban**: Implementing an interactive board demonstration.
-- [x] **Link**: Showcase standard and themed link styles.
-- [x] **Metric Card**: Demonstrate KPI cards with trends and sparklines.
-- [x] **Rich Text Editor**: Add interactive editor story.
-- [x] **Text**: Show off typography tokens and utility variants.
-- [x] **Video Player**: Demonstrate custom controls and progress tracking.
-- [x] **Virtual List**: Show handling of large datasets with virtualization.
+### Foundation
 
-## 🧱 Missing Core Components (Joy UI Inspired)
+- [x] **@altrugenix/core**: Shared theme, design tokens, and utilities (`cn`, `refs`).
 
-High-quality primitives to round out the library's versatility.
+### Core Components
 
-- [x] **IconButton**: A specialized button variant optimized for single-icon use cases with proper padding and hover states.
-- [x] **ButtonGroup**: A layout component to group multiple buttons into a single visually cohesive unit.
-- [x] **AvatarGroup**: A component for stacking multiple avatars (overlapping) with a limit indicator (e.g., +3).
-- [x] **ListItemButton & Decorator**: Advanced primitives for the `List` component to handle interactive items and lead/tail icons.
-- [x] **Sheet**: A foundational surface component for grouping content with specific elevations and backgrounds.
-- [x] **Circular Progress**: A circular indeterminate or determinate loading indicator.
-- [x] **Aspect Ratio**: A utility wrapper to force a specific ratio on its children (e.g., 16/9 for video/images).
-- [x] **Snackbar**: A specialized "Toast" variant for bottom/top persistent notifications.
-- [x] **Typography Wrapper**: A high-level component to manage consistent text styles (Size, Weight, Color) across the app.
-- [x] **CssBaseline / GlobalStyles**: Utilities for consistent global resets and styles across different environments.
+- [x] **@altrugenix/accordion**: Relatable, accessible accordion.
+- [x] **@altrugenix/button**: Primitives including `IconButton` and `ButtonGroup`.
+- [x] **@altrugenix/badge**: status and notification indicators.
+- [x] **@altrugenix/avatar**: profile and image representations.
+- [x] **@altrugenix/chip**: compact elements for tags or actions.
+- [x] **@altrugenix/link**: themed hyperlink components.
+- [x] **@altrugenix/icon**: svg wrapper and icon management.
 
-## 🧠 Headless & Accessibility Utilities (Base UI Inspired)
+### Structure & Layout
 
-Low-level primitives focused on behavior and accessibility.
+- [ ] **@altrugenix/card**: surface containers for grouping content.
+- [ ] **@altrugenix/list**: basic and interactive list primitives.
+- [ ] **@altrugenix/table**: high-performance data tables.
+- [ ] **@altrugenix/aspect-ratio**: layout utility for fixed ratios.
 
-- [x] **TextareaAutosize**: A specialized textarea component that automatically adjusts its height based on the content.
-- [ ] **Popper / Floating Utility**: A low-level positioning engine for popovers, tooltips, and menus (potentially leveraging Floating UI).
-- [x] **Portal**: A utility to render component children into a DOM node at the end of `document.body`.
-- [x] **ClickAwayListener**: A utility component to detect and handle click events outside its child element.
-- [x] **FocusTrap**: A critical accessibility component that traps focus within a specific container (e.g., inside a Modal or Drawer).
-- [x] **VisuallyHidden**: A utility to hide content from the screen while remaining accessible to screen readers.
+### Forms & Inputs
 
-## 🌟 Advanced Inputs & Refined Layouts (MUI Inspired)
+- [ ] **@altrugenix/input**: standard and specialized text inputs.
+- [ ] **@altrugenix/textarea**: multiline text entry.
+- [ ] **@altrugenix/select**: dropdown selection menus.
+- [ ] **@altrugenix/checkbox**: binary selection controls.
+- [ ] **@altrugenix/radio**: single-choice selection groups.
+- [ ] **@altrugenix/switch**: binary toggle controls.
+- [ ] **@altrugenix/slider**: range selection components.
 
-Enterprise-grade components for complex data and mobile-first interactions.
+### Overlays & Feedback
 
-- [x] **ToggleButton & ToggleButtonGroup**: A set of mutually exclusive buttons for mode switching or data filtering.
-- [x] **Rating**: An interactive star or icon-based rating component with support for halves and read-only states.
-- [x] **Transfer List**: A dual-list selection component for moving items between two sets (e.g., "Available" vs "Selected").
-- [x] **Speed Dial**: A floating action button that displays a series of quick-access actions upon hover or click.
-- [x] **Backdrop**: A standalone utility component for dimming the background behind active elements.
-- [x] **Image List**: A specialized grid layout optimized for displaying collections of images with captions.
-- [x] **Data Grid (High-Performance)**: A virtualization-powered grid for handling thousands of rows with advanced Excel-like features.
-- [x] **Time & DateTime Picker**: Complementary pickers for selecting time or combined date/time values.
+- [ ] **@altrugenix/modal**: dialogs and overlay containers.
+- [ ] **@altrugenix/toast**: transient notification components.
+- [ ] **@altrugenix/snackbar**: persistent status indicators.
+- [ ] **@altrugenix/backdrop**: dimming utilities for overlays.
 
-## 🎬 Animation & System Utilities
+### Specialized Components
 
-Standardized behaviors for consistent UI motion and environment handling.
-
-- [x] **Animation Wrappers**: Reusable `framer-motion` components for `Grow`, `Fade`, `Slide`, `Zoom`, and `Collapse`.
-- [x] **NoSsr Wrapper**: A utility component to ensure its children are only rendered on the client side (Vite/Next.js).
-- [x] **Elevation / Paper**: A high-level layout component that abstracts shadows and borders into standardized depth levels.
+- [ ] **@altrugenix/carousel**: touch-enabled content sliders.
+- [ ] **@altrugenix/charts**: data visualization primitives.
+- [ ] **@altrugenix/kanban**: board-based project management views.
 
 ---
 
-_Note: Use `yarn storybook` to verify implementations._
+## 🛠 Migration Checklist (Per Component)
+
+For each component migrated:
+
+1. Create `packages/<name>` folder.
+2. Scaffold `package.json`, `tsconfig.json`, and `vite.config.ts`.
+3. Move source files from `packages/ui/src/components/ui/<name>`.
+4. Update imports to use `@altrugenix/core` for utilities.
+5. Setup unit tests in `src/*.test.tsx`.
+6. Re-export from `packages/ui` to maintain backward compatibility.
+7. Run `yarn build` and verify.

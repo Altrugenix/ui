@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 
 export interface AvatarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Maximum number of avatars to display */
@@ -35,7 +35,7 @@ export const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
         {surplus > 0 && (
           <div
             className={cn(
-              "relative flex items-center justify-center rounded-full bg-muted font-bold text-muted-foreground ring-2 ring-background",
+              "bg-muted text-muted-foreground ring-background relative flex items-center justify-center rounded-full font-bold ring-2",
               sizeClasses[size]
             )}
             style={{ zIndex: 0 }}

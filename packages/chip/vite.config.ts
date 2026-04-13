@@ -1,0 +1,54 @@
+/// <reference types="vitest/config" />
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+import dts from "vite-plugin-dts";
+
+export default defineConfig({
+  plugins: [
+    react(),
+    dts({
+      insertTypesEntry: true,
+      include: ["src"],
+    }),
+  ],
+  resolve: {
+    alias: {
+      "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+    },
+  },
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, "src/index.ts"),
+      name: "AltrugenixChip",
+      formats: ["es", "umd"],
+      fileName: (format) =>
+        `altrugenix-chip.${format === "es" ? "js" : "umd.cjs"}`,
+    },
+    rollupOptions: {
+      external: [
+        "react",
+        "react-dom",
+        "@altrugenix/core",
+        "class-variance-authority",
+        "lucide-react",
+        "framer-motion",
+      ],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "@altrugenix/core": "AltrugenixCore",
+          "class-variance-authority": "Cva",
+          "lucide-react": "Lucide",
+          "framer-motion": "Motion",
+        },
+      },
+    },
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: ["./src/test/setup.ts"],
+  },
+});

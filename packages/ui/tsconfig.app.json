@@ -30,7 +30,12 @@
       "~/*": ["./src/*"],
       "@altrugenix/core": ["../core/src"],
       "@altrugenix/accordion": ["../accordion/src"],
-      "@altrugenix/button": ["../button/src"]
+      "@altrugenix/button": ["../button/src"],
+      "@altrugenix/badge": ["../badge/src"],
+      "@altrugenix/avatar": ["../avatar/src"],
+      "@altrugenix/chip": ["../chip/src"],
+      "@altrugenix/link": ["../link/src"],
+      "@altrugenix/icon": ["../icon/src"]
     }
   },
   "include": ["src"]
