@@ -33,6 +33,20 @@ A premium, scalable, and production-ready UI component library built with React,
 yarn install
 ```
 
+### Using GitHub Packages
+
+To use these packages in another project, add a `.npmrc` file to your project:
+
+```text
+@altrugenix:registry=https://npm.pkg.github.com
+```
+
+Then install via:
+
+```bash
+yarn add @altrugenix/ui
+```
+
 ### Development
 
 Run the development server for the docs app:
