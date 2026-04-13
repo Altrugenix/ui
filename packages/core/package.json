@@ -1,6 +1,6 @@
 {
   "name": "@altrugenix/core",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "type": "module",
   "main": "./dist/altrugenix-core.umd.cjs",
