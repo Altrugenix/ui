@@ -26,7 +26,7 @@ export default defineConfig({
         `altrugenix-checkbox.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react", "react-dom", "@altrugenix/core"],
+      external: ["react/jsx-runtime", "react", "react-dom", "@altrugenix/core"],
       output: {
         globals: {
           react: "React",

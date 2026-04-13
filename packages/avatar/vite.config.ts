@@ -26,7 +26,7 @@ export default defineConfig({
         `altrugenix-avatar.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: [
+      external: ["react/jsx-runtime", 
         "react",
         "react-dom",
         "@altrugenix/core",

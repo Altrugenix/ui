@@ -32,7 +32,7 @@ export default defineConfig({
         `altrugenix-table.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: [
+      external: ["react/jsx-runtime", 
         "react",
         "react-dom",
         "lucide-react",

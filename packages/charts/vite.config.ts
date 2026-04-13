@@ -26,7 +26,7 @@ export default defineConfig({
         `altrugenix-charts.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react", "react-dom", "framer-motion", "@altrugenix/core"],
+      external: ["react/jsx-runtime", "react", "react-dom", "framer-motion", "@altrugenix/core"],
       output: {
         globals: {
           react: "React",

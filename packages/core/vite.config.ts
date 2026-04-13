@@ -21,7 +21,7 @@ export default defineConfig({
         `altrugenix-core.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react", "react-dom", "clsx", "tailwind-merge"],
+      external: ["react/jsx-runtime", "react", "react-dom", "clsx", "tailwind-merge"],
       output: {
         globals: {
           react: "React",
