@@ -49,6 +49,20 @@ yarn add @altrugenix/ui
 
 The package is also available on **NPM** for public use.
 
+## Releasing
+
+We use [Changesets](https://github.com/changesets/changesets) for versioning and releases.
+
+1.  Create a new changeset:
+    ```bash
+    yarn change
+    ```
+2.  Follow the prompts to select the packages and version type (patch, minor, major).
+3.  Commit the generated changeset file.
+4.  Push to `main`.
+5.  A "Version Packages" PR will be automatically created/updated.
+6.  Merging this PR will trigger an automatic release to both NPM and GitHub Packages.
+
 ### Development
 
 Run the development server for the docs app:

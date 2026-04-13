@@ -1,12 +1,11 @@
 name: Build and Publish
 
 on:
-  push:
-    branches: [main]
-    tags:
-      - "v*"
-  pull_request:
-    branches: [main]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to publish'
+        required: true
 
 jobs:
   build-and-test:

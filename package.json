@@ -19,9 +19,16 @@
     "lint": "yarn workspaces run lint",
     "test": "yarn workspaces run test",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "build:all": "yarn build:lib && yarn build:docs && yarn build:storybook"
+    "build:all": "yarn build:lib && yarn build:docs && yarn build:storybook",
+    "change": "changeset",
+    "version:ci": "changeset version",
+    "release": "changeset publish",
+    "release:github": "changeset publish"
   },
   "dependencies": {
     "prettier": "^3.8.1"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.28.1"
   }
 }
