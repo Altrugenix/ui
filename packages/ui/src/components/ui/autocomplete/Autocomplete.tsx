@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { cn } from "~/lib/utils/cn";
-import { Input } from "../input/Input";
+import { Input } from "@altrugenix/input";
 
 export interface AutocompleteProps extends Omit<
   React.ComponentProps<typeof Input>,

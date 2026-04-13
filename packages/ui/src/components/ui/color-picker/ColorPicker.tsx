@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { cn } from "~/lib/utils/cn";
-import { Input } from "../input/Input";
+import { Input } from "@altrugenix/input";
 import { Popover } from "../../overlays/popover/Popover";
 import { Check, Pipette } from "lucide-react";
 

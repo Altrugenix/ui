@@ -8,7 +8,7 @@ import {
   Settings,
 } from "lucide-react";
 import { cn } from "~/lib/utils/cn";
-import { Slider } from "../slider/Slider";
+import { Slider } from "@altrugenix/slider";
 
 export interface VideoPlayerProps {
   src: string;

@@ -9,7 +9,7 @@ export const Link = React.forwardRef<
     <a
       ref={ref}
       className={cn(
-        "font-medium text-primary underline underline-offset-4 transition-colors hover:text-primary/80",
+        "text-primary hover:text-primary/80 font-medium underline underline-offset-4 transition-colors",
         className
       )}
       {...props}

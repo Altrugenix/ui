@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "~/lib/utils/cn";
-import { Card } from "../card/Card";
+import { Card } from "@altrugenix/card";
 import { Sparkline } from "./Sparkline";
 import {
   metricCardVariants,

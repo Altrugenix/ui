@@ -20,33 +20,34 @@ The goal is to migrate all UI components from the monolithic `@altrugenix/ui` pa
 
 ### Structure & Layout
 
-- [ ] **@altrugenix/card**: surface containers for grouping content.
-- [ ] **@altrugenix/list**: basic and interactive list primitives.
-- [ ] **@altrugenix/table**: high-performance data tables.
-- [ ] **@altrugenix/aspect-ratio**: layout utility for fixed ratios.
+- [x] **@altrugenix/card**: surface containers for grouping content.
+- [x] **@altrugenix/list**: basic and interactive list primitives.
+- [x] **@altrugenix/table**: high-performance data tables.
+- [x] **@altrugenix/aspect-ratio**: layout utility for fixed ratios.
 
 ### Forms & Inputs
 
-- [ ] **@altrugenix/input**: standard and specialized text inputs.
-- [ ] **@altrugenix/textarea**: multiline text entry.
-- [ ] **@altrugenix/select**: dropdown selection menus.
-- [ ] **@altrugenix/checkbox**: binary selection controls.
-- [ ] **@altrugenix/radio**: single-choice selection groups.
-- [ ] **@altrugenix/switch**: binary toggle controls.
-- [ ] **@altrugenix/slider**: range selection components.
+- [x] **@altrugenix/input**: standard and specialized text inputs.
+- [x] **@altrugenix/textarea**: multiline text entry.
+- [x] **@altrugenix/select**: dropdown selection menus.
+- [x] **@altrugenix/checkbox**: binary selection controls.
+- [x] **@altrugenix/radio**: single-choice selection groups.
+- [x] **@altrugenix/switch**: binary toggle controls.
+- [x] **@altrugenix/slider**: range selection components.
 
 ### Overlays & Feedback
 
-- [ ] **@altrugenix/modal**: dialogs and overlay containers.
-- [ ] **@altrugenix/toast**: transient notification components.
-- [ ] **@altrugenix/snackbar**: persistent status indicators.
-- [ ] **@altrugenix/backdrop**: dimming utilities for overlays.
+- [x] **@altrugenix/modal**: dialogs and overlay containers.
+- [x] **@altrugenix/toast**: transient notification components.
+- [x] **@altrugenix/snackbar**: persistent status indicators.
+- [x] **@altrugenix/backdrop**: dimming utilities for overlays.
 
 ### Specialized Components
 
-- [ ] **@altrugenix/carousel**: touch-enabled content sliders.
-- [ ] **@altrugenix/charts**: data visualization primitives.
-- [ ] **@altrugenix/kanban**: board-based project management views.
+- [x] **@altrugenix/carousel**: touch-enabled content sliders.
+- [x] **@altrugenix/charts**: data visualization primitives.
+- [x] **@altrugenix/kanban**: board-based project management views.
+- [x] **@altrugenix/virtual-list**: high-performance list virtualization.
 
 ---
 

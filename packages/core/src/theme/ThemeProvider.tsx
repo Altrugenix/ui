@@ -1,9 +1,9 @@
 /* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useEffect, useState } from "react";
 
-type Theme = "dark" | "light" | "system";
+export type Theme = "dark" | "light" | "system";
 
-interface ThemeTokens {
+export interface ThemeTokens {
   colors?: {
     primary?: string;
     secondary?: string;
@@ -18,18 +18,26 @@ interface ThemeTokens {
     success?: string;
     warning?: string;
     info?: string;
+    primaryForeground?: string;
+    secondaryForeground?: string;
+    accentForeground?: string;
+    destructiveForeground?: string;
+    popover?: string;
+    popoverForeground?: string;
+    card?: string;
+    cardForeground?: string;
   };
   radius?: string;
 }
 
-interface ThemeProviderProps {
+export interface ThemeProviderProps {
   children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
   tokens?: ThemeTokens;
 }
 
-interface ThemeProviderState {
+export interface ThemeProviderState {
   theme: Theme;
   isDark: boolean;
   setTheme: (theme: Theme) => void;
