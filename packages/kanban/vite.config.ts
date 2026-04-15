@@ -29,7 +29,8 @@ export default defineConfig({
         `altrugenix-kanban.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", 
+      external: [
+        "react/jsx-runtime",
         "react",
         "react-dom",
         "framer-motion",
@@ -49,6 +50,7 @@ export default defineConfig({
           "@altrugenix/button": "AltrugenixButton",
           "@altrugenix/badge": "AltrugenixBadge",
           "@altrugenix/avatar": "AltrugenixAvatar",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

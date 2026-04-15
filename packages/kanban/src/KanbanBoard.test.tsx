@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
-import { KanbanBoard, KanbanTask } from "./KanbanBoard";
+import { KanbanBoard, type KanbanTask } from "./KanbanBoard";
 
 describe("KanbanBoard", () => {
   const tasks: KanbanTask[] = [

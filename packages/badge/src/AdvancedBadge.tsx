@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@altrugenix/core";
 import { Badge, type BadgeProps } from "./Badge";
 
-export interface AdvancedBadgeProps extends BadgeProps {
+export interface AdvancedBadgeProps extends Omit<BadgeProps, "content"> {
   /** The content to display inside the badge (usually a number or text) */
   content?: React.ReactNode;
   /** Maximum value to display before showing overflow (e.g., 99+) */

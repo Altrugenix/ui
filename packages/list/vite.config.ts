@@ -32,6 +32,7 @@ export default defineConfig({
           react: "React",
           "react-dom": "ReactDOM",
           "@altrugenix/core": "AltrugenixCore",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

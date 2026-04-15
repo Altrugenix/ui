@@ -26,7 +26,8 @@ export default defineConfig({
         `altrugenix-chip.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", 
+      external: [
+        "react/jsx-runtime",
         "react",
         "react-dom",
         "@altrugenix/core",
@@ -42,6 +43,7 @@ export default defineConfig({
           "class-variance-authority": "Cva",
           "lucide-react": "Lucide",
           "framer-motion": "Motion",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

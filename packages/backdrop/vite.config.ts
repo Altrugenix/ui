@@ -26,13 +26,20 @@ export default defineConfig({
         `altrugenix-backdrop.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", "react", "react-dom", "framer-motion", "@altrugenix/core"],
+      external: [
+        "react/jsx-runtime",
+        "react",
+        "react-dom",
+        "framer-motion",
+        "@altrugenix/core",
+      ],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
           "framer-motion": "FramerMotion",
           "@altrugenix/core": "AltrugenixCore",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

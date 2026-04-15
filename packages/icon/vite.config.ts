@@ -26,13 +26,20 @@ export default defineConfig({
         `altrugenix-icon.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", "react", "react-dom", "@altrugenix/core", "lucide-react"],
+      external: [
+        "react/jsx-runtime",
+        "react",
+        "react-dom",
+        "@altrugenix/core",
+        "lucide-react",
+      ],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
           "@altrugenix/core": "AltrugenixCore",
           "lucide-react": "Lucide",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

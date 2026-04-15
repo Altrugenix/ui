@@ -27,8 +27,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@altrugenix/core": "1.0.0-alpha.0",
     "@altrugenix/button": "1.0.0-alpha.0",
+    "@altrugenix/core": "1.0.0-alpha.0",
     "framer-motion": "^12.4.7",
     "lucide-react": "^1.7.0"
   },

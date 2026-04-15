@@ -27,7 +27,8 @@ export default defineConfig({
         `altrugenix-snackbar.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", 
+      external: [
+        "react/jsx-runtime",
         "react",
         "react-dom",
         "framer-motion",
@@ -43,6 +44,7 @@ export default defineConfig({
           "lucide-react": "Lucide",
           "@altrugenix/core": "AltrugenixCore",
           "@altrugenix/button": "AltrugenixButton",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

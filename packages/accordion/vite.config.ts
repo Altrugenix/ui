@@ -26,7 +26,8 @@ export default defineConfig({
         `altrugenix-accordion.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", 
+      external: [
+        "react/jsx-runtime",
         "react",
         "react-dom",
         "lucide-react",
@@ -40,6 +41,7 @@ export default defineConfig({
           "lucide-react": "Lucide",
           "@altrugenix/core": "AltrugenixCore",
           "framer-motion": "Motion",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

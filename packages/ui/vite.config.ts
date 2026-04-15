@@ -42,7 +42,8 @@ export default defineConfig({
         `altrugenix-ui.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", 
+      external: [
+        "react/jsx-runtime",
         "react",
         "react-dom",
         "framer-motion",
@@ -60,6 +61,7 @@ export default defineConfig({
           clsx: "Clsx",
           "tailwind-merge": "TailwindMerge",
           "class-variance-authority": "Cva",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

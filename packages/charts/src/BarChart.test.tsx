@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import { BarChart, ChartDataPoint } from "./BarChart";
+import { BarChart, type ChartDataPoint } from "./BarChart";
 
 describe("BarChart", () => {
   const data: ChartDataPoint[] = [

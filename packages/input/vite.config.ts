@@ -26,7 +26,8 @@ export default defineConfig({
         `altrugenix-input.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", 
+      external: [
+        "react/jsx-runtime",
         "react",
         "react-dom",
         "class-variance-authority",
@@ -38,6 +39,7 @@ export default defineConfig({
           "react-dom": "ReactDOM",
           "class-variance-authority": "cva",
           "@altrugenix/core": "AltrugenixCore",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

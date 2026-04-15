@@ -26,7 +26,8 @@ export default defineConfig({
         `altrugenix-badge.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", 
+      external: [
+        "react/jsx-runtime",
         "react",
         "react-dom",
         "@altrugenix/core",
@@ -40,6 +41,7 @@ export default defineConfig({
           "@altrugenix/core": "AltrugenixCore",
           "class-variance-authority": "Cva",
           "framer-motion": "Motion",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

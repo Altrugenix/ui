@@ -2,7 +2,10 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@altrugenix/core";
 
-export interface BackdropProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface BackdropProps extends Omit<
+  React.HTMLAttributes<HTMLDivElement>,
+  "onDrag" | "onDragStart" | "onDragEnd" | "onAnimationStart"
+> {
   /** Whether the backdrop is visible */
   open: boolean;
   /** Whether the backdrop is transparent */

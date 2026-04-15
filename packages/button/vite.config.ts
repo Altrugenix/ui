@@ -26,7 +26,8 @@ export default defineConfig({
         `altrugenix-button.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", 
+      external: [
+        "react/jsx-runtime",
         "react",
         "react-dom",
         "lucide-react",
@@ -42,6 +43,7 @@ export default defineConfig({
           "@altrugenix/core": "AltrugenixCore",
           "framer-motion": "Motion",
           "class-variance-authority": "Cva",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

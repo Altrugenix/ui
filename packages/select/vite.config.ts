@@ -26,13 +26,20 @@ export default defineConfig({
         `altrugenix-select.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", "react", "react-dom", "lucide-react", "@altrugenix/core"],
+      external: [
+        "react/jsx-runtime",
+        "react",
+        "react-dom",
+        "lucide-react",
+        "@altrugenix/core",
+      ],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
           "lucide-react": "Lucide",
           "@altrugenix/core": "AltrugenixCore",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },

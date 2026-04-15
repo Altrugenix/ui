@@ -20,7 +20,7 @@ type IconButtonComponent = {
 };
 
 export const IconButton: IconButtonComponent = React.forwardRef(
-  <E extends React.ElementType = "button">(
+  (
     {
       as,
       className,
@@ -30,8 +30,8 @@ export const IconButton: IconButtonComponent = React.forwardRef(
       children,
       disabled,
       ...props
-    }: Omit<PolymorphicButtonProps<E>, "leftIcon" | "rightIcon">,
-    ref: PolymorphicRef<E>
+    },
+    ref
   ) => {
     const Component = as || "button";
 
@@ -40,8 +40,13 @@ export const IconButton: IconButtonComponent = React.forwardRef(
         ref={ref}
         disabled={disabled}
         className={cn(
-          buttonVariants({ variant, size, radius, className }),
-          "p-0" // Ensure no additional padding for icon buttons
+          buttonVariants({
+            variant: variant,
+            size: size,
+            radius: radius,
+            className,
+          }),
+          "p-0"
         )}
         {...props}
       >
