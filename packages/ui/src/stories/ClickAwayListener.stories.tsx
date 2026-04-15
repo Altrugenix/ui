@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ClickAwayListener } from "~/components/utilities/click-away-listener/ClickAwayListener";
 import { useState } from "react";
-import { Button } from "~/components/ui/button";
+import { Button } from "@altrugenix/button";
 
 const meta: Meta<typeof ClickAwayListener> = {
   title: "Utilities/ClickAwayListener",

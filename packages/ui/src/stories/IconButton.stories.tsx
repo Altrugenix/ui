@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { IconButton } from "~/components/ui/button";
+import { IconButton } from "@altrugenix/button";
 import { Plus, Settings, Trash, Search, Heart, Mail } from "lucide-react";
 
 const meta: Meta<typeof IconButton> = {

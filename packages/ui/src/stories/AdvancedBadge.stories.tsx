@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { AdvancedBadge } from "~/components/ui/badge";
+import { AdvancedBadge } from "@altrugenix/badge";
 import { Mail, Bell } from "lucide-react";
 
 const meta: Meta<typeof AdvancedBadge> = {
@@ -17,7 +17,7 @@ export const WithChildren: StoryObj = {
         <Mail className="h-6 w-6" />
       </AdvancedBadge>
 
-      <AdvancedBadge content={120} max={99} variant="primary">
+      <AdvancedBadge content={120} max={99} variant="success">
         <Bell className="h-6 w-6" />
       </AdvancedBadge>
 

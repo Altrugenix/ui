@@ -4,7 +4,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
 } from "~/components/navigation/dropdown-menu";
-import { Button } from "~/components/ui/button";
+import { Button } from "@altrugenix/button";
 
 const meta: Meta<typeof DropdownMenu> = {
   title: "Navigation/DropdownMenu",

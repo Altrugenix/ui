@@ -1,6 +1,6 @@
 import type { Meta } from "@storybook/react-vite";
 import { Confetti } from "../components/feedback/Confetti";
-import { Button } from "../components/ui/button";
+import { Button } from "@altrugenix/button";
 
 const meta: Meta = {
   title: "Components/Feedback/Confetti",

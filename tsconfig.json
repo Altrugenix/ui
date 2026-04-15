@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "useDefineForClassFields": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    /* Path Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@altrugenix/core": ["packages/core/src"],
+      "@altrugenix/accordion": ["packages/accordion/src"],
+      "@altrugenix/aspect-ratio": ["packages/aspect-ratio/src"],
+      "@altrugenix/avatar": ["packages/avatar/src"],
+      "@altrugenix/backdrop": ["packages/backdrop/src"],
+      "@altrugenix/badge": ["packages/badge/src"],
+      "@altrugenix/button": ["packages/button/src"],
+      "@altrugenix/card": ["packages/card/src"],
+      "@altrugenix/carousel": ["packages/carousel/src"],
+      "@altrugenix/charts": ["packages/charts/src"],
+      "@altrugenix/checkbox": ["packages/checkbox/src"],
+      "@altrugenix/chip": ["packages/chip/src"],
+      "@altrugenix/icon": ["packages/icon/src"],
+      "@altrugenix/input": ["packages/input/src"],
+      "@altrugenix/kanban": ["packages/kanban/src"],
+      "@altrugenix/link": ["packages/link/src"],
+      "@altrugenix/list": ["packages/list/src"],
+      "@altrugenix/modal": ["packages/modal/src"],
+      "@altrugenix/radio": ["packages/radio/src"],
+      "@altrugenix/select": ["packages/select/src"],
+      "@altrugenix/slider": ["packages/slider/src"],
+      "@altrugenix/snackbar": ["packages/snackbar/src"],
+      "@altrugenix/switch": ["packages/switch/src"],
+      "@altrugenix/table": ["packages/table/src"],
+      "@altrugenix/textarea": ["packages/textarea/src"],
+      "@altrugenix/toast": ["packages/toast/src"],
+      "@altrugenix/virtual-list": ["packages/virtual-list/src"],
+      "@altrugenix/ui": ["packages/ui/src"]
+    }
+  }
+}

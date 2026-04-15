@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { cn } from "~/lib/utils/cn";
-import { Input } from "../input";
+import { Input } from "@altrugenix/input";
 
 export interface InputOTPProps {
   /** Number of total digits (default: 6) */

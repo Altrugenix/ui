@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Popover } from "~/components/overlays/popover/Popover";
-import { Button } from "~/components/ui/button";
+import { Button } from "@altrugenix/button";
 import { Bell } from "lucide-react";
 
 const meta: Meta<typeof Popover> = {

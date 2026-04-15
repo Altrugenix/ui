@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Plus, X } from "lucide-react";
 import { cn } from "~/lib/utils/cn";
-import { IconButton } from "../button";
+import { IconButton } from "@altrugenix/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 export interface SpeedDialAction {

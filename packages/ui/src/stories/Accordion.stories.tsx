@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Accordion } from "~/components/ui/accordion";
+import { Accordion } from "@altrugenix/accordion";
 
 const meta: Meta<typeof Accordion> = {
   title: "Data Display/Accordion",

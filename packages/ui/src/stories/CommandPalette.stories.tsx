@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { CommandPalette } from "~/components/navigation/command-palette";
-import { Button } from "~/components/ui/button";
+import { Button } from "@altrugenix/button";
 import { useState, useEffect } from "react";
 import {
   Plus,

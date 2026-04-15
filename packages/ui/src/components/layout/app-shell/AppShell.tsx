@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { cn } from "~/lib/utils/cn";
 import { Drawer } from "../../navigation/drawer/Drawer";
 import { Menu } from "lucide-react";
-import { Button } from "../../ui/button";
+import { Button } from "@altrugenix/button";
 
 export interface AppShellProps {
   /** The navigation bar (fixed or sticky) */

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Stack } from "~/components/layout/stack";
-import { Button } from "~/components/ui/button";
+import { Button } from "@altrugenix/button";
 
 const meta: Meta<typeof Stack> = {
   title: "Layout/Stack",

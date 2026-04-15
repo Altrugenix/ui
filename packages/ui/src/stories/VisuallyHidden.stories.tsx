@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { VisuallyHidden } from "~/components/utilities/visually-hidden/VisuallyHidden";
-import { Button } from "~/components/ui/button";
+import { Button } from "@altrugenix/button";
 import { Plus } from "lucide-react";
 
 const meta: Meta<typeof VisuallyHidden> = {

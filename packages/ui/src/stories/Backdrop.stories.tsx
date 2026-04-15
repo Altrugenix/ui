@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Backdrop } from "~/components/ui/backdrop";
+import { Backdrop } from "@altrugenix/backdrop";
 import { useState } from "react";
-import { Button } from "~/components/ui/button";
+import { Button } from "@altrugenix/button";
 import { CircularProgress } from "~/components/ui/circular-progress";
 
 const meta: Meta<typeof Backdrop> = {

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Select } from "~/components/ui/select";
+import { Select } from "@altrugenix/select";
 
 const meta: Meta<typeof Select> = {
   title: "UI/Select",

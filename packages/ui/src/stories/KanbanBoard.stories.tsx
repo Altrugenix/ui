@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { KanbanBoard } from "~/components/ui/kanban";
-import type { KanbanTask } from "~/components/ui/kanban";
+import { KanbanBoard } from "@altrugenix/kanban";
+import type { KanbanTask } from "@altrugenix/kanban";
 
 const meta: Meta<typeof KanbanBoard> = {
   title: "UI/KanbanBoard",

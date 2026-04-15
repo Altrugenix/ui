@@ -1,6 +1,6 @@
 import type { Meta } from "@storybook/react-vite";
-import { useToast } from "~/components/ui/toast";
-import { Button } from "~/components/ui/button";
+import { useToast } from "~/components/ui";
+import { Button } from "~/components/ui";
 
 const meta: Meta = {
   title: "UI/Toast",

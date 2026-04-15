@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Carousel } from "~/components/ui/carousel";
+import { Carousel } from "@altrugenix/carousel";
 
 const meta: Meta<typeof Carousel> = {
   title: "UI/Carousel",

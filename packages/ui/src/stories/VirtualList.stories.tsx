@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { VirtualList } from "~/components/ui/virtual-list";
+import { VirtualList } from "@altrugenix/virtual-list";
 
 const meta: Meta<typeof VirtualList> = {
   title: "UI/VirtualList",

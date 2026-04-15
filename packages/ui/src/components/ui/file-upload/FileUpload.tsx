@@ -1,7 +1,7 @@
 import { useState, useCallback, useRef } from "react";
 import { cn } from "~/lib/utils/cn";
 import { Upload, X, File, Image as ImageIcon } from "lucide-react";
-import { Button } from "../button";
+import { Button } from "@altrugenix/button";
 import { ProgressBar } from "../../composites/progress-bar";
 
 export interface FileUploadProps {

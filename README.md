@@ -33,6 +33,36 @@ A premium, scalable, and production-ready UI component library built with React,
 yarn install
 ```
 
+### Using GitHub Packages
+
+To use these packages in another project, add a `.npmrc` file to your project:
+
+```text
+@altrugenix:registry=https://npm.pkg.github.com
+```
+
+Then install via:
+
+```bash
+yarn add @altrugenix/ui
+```
+
+The package is also available on **NPM** for public use.
+
+## Releasing
+
+We use [Changesets](https://github.com/changesets/changesets) for versioning and releases.
+
+1.  Create a new changeset:
+    ```bash
+    yarn change
+    ```
+2.  Follow the prompts to select the packages and version type (patch, minor, major).
+3.  Commit the generated changeset file.
+4.  Push to `main`.
+5.  A "Version Packages" PR will be automatically created/updated.
+6.  Merging this PR will trigger an automatic release to both NPM and GitHub Packages.
+
 ### Development
 
 Run the development server for the docs app:

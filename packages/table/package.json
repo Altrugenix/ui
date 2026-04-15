@@ -1,0 +1,50 @@
+{
+  "name": "@altrugenix/table",
+  "version": "1.0.0-alpha.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/altrugenix-table.umd.cjs",
+  "module": "./dist/altrugenix-table.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/altrugenix-table.js",
+      "require": "./dist/altrugenix-table.umd.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@altrugenix/button": "1.0.0-alpha.0",
+    "@altrugenix/core": "1.0.0-alpha.0",
+    "@altrugenix/input": "1.0.0-alpha.0",
+    "@altrugenix/virtual-list": "1.0.0-alpha.0",
+    "@tanstack/react-table": "^8.21.3",
+    "lucide-react": "^1.7.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "jsdom": "^29.0.1",
+    "vitest": "^4.1.2"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "tailwindcss": "3.x"
+  }
+}

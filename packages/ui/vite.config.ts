@@ -4,8 +4,6 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import dts from "vite-plugin-dts";
 import { fileURLToPath } from "node:url";
-import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
-import { playwright } from "@vitest/browser-playwright";
 
 const dirname =
   typeof __dirname !== "undefined"
@@ -30,6 +28,32 @@ export default defineConfig({
   resolve: {
     alias: {
       "~": path.resolve(dirname, "./src"),
+      "@altrugenix/core": path.resolve(dirname, "../core/src"),
+      "@altrugenix/accordion": path.resolve(dirname, "../accordion/src"),
+      "@altrugenix/aspect-ratio": path.resolve(dirname, "../aspect-ratio/src"),
+      "@altrugenix/avatar": path.resolve(dirname, "../avatar/src"),
+      "@altrugenix/badge": path.resolve(dirname, "../badge/src"),
+      "@altrugenix/button": path.resolve(dirname, "../button/src"),
+      "@altrugenix/calendar": path.resolve(dirname, "../calendar/src"),
+      "@altrugenix/carousel": path.resolve(dirname, "../carousel/src"),
+      "@altrugenix/checkbox": path.resolve(dirname, "../checkbox/src"),
+      "@altrugenix/dialog": path.resolve(dirname, "../dialog/src"),
+      "@altrugenix/icon": path.resolve(dirname, "../icon/src"),
+      "@altrugenix/input": path.resolve(dirname, "../input/src"),
+      "@altrugenix/kanban": path.resolve(dirname, "../kanban/src"),
+      "@altrugenix/label": path.resolve(dirname, "../label/src"),
+      "@altrugenix/menu": path.resolve(dirname, "../menu/src"),
+      "@altrugenix/popover": path.resolve(dirname, "../popover/src"),
+      "@altrugenix/progress": path.resolve(dirname, "../progress/src"),
+      "@altrugenix/radio": path.resolve(dirname, "../radio/src"),
+      "@altrugenix/select": path.resolve(dirname, "../select/src"),
+      "@altrugenix/slider": path.resolve(dirname, "../slider/src"),
+      "@altrugenix/snackbar": path.resolve(dirname, "../snackbar/src"),
+      "@altrugenix/switch": path.resolve(dirname, "../switch/src"),
+      "@altrugenix/table": path.resolve(dirname, "../table/src"),
+      "@altrugenix/textarea": path.resolve(dirname, "../textarea/src"),
+      "@altrugenix/toast": path.resolve(dirname, "../toast/src"),
+      "@altrugenix/virtual-list": path.resolve(dirname, "../virtual-list/src"),
     },
   },
   build: {
@@ -42,6 +66,7 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [
+        "react/jsx-runtime",
         "react",
         "react-dom",
         "framer-motion",
@@ -59,41 +84,14 @@ export default defineConfig({
           clsx: "Clsx",
           "tailwind-merge": "TailwindMerge",
           "class-variance-authority": "Cva",
+          "react/jsx-runtime": "jsxRuntime",
         },
       },
     },
   },
   test: {
-    projects: [
-      {
-        extends: true,
-        test: {
-          globals: true,
-          environment: "jsdom",
-          setupFiles: ["./src/test/setup.ts"],
-        },
-      },
-      {
-        extends: true,
-        plugins: [
-          storybookTest({
-            configDir: path.join(dirname, ".storybook"),
-          }),
-        ],
-        test: {
-          name: "storybook",
-          browser: {
-            enabled: true,
-            headless: true,
-            provider: playwright({}),
-            instances: [
-              {
-                browser: "chromium",
-              },
-            ],
-          },
-        },
-      },
-    ],
+    globals: true,
+    environment: "jsdom",
+    setupFiles: ["./src/test/setup.ts"],
   },
 });

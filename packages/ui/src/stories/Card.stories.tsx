@@ -6,8 +6,8 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "~/components/ui/card";
-import { Button } from "~/components/ui/button";
+} from "@altrugenix/card";
+import { Button } from "@altrugenix/button";
 
 const meta: Meta<typeof Card> = {
   title: "UI/Card",

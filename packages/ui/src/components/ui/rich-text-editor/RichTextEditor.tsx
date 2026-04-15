@@ -10,7 +10,7 @@ import {
   AlignCenter,
   AlignRight,
 } from "lucide-react";
-import { Button } from "../button";
+import { Button } from "@altrugenix/button";
 
 export interface RichTextEditorProps {
   initialValue?: string;

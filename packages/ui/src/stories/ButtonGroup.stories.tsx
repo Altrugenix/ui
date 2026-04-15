@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { ButtonGroup, Button, IconButton } from "~/components/ui/button";
+import { ButtonGroup, Button, IconButton } from "@altrugenix/button";
 import {
   LayoutGrid,
   List,
