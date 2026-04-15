@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Avatar, AvatarGroup } from "./index";
-import React from "react";
 
 describe("Avatar", () => {
   it("renders fallback when src is missing", () => {

@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Badge, AdvancedBadge } from "./index";
-import React from "react";
 
 describe("Badge", () => {
   it("renders correctly with content", () => {

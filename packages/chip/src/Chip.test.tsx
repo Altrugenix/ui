@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Chip } from "./index";
-import React from "react";
 
 describe("Chip", () => {
   it("renders correctly with children text", () => {

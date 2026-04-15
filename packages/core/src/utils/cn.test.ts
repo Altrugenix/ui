@@ -6,8 +6,11 @@ describe("cn utility", () => {
     expect(cn("a", "b")).toBe("a b");
   });
 
-  it("handles conditional classes", () => {
-    expect(cn("a", true && "b", false && "c")).toBe("a b");
+  it("handles conditional classes correctly", () => {
+    const isEnabled = true;
+    const isHidden = false;
+
+    expect(cn("a", isEnabled && "b", isHidden && "c")).toBe("a b");
   });
 
   it("merges tailwind classes and resolves conflicts", () => {
