@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { List, ListItem } from "~/components/ui/list";
-import { Avatar } from "~/components/ui/avatar";
-import { Badge } from "~/components/ui/badge";
+import { List, ListItem } from "@altrugenix/list";
+import { Avatar } from "@altrugenix/avatar";
+import { Badge } from "@altrugenix/badge";
 import { Mail, Star, User } from "lucide-react";
 
 const meta: Meta<typeof List> = {

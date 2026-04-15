@@ -7,8 +7,8 @@ import {
   TableHead,
   TableCell,
   TableCaption,
-} from "~/components/ui/table";
-import { Badge } from "~/components/ui/badge";
+} from "@altrugenix/table";
+import { Badge } from "@altrugenix/badge";
 
 const meta: Meta<typeof Table> = {
   title: "Data Display/Table",

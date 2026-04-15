@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { BarChart } from "~/components/ui/charts/BarChart";
+import { BarChart } from "@altrugenix/charts";
 
 const meta: Meta<typeof BarChart> = {
   title: "UI/Charts/BarChart",

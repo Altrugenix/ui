@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { DataTable } from "~/components/ui/table";
+import { DataTable } from "@altrugenix/table";
 import { type ColumnDef } from "@tanstack/react-table";
 
 interface Payment {

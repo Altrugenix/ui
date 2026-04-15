@@ -4,7 +4,7 @@ import {
   ListItem,
   ListItemButton,
   ListItemDecorator,
-} from "~/components/ui/list";
+} from "@altrugenix/list";
 import {
   User,
   Settings,

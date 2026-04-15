@@ -1,8 +1,8 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Drawer } from "~/components/navigation/drawer";
-import { Button } from "~/components/ui/button";
-import { Input } from "~/components/ui/input";
+import { Button } from "@altrugenix/button";
+import { Input } from "@altrugenix/input";
 
 const meta: Meta<typeof Drawer> = {
   title: "Navigation/Drawer",

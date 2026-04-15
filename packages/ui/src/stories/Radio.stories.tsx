@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Radio } from "~/components/ui/radio";
+import { Radio } from "@altrugenix/radio";
 
 const meta: Meta<typeof Radio> = {
   title: "UI/Radio",

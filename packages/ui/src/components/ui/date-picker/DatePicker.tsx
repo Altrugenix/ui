@@ -2,7 +2,7 @@ import { useState } from "react";
 import { cn } from "~/lib/utils/cn";
 import { Calendar as CalendarIcon } from "lucide-react";
 import { Popover } from "../../overlays/popover/Popover";
-import { Button } from "../button";
+import { Button } from "@altrugenix/button";
 import { Calendar } from "./Calendar";
 
 export interface DatePickerProps {

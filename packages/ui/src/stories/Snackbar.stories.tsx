@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Snackbar } from "~/components/ui/snackbar";
+import { Snackbar } from "@altrugenix/snackbar";
 import { useState } from "react";
-import { Button } from "~/components/ui/button";
+import { Button } from "@altrugenix/button";
 
 const meta: Meta<typeof Snackbar> = {
   title: "UI/Snackbar",
@@ -79,8 +79,8 @@ export const Positions: Story = {
       | "bottom-left"
       | "bottom-center"
       | "bottom-right"
-      | null
-    >(null);
+      | undefined
+    >(undefined);
     return (
       <div className="grid grid-cols-3 gap-4">
         <Button onClick={() => setPos("top-left")}>Top Left</Button>
@@ -94,7 +94,7 @@ export const Positions: Story = {
           open={Boolean(pos)}
           position={pos}
           message={`Visible at ${pos}`}
-          onClose={() => setPos(null)}
+          onClose={() => setPos(undefined)}
           autoHideDuration={2000}
         />
       </div>

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Icon } from "~/components/ui/icon";
+import { Icon } from "@altrugenix/icon";
 import * as LucideIcons from "lucide-react";
 
 const meta: Meta<typeof Icon> = {

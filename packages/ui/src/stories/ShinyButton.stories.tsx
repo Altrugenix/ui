@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { ShinyButton } from "../components/ui/button";
+import { ShinyButton } from "@altrugenix/button";
 
 const meta: Meta<typeof ShinyButton> = {
   title: "Components/Primitives/ShinyButton",

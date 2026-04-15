@@ -70,6 +70,6 @@ export * from "../navigation/command-palette";
 
 // Theme & Utils
 export * from "../utilities";
-export { ThemeProvider } from "../../theme/ThemeProvider";
-export { useTheme } from "../../theme/useTheme";
-export { cn } from "../../lib/utils/cn";
+export { ThemeProvider } from "@altrugenix/core";
+export { useTheme } from "@altrugenix/core";
+export { cn } from "@altrugenix/core";

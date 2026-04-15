@@ -27,9 +27,6 @@ export default defineConfig([
         tsconfigRootDir: import.meta.dirname,
       },
     },
-    ignores: [
-      "**/vitest.shims.d.ts",
-      "**/vite.config.ts",
-    ],
+    ignores: ["**/vitest.shims.d.ts", "**/vite.config.ts"],
   },
 ]);

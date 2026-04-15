@@ -4,11 +4,10 @@ import { X } from "lucide-react";
 import { cn } from "@altrugenix/core";
 import { Button } from "@altrugenix/button";
 
-export interface SnackbarProps
-  extends Omit<
-    React.HTMLAttributes<HTMLDivElement>,
-    "onDrag" | "onDragStart" | "onDragEnd" | "onAnimationStart"
-  > {
+export interface SnackbarProps extends Omit<
+  React.HTMLAttributes<HTMLDivElement>,
+  "onDrag" | "onDragStart" | "onDragEnd" | "onAnimationStart"
+> {
   /** Whether the snackbar is visible */
   open: boolean;
   /** Message to display */

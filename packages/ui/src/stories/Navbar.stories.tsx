@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Navbar } from "~/components/navigation/navbar/Navbar";
-import { Button } from "~/components/ui/button";
+import { Button } from "@altrugenix/button";
 import { ExternalLink } from "lucide-react";
 
 const meta: Meta<typeof Navbar> = {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { cn } from "~/lib/utils/cn";
-import { Button } from "../button";
+import { Button } from "@altrugenix/button";
 import { Checkbox } from "@altrugenix/checkbox";
 import { Card } from "@altrugenix/card";
 import { List, ListItem } from "@altrugenix/list";

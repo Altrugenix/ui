@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { DataGrid } from "~/components/ui/table/DataGrid";
-import { Badge } from "~/components/ui/badge";
+import { DataGrid } from "@altrugenix/table";
+import { Badge } from "@altrugenix/badge";
 
 interface UserData {
   id: number;

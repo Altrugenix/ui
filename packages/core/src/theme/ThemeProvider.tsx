@@ -61,9 +61,19 @@ export function ThemeProvider({
   tokens,
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
-  );
+  const [theme, setTheme] = useState<Theme>(() => {
+    try {
+      if (typeof window !== "undefined" && window.localStorage) {
+        return (
+          (window.localStorage.getItem(storageKey) as Theme) || defaultTheme
+        );
+      }
+    } catch (e) {
+      // Fallback
+      console.error(e);
+    }
+    return defaultTheme;
+  });
 
   const isDark =
     theme === "dark" ||
@@ -103,12 +113,26 @@ export function ThemeProvider({
     theme,
     isDark,
     setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme);
+      try {
+        if (typeof window !== "undefined" && window.localStorage) {
+          window.localStorage.setItem(storageKey, theme);
+        }
+      } catch (e) {
+        // Fallback for private mode or disabled storage
+        console.error(e);
+      }
       setTheme(theme);
     },
     toggleTheme: () => {
       const nextTheme = isDark ? "light" : "dark";
-      localStorage.setItem(storageKey, nextTheme);
+      try {
+        if (typeof window !== "undefined" && window.localStorage) {
+          window.localStorage.setItem(storageKey, nextTheme);
+        }
+      } catch (e) {
+        // Fallback
+        console.error(e);
+      }
       setTheme(nextTheme);
     },
   };

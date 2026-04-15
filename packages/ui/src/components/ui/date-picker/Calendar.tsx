@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { cn } from "~/lib/utils/cn";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "../button";
+import { Button } from "@altrugenix/button";
 
 export interface CalendarProps {
   value?: Date;

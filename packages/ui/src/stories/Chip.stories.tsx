@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Chip } from "~/components/ui/chip";
+import { Chip } from "@altrugenix/chip";
 import { User } from "lucide-react";
-import { Avatar } from "~/components/ui/avatar";
+import { Avatar } from "@altrugenix/avatar";
 
 const meta: Meta<typeof Chip> = {
   title: "UI/Chip",

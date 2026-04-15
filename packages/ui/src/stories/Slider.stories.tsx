@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Slider } from "~/components/ui/slider";
+import { Slider } from "@altrugenix/slider";
 
 const meta: Meta<typeof Slider> = {
   title: "UI/Slider",
