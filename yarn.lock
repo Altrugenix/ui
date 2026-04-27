@@ -135,6 +135,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/calendar-view@workspace:packages/calendar-view":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/calendar-view@workspace:packages/calendar-view"
+  dependencies:
+    "@altrugenix/button": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/card@workspace:*, @altrugenix/card@workspace:packages/card":
   version: 0.0.0-use.local
   resolution: "@altrugenix/card@workspace:packages/card"
@@ -250,6 +271,88 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/css-baseline@workspace:packages/css-baseline":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/css-baseline@workspace:packages/css-baseline"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/date-picker@workspace:packages/date-picker":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/date-picker@workspace:packages/date-picker"
+  dependencies:
+    "@altrugenix/button": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/popover": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/divider@workspace:packages/divider":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/divider@workspace:packages/divider"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/heading@workspace:*, @altrugenix/heading@workspace:packages/heading":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/heading@workspace:packages/heading"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/icon@workspace:*, @altrugenix/icon@workspace:packages/icon":
   version: 0.0.0-use.local
   resolution: "@altrugenix/icon@workspace:packages/icon"
@@ -263,6 +366,46 @@ __metadata:
     lucide-react: "npm:^1.7.0"
     vitest: "npm:^4.1.2"
   peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/image@workspace:*, @altrugenix/image@workspace:packages/image":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/image@workspace:packages/image"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/input-otp@workspace:*, @altrugenix/input-otp@workspace:packages/input-otp":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/input-otp@workspace:packages/input-otp"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
   languageName: unknown
@@ -366,6 +509,47 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/popover@npm:1.0.0-alpha.0, @altrugenix/popover@workspace:packages/popover":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/popover@workspace:packages/popover"
+  dependencies:
+    "@altrugenix/button": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/progress-bar@workspace:packages/progress-bar":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/progress-bar@workspace:packages/progress-bar"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/radio@workspace:*, @altrugenix/radio@workspace:packages/radio":
   version: 0.0.0-use.local
   resolution: "@altrugenix/radio@workspace:packages/radio"
@@ -400,6 +584,46 @@ __metadata:
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
     tailwindcss: 3.x
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/sheet@workspace:packages/sheet":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/sheet@workspace:packages/sheet"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/skeleton@workspace:packages/skeleton":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/skeleton@workspace:packages/skeleton"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
   languageName: unknown
   linkType: soft
 
@@ -483,6 +707,46 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/tag@workspace:*, @altrugenix/tag@workspace:packages/tag":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/tag@workspace:packages/tag"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/text@workspace:*, @altrugenix/text@workspace:packages/text":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/text@workspace:packages/text"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/textarea@workspace:*, @altrugenix/textarea@workspace:packages/textarea":
   version: 0.0.0-use.local
   resolution: "@altrugenix/textarea@workspace:packages/textarea"
@@ -521,6 +785,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/typography@workspace:packages/typography":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/typography@workspace:packages/typography"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/ui@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@altrugenix/ui@workspace:packages/ui"
@@ -537,8 +821,11 @@ __metadata:
     "@altrugenix/checkbox": "workspace:*"
     "@altrugenix/chip": "workspace:*"
     "@altrugenix/core": "workspace:*"
+    "@altrugenix/heading": "workspace:*"
     "@altrugenix/icon": "workspace:*"
+    "@altrugenix/image": "workspace:*"
     "@altrugenix/input": "workspace:*"
+    "@altrugenix/input-otp": "workspace:*"
     "@altrugenix/kanban": "workspace:*"
     "@altrugenix/link": "workspace:*"
     "@altrugenix/list": "workspace:*"
@@ -549,6 +836,8 @@ __metadata:
     "@altrugenix/snackbar": "workspace:*"
     "@altrugenix/switch": "workspace:*"
     "@altrugenix/table": "workspace:*"
+    "@altrugenix/tag": "workspace:*"
+    "@altrugenix/text": "workspace:*"
     "@altrugenix/textarea": "workspace:*"
     "@altrugenix/toast": "workspace:*"
     "@altrugenix/virtual-list": "workspace:*"
