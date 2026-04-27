@@ -1,3 +1,3 @@
-export * from "./popover";
+export * from "@altrugenix/popover";
 export * from "./tooltip";
 export * from "./context-menu";
