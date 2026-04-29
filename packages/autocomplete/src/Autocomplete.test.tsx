@@ -8,22 +8,26 @@ describe("Autocomplete component", () => {
   const options = ["Apple", "Banana", "Cherry"];
 
   it("renders input and shows options on focus", () => {
-    const { getByRole, queryByText } = render(<Autocomplete options={options} />);
+    const { getByRole, queryByText } = render(
+      <Autocomplete options={options} />
+    );
     const input = getByRole("textbox");
-    
+
     expect(queryByText("Apple")).not.toBeInTheDocument();
-    
+
     fireEvent.focus(input);
     expect(queryByText("Apple")).toBeInTheDocument();
   });
 
   it("filters options based on input", () => {
-    const { getByRole, queryByText } = render(<Autocomplete options={options} />);
+    const { getByRole, queryByText } = render(
+      <Autocomplete options={options} />
+    );
     const input = getByRole("textbox");
-    
+
     fireEvent.focus(input);
     fireEvent.change(input, { target: { value: "App" } });
-    
+
     expect(queryByText("Apple")).toBeInTheDocument();
     expect(queryByText("Banana")).not.toBeInTheDocument();
   });

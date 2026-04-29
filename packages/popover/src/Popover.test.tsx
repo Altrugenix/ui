@@ -11,10 +11,10 @@ describe("Popover component", () => {
         <div>Content</div>
       </Popover>
     );
-    
+
     expect(getByText("Open")).toBeInTheDocument();
     expect(queryByText("Content")).not.toBeInTheDocument();
-    
+
     fireEvent.click(getByText("Open"));
     expect(getByText("Content")).toBeInTheDocument();
   });
@@ -25,10 +25,10 @@ describe("Popover component", () => {
         <div>Content</div>
       </Popover>
     );
-    
+
     fireEvent.click(getByText("Open"));
     expect(getByText("Content")).toBeInTheDocument();
-    
+
     fireEvent.mouseDown(document.body);
     expect(queryByText("Content")).not.toBeInTheDocument();
   });

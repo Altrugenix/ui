@@ -8,7 +8,7 @@ import { Skeleton } from "./Skeleton";
 export const CardSkeleton = ({ className }: { className?: string }) => (
   <div
     className={cn(
-      "glass flex flex-col gap-4 rounded-xl p-5 shadow-soft",
+      "glass shadow-soft flex flex-col gap-4 rounded-xl p-5",
       className
     )}
   >
@@ -75,7 +75,7 @@ export const ListSkeleton = ({ rows = 5 }: { rows?: number }) => (
 export const MetricSkeleton = ({ className }: { className?: string }) => (
   <div
     className={cn(
-      "glass flex flex-col gap-3 rounded-xl p-6 shadow-soft",
+      "glass shadow-soft flex flex-col gap-3 rounded-xl p-6",
       className
     )}
   >
@@ -86,7 +86,7 @@ export const MetricSkeleton = ({ className }: { className?: string }) => (
         variant="rectangular"
         width={40}
         height={16}
-        className="rounded-full bg-primary/20"
+        className="bg-primary/20 rounded-full"
       />
       <Skeleton variant="text" width={80} height={10} className="opacity-50" />
     </div>

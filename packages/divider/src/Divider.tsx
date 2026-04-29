@@ -18,11 +18,11 @@ export const Divider = React.forwardRef<HTMLDivElement, DividerProps>(
           role="separator"
           {...props}
         >
-          <div className="h-px flex-1 bg-border" />
-          <span className="text-xs font-medium text-muted-foreground">
+          <div className="bg-border h-px flex-1" />
+          <span className="text-muted-foreground text-xs font-medium">
             {label}
           </span>
-          <div className="h-px flex-1 bg-border" />
+          <div className="bg-border h-px flex-1" />
         </div>
       );
     }
@@ -33,8 +33,8 @@ export const Divider = React.forwardRef<HTMLDivElement, DividerProps>(
         role="separator"
         className={cn(
           orientation === "horizontal"
-            ? "h-px w-full bg-border"
-            : "inline-block h-full w-px bg-border",
+            ? "bg-border h-px w-full"
+            : "bg-border inline-block h-full w-px",
           className
         )}
         {...props}

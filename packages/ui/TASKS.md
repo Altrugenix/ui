@@ -1,6 +1,7 @@
 # Components to Modularize
 
 ### Primitives
+
 - [x] `heading`
 - [x] `text`
 - [x] `image`
@@ -8,12 +9,14 @@
 - [x] `input-otp`
 
 ### Layout & Structure
+
 - [x] `divider`
 - [x] `sheet`
 - [x] `typography`
 - [x] `css-baseline`
 
 ### Composites & Complex UI
+
 - [x] `progress-bar`
 - [x] `skeleton`
 - [x] `calendar-view`
@@ -37,12 +40,15 @@
 - [ ] `tabs`
 
 ### Feedback & Micro-interactions
+
 - [ ] `feedback`
 - [ ] `effects`
 
 ### Overlays & Navigation
+
 - [ ] `drawer`
 - [ ] `command-palette`
 
 ### Theme & Utils
+
 - [ ] `utilities`

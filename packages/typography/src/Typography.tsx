@@ -65,7 +65,8 @@ export const Typography = React.forwardRef<HTMLElement, TypographyProps>(
     // Automatically determine the component based on variant if 'as' is not provided
     const Component =
       as ||
-      ((variant && ["h1", "h2", "h3", "h4", "h5", "h6"].includes(variant as string))
+      (variant &&
+      ["h1", "h2", "h3", "h4", "h5", "h6"].includes(variant as string)
         ? (variant as React.ElementType)
         : variant === "caption" || variant === "overline"
           ? "span"

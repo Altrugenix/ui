@@ -18,6 +18,9 @@ describe("Skeleton component", () => {
 
   it("renders with custom dimensions", () => {
     const { container } = render(<Skeleton width={100} height={50} />);
-    expect(container.firstChild).toHaveStyle({ width: "100px", height: "50px" });
+    expect(container.firstChild).toHaveStyle({
+      width: "100px",
+      height: "50px",
+    });
   });
 });

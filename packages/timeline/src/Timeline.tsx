@@ -32,7 +32,7 @@ export const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
             <div key={index} className="relative flex gap-4 pb-8 last:pb-0">
               {/* Line */}
               {!isLast && (
-                <div className="absolute left-[0.6875rem] top-6 h-full w-px bg-border" />
+                <div className="bg-border absolute left-[0.6875rem] top-6 h-full w-px" />
               )}
 
               {/* Dot / Icon */}
@@ -40,7 +40,7 @@ export const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
                 {item.icon ? (
                   <div
                     className={cn(
-                      "flex h-6 w-6 items-center justify-center rounded-full border-2 bg-background",
+                      "bg-background flex h-6 w-6 items-center justify-center rounded-full border-2",
                       dotVariants[variant].replace("bg-", "border-")
                     )}
                   >
@@ -61,13 +61,13 @@ export const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-semibold">{item.title}</p>
                   {item.date && (
-                    <time className="text-xs text-muted-foreground">
+                    <time className="text-muted-foreground text-xs">
                       {item.date}
                     </time>
                   )}
                 </div>
                 {item.description && (
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-muted-foreground text-sm">
                     {item.description}
                   </p>
                 )}

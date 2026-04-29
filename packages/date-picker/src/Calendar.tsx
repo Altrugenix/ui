@@ -111,7 +111,7 @@ export const Calendar = ({ value, onChange, className }: CalendarProps) => {
         {DAYS.map((day) => (
           <div
             key={day}
-            className="text-center text-[10px] font-medium uppercase tracking-tight text-muted-foreground"
+            className="text-muted-foreground text-center text-[10px] font-medium uppercase tracking-tight"
           >
             {day[0]}
           </div>
@@ -122,7 +122,7 @@ export const Calendar = ({ value, onChange, className }: CalendarProps) => {
         {prevDays.map((day, i) => (
           <div
             key={`prev-${i}`}
-            className="flex h-8 items-center justify-center text-sm text-muted-foreground/30"
+            className="text-muted-foreground/30 flex h-8 items-center justify-center text-sm"
           >
             {day}
           </div>
@@ -133,12 +133,12 @@ export const Calendar = ({ value, onChange, className }: CalendarProps) => {
             key={day}
             onClick={() => onChange?.(new Date(currentYear, currentMonth, day))}
             className={cn(
-              "flex h-8 w-8 items-center justify-center rounded-md text-sm transition-all hover:bg-accent hover:text-accent-foreground",
+              "hover:bg-accent hover:text-accent-foreground flex h-8 w-8 items-center justify-center rounded-md text-sm transition-all",
               isSelected(day) &&
-                "bg-primary font-semibold text-primary-foreground hover:bg-primary hover:text-primary-foreground",
+                "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground font-semibold",
               isToday(day) &&
                 !isSelected(day) &&
-                "bg-accent/50 font-bold text-accent-foreground"
+                "bg-accent/50 text-accent-foreground font-bold"
             )}
           >
             {day}
@@ -148,7 +148,7 @@ export const Calendar = ({ value, onChange, className }: CalendarProps) => {
         {nextDays.map((day, i) => (
           <div
             key={`next-${i}`}
-            className="flex h-8 items-center justify-center text-sm text-muted-foreground/30"
+            className="text-muted-foreground/30 flex h-8 items-center justify-center text-sm"
           >
             {day}
           </div>

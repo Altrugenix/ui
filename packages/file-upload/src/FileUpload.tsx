@@ -84,7 +84,7 @@ export const FileUpload = ({
         className={cn(
           "relative flex cursor-pointer flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed p-8 transition-all",
           isDragging
-            ? "scale-[0.99] border-primary bg-primary/5"
+            ? "border-primary bg-primary/5 scale-[0.99]"
             : "border-muted-foreground/20 hover:border-primary/50 hover:bg-muted/50"
         )}
       >
@@ -97,13 +97,13 @@ export const FileUpload = ({
           onChange={(e) => handleFiles(e.target.files)}
         />
 
-        <div className="rounded-full bg-primary/10 p-4">
-          <Upload className="h-6 w-6 text-primary" />
+        <div className="bg-primary/10 rounded-full p-4">
+          <Upload className="text-primary h-6 w-6" />
         </div>
 
         <div className="text-center">
           <p className="font-semibold">Click or drag to upload</p>
-          <p className="mt-1 text-sm text-muted-foreground">
+          <p className="text-muted-foreground mt-1 text-sm">
             Maximum file size {maxSize}MB
           </p>
         </div>
@@ -114,19 +114,19 @@ export const FileUpload = ({
           {files.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 rounded-lg border bg-card p-3"
+              className="bg-card flex items-center gap-4 rounded-lg border p-3"
             >
-              <div className="shrink-0 rounded-md bg-muted p-2">
+              <div className="bg-muted shrink-0 rounded-md p-2">
                 {isImage(item.file) ? (
                   <ImageIcon className="h-5 w-5 text-sky-500" />
                 ) : (
-                  <File className="h-5 w-5 text-primary" />
+                  <File className="text-primary h-5 w-5" />
                 )}
               </div>
 
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-medium">{item.file.name}</p>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-muted-foreground text-xs">
                   {(item.file.size / 1024 / 1024).toFixed(2)} MB
                 </p>
                 {item.status === "uploading" && (
@@ -141,7 +141,7 @@ export const FileUpload = ({
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-8 w-8 hover:text-destructive"
+                className="hover:text-destructive h-8 w-8"
                 onClick={() => removeFile(index)}
               >
                 <X className="h-4 w-4" />

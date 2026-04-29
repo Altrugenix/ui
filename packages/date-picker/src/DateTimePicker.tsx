@@ -29,10 +29,10 @@ export const DateTimePicker: React.FC<DateTimePickerProps> = ({
         type="datetime-local"
         value={dateTime}
         onChange={handleChange}
-        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
       />
-      <CalendarIcon className="pointer-events-none absolute right-10 h-4 w-4 text-muted-foreground" />
-      <Clock className="pointer-events-none absolute right-3 h-4 w-4 text-muted-foreground" />
+      <CalendarIcon className="text-muted-foreground pointer-events-none absolute right-10 h-4 w-4" />
+      <Clock className="text-muted-foreground pointer-events-none absolute right-3 h-4 w-4" />
     </div>
   );
 };

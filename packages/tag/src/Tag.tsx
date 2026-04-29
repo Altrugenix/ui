@@ -49,7 +49,7 @@ export const Tag = React.forwardRef<HTMLSpanElement, TagProps>(
               e.stopPropagation();
               onRemove();
             }}
-            className="ml-0.5 rounded-full p-0.5 opacity-60 transition-opacity hover:opacity-100 focus:outline-none focus:ring-1 focus:ring-ring"
+            className="focus:ring-ring ml-0.5 rounded-full p-0.5 opacity-60 transition-opacity hover:opacity-100 focus:outline-none focus:ring-1"
             aria-label="Remove"
           >
             <X className="h-3 w-3" />

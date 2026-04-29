@@ -12,12 +12,16 @@ describe("FileUpload component", () => {
 
   it("handles file selection via input", () => {
     const onFilesSelected = vi.fn();
-    const { container } = render(<FileUpload onFilesSelected={onFilesSelected} />);
-    const input = container.querySelector('input[type="file"]') as HTMLInputElement;
-    
+    const { container } = render(
+      <FileUpload onFilesSelected={onFilesSelected} />
+    );
+    const input = container.querySelector(
+      'input[type="file"]'
+    ) as HTMLInputElement;
+
     const file = new File(["hello"], "hello.png", { type: "image/png" });
     fireEvent.change(input, { target: { files: [file] } });
-    
+
     expect(onFilesSelected).toHaveBeenCalled();
     expect(screen.getByText("hello.png")).toBeInTheDocument();
   });

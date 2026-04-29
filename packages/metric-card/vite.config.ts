@@ -20,10 +20,10 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "AltrugenixAutocomplete",
+      name: "AltrugenixMetricCard",
       formats: ["es", "umd"],
       fileName: (format) =>
-        `altrugenix-autocomplete.${format === "es" ? "js" : "umd.cjs"}`,
+        `altrugenix-metric-card.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
       external: [

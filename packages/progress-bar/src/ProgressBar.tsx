@@ -50,7 +50,7 @@ export const ProgressBar = React.forwardRef<HTMLDivElement, ProgressBarProps>(
         {(label || showValue) && (
           <div className="flex items-center justify-between text-sm">
             {label && (
-              <span className="font-medium text-foreground">{label}</span>
+              <span className="text-foreground font-medium">{label}</span>
             )}
             {showValue && (
               <span className="text-muted-foreground">
@@ -61,7 +61,7 @@ export const ProgressBar = React.forwardRef<HTMLDivElement, ProgressBarProps>(
         )}
         <div
           className={cn(
-            "w-full overflow-hidden rounded-full bg-secondary",
+            "bg-secondary w-full overflow-hidden rounded-full",
             sizeHeight[size]
           )}
           role="progressbar"

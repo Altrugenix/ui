@@ -62,11 +62,11 @@ export const Autocomplete = React.forwardRef<
         {...props}
       />
       {isOpen && filteredOptions.length > 0 && (
-        <ul className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md border bg-popover text-popover-foreground shadow-md outline-none animate-in fade-in-0 zoom-in-95">
+        <ul className="bg-popover text-popover-foreground animate-in fade-in-0 zoom-in-95 absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md border shadow-md outline-none">
           {filteredOptions.map((option, index) => (
             <li
               key={index}
-              className="relative flex w-full cursor-pointer select-none items-center rounded-sm px-3 py-1.5 text-sm outline-none hover:bg-accent hover:text-accent-foreground"
+              className="hover:bg-accent hover:text-accent-foreground relative flex w-full cursor-pointer select-none items-center rounded-sm px-3 py-1.5 text-sm outline-none"
               onClick={() => handleOptionClick(option)}
             >
               {option}

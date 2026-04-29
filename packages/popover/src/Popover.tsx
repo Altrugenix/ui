@@ -77,7 +77,7 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
           <div
             ref={ref}
             className={cn(
-              "absolute z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none",
+              "bg-popover text-popover-foreground absolute z-50 w-72 rounded-md border p-4 shadow-md outline-none",
               "animate-in fade-in-0 zoom-in-95",
               alignStyles[align],
               sideStyles[side],

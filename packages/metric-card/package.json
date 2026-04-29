@@ -1,10 +1,10 @@
 {
-  "name": "@altrugenix/autocomplete",
+  "name": "@altrugenix/metric-card",
   "version": "1.0.0-alpha.0",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/altrugenix-autocomplete.umd.cjs",
-  "module": "./dist/altrugenix-autocomplete.js",
+  "main": "./dist/altrugenix-metric-card.umd.cjs",
+  "module": "./dist/altrugenix-metric-card.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -12,8 +12,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/altrugenix-autocomplete.js",
-      "require": "./dist/altrugenix-autocomplete.umd.cjs"
+      "import": "./dist/altrugenix-metric-card.js",
+      "require": "./dist/altrugenix-metric-card.umd.cjs"
     }
   },
   "publishConfig": {

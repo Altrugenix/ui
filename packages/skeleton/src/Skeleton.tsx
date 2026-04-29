@@ -39,10 +39,10 @@ export const Skeleton = React.forwardRef<HTMLDivElement, SkeletonProps>(
       <div
         ref={ref}
         className={cn(
-          "relative overflow-hidden bg-muted",
+          "bg-muted relative overflow-hidden",
           animation === "pulse" && "animate-pulse",
           animation === "wave" &&
-            "after:absolute after:inset-0 after:-translate-x-full after:animate-shimmer after:bg-gradient-to-r after:from-transparent after:via-foreground/5 after:to-transparent",
+            "after:animate-shimmer after:via-foreground/5 after:absolute after:inset-0 after:-translate-x-full after:bg-gradient-to-r after:from-transparent after:to-transparent",
           variantStyles[variant],
           className
         )}

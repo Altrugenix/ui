@@ -1,7 +1,9 @@
 import fs from "fs";
 import path from "path";
 
-const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+const capitalize = (str) =>
+  str.charAt(0).toUpperCase() +
+  str.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
 
 const createPackage = (compName, sourceRelPath) => {
   const root = process.cwd();
@@ -61,7 +63,10 @@ const createPackage = (compName, sourceRelPath) => {
       "react-dom": "^18.0.0 || ^19.0.0",
     },
   };
-  fs.writeFileSync(path.join(pkgPath, "package.json"), JSON.stringify(pkgJson, null, 2));
+  fs.writeFileSync(
+    path.join(pkgPath, "package.json"),
+    JSON.stringify(pkgJson, null, 2)
+  );
 
   // 2. tsconfig.json
   const tsconfig = `{\n  "extends": "../../tsconfig.json",\n  "include": ["src"]\n}\n`;
@@ -163,29 +168,39 @@ export default defineConfig([
   fs.writeFileSync(path.join(pkgPath, "eslint.config.js"), eslintConfig);
 
   // 5. Copy Source files
-  const absoluteSourcePath = path.join(root, "packages/ui/src/components/ui", sourceRelPath);
-  
+  const absoluteSourcePath = path.join(
+    root,
+    "packages/ui/src/components/ui",
+    sourceRelPath
+  );
+
   if (fs.existsSync(absoluteSourcePath)) {
-     const stat = fs.statSync(absoluteSourcePath);
-     if (stat.isDirectory()) {
-         const files = fs.readdirSync(absoluteSourcePath);
-         for (const file of files) {
-             let content = fs.readFileSync(path.join(absoluteSourcePath, file), "utf-8");
-             content = content.replace(/~\/lib\/utils\/cn/g, "@altrugenix/core");
-             content = content.replace(/~\/types\/polymorphic/g, "@altrugenix/core");
-             fs.writeFileSync(path.join(srcPath, file), content);
-         }
-     } else {
-         let content = fs.readFileSync(absoluteSourcePath, "utf-8");
-         content = content.replace(/~\/lib\/utils\/cn/g, "@altrugenix/core");
-         content = content.replace(/~\/types\/polymorphic/g, "@altrugenix/core");
-         
-         const filename = path.basename(absoluteSourcePath);
-         fs.writeFileSync(path.join(srcPath, filename), content);
-         fs.writeFileSync(path.join(srcPath, "index.ts"), 'export * from "./' + filename.replace(".tsx", "") + '";\\n');
-     }
+    const stat = fs.statSync(absoluteSourcePath);
+    if (stat.isDirectory()) {
+      const files = fs.readdirSync(absoluteSourcePath);
+      for (const file of files) {
+        let content = fs.readFileSync(
+          path.join(absoluteSourcePath, file),
+          "utf-8"
+        );
+        content = content.replace(/~\/lib\/utils\/cn/g, "@altrugenix/core");
+        content = content.replace(/~\/types\/polymorphic/g, "@altrugenix/core");
+        fs.writeFileSync(path.join(srcPath, file), content);
+      }
+    } else {
+      let content = fs.readFileSync(absoluteSourcePath, "utf-8");
+      content = content.replace(/~\/lib\/utils\/cn/g, "@altrugenix/core");
+      content = content.replace(/~\/types\/polymorphic/g, "@altrugenix/core");
+
+      const filename = path.basename(absoluteSourcePath);
+      fs.writeFileSync(path.join(srcPath, filename), content);
+      fs.writeFileSync(
+        path.join(srcPath, "index.ts"),
+        'export * from "./' + filename.replace(".tsx", "") + '";\\n'
+      );
+    }
   } else {
-     console.log("Source not found: " + absoluteSourcePath);
+    console.log("Source not found: " + absoluteSourcePath);
   }
 };
 
@@ -196,5 +211,5 @@ const componentsToExtract = [
   { name: "input-otp", path: "input-otp" },
 ];
 
-componentsToExtract.forEach(c => createPackage(c.name, c.path));
+componentsToExtract.forEach((c) => createPackage(c.name, c.path));
 console.log("Migration done!");

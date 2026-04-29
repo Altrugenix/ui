@@ -55,8 +55,8 @@ export const RichTextEditor = ({
   };
 
   return (
-    <div className={cn("overflow-hidden rounded-xl border bg-card", className)}>
-      <div className="flex flex-wrap gap-1 border-b bg-muted/30 p-1">
+    <div className={cn("bg-card overflow-hidden rounded-xl border", className)}>
+      <div className="bg-muted/30 flex flex-wrap gap-1 border-b p-1">
         <Button
           variant="ghost"
           size="icon"
@@ -82,7 +82,7 @@ export const RichTextEditor = ({
           <Underline className="h-4 w-4" />
         </Button>
 
-        <div className="mx-1 h-4 w-[1px] self-center bg-border" />
+        <div className="bg-border mx-1 h-4 w-[1px] self-center" />
 
         <Button
           variant="ghost"
@@ -101,7 +101,7 @@ export const RichTextEditor = ({
           <ListOrdered className="h-4 w-4" />
         </Button>
 
-        <div className="mx-1 h-4 w-[1px] self-center bg-border" />
+        <div className="bg-border mx-1 h-4 w-[1px] self-center" />
 
         <Button
           variant="ghost"
@@ -132,13 +132,13 @@ export const RichTextEditor = ({
       <div
         ref={editorRef}
         role="textbox"
-      contentEditable
+        contentEditable
         onInput={handleInput}
         data-placeholder={placeholder}
         className={cn(
           "prose prose-sm dark:prose-invert min-h-[150px] max-w-none p-4 text-sm leading-relaxed outline-none",
           (html === "" || html === "<br>") &&
-            "before:pointer-events-none before:text-muted-foreground before:content-[attr(data-placeholder)]"
+            "before:text-muted-foreground before:pointer-events-none before:content-[attr(data-placeholder)]"
         )}
       />
     </div>

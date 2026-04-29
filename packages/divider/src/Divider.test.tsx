@@ -14,7 +14,7 @@ describe("Divider component", () => {
     const { getByText } = render(<Divider label="OR" />);
     expect(getByText("OR")).toBeInTheDocument();
   });
-  
+
   it("renders vertical orientation", () => {
     const { container } = render(<Divider orientation="vertical" />);
     expect(container.firstChild).toHaveClass("h-full");

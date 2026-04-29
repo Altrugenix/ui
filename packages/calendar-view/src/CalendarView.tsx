@@ -94,8 +94,8 @@ export const CalendarView = ({
   }
 
   return (
-    <div className={cn("overflow-hidden rounded-xl border bg-card", className)}>
-      <div className="flex items-center justify-between border-b bg-muted/20 p-4">
+    <div className={cn("bg-card overflow-hidden rounded-xl border", className)}>
+      <div className="bg-muted/20 flex items-center justify-between border-b p-4">
         <div className="flex items-center gap-4">
           <h2 className="text-xl font-bold">
             {MONTHS[currentMonth]} {currentYear}
@@ -132,7 +132,7 @@ export const CalendarView = ({
         {DAYS.map((day) => (
           <div
             key={day}
-            className="bg-muted/10 py-2 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground"
+            className="bg-muted/10 text-muted-foreground py-2 text-center text-xs font-semibold uppercase tracking-wider"
           >
             {day}
           </div>
@@ -143,7 +143,7 @@ export const CalendarView = ({
         {prevDays.map((day, i) => (
           <div
             key={`prev-${i}`}
-            className="border-b border-r bg-muted/5 p-2 opacity-40"
+            className="bg-muted/5 border-b border-r p-2 opacity-40"
           >
             <span className="text-sm font-medium">{day}</span>
           </div>
@@ -155,7 +155,7 @@ export const CalendarView = ({
             <div
               key={day}
               className={cn(
-                "group relative border-b border-r p-2 transition-colors hover:bg-muted/5",
+                "hover:bg-muted/5 group relative border-b border-r p-2 transition-colors",
                 isToday(day) && "bg-primary/5"
               )}
             >
@@ -172,9 +172,9 @@ export const CalendarView = ({
                   onClick={() =>
                     onAddEvent?.(new Date(currentYear, currentMonth, day))
                   }
-                  className="rounded p-1 opacity-0 transition-opacity hover:bg-primary/10 group-hover:opacity-100"
+                  className="hover:bg-primary/10 rounded p-1 opacity-0 transition-opacity group-hover:opacity-100"
                 >
-                  <Plus className="h-3 w-3 text-primary" />
+                  <Plus className="text-primary h-3 w-3" />
                 </button>
               </div>
 
@@ -198,7 +198,7 @@ export const CalendarView = ({
         {nextDays.map((day, i) => (
           <div
             key={`next-${i}`}
-            className="border-b border-r bg-muted/5 p-2 opacity-40"
+            className="bg-muted/5 border-b border-r p-2 opacity-40"
           >
             <span className="text-sm font-medium">{day}</span>
           </div>

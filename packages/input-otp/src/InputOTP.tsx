@@ -134,7 +134,7 @@ export const InputOTP = ({
           disabled={disabled}
           className={cn(
             "h-12 w-10 px-0 text-center text-xl font-bold selection:bg-transparent md:h-14 md:w-12",
-            "border-2 transition-all duration-200 focus:border-primary focus:ring-4 focus:ring-primary/10",
+            "focus:border-primary focus:ring-primary/10 border-2 transition-all duration-200 focus:ring-4",
             currentValue[i]
               ? "border-primary/50 bg-primary/5 shadow-soft"
               : "border-muted/50 bg-muted/20",
