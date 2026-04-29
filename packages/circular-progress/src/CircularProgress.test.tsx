@@ -1,7 +1,6 @@
 import { render } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { CircularProgress } from "./CircularProgress";
-import React from "react";
 
 describe("CircularProgress", () => {
   it("renders correctly with default props", () => {
@@ -28,7 +27,7 @@ describe("CircularProgress", () => {
     const { container } = render(<CircularProgress indeterminate />);
     const svg = container.querySelector("svg");
     expect(svg).toHaveClass("animate-spin");
-    
+
     const progressCircle = container.querySelectorAll("circle")[1];
     expect(progressCircle).toHaveClass("animate-progress-circular");
   });
@@ -36,19 +35,23 @@ describe("CircularProgress", () => {
   it("calculates stroke-dashoffset correctly based on value", () => {
     const { rerender, container } = render(<CircularProgress value={50} />);
     const progressCircle = container.querySelectorAll("circle")[1];
-    
-    const radius = 20;
-    const circumference = 2 * Math.PI * radius;
-    const expectedOffset = circumference - (50 / 100) * circumference;
-    
-    // We can't easily check the exact calculated value because of floating point, 
+
+    // const radius = 20;
+    // const circumference = 2 * Math.PI * radius;
+    // const expectedOffset = circumference - (50 / 100) * circumference;
+
+    // We can't easily check the exact calculated value because of floating point,
     // but we can check if it exists and is roughly correct if needed.
     // However, let's just check that it changes when value changes.
-    const initialOffset = parseFloat(progressCircle.getAttribute("stroke-dashoffset") || "0");
-    
+    const initialOffset = parseFloat(
+      progressCircle.getAttribute("stroke-dashoffset") || "0"
+    );
+
     rerender(<CircularProgress value={75} />);
-    const updatedOffset = parseFloat(progressCircle.getAttribute("stroke-dashoffset") || "0");
-    
+    const updatedOffset = parseFloat(
+      progressCircle.getAttribute("stroke-dashoffset") || "0"
+    );
+
     expect(updatedOffset).toBeLessThan(initialOffset);
   });
 
@@ -59,7 +62,9 @@ describe("CircularProgress", () => {
   });
 
   it("passes extra props to svg element", () => {
-    const { container } = render(<CircularProgress data-testid="progress" aria-label="loading" />);
+    const { container } = render(
+      <CircularProgress data-testid="progress" aria-label="loading" />
+    );
     const svg = container.querySelector("svg");
     expect(svg).toHaveAttribute("data-testid", "progress");
     expect(svg).toHaveAttribute("aria-label", "loading");

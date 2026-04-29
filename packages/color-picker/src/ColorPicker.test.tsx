@@ -1,10 +1,9 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { ColorPicker } from "./ColorPicker";
-import React from "react";
+import { ColorPicker, type ColorPickerProps } from "./ColorPicker";
 
 describe("ColorPicker", () => {
-  let defaultProps: any;
+  let defaultProps: ColorPickerProps;
 
   beforeEach(() => {
     defaultProps = {
@@ -17,7 +16,7 @@ describe("ColorPicker", () => {
     render(<ColorPicker {...defaultProps} />);
     const trigger = screen.getByTitle("Select color");
     expect(trigger).toHaveStyle({ backgroundColor: "#ff0000" });
-    
+
     const inputs = screen.getAllByPlaceholderText("#000000");
     // One is in the main view, one is in the popover (which is not open yet, but might be rendered if Popover renders eagerly or if we are using a mock)
     // Actually, Popover usually renders children only when open.
@@ -28,7 +27,7 @@ describe("ColorPicker", () => {
   it("calls onChange when typing a valid hex code", () => {
     render(<ColorPicker {...defaultProps} />);
     const input = screen.getByDisplayValue("#ff0000");
-    
+
     fireEvent.change(input, { target: { value: "#00ff00" } });
     expect(defaultProps.onChange).toHaveBeenCalledWith("#00ff00");
   });
@@ -36,7 +35,7 @@ describe("ColorPicker", () => {
   it("does not call onChange when typing an invalid hex code", () => {
     render(<ColorPicker {...defaultProps} />);
     const input = screen.getByDisplayValue("#ff0000");
-    
+
     fireEvent.change(input, { target: { value: "invalid" } });
     expect(defaultProps.onChange).not.toHaveBeenCalled();
   });
@@ -45,12 +44,14 @@ describe("ColorPicker", () => {
     render(<ColorPicker {...defaultProps} />);
     const trigger = screen.getByTitle("Select color");
     fireEvent.click(trigger);
-    
+
     expect(screen.getByText("Presets")).toBeInTheDocument();
     expect(screen.getByText("Presets")).toBeInTheDocument();
-    
+
     // Preset buttons are those with a background color style
-    const presetButtons = screen.getAllByRole("button").filter(b => b.style.backgroundColor !== "");
+    const presetButtons = screen
+      .getAllByRole("button")
+      .filter((b) => b.style.backgroundColor !== "");
     expect(presetButtons.length).toBeGreaterThan(0);
   });
 
@@ -58,14 +59,17 @@ describe("ColorPicker", () => {
     render(<ColorPicker {...defaultProps} />);
     const trigger = screen.getByTitle("Select color");
     fireEvent.click(trigger);
-    
+
     // Preset buttons are those with a background color style, excluding the trigger
-    const presetButtons = screen.getAllByRole("button").filter(b => 
-      b.getAttribute('style')?.includes('background-color') && 
-      b.getAttribute('title') !== "Select color"
-    );
+    const presetButtons = screen
+      .getAllByRole("button")
+      .filter(
+        (b) =>
+          b.getAttribute("style")?.includes("background-color") &&
+          b.getAttribute("title") !== "Select color"
+      );
     fireEvent.click(presetButtons[0]);
-    
+
     expect(defaultProps.onChange).toHaveBeenCalled();
   });
 
@@ -73,7 +77,7 @@ describe("ColorPicker", () => {
     render(<ColorPicker {...defaultProps} disabled />);
     const trigger = screen.getByTitle("Select color");
     const input = screen.getByDisplayValue("#ff0000");
-    
+
     expect(trigger).toBeDisabled();
     expect(input).toBeDisabled();
   });
