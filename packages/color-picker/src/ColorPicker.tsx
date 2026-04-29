@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 import { Input } from "@altrugenix/input";
-import { Popover } from "../../overlays/popover/Popover";
+import { Popover } from "@altrugenix/popover";
 import { Check, Pipette } from "lucide-react";
 
 export interface ColorPickerProps {

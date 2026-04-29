@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 import { Card } from "@altrugenix/card";
 import { Sparkline } from "./Sparkline";
 import {
@@ -9,7 +9,8 @@ import {
 import { ArrowUpRight, ArrowDownRight, Minus } from "lucide-react";
 
 export interface MetricCardProps
-  extends React.HTMLAttributes<HTMLDivElement>, MetricCardStylesProps {
+  extends React.HTMLAttributes<HTMLDivElement>,
+    MetricCardStylesProps {
   title: string;
   value: string | number;
   description?: string;

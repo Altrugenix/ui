@@ -7,7 +7,7 @@ import {
   Maximize,
   Settings,
 } from "lucide-react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 import { Slider } from "@altrugenix/slider";
 
 export interface VideoPlayerProps {
@@ -32,7 +32,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const [volume, setVolume] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
   const [showControls, setShowControls] = useState(true);
-  const controlsTimeoutRef = useRef<NodeJS.Timeout>(null);
+  const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const video = videoRef.current;

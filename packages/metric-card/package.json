@@ -27,8 +27,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@altrugenix/core": "1.0.0-alpha.0",
-    "@altrugenix/input": "1.0.0-alpha.0",
+    "@altrugenix/card": "workspace:*",
+    "@altrugenix/core": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^1.7.0"
   },
@@ -37,7 +37,11 @@
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
     "jsdom": "^29.0.1",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.1",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.1.2"
   },
   "peerDependencies": {

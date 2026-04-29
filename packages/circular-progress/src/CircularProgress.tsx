@@ -1,7 +1,8 @@
 import React from "react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 
-export interface CircularProgressProps extends React.SVGAttributes<SVGSVGElement> {
+export interface CircularProgressProps
+  extends React.SVGAttributes<SVGSVGElement> {
   /** Current progress value (0–100) */
   value?: number;
   /** Visual size */
@@ -49,11 +50,7 @@ export const CircularProgress = React.forwardRef<
         viewBox="0 0 44 44"
         width={dimensions}
         height={dimensions}
-        className={cn(
-          "inline-block",
-          indeterminate && "animate-spin",
-          className
-        )}
+        className={cn("inline-block", indeterminate && "animate-spin", className)}
         {...props}
       >
         <circle

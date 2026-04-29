@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn, ZoomOut, Maximize2, Minimize2 } from "lucide-react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 
 export interface ImageViewerProps {
   src: string;

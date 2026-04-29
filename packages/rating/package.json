@@ -1,10 +1,10 @@
 {
-  "name": "@altrugenix/rich-text-editor",
+  "name": "@altrugenix/rating",
   "version": "1.0.0-alpha.0",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/altrugenix-rich-text-editor.umd.cjs",
-  "module": "./dist/altrugenix-rich-text-editor.js",
+  "main": "./dist/altrugenix-rating.umd.cjs",
+  "module": "./dist/altrugenix-rating.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -12,8 +12,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/altrugenix-rich-text-editor.js",
-      "require": "./dist/altrugenix-rich-text-editor.umd.cjs"
+      "import": "./dist/altrugenix-rating.js",
+      "require": "./dist/altrugenix-rating.umd.cjs"
     }
   },
   "publishConfig": {
@@ -27,10 +27,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@altrugenix/button": "1.0.0-alpha.0",
-    "@altrugenix/core": "1.0.0-alpha.0",
-    "@altrugenix/progress-bar": "1.0.0-alpha.0",
-    "class-variance-authority": "^0.7.1",
+    "@altrugenix/core": "workspace:*",
     "lucide-react": "^1.7.0"
   },
   "devDependencies": {
@@ -38,11 +35,14 @@
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
     "jsdom": "^29.0.1",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.1",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.1.2"
   },
   "peerDependencies": {
-    "framer-motion": "^11.0.0 || ^12.0.0",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
   }

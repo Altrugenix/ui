@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Star } from "lucide-react";
-import { cn } from "~/lib/utils/cn";
+import { cn } from "@altrugenix/core";
 
 export interface RatingProps {
   /** Current value */

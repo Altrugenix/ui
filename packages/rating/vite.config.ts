@@ -20,10 +20,10 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "AltrugenixMetricCard",
+      name: "AltrugenixRating",
       formats: ["es", "umd"],
       fileName: (format) =>
-        `altrugenix-metric-card.${format === "es" ? "js" : "umd.cjs"}`,
+        `altrugenix-rating.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
       external: [
@@ -32,9 +32,6 @@ export default defineConfig({
         "react-dom",
         "lucide-react",
         "@altrugenix/core",
-        "@altrugenix/card",
-        "framer-motion",
-        "class-variance-authority",
       ],
       output: {
         globals: {
@@ -42,9 +39,6 @@ export default defineConfig({
           "react-dom": "ReactDOM",
           "lucide-react": "Lucide",
           "@altrugenix/core": "AltrugenixCore",
-          "@altrugenix/card": "AltrugenixCard",
-          "framer-motion": "Motion",
-          "class-variance-authority": "Cva",
           "react/jsx-runtime": "jsxRuntime",
         },
       },

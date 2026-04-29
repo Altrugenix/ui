@@ -57,6 +57,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/autocomplete@workspace:*, @altrugenix/autocomplete@workspace:packages/autocomplete":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/autocomplete@workspace:packages/autocomplete"
+  dependencies:
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/input": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/avatar@npm:1.0.0-alpha.0, @altrugenix/avatar@workspace:*, @altrugenix/avatar@workspace:packages/avatar":
   version: 0.0.0-use.local
   resolution: "@altrugenix/avatar@workspace:packages/avatar"
@@ -135,7 +156,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/calendar-view@workspace:packages/calendar-view":
+"@altrugenix/calendar-view@workspace:*, @altrugenix/calendar-view@workspace:packages/calendar-view":
   version: 0.0.0-use.local
   resolution: "@altrugenix/calendar-view@workspace:packages/calendar-view"
   dependencies:
@@ -253,6 +274,51 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/circular-progress@workspace:*, @altrugenix/circular-progress@workspace:packages/circular-progress":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/circular-progress@workspace:packages/circular-progress"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    "@vitejs/plugin-react": "npm:^6.0.1"
+    jsdom: "npm:^29.0.1"
+    typescript: "npm:~5.9.3"
+    vite: "npm:^8.0.1"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/color-picker@workspace:*, @altrugenix/color-picker@workspace:packages/color-picker":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/color-picker@workspace:packages/color-picker"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@altrugenix/input": "workspace:*"
+    "@altrugenix/popover": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    "@vitejs/plugin-react": "npm:^6.0.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    typescript: "npm:~5.9.3"
+    vite: "npm:^8.0.1"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/core@npm:1.0.0-alpha.0, @altrugenix/core@workspace:*, @altrugenix/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@altrugenix/core@workspace:packages/core"
@@ -271,7 +337,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/css-baseline@workspace:packages/css-baseline":
+"@altrugenix/css-baseline@workspace:*, @altrugenix/css-baseline@workspace:packages/css-baseline":
   version: 0.0.0-use.local
   resolution: "@altrugenix/css-baseline@workspace:packages/css-baseline"
   dependencies:
@@ -291,7 +357,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/date-picker@workspace:packages/date-picker":
+"@altrugenix/date-picker@workspace:*, @altrugenix/date-picker@workspace:packages/date-picker":
   version: 0.0.0-use.local
   resolution: "@altrugenix/date-picker@workspace:packages/date-picker"
   dependencies:
@@ -313,11 +379,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/divider@workspace:packages/divider":
+"@altrugenix/divider@workspace:*, @altrugenix/divider@workspace:packages/divider":
   version: 0.0.0-use.local
   resolution: "@altrugenix/divider@workspace:packages/divider"
   dependencies:
     "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/file-upload@workspace:*, @altrugenix/file-upload@workspace:packages/file-upload":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/file-upload@workspace:packages/file-upload"
+  dependencies:
+    "@altrugenix/button": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/progress-bar": "npm:1.0.0-alpha.0"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -366,6 +454,29 @@ __metadata:
     lucide-react: "npm:^1.7.0"
     vitest: "npm:^4.1.2"
   peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/image-viewer@workspace:*, @altrugenix/image-viewer@workspace:packages/image-viewer":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/image-viewer@workspace:packages/image-viewer"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    "@vitejs/plugin-react": "npm:^6.0.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    typescript: "npm:~5.9.3"
+    vite: "npm:^8.0.1"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
   languageName: unknown
@@ -488,6 +599,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/metric-card@workspace:*, @altrugenix/metric-card@workspace:packages/metric-card":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/metric-card@workspace:packages/metric-card"
+  dependencies:
+    "@altrugenix/card": "workspace:*"
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    "@vitejs/plugin-react": "npm:^6.0.1"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    typescript: "npm:~5.9.3"
+    vite: "npm:^8.0.1"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/modal@workspace:*, @altrugenix/modal@workspace:packages/modal":
   version: 0.0.0-use.local
   resolution: "@altrugenix/modal@workspace:packages/modal"
@@ -509,7 +645,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/popover@npm:1.0.0-alpha.0, @altrugenix/popover@workspace:packages/popover":
+"@altrugenix/popover@npm:1.0.0-alpha.0, @altrugenix/popover@workspace:*, @altrugenix/popover@workspace:packages/popover":
   version: 0.0.0-use.local
   resolution: "@altrugenix/popover@workspace:packages/popover"
   dependencies:
@@ -530,7 +666,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/progress-bar@workspace:packages/progress-bar":
+"@altrugenix/progress-bar@npm:1.0.0-alpha.0, @altrugenix/progress-bar@workspace:*, @altrugenix/progress-bar@workspace:packages/progress-bar":
   version: 0.0.0-use.local
   resolution: "@altrugenix/progress-bar@workspace:packages/progress-bar"
   dependencies:
@@ -565,6 +701,50 @@ __metadata:
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
     tailwindcss: 3.x
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/rating@workspace:*, @altrugenix/rating@workspace:packages/rating":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/rating@workspace:packages/rating"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    "@vitejs/plugin-react": "npm:^6.0.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    typescript: "npm:~5.9.3"
+    vite: "npm:^8.0.1"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/rich-text-editor@workspace:*, @altrugenix/rich-text-editor@workspace:packages/rich-text-editor":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/rich-text-editor@workspace:packages/rich-text-editor"
+  dependencies:
+    "@altrugenix/button": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/progress-bar": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
   languageName: unknown
   linkType: soft
 
@@ -607,7 +787,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/skeleton@workspace:packages/skeleton":
+"@altrugenix/skeleton@workspace:*, @altrugenix/skeleton@workspace:packages/skeleton":
   version: 0.0.0-use.local
   resolution: "@altrugenix/skeleton@workspace:packages/skeleton"
   dependencies:
@@ -765,6 +945,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/timeline@workspace:*, @altrugenix/timeline@workspace:packages/timeline":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/timeline@workspace:packages/timeline"
+  dependencies:
+    "@altrugenix/button": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/progress-bar": "npm:1.0.0-alpha.0"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/toast@workspace:*, @altrugenix/toast@workspace:packages/toast":
   version: 0.0.0-use.local
   resolution: "@altrugenix/toast@workspace:packages/toast"
@@ -785,7 +987,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/typography@workspace:packages/typography":
+"@altrugenix/typography@workspace:*, @altrugenix/typography@workspace:packages/typography":
   version: 0.0.0-use.local
   resolution: "@altrugenix/typography@workspace:packages/typography"
   dependencies:
@@ -811,27 +1013,42 @@ __metadata:
   dependencies:
     "@altrugenix/accordion": "workspace:*"
     "@altrugenix/aspect-ratio": "workspace:*"
+    "@altrugenix/autocomplete": "workspace:*"
     "@altrugenix/avatar": "workspace:*"
     "@altrugenix/backdrop": "workspace:*"
     "@altrugenix/badge": "workspace:*"
     "@altrugenix/button": "workspace:*"
+    "@altrugenix/calendar-view": "workspace:*"
     "@altrugenix/card": "workspace:*"
     "@altrugenix/carousel": "workspace:*"
     "@altrugenix/charts": "workspace:*"
     "@altrugenix/checkbox": "workspace:*"
     "@altrugenix/chip": "workspace:*"
+    "@altrugenix/circular-progress": "workspace:*"
+    "@altrugenix/color-picker": "workspace:*"
     "@altrugenix/core": "workspace:*"
+    "@altrugenix/css-baseline": "workspace:*"
+    "@altrugenix/date-picker": "workspace:*"
+    "@altrugenix/divider": "workspace:*"
+    "@altrugenix/file-upload": "workspace:*"
     "@altrugenix/heading": "workspace:*"
     "@altrugenix/icon": "workspace:*"
     "@altrugenix/image": "workspace:*"
+    "@altrugenix/image-viewer": "workspace:*"
     "@altrugenix/input": "workspace:*"
     "@altrugenix/input-otp": "workspace:*"
     "@altrugenix/kanban": "workspace:*"
     "@altrugenix/link": "workspace:*"
     "@altrugenix/list": "workspace:*"
+    "@altrugenix/metric-card": "workspace:*"
     "@altrugenix/modal": "workspace:*"
+    "@altrugenix/popover": "workspace:*"
+    "@altrugenix/progress-bar": "workspace:*"
     "@altrugenix/radio": "workspace:*"
+    "@altrugenix/rating": "workspace:*"
+    "@altrugenix/rich-text-editor": "workspace:*"
     "@altrugenix/select": "workspace:*"
+    "@altrugenix/skeleton": "workspace:*"
     "@altrugenix/slider": "workspace:*"
     "@altrugenix/snackbar": "workspace:*"
     "@altrugenix/switch": "workspace:*"
@@ -839,7 +1056,10 @@ __metadata:
     "@altrugenix/tag": "workspace:*"
     "@altrugenix/text": "workspace:*"
     "@altrugenix/textarea": "workspace:*"
+    "@altrugenix/timeline": "workspace:*"
     "@altrugenix/toast": "workspace:*"
+    "@altrugenix/typography": "workspace:*"
+    "@altrugenix/video-player": "workspace:*"
     "@altrugenix/virtual-list": "workspace:*"
     "@chromatic-com/storybook": "npm:^5.1.1"
     "@eslint/js": "npm:^9.39.4"
@@ -893,6 +1113,29 @@ __metadata:
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
     tailwindcss: 3.x
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/video-player@workspace:*, @altrugenix/video-player@workspace:packages/video-player":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/video-player@workspace:packages/video-player"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@altrugenix/slider": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    "@vitejs/plugin-react": "npm:^6.0.1"
+    jsdom: "npm:^29.0.1"
+    lucide-react: "npm:^1.7.0"
+    typescript: "npm:~5.9.3"
+    vite: "npm:^8.0.1"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.2"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
   languageName: unknown
   linkType: soft
 

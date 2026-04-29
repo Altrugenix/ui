@@ -25,12 +25,12 @@
 - [x] `rich-text-editor`
 - [x] `timeline`
 - [x] `autocomplete`
-- [ ] `metric-card`
-- [ ] `image-viewer`
-- [ ] `video-player`
-- [ ] `color-picker`
-- [ ] `circular-progress`
-- [ ] `rating`
+- [x] `metric-card`
+- [x] `image-viewer`
+- [x] `video-player`
+- [x] `color-picker`
+- [x] `circular-progress`
+- [x] `rating`
 - [ ] `toggle`
 - [ ] `speed-dial`
 - [ ] `image-list`
