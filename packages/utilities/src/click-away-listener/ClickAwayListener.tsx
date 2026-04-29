@@ -49,7 +49,7 @@ export const ClickAwayListener: React.FC<ClickAwayListenerProps> = ({
 
   return React.cloneElement(children, {
     ref: combinedRef,
-  });
+  } as any);
 };
 
 ClickAwayListener.displayName = "ClickAwayListener";

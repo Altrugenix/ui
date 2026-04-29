@@ -65,7 +65,7 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({
 
   return React.cloneElement(children, {
     ref: combinedRef,
-  });
+  } as any);
 };
 
 FocusTrap.displayName = "FocusTrap";
