@@ -48,29 +48,29 @@ export * from "@altrugenix/color-picker";
 export * from "@altrugenix/circular-progress";
 export * from "@altrugenix/snackbar";
 export * from "@altrugenix/rating";
-export * from "./toggle";
-export * from "./speed-dial";
+export * from "@altrugenix/toggle";
+export * from "@altrugenix/speed-dial";
 export * from "@altrugenix/chip";
 export * from "@altrugenix/backdrop";
 export * from "@altrugenix/popover";
-export * from "./image-list";
-export * from "./transfer-list";
-export * from "../composites/stepper";
-export * from "../composites/breadcrumbs";
-export * from "../composites/tabs";
+export * from "@altrugenix/image-list";
+export * from "@altrugenix/transfer-list";
+export * from "@altrugenix/stepper";
+export * from "@altrugenix/breadcrumbs";
+export * from "@altrugenix/tabs";
 
 // Feedback & Micro-interactions
-export * from "../feedback";
-export * from "../effects";
+export * from "@altrugenix/feedback";
+export * from "@altrugenix/effects";
 
 // Overlays & Navigation
 export * from "@altrugenix/toast";
 export * from "@altrugenix/modal";
-export * from "../navigation/drawer/Drawer";
-export * from "../navigation/command-palette";
+export * from "@altrugenix/drawer";
+export * from "@altrugenix/command-palette";
 
 // Theme & Utils
-export * from "../utilities";
+export * from "@altrugenix/utilities";
 export { ThemeProvider } from "@altrugenix/core";
 export { useTheme } from "@altrugenix/core";
 export { cn } from "@altrugenix/core";

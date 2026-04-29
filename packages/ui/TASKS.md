@@ -31,24 +31,24 @@
 - [x] `color-picker`
 - [x] `circular-progress`
 - [x] `rating`
-- [ ] `toggle`
-- [ ] `speed-dial`
-- [ ] `image-list`
-- [ ] `transfer-list`
-- [ ] `stepper`
-- [ ] `breadcrumbs`
-- [ ] `tabs`
+- [x] `toggle`
+- [x] `speed-dial`
+- [x] `image-list`
+- [x] `transfer-list`
+- [x] `stepper`
+- [x] `breadcrumbs`
+- [x] `tabs`
 
 ### Feedback & Micro-interactions
 
-- [ ] `feedback`
-- [ ] `effects`
+- [x] `feedback`
+- [x] `effects`
 
 ### Overlays & Navigation
 
-- [ ] `drawer`
-- [ ] `command-palette`
+- [x] `drawer`
+- [x] `command-palette`
 
 ### Theme & Utils
 
-- [ ] `utilities`
+- [x] `utilities`
