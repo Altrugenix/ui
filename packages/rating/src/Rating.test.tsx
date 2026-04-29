@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Rating } from "./Rating";
-import React from "react";
 
 describe("Rating", () => {
   it("renders the correct number of stars", () => {

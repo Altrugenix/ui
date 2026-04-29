@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Reveal } from "./Reveal";
-import React from "react";
 
 // Mock framer-motion's useInView to always return true for tests
 vi.mock("framer-motion", async () => {

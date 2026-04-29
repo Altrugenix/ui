@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { ImageList, ImageListItem } from "./ImageList";
-import React from "react";
 
 describe("ImageList", () => {
   it("renders children correctly", () => {

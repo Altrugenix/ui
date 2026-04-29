@@ -1,7 +1,6 @@
 import { render, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { VideoPlayer } from "./VideoPlayer";
-import React from "react";
 
 describe("VideoPlayer", () => {
   const src = "test-video.mp4";

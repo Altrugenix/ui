@@ -3,7 +3,6 @@ import { describe, it, expect, vi } from "vitest";
 import { Portal } from "./portal/Portal";
 import { ClickAwayListener } from "./click-away-listener/ClickAwayListener";
 import { VisuallyHidden } from "./visually-hidden/VisuallyHidden";
-import React from "react";
 
 describe("Utilities", () => {
   describe("Portal", () => {

@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { Drawer } from "./Drawer";
-import React from "react";
 
 describe("Drawer", () => {
   const defaultProps = {

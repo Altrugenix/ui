@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { TransferList } from "./TransferList";
-import React from "react";
 
 describe("TransferList", () => {
   const items = ["Apple", "Banana", "Cherry", "Date"];

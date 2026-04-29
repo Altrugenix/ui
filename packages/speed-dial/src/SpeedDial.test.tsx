@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { SpeedDial } from "./SpeedDial";
-import React from "react";
 
 describe("SpeedDial", () => {
   const mockActions = [
