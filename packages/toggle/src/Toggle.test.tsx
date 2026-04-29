@@ -38,40 +38,48 @@ describe("ToggleGroup", () => {
         <Toggle value="italic">I</Toggle>
       </ToggleGroup>
     );
-    
+
     const italicToggle = screen.getByText("I");
     fireEvent.click(italicToggle);
-    
+
     expect(onValueChange).toHaveBeenCalledWith("italic");
   });
 
   it("handles multiple selection correctly", () => {
     const onValueChange = vi.fn();
     render(
-      <ToggleGroup type="multiple" value={["bold"]} onValueChange={onValueChange}>
+      <ToggleGroup
+        type="multiple"
+        value={["bold"]}
+        onValueChange={onValueChange}
+      >
         <Toggle value="bold">B</Toggle>
         <Toggle value="italic">I</Toggle>
       </ToggleGroup>
     );
-    
+
     const italicToggle = screen.getByText("I");
     fireEvent.click(italicToggle);
-    
+
     expect(onValueChange).toHaveBeenCalledWith(["bold", "italic"]);
   });
 
   it("removes value from multiple selection when clicked again", () => {
     const onValueChange = vi.fn();
     render(
-      <ToggleGroup type="multiple" value={["bold", "italic"]} onValueChange={onValueChange}>
+      <ToggleGroup
+        type="multiple"
+        value={["bold", "italic"]}
+        onValueChange={onValueChange}
+      >
         <Toggle value="bold">B</Toggle>
         <Toggle value="italic">I</Toggle>
       </ToggleGroup>
     );
-    
+
     const italicToggle = screen.getByText("I");
     fireEvent.click(italicToggle);
-    
+
     expect(onValueChange).toHaveBeenCalledWith(["bold"]);
   });
 
@@ -82,10 +90,10 @@ describe("ToggleGroup", () => {
         <Toggle value="bold">B</Toggle>
       </ToggleGroup>
     );
-    
+
     const boldToggle = screen.getByText("B");
     fireEvent.click(boldToggle);
-    
+
     expect(onValueChange).toHaveBeenCalledWith("");
   });
 

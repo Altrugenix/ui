@@ -18,15 +18,15 @@ describe("TransferList", () => {
   it("toggles items and moves them to the right", () => {
     const onChange = vi.fn();
     render(<TransferList items={items} onChange={onChange} />);
-    
+
     const apple = screen.getByText("Apple");
     fireEvent.click(apple);
-    
+
     const moveRightBtn = screen.getByLabelText("move selected right");
     expect(moveRightBtn).not.toBeDisabled();
-    
+
     fireEvent.click(moveRightBtn);
-    
+
     expect(onChange).toHaveBeenCalled();
     // Check if Apple is now in the right list (by checking item counts or presence)
     expect(screen.getAllByText("1 items")).toHaveLength(1); // Right list
@@ -35,13 +35,13 @@ describe("TransferList", () => {
 
   it("moves items back to the left", () => {
     render(<TransferList items={items} initialSelected={["Apple"]} />);
-    
+
     const apple = screen.getByText("Apple");
     fireEvent.click(apple);
-    
+
     const moveLeftBtn = screen.getByLabelText("move selected left");
     fireEvent.click(moveLeftBtn);
-    
+
     expect(screen.getAllByText("4 items")).toHaveLength(1); // Left list
     expect(screen.getAllByText("0 items")).toHaveLength(1); // Right list
   });

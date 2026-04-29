@@ -36,7 +36,8 @@ describe("ImageViewer", () => {
   it("calls onClose when clicking the backdrop", () => {
     render(<ImageViewer {...defaultProps} />);
     // The backdrop is the first motion.div child of the root div
-    const backdrop = screen.getByRole("img").closest('div')?.parentElement?.firstChild;
+    const backdrop = screen.getByRole("img").closest("div")
+      ?.parentElement?.firstChild;
     if (backdrop) {
       fireEvent.click(backdrop);
     }
@@ -46,8 +47,7 @@ describe("ImageViewer", () => {
   it("increases scale when clicking zoom in", () => {
     render(<ImageViewer {...defaultProps} />);
     const zoomIn = screen.getByTitle("Zoom In");
-    const img = screen.getByRole("img");
-    
+
     // Initial scale is 1
     fireEvent.click(zoomIn);
     // Since scale is part of motion props, we might not see it directly in style unless we wait for animation
@@ -57,10 +57,10 @@ describe("ImageViewer", () => {
   it("toggles maximize state", () => {
     render(<ImageViewer {...defaultProps} />);
     const maximize = screen.getByTitle("Maximize");
-    
+
     fireEvent.click(maximize);
     expect(screen.getByTitle("Minimize")).toBeInTheDocument();
-    
+
     fireEvent.click(screen.getByTitle("Minimize"));
     expect(screen.getByTitle("Maximize")).toBeInTheDocument();
   });

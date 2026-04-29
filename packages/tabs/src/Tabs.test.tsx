@@ -5,9 +5,22 @@ import React from "react";
 
 describe("Tabs", () => {
   const mockItems: TabItem[] = [
-    { label: "Account", value: "account", content: <div data-testid="account-content">Account Content</div> },
-    { label: "Password", value: "password", content: <div data-testid="password-content">Password Content</div> },
-    { label: "Settings", value: "settings", content: <div data-testid="settings-content">Settings Content</div>, disabled: true },
+    {
+      label: "Account",
+      value: "account",
+      content: <div data-testid="account-content">Account Content</div>,
+    },
+    {
+      label: "Password",
+      value: "password",
+      content: <div data-testid="password-content">Password Content</div>,
+    },
+    {
+      label: "Settings",
+      value: "settings",
+      content: <div data-testid="settings-content">Settings Content</div>,
+      disabled: true,
+    },
   ];
 
   it("renders all tab triggers", () => {
@@ -32,9 +45,9 @@ describe("Tabs", () => {
   it("switches content when a tab is clicked", () => {
     render(<Tabs items={mockItems} />);
     const passwordTab = screen.getByText("Password");
-    
+
     fireEvent.click(passwordTab);
-    
+
     expect(screen.getByTestId("password-content")).toBeInTheDocument();
     expect(screen.queryByTestId("account-content")).not.toBeInTheDocument();
   });
@@ -43,18 +56,18 @@ describe("Tabs", () => {
     const onValueChange = vi.fn();
     render(<Tabs items={mockItems} onValueChange={onValueChange} />);
     const passwordTab = screen.getByText("Password");
-    
+
     fireEvent.click(passwordTab);
-    
+
     expect(onValueChange).toHaveBeenCalledWith("password");
   });
 
   it("does not switch content when a disabled tab is clicked", () => {
     render(<Tabs items={mockItems} />);
     const settingsTab = screen.getByText("Settings");
-    
+
     fireEvent.click(settingsTab);
-    
+
     expect(screen.getByTestId("account-content")).toBeInTheDocument();
     expect(screen.queryByTestId("settings-content")).not.toBeInTheDocument();
     expect(settingsTab).toBeDisabled();
@@ -79,14 +92,21 @@ describe("Tabs", () => {
 
   it("renders icons if provided", () => {
     const itemsWithIcon = [
-      { label: "Account", value: "account", content: "Account", icon: <span data-testid="account-icon">Icon</span> },
+      {
+        label: "Account",
+        value: "account",
+        content: "Account",
+        icon: <span data-testid="account-icon">Icon</span>,
+      },
     ];
     render(<Tabs items={itemsWithIcon} />);
     expect(screen.getByTestId("account-icon")).toBeInTheDocument();
   });
 
   it("applies vertical orientation correctly", () => {
-    const { container } = render(<Tabs items={mockItems} orientation="vertical" />);
+    const { container } = render(
+      <Tabs items={mockItems} orientation="vertical" />
+    );
     expect(container.firstChild).toHaveClass("flex");
     expect(screen.getByRole("tablist")).toHaveClass("flex-col");
   });

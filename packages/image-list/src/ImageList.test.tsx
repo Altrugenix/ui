@@ -53,7 +53,11 @@ describe("ImageListItem", () => {
   });
 
   it("applies custom cols and rows span", () => {
-    render(<ImageListItem data-testid="item" cols={2} rows={3}>Content</ImageListItem>);
+    render(
+      <ImageListItem data-testid="item" cols={2} rows={3}>
+        Content
+      </ImageListItem>
+    );
     const item = screen.getByTestId("item");
     expect(item).toHaveStyle({
       gridColumn: "span 2",
@@ -62,7 +66,11 @@ describe("ImageListItem", () => {
   });
 
   it("applies custom className", () => {
-    render(<ImageListItem data-testid="item" className="custom-item">Content</ImageListItem>);
+    render(
+      <ImageListItem data-testid="item" className="custom-item">
+        Content
+      </ImageListItem>
+    );
     expect(screen.getByTestId("item")).toHaveClass("custom-item");
   });
 });

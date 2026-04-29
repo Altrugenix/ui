@@ -21,7 +21,11 @@ describe("Drawer", () => {
   });
 
   it("does not render when isOpen is false", () => {
-    render(<Drawer {...defaultProps} isOpen={false}>Content</Drawer>);
+    render(
+      <Drawer {...defaultProps} isOpen={false}>
+        Content
+      </Drawer>
+    );
     expect(screen.queryByText("Test Drawer")).not.toBeInTheDocument();
   });
 
@@ -53,16 +57,28 @@ describe("Drawer", () => {
   });
 
   it("applies custom width", () => {
-    render(<Drawer {...defaultProps} width="500px">Content</Drawer>);
+    render(
+      <Drawer {...defaultProps} width="500px">
+        Content
+      </Drawer>
+    );
     const dialog = screen.getByRole("dialog");
     expect(dialog).toHaveStyle({ width: "500px" });
   });
 
   it("applies correct classes for side prop", () => {
-    const { rerender } = render(<Drawer {...defaultProps} side="left">Content</Drawer>);
+    const { rerender } = render(
+      <Drawer {...defaultProps} side="left">
+        Content
+      </Drawer>
+    );
     expect(screen.getByRole("dialog")).toHaveClass("left-0");
 
-    rerender(<Drawer {...defaultProps} side="right">Content</Drawer>);
+    rerender(
+      <Drawer {...defaultProps} side="right">
+        Content
+      </Drawer>
+    );
     expect(screen.getByRole("dialog")).toHaveClass("right-0");
   });
 });

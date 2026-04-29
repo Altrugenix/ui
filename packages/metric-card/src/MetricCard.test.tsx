@@ -16,7 +16,9 @@ describe("MetricCard", () => {
   });
 
   it("renders the description when provided", () => {
-    render(<MetricCard {...defaultProps} description="+20.1% from last month" />);
+    render(
+      <MetricCard {...defaultProps} description="+20.1% from last month" />
+    );
     expect(screen.getByText("+20.1% from last month")).toBeInTheDocument();
   });
 
@@ -41,16 +43,25 @@ describe("MetricCard", () => {
       />
     );
     expect(screen.getByText("-1.2%")).toBeInTheDocument();
-    expect(screen.getByText("-1.2%").parentElement).toHaveClass("text-destructive");
+    expect(screen.getByText("-1.2%").parentElement).toHaveClass(
+      "text-destructive"
+    );
   });
 
   it("renders the icon when provided", () => {
-    render(<MetricCard {...defaultProps} icon={<span data-testid="custom-icon">Icon</span>} />);
+    render(
+      <MetricCard
+        {...defaultProps}
+        icon={<span data-testid="custom-icon">Icon</span>}
+      />
+    );
     expect(screen.getByTestId("custom-icon")).toBeInTheDocument();
   });
 
   it("renders a sparkline when chartData is provided", () => {
-    const { container } = render(<MetricCard {...defaultProps} chartData={[10, 20, 15, 30]} />);
+    const { container } = render(
+      <MetricCard {...defaultProps} chartData={[10, 20, 15, 30]} />
+    );
     const svg = container.querySelector("svg");
     expect(svg).toBeInTheDocument();
   });

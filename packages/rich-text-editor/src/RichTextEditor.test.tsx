@@ -6,9 +6,7 @@ import { RichTextEditor } from "./RichTextEditor";
 
 describe("RichTextEditor component", () => {
   it("renders correctly", () => {
-    const { getByText, getByRole } = render(
-      <RichTextEditor placeholder="Enter text" />
-    );
+    const { getByRole } = render(<RichTextEditor placeholder="Enter text" />);
     // Check for toolbar buttons (Bold is a good candidate)
     const editor = getByRole("textbox");
     expect(editor).toBeInTheDocument();

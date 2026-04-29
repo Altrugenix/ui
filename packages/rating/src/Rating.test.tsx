@@ -19,7 +19,7 @@ describe("Rating", () => {
     const onChange = vi.fn();
     render(<Rating max={5} onChange={onChange} />);
     const stars = screen.getAllByRole("button");
-    
+
     fireEvent.click(stars[3]); // Click the 4th star
     expect(onChange).toHaveBeenCalledWith(4);
   });
@@ -27,11 +27,11 @@ describe("Rating", () => {
   it("updates hover state on mouse enter/leave", () => {
     const { container } = render(<Rating value={0} max={5} />);
     const stars = screen.getAllByRole("button");
-    
+
     fireEvent.mouseEnter(stars[1]); // Hover over 2nd star
     let activeStars = container.querySelectorAll(".text-amber-400");
     expect(activeStars).toHaveLength(2);
-    
+
     fireEvent.mouseLeave(stars[1]);
     activeStars = container.querySelectorAll(".text-amber-400");
     expect(activeStars).toHaveLength(0);
@@ -41,7 +41,7 @@ describe("Rating", () => {
     const onChange = vi.fn();
     render(<Rating value={0} max={5} readonly onChange={onChange} />);
     const stars = screen.getAllByRole("button");
-    
+
     fireEvent.click(stars[2]);
     expect(onChange).not.toHaveBeenCalled();
     expect(stars[2]).toBeDisabled();
@@ -50,7 +50,7 @@ describe("Rating", () => {
   it("applies different sizes", () => {
     const { rerender, container } = render(<Rating size="sm" />);
     expect(container.querySelector("svg")).toHaveClass("h-4 w-4");
-    
+
     rerender(<Rating size="lg" />);
     expect(container.querySelector("svg")).toHaveClass("h-8 w-8");
   });

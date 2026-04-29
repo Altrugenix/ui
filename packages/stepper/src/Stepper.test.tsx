@@ -23,7 +23,7 @@ describe("Stepper", () => {
   });
 
   it("indicates active step correctly", () => {
-    const { container } = render(<Stepper steps={mockSteps} activeStep={1} />);
+    render(<Stepper steps={mockSteps} activeStep={1} />);
     // Active step should have number '2' and specific border class
     expect(screen.getByText("2")).toHaveClass("border-primary");
     expect(screen.getByText("2")).toHaveClass("bg-background");

@@ -18,11 +18,11 @@ describe("Confetti", () => {
   it("calls confetti on rain", () => {
     vi.useFakeTimers();
     Confetti.rain();
-    
+
     act(() => {
       vi.advanceTimersByTime(300);
     });
-    
+
     expect(confetti).toHaveBeenCalled();
     vi.useRealTimers();
   });
