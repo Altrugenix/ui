@@ -39,9 +39,15 @@ export default defineConfig({
       "@altrugenix/carousel": path.resolve(dirname, "../carousel/src"),
       "@altrugenix/checkbox": path.resolve(dirname, "../checkbox/src"),
       "@altrugenix/chip": path.resolve(dirname, "../chip/src"),
-      "@altrugenix/circular-progress": path.resolve(dirname, "../circular-progress/src"),
+      "@altrugenix/circular-progress": path.resolve(
+        dirname,
+        "../circular-progress/src"
+      ),
       "@altrugenix/color-picker": path.resolve(dirname, "../color-picker/src"),
-      "@altrugenix/command-palette": path.resolve(dirname, "../command-palette/src"),
+      "@altrugenix/command-palette": path.resolve(
+        dirname,
+        "../command-palette/src"
+      ),
       "@altrugenix/core": path.resolve(dirname, "../core/src"),
       "@altrugenix/dialog": path.resolve(dirname, "../dialog/src"),
       "@altrugenix/drawer": path.resolve(dirname, "../drawer/src"),
@@ -70,7 +76,10 @@ export default defineConfig({
       "@altrugenix/textarea": path.resolve(dirname, "../textarea/src"),
       "@altrugenix/toast": path.resolve(dirname, "../toast/src"),
       "@altrugenix/toggle": path.resolve(dirname, "../toggle/src"),
-      "@altrugenix/transfer-list": path.resolve(dirname, "../transfer-list/src"),
+      "@altrugenix/transfer-list": path.resolve(
+        dirname,
+        "../transfer-list/src"
+      ),
       "@altrugenix/utilities": path.resolve(dirname, "../utilities/src"),
       "@altrugenix/video-player": path.resolve(dirname, "../video-player/src"),
       "@altrugenix/virtual-list": path.resolve(dirname, "../virtual-list/src"),

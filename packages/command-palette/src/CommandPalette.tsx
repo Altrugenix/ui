@@ -130,7 +130,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-background/60 backdrop-blur-md"
+            className="bg-background/60 fixed inset-0 backdrop-blur-md"
             onClick={onClose}
           />
 
@@ -140,19 +140,19 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-2xl overflow-hidden rounded-2xl border bg-background/80 shadow-2xl ring-1 ring-black/5 backdrop-blur-xl dark:ring-white/10"
+            className="bg-background/80 relative w-full max-w-2xl overflow-hidden rounded-2xl border shadow-2xl ring-1 ring-black/5 backdrop-blur-xl dark:ring-white/10"
           >
             {/* Search Input */}
             <div className="flex items-center border-b px-4">
-              <Search className="h-5 w-5 text-muted-foreground" />
+              <Search className="text-muted-foreground h-5 w-5" />
               <input
                 autoFocus
-                className="flex h-14 w-full bg-transparent px-4 py-3 text-lg outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
+                className="placeholder:text-muted-foreground flex h-14 w-full bg-transparent px-4 py-3 text-lg outline-none disabled:cursor-not-allowed disabled:opacity-50"
                 placeholder={placeholder}
                 value={searchQuery}
                 onChange={handleSearchChange}
               />
-              <div className="hidden items-center gap-1 rounded border bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground opacity-100 sm:flex">
+              <div className="bg-muted text-muted-foreground hidden items-center gap-1 rounded border px-1.5 py-0.5 text-[10px] font-medium opacity-100 sm:flex">
                 <span className="text-xs">ESC</span>
               </div>
             </div>
@@ -163,16 +163,16 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
               className="scrollbar-thin scrollbar-thumb-muted-foreground/20 max-h-[50vh] overflow-y-auto p-2"
             >
               {flatFilteredItems.length === 0 ? (
-                <div className="p-8 text-center text-muted-foreground">
+                <div className="text-muted-foreground p-8 text-center">
                   No results found for{" "}
-                  <span className="font-semibold text-foreground">
+                  <span className="text-foreground font-semibold">
                     "{searchQuery}"
                   </span>
                 </div>
               ) : (
                 Object.entries(groupedItems).map(([groupName, groupItems]) => (
                   <div key={groupName} className="mb-2 last:mb-0">
-                    <h3 className="px-3 py-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                    <h3 className="text-muted-foreground px-3 py-2 text-xs font-semibold uppercase tracking-widest">
                       {groupName}
                     </h3>
                     {groupItems.map((item) => {
@@ -190,7 +190,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                           className={cn(
                             "group flex cursor-pointer items-center gap-3 rounded-lg px-3 py-3 transition-all",
                             isActive
-                              ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                              ? "bg-primary text-primary-foreground shadow-primary/20 shadow-lg"
                               : "hover:bg-accent hover:text-accent-foreground"
                           )}
                         >
@@ -233,16 +233,16 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
             </div>
 
             {/* Footer */}
-            <div className="flex items-center justify-between border-t bg-muted/30 px-4 py-3 text-xs text-muted-foreground">
+            <div className="bg-muted/30 text-muted-foreground flex items-center justify-between border-t px-4 py-3 text-xs">
               <div className="flex items-center gap-4">
                 <span className="flex items-center gap-1 italic">
-                  <kbd className="rounded border bg-background px-1 not-italic">
+                  <kbd className="bg-background rounded border px-1 not-italic">
                     ↑↓
                   </kbd>{" "}
                   Navigate
                 </span>
                 <span className="flex items-center gap-1 italic">
-                  <kbd className="rounded border bg-background px-1 not-italic">
+                  <kbd className="bg-background rounded border px-1 not-italic">
                     Enter
                   </kbd>{" "}
                   Select
@@ -250,7 +250,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
               </div>
               <div className="flex items-center gap-1">
                 Powered by{" "}
-                <span className="font-bold text-foreground/80">Altrugenix</span>
+                <span className="text-foreground/80 font-bold">Altrugenix</span>
               </div>
             </div>
           </motion.div>

@@ -57,10 +57,10 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
         <div
           ref={ref}
           className={cn(
-            "fixed inset-y-0 z-50 flex flex-col bg-background shadow-xl transition-transform duration-300",
+            "bg-background fixed inset-y-0 z-50 flex flex-col shadow-xl transition-transform duration-300",
             side === "right"
-              ? "right-0 animate-in slide-in-from-right"
-              : "left-0 animate-in slide-in-from-left",
+              ? "animate-in slide-in-from-right right-0"
+              : "animate-in slide-in-from-left left-0",
             className
           )}
           style={{ width }}
@@ -73,7 +73,7 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
             {title && <h2 className="text-lg font-semibold">{title}</h2>}
             <button
               onClick={onClose}
-              className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              className="ring-offset-background focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2"
               aria-label="Close drawer"
             >
               <X className="h-4 w-4" />

@@ -72,8 +72,11 @@ export const SpeedDial: React.FC<SpeedDialProps> = ({
             )}
           >
             {actions.map((action, index) => (
-              <div key={index} className="group relative flex items-center gap-2">
-                <span className="invisible absolute right-full mr-2 scale-75 whitespace-nowrap rounded bg-muted px-2 py-1 text-xs font-bold text-muted-foreground opacity-0 transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100">
+              <div
+                key={index}
+                className="group relative flex items-center gap-2"
+              >
+                <span className="bg-muted text-muted-foreground invisible absolute right-full mr-2 scale-75 whitespace-nowrap rounded px-2 py-1 text-xs font-bold opacity-0 transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100">
                   {action.label}
                 </span>
                 <IconButton

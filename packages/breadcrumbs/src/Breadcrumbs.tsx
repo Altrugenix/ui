@@ -39,9 +39,9 @@ export const Breadcrumbs = React.forwardRef<HTMLElement, BreadcrumbsProps>(
                       }
                     }}
                     className={cn(
-                      "transition-colors hover:text-foreground",
+                      "hover:text-foreground transition-colors",
                       isLast
-                        ? "pointer-events-none font-medium text-foreground"
+                        ? "text-foreground pointer-events-none font-medium"
                         : "text-muted-foreground"
                     )}
                     aria-current={isLast ? "page" : undefined}
@@ -52,7 +52,7 @@ export const Breadcrumbs = React.forwardRef<HTMLElement, BreadcrumbsProps>(
                   <span
                     className={cn(
                       isLast
-                        ? "font-medium text-foreground"
+                        ? "text-foreground font-medium"
                         : "text-muted-foreground"
                     )}
                     aria-current={isLast ? "page" : undefined}

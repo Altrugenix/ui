@@ -45,7 +45,7 @@ export const ToggleGroup = React.forwardRef<HTMLDivElement, ToggleGroupProps>(
       <div
         ref={ref}
         className={cn(
-          "inline-flex items-center justify-center rounded-md border bg-background p-1 shadow-sm",
+          "bg-background inline-flex items-center justify-center rounded-md border p-1 shadow-sm",
           orientation === "vertical" ? "flex-col" : "flex-row",
           className
         )}

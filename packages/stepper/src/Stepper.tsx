@@ -94,7 +94,7 @@ export const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
                     {step.label}
                   </p>
                   {step.description && (
-                    <p className="mt-0.5 text-xs text-muted-foreground">
+                    <p className="text-muted-foreground mt-0.5 text-xs">
                       {step.description}
                     </p>
                   )}

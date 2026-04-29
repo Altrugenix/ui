@@ -52,7 +52,9 @@ export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
       onValueChange?.(tabValue);
     };
 
-    const activeContent = items.find((item) => item.value === activeValue)?.content;
+    const activeContent = items.find(
+      (item) => item.value === activeValue
+    )?.content;
 
     const listStyles = {
       default:
@@ -97,7 +99,8 @@ export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
         <div
           className={cn(
             listStyles[variant],
-            orientation === "vertical" && "h-auto w-auto min-w-[120px] flex-col",
+            orientation === "vertical" &&
+              "h-auto w-auto min-w-[120px] flex-col",
             scrollable &&
               (orientation === "horizontal"
                 ? "scrollbar-hide overflow-x-auto"

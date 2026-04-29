@@ -73,7 +73,7 @@ export const TypingAnimation: React.FC<TypingAnimationProps> = ({
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="ml-1 inline-block h-[1.1em] w-[2px] bg-primary align-middle"
+          className="bg-primary ml-1 inline-block h-[1.1em] w-[2px] align-middle"
         />
       )}
     </div>

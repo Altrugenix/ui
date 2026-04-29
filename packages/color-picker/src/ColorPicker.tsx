@@ -65,8 +65,8 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({
           <button
             disabled={disabled}
             className={cn(
-              "h-9 w-9 shrink-0 rounded-md border border-input shadow-sm transition-all hover:scale-105 active:scale-95 disabled:opacity-50",
-              "ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              "border-input h-9 w-9 shrink-0 rounded-md border shadow-sm transition-all hover:scale-105 active:scale-95 disabled:opacity-50",
+              "ring-offset-background focus-visible:ring-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
             )}
             style={{ backgroundColor: value }}
             title="Select color"
@@ -76,7 +76,7 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({
         }
       >
         <div className="space-y-3">
-          <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+          <div className="text-muted-foreground text-xs font-semibold uppercase tracking-wider">
             Presets
           </div>
           <div className="grid grid-cols-7 gap-1.5">
@@ -85,7 +85,7 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({
                 key={color}
                 className={cn(
                   "group relative h-6 w-6 rounded-sm border border-black/10 transition-transform hover:z-10 hover:scale-125",
-                  value === color && "ring-2 ring-primary ring-offset-1"
+                  value === color && "ring-primary ring-2 ring-offset-1"
                 )}
                 style={{ backgroundColor: color }}
                 onClick={() => handlePresetSelect(color)}
@@ -104,10 +104,10 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({
             ))}
           </div>
 
-          <div className="space-y-2 border-t border-border pt-2">
+          <div className="border-border space-y-2 border-t pt-2">
             <div className="flex items-center gap-2">
-              <Pipette className="h-4 w-4 text-muted-foreground" />
-              <div className="text-xs font-medium text-muted-foreground">
+              <Pipette className="text-muted-foreground h-4 w-4" />
+              <div className="text-muted-foreground text-xs font-medium">
                 Custom Hex
               </div>
             </div>

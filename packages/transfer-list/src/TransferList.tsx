@@ -70,9 +70,9 @@ export const TransferList: React.FC<TransferListProps> = ({
 
   const customList = (title: string, items: string[]) => (
     <Card className="flex h-64 w-full flex-col overflow-hidden">
-      <div className="flex items-center justify-between border-b bg-muted/50 px-4 py-2">
+      <div className="bg-muted/50 flex items-center justify-between border-b px-4 py-2">
         <span className="text-sm font-bold">{title}</span>
-        <span className="text-xs text-muted-foreground">
+        <span className="text-muted-foreground text-xs">
           {items.length} items
         </span>
       </div>
@@ -83,7 +83,7 @@ export const TransferList: React.FC<TransferListProps> = ({
               key={value}
               onClick={handleToggle(value)}
               leading={<Checkbox checked={checked.indexOf(value) !== -1} />}
-              className="cursor-pointer py-1.5 transition-colors hover:bg-muted/50"
+              className="hover:bg-muted/50 cursor-pointer py-1.5 transition-colors"
             >
               <span className="text-sm">{value}</span>
             </ListItem>

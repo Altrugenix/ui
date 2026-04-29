@@ -9,8 +9,7 @@ import {
 import { ArrowUpRight, ArrowDownRight, Minus } from "lucide-react";
 
 export interface MetricCardProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    MetricCardStylesProps {
+  extends React.HTMLAttributes<HTMLDivElement>, MetricCardStylesProps {
   title: string;
   value: string | number;
   description?: string;
@@ -63,11 +62,11 @@ export const MetricCard = React.forwardRef<HTMLDivElement, MetricCardProps>(
       >
         <div className="flex items-start justify-between">
           <div className="space-y-1">
-            <p className="text-sm font-medium text-muted-foreground">{title}</p>
+            <p className="text-muted-foreground text-sm font-medium">{title}</p>
             <h3 className="text-2xl font-bold tracking-tight">{value}</h3>
           </div>
           {icon && (
-            <div className="rounded-full bg-muted/50 p-2 text-muted-foreground transition-colors group-hover:bg-muted group-hover:text-foreground">
+            <div className="bg-muted/50 text-muted-foreground group-hover:bg-muted group-hover:text-foreground rounded-full p-2 transition-colors">
               {icon}
             </div>
           )}
@@ -86,14 +85,14 @@ export const MetricCard = React.forwardRef<HTMLDivElement, MetricCardProps>(
                   <TrendIcon className="mr-1 h-3.5 w-3.5" />
                   <span>{trend.value}</span>
                   {trend.label && (
-                    <span className="ml-1 font-normal text-muted-foreground">
+                    <span className="text-muted-foreground ml-1 font-normal">
                       {trend.label}
                     </span>
                   )}
                 </div>
               )}
               {description && (
-                <p className="line-clamp-1 text-xs text-muted-foreground">
+                <p className="text-muted-foreground line-clamp-1 text-xs">
                   {description}
                 </p>
               )}

@@ -162,7 +162,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
           <div className="flex items-center gap-4">
             <button
               onClick={togglePlay}
-              className="text-white transition-colors hover:text-primary"
+              className="hover:text-primary text-white transition-colors"
             >
               {isPlaying ? (
                 <Pause className="h-5 w-5 fill-current" />
@@ -174,7 +174,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
             <div className="group/volume flex items-center gap-2">
               <button
                 onClick={toggleMute}
-                className="text-white transition-colors hover:text-primary"
+                className="hover:text-primary text-white transition-colors"
               >
                 {isMuted || volume === 0 ? (
                   <VolumeX className="h-5 w-5" />

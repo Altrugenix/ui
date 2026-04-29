@@ -26,12 +26,7 @@ export default defineConfig({
         `altrugenix-image-list.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: [
-        "react/jsx-runtime",
-        "react",
-        "react-dom",
-        "@altrugenix/core",
-      ],
+      external: ["react/jsx-runtime", "react", "react-dom", "@altrugenix/core"],
       output: {
         globals: {
           react: "React",
