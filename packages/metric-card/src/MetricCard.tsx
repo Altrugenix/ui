@@ -72,7 +72,7 @@ export const MetricCard = React.forwardRef<HTMLDivElement, MetricCardProps>(
           )}
         </div>
 
-        {(trend || chartData) && (
+        {(trend || description || chartData) && (
           <div className="mt-4 flex items-end justify-between gap-4">
             <div className="space-y-1.5">
               {trend && (

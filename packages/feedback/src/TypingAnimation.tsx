@@ -37,14 +37,16 @@ export const TypingAnimation: React.FC<TypingAnimationProps> = ({
 
     if (delay > 0 && index === 0 && !isFinished) {
       timeout = setTimeout(() => {
-        setIndex(0);
+        // Just trigger a re-render to proceed to the next block
+        setIndex(0.1); // Use a tiny non-integer to distinguish from initial 0 if needed, or just a flag
       }, delay);
       return () => clearTimeout(timeout);
     }
 
-    if (!isFinished) {
+    const actualIndex = Math.floor(index);
+    if (actualIndex < text.length) {
       timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + text[index]);
+        setDisplayedText((prev) => prev + text[actualIndex]);
         setIndex((prev) => prev + 1);
       }, speed);
     } else if (repeat) {
