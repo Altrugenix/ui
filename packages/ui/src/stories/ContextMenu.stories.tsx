@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { ContextMenu } from "~/components/overlays/context-menu/ContextMenu";
+import { ContextMenu } from "../components/overlays/context-menu/ContextMenu";
 import { Copy, Edit, Trash, Share } from "lucide-react";
 
 const meta: Meta<typeof ContextMenu> = {

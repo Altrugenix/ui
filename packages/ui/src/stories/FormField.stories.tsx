@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { FormField } from "~/components/composites/form-field";
-import { FormGroup } from "~/components/composites/form-group";
+import { FormField } from "../components/composites/form-field";
+import { FormGroup } from "../components/composites/form-group";
 import { Input } from "@altrugenix/input";
 import { Textarea } from "@altrugenix/textarea";
 import { Button } from "@altrugenix/button";

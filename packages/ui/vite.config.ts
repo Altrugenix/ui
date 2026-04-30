@@ -162,6 +162,7 @@ export default defineConfig({
               __dirname,
               "../virtual-list/src"
             ),
+            "~": path.resolve(__dirname, "./src"),
           }
         : {}),
     },

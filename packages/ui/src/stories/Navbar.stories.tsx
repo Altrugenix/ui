@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Navbar } from "~/components/navigation/navbar/Navbar";
+import { Navbar } from "../components/navigation/navbar/Navbar";
 import { Button } from "@altrugenix/button";
 import { ExternalLink } from "lucide-react";
 

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { AppShell } from "~/components/layout/app-shell";
-import { Navbar } from "~/components/navigation/navbar/Navbar";
-import { Sidebar, SidebarItem } from "~/components/navigation/sidebar/Sidebar";
+import { AppShell } from "../components/layout/app-shell";
+import { Navbar } from "../components/navigation/navbar/Navbar";
+import { Sidebar, SidebarItem } from "../components/navigation/sidebar/Sidebar";
 import { Button } from "@altrugenix/button";
 import { LayoutDashboard, Users, Settings, Mail } from "lucide-react";
 

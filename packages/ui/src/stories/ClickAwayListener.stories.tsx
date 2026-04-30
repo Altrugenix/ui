@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { ClickAwayListener } from "~/components/utilities/click-away-listener/ClickAwayListener";
+import { ClickAwayListener } from "../components/utilities/click-away-listener/ClickAwayListener";
 import { useState } from "react";
 import { Button } from "@altrugenix/button";
 

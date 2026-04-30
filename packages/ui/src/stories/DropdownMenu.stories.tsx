@@ -3,7 +3,7 @@ import {
   DropdownMenu,
   DropdownMenuItem,
   DropdownMenuSeparator,
-} from "~/components/navigation/dropdown-menu";
+} from "../components/navigation/dropdown-menu";
 import { Button } from "@altrugenix/button";
 
 const meta: Meta<typeof DropdownMenu> = {

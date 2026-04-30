@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Tabs } from "~/components/composites/tabs";
+import { Tabs } from "../components/composites/tabs";
 import { User, Settings, Lock, Bell, HelpCircle } from "lucide-react";
 
 const meta: Meta<typeof Tabs> = {

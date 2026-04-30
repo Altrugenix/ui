@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Box } from "~/components/layout/box";
+import { Box } from "../components/layout/box";
 
 const meta: Meta<typeof Box> = {
   title: "Layout/Box",

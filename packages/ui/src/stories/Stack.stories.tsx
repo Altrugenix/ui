@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Stack } from "~/components/layout/stack";
+import { Stack } from "../components/layout/stack";
 import { Button } from "@altrugenix/button";
 
 const meta: Meta<typeof Stack> = {

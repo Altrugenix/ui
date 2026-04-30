@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Sidebar, SidebarItem } from "~/components/navigation/sidebar/Sidebar";
+import { Sidebar, SidebarItem } from "../components/navigation/sidebar/Sidebar";
 import {
   LayoutDashboard,
   Users,

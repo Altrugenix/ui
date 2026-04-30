@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Tooltip } from "~/components/overlays/tooltip";
+import { Tooltip } from "../components/overlays/tooltip";
 import { Button } from "@altrugenix/button";
 
 const meta: Meta<typeof Tooltip> = {

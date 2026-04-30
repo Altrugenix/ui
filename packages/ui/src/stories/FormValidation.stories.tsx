@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { FormValidation } from "~/components/composites/form-validation";
+import { FormValidation } from "../components/composites/form-validation";
 
 const meta: Meta<typeof FormValidation> = {
   title: "Composites/FormValidation",

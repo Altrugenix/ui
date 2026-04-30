@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { TextareaAutosize } from "~/components/utilities/textarea-autosize/TextareaAutosize";
+import { TextareaAutosize } from "../components/utilities/textarea-autosize/TextareaAutosize";
 
 const meta: Meta<typeof TextareaAutosize> = {
   title: "Utilities/TextareaAutosize",
