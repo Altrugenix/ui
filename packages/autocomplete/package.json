@@ -30,15 +30,15 @@
     "@altrugenix/core": "1.0.0-alpha.0",
     "@altrugenix/input": "1.0.0-alpha.0",
     "class-variance-authority": "^0.7.1",
-    "lucide-react": "^1.7.0"
+    "lucide-react": "^1.14.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "jsdom": "^29.0.1",
-    "vitest": "^4.1.2"
+    "jsdom": "^29.1.0",
+    "vitest": "^4.1.5"
   },
   "peerDependencies": {
     "framer-motion": "^11.0.0 || ^12.0.0",
