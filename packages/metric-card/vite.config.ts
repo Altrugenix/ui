@@ -15,6 +15,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+      "@altrugenix/card": path.resolve(__dirname, "../card/src"),
     },
   },
   build: {

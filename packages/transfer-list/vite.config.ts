@@ -15,6 +15,10 @@ export default defineConfig({
   resolve: {
     alias: {
       "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+      "@altrugenix/button": path.resolve(__dirname, "../button/src"),
+      "@altrugenix/card": path.resolve(__dirname, "../card/src"),
+      "@altrugenix/checkbox": path.resolve(__dirname, "../checkbox/src"),
+      "@altrugenix/list": path.resolve(__dirname, "../list/src"),
     },
   },
   build: {

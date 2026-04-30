@@ -15,6 +15,8 @@ export default defineConfig({
   resolve: {
     alias: {
       "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+      "@altrugenix/button": path.resolve(__dirname, "../button/src"),
+      "@altrugenix/progress-bar": path.resolve(__dirname, "../progress-bar/src"),
     },
   },
   build: {

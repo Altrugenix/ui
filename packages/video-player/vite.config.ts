@@ -15,6 +15,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+      "@altrugenix/slider": path.resolve(__dirname, "../slider/src"),
     },
   },
   build: {

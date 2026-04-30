@@ -15,6 +15,8 @@ export default defineConfig({
   resolve: {
     alias: {
       "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+      "@altrugenix/input": path.resolve(__dirname, "../input/src"),
+      "@altrugenix/popover": path.resolve(__dirname, "../popover/src"),
     },
   },
   build: {
