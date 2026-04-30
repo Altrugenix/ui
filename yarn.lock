@@ -23,7 +23,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/accordion@workspace:packages/accordion"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -47,7 +47,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/aspect-ratio@workspace:packages/aspect-ratio"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -69,8 +69,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/autocomplete@workspace:packages/autocomplete"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
-    "@altrugenix/input": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
+    "@altrugenix/input": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -90,11 +90,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/avatar@npm:1.0.0-alpha.0, @altrugenix/avatar@workspace:*, @altrugenix/avatar@workspace:packages/avatar":
+"@altrugenix/avatar@workspace:*, @altrugenix/avatar@workspace:packages/avatar":
   version: 0.0.0-use.local
   resolution: "@altrugenix/avatar@workspace:packages/avatar"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -117,7 +117,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/backdrop@workspace:packages/backdrop"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -136,11 +136,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/badge@npm:1.0.0-alpha.0, @altrugenix/badge@workspace:*, @altrugenix/badge@workspace:packages/badge":
+"@altrugenix/badge@workspace:*, @altrugenix/badge@workspace:packages/badge":
   version: 0.0.0-use.local
   resolution: "@altrugenix/badge@workspace:packages/badge"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -182,11 +182,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/button@npm:1.0.0-alpha.0, @altrugenix/button@workspace:*, @altrugenix/button@workspace:packages/button":
+"@altrugenix/button@workspace:*, @altrugenix/button@workspace:packages/button":
   version: 0.0.0-use.local
   resolution: "@altrugenix/button@workspace:packages/button"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -210,8 +210,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/calendar-view@workspace:packages/calendar-view"
   dependencies:
-    "@altrugenix/button": "npm:1.0.0-alpha.0"
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -235,7 +235,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/card@workspace:packages/card"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -258,8 +258,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/carousel@workspace:packages/carousel"
   dependencies:
-    "@altrugenix/button": "npm:1.0.0-alpha.0"
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -283,7 +283,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/charts@workspace:packages/charts"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -306,7 +306,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/checkbox@workspace:packages/checkbox"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -328,7 +328,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/chip@workspace:packages/chip"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -419,7 +419,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/core@npm:1.0.0-alpha.0, @altrugenix/core@workspace:*, @altrugenix/core@workspace:packages/core":
+"@altrugenix/core@workspace:*, @altrugenix/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@altrugenix/core@workspace:packages/core"
   dependencies:
@@ -445,7 +445,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/css-baseline@workspace:packages/css-baseline"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -469,9 +469,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/date-picker@workspace:packages/date-picker"
   dependencies:
-    "@altrugenix/button": "npm:1.0.0-alpha.0"
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
-    "@altrugenix/popover": "npm:1.0.0-alpha.0"
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
+    "@altrugenix/popover": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -495,7 +495,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/divider@workspace:packages/divider"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -590,9 +590,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/file-upload@workspace:packages/file-upload"
   dependencies:
-    "@altrugenix/button": "npm:1.0.0-alpha.0"
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
-    "@altrugenix/progress-bar": "npm:1.0.0-alpha.0"
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
+    "@altrugenix/progress-bar": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -616,7 +616,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/heading@workspace:packages/heading"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -640,7 +640,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/icon@workspace:packages/icon"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -708,7 +708,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/image@workspace:packages/image"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -732,8 +732,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/input-otp@workspace:packages/input-otp"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
-    "@altrugenix/input": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
+    "@altrugenix/input": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -753,11 +753,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/input@npm:1.0.0-alpha.0, @altrugenix/input@workspace:*, @altrugenix/input@workspace:packages/input":
+"@altrugenix/input@workspace:*, @altrugenix/input@workspace:packages/input":
   version: 0.0.0-use.local
   resolution: "@altrugenix/input@workspace:packages/input"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -780,10 +780,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/kanban@workspace:packages/kanban"
   dependencies:
-    "@altrugenix/avatar": "npm:1.0.0-alpha.0"
-    "@altrugenix/badge": "npm:1.0.0-alpha.0"
-    "@altrugenix/button": "npm:1.0.0-alpha.0"
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/avatar": "workspace:*"
+    "@altrugenix/badge": "workspace:*"
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -807,7 +807,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/link@workspace:packages/link"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -828,7 +828,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/list@workspace:packages/list"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -876,8 +876,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/modal@workspace:packages/modal"
   dependencies:
-    "@altrugenix/button": "npm:1.0.0-alpha.0"
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -897,12 +897,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/popover@npm:1.0.0-alpha.0, @altrugenix/popover@workspace:*, @altrugenix/popover@workspace:packages/popover":
+"@altrugenix/popover@workspace:*, @altrugenix/popover@workspace:packages/popover":
   version: 0.0.0-use.local
   resolution: "@altrugenix/popover@workspace:packages/popover"
   dependencies:
-    "@altrugenix/button": "npm:1.0.0-alpha.0"
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -922,11 +922,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/progress-bar@npm:1.0.0-alpha.0, @altrugenix/progress-bar@workspace:*, @altrugenix/progress-bar@workspace:packages/progress-bar":
+"@altrugenix/progress-bar@workspace:*, @altrugenix/progress-bar@workspace:packages/progress-bar":
   version: 0.0.0-use.local
   resolution: "@altrugenix/progress-bar@workspace:packages/progress-bar"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -950,7 +950,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/radio@workspace:packages/radio"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -995,9 +995,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/rich-text-editor@workspace:packages/rich-text-editor"
   dependencies:
-    "@altrugenix/button": "npm:1.0.0-alpha.0"
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
-    "@altrugenix/progress-bar": "npm:1.0.0-alpha.0"
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
+    "@altrugenix/progress-bar": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1021,7 +1021,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/select@workspace:packages/select"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1044,7 +1044,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/sheet@workspace:packages/sheet"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1068,7 +1068,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/skeleton@workspace:packages/skeleton"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1092,7 +1092,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/slider@workspace:packages/slider"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1114,8 +1114,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/snackbar@workspace:packages/snackbar"
   dependencies:
-    "@altrugenix/button": "npm:1.0.0-alpha.0"
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1187,7 +1187,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/switch@workspace:packages/switch"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1209,10 +1209,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/table@workspace:packages/table"
   dependencies:
-    "@altrugenix/button": "npm:1.0.0-alpha.0"
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
-    "@altrugenix/input": "npm:1.0.0-alpha.0"
-    "@altrugenix/virtual-list": "npm:1.0.0-alpha.0"
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
+    "@altrugenix/input": "workspace:*"
+    "@altrugenix/virtual-list": "workspace:*"
     "@tanstack/react-table": "npm:^8.21.3"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
@@ -1258,7 +1258,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/tag@workspace:packages/tag"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1282,7 +1282,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/text@workspace:packages/text"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1306,7 +1306,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/textarea@workspace:packages/textarea"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1328,9 +1328,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/timeline@workspace:packages/timeline"
   dependencies:
-    "@altrugenix/button": "npm:1.0.0-alpha.0"
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
-    "@altrugenix/progress-bar": "npm:1.0.0-alpha.0"
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
+    "@altrugenix/progress-bar": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1354,7 +1354,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/toast@workspace:packages/toast"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1428,7 +1428,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altrugenix/typography@workspace:packages/typography"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"
@@ -1617,11 +1617,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@altrugenix/virtual-list@npm:1.0.0-alpha.0, @altrugenix/virtual-list@workspace:*, @altrugenix/virtual-list@workspace:packages/virtual-list":
+"@altrugenix/virtual-list@workspace:*, @altrugenix/virtual-list@workspace:packages/virtual-list":
   version: 0.0.0-use.local
   resolution: "@altrugenix/virtual-list@workspace:packages/virtual-list"
   dependencies:
-    "@altrugenix/core": "npm:1.0.0-alpha.0"
+    "@altrugenix/core": "workspace:*"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@types/react": "npm:^19.2.14"

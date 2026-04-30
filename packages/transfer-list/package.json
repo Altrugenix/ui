@@ -35,6 +35,11 @@
     "lucide-react": "^1.14.0"
   },
   "devDependencies": {
+    "@altrugenix/button": "workspace:*",
+    "@altrugenix/card": "workspace:*",
+    "@altrugenix/checkbox": "workspace:*",
+    "@altrugenix/core": "workspace:*",
+    "@altrugenix/list": "workspace:*",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.14",

@@ -31,6 +31,7 @@
     "class-variance-authority": "^0.7.1"
   },
   "devDependencies": {
+    "@altrugenix/core": "workspace:*",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.14",
