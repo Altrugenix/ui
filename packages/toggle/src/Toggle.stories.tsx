@@ -37,13 +37,10 @@ export const SingleToggle: StoryObj = {
 };
 
 const ToggleStory2Render = () => {
-  const [alignment, setAlignment] = useState("left");
+  const [alignment, setAlignment] = useState<string | string[]>("left");
   return (
     <div className="space-y-4">
-      <ToggleGroup
-        value={alignment}
-        onValueChange={(val) => val && setAlignment(val)}
-      >
+      <ToggleGroup value={alignment} onValueChange={(val) => setAlignment(val)}>
         <Toggle value="left" aria-label="Align left">
           <AlignLeft className="h-4 w-4" />
         </Toggle>
@@ -64,10 +61,14 @@ export const SingleGroup: StoryObj = {
 };
 
 const ToggleStory3Render = () => {
-  const [formats, setFormats] = useState(["bold"]);
+  const [formats, setFormats] = useState<string | string[]>(["bold"]);
   return (
     <div className="space-y-4">
-      <ToggleGroup type="multiple" value={formats} onValueChange={setFormats}>
+      <ToggleGroup
+        type="multiple"
+        value={formats}
+        onValueChange={(val) => setFormats(val)}
+      >
         <Toggle value="bold" aria-label="Bold">
           <Bold className="h-4 w-4" />
         </Toggle>
@@ -78,7 +79,10 @@ const ToggleStory3Render = () => {
           <Underline className="h-4 w-4" />
         </Toggle>
       </ToggleGroup>
-      <p className="text-sm">Active formats: {formats.join(", ") || "None"}</p>
+      <p className="text-sm">
+        Active formats:{" "}
+        {Array.isArray(formats) ? formats.join(", ") : formats || "None"}
+      </p>
     </div>
   );
 };
