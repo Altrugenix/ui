@@ -43,6 +43,53 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/alert@workspace:*, @altrugenix/alert@workspace:packages/alert":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/alert@workspace:packages/alert"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/app-shell@workspace:*, @altrugenix/app-shell@workspace:packages/app-shell":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/app-shell@workspace:packages/app-shell"
+  dependencies:
+    "@altrugenix/button": "workspace:*"
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/aspect-ratio@workspace:*, @altrugenix/aspect-ratio@workspace:packages/aspect-ratio":
   version: 0.0.0-use.local
   resolution: "@altrugenix/aspect-ratio@workspace:packages/aspect-ratio"
@@ -156,6 +203,28 @@ __metadata:
     framer-motion: ^11.0.0 || ^12.0.0
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/box@workspace:*, @altrugenix/box@workspace:packages/box":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/box@workspace:packages/box"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
   languageName: unknown
   linkType: soft
 
@@ -419,6 +488,50 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/container@workspace:*, @altrugenix/container@workspace:packages/container":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/container@workspace:packages/container"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/context-menu@workspace:*, @altrugenix/context-menu@workspace:packages/context-menu":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/context-menu@workspace:packages/context-menu"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/core@workspace:*, @altrugenix/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@altrugenix/core@workspace:packages/core"
@@ -538,6 +651,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/dropdown-menu@workspace:*, @altrugenix/dropdown-menu@workspace:packages/dropdown-menu":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/dropdown-menu@workspace:packages/dropdown-menu"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/effects@workspace:*, @altrugenix/effects@workspace:packages/effects":
   version: 0.0.0-use.local
   resolution: "@altrugenix/effects@workspace:packages/effects"
@@ -609,6 +744,117 @@ __metadata:
     framer-motion: ^11.0.0 || ^12.0.0
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/flex@workspace:*, @altrugenix/flex@workspace:packages/flex":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/flex@workspace:packages/flex"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/form-field@workspace:*, @altrugenix/form-field@workspace:packages/form-field":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/form-field@workspace:packages/form-field"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/form-group@workspace:*, @altrugenix/form-group@workspace:packages/form-group":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/form-group@workspace:packages/form-group"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/form-validation@workspace:*, @altrugenix/form-validation@workspace:packages/form-validation":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/form-validation@workspace:packages/form-validation"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/grid@workspace:*, @altrugenix/grid@workspace:packages/grid":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/grid@workspace:packages/grid"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
   languageName: unknown
   linkType: soft
 
@@ -846,6 +1092,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/marquee@workspace:*, @altrugenix/marquee@workspace:packages/marquee":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/marquee@workspace:packages/marquee"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    framer-motion: ^11.0.0 || ^12.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/metric-card@workspace:*, @altrugenix/metric-card@workspace:packages/metric-card":
   version: 0.0.0-use.local
   resolution: "@altrugenix/metric-card@workspace:packages/metric-card"
@@ -886,6 +1155,75 @@ __metadata:
     framer-motion: "npm:^12.38.0"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/navbar@workspace:*, @altrugenix/navbar@workspace:packages/navbar":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/navbar@workspace:packages/navbar"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/pagination@workspace:*, @altrugenix/pagination@workspace:packages/pagination":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/pagination@workspace:packages/pagination"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/paper@workspace:*, @altrugenix/paper@workspace:packages/paper":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/paper@workspace:packages/paper"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    class-variance-authority: "npm:^0.7.1"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
     typescript: "npm:^6.0.3"
     vite: "npm:^8.0.10"
     vite-plugin-dts: "npm:^4.5.4"
@@ -1064,6 +1402,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/sidebar@workspace:*, @altrugenix/sidebar@workspace:packages/sidebar":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/sidebar@workspace:packages/sidebar"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/skeleton@workspace:*, @altrugenix/skeleton@workspace:packages/skeleton":
   version: 0.0.0-use.local
   resolution: "@altrugenix/skeleton@workspace:packages/skeleton"
@@ -1135,6 +1495,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/spacer@workspace:*, @altrugenix/spacer@workspace:packages/spacer":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/spacer@workspace:packages/spacer"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/speed-dial@workspace:*, @altrugenix/speed-dial@workspace:packages/speed-dial":
   version: 0.0.0-use.local
   resolution: "@altrugenix/speed-dial@workspace:packages/speed-dial"
@@ -1157,6 +1539,51 @@ __metadata:
     framer-motion: ^11.0.0 || ^12.0.0
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/spinner@workspace:*, @altrugenix/spinner@workspace:packages/spinner":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/spinner@workspace:packages/spinner"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
+"@altrugenix/stack@workspace:*, @altrugenix/stack@workspace:packages/stack":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/stack@workspace:packages/stack"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
   languageName: unknown
   linkType: soft
 
@@ -1397,6 +1824,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@altrugenix/tooltip@workspace:*, @altrugenix/tooltip@workspace:packages/tooltip":
+  version: 0.0.0-use.local
+  resolution: "@altrugenix/tooltip@workspace:packages/tooltip"
+  dependencies:
+    "@altrugenix/core": "workspace:*"
+    "@testing-library/jest-dom": "npm:^6.9.1"
+    "@testing-library/react": "npm:^16.3.2"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    eslint: "npm:^10.2.1"
+    jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
+    vitest: "npm:^4.1.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    tailwindcss: ^3.0.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
 "@altrugenix/transfer-list@workspace:*, @altrugenix/transfer-list@workspace:packages/transfer-list":
   version: 0.0.0-use.local
   resolution: "@altrugenix/transfer-list@workspace:packages/transfer-list"
@@ -1453,11 +1902,14 @@ __metadata:
   resolution: "@altrugenix/ui@workspace:packages/ui"
   dependencies:
     "@altrugenix/accordion": "workspace:*"
+    "@altrugenix/alert": "workspace:*"
+    "@altrugenix/app-shell": "workspace:*"
     "@altrugenix/aspect-ratio": "workspace:*"
     "@altrugenix/autocomplete": "workspace:*"
     "@altrugenix/avatar": "workspace:*"
     "@altrugenix/backdrop": "workspace:*"
     "@altrugenix/badge": "workspace:*"
+    "@altrugenix/box": "workspace:*"
     "@altrugenix/breadcrumbs": "workspace:*"
     "@altrugenix/button": "workspace:*"
     "@altrugenix/calendar-view": "workspace:*"
@@ -1469,14 +1921,22 @@ __metadata:
     "@altrugenix/circular-progress": "workspace:*"
     "@altrugenix/color-picker": "workspace:*"
     "@altrugenix/command-palette": "workspace:*"
+    "@altrugenix/container": "workspace:*"
+    "@altrugenix/context-menu": "workspace:*"
     "@altrugenix/core": "workspace:*"
     "@altrugenix/css-baseline": "workspace:*"
     "@altrugenix/date-picker": "workspace:*"
     "@altrugenix/divider": "workspace:*"
     "@altrugenix/drawer": "workspace:*"
+    "@altrugenix/dropdown-menu": "workspace:*"
     "@altrugenix/effects": "workspace:*"
     "@altrugenix/feedback": "workspace:*"
     "@altrugenix/file-upload": "workspace:*"
+    "@altrugenix/flex": "workspace:*"
+    "@altrugenix/form-field": "workspace:*"
+    "@altrugenix/form-group": "workspace:*"
+    "@altrugenix/form-validation": "workspace:*"
+    "@altrugenix/grid": "workspace:*"
     "@altrugenix/heading": "workspace:*"
     "@altrugenix/icon": "workspace:*"
     "@altrugenix/image": "workspace:*"
@@ -1487,8 +1947,12 @@ __metadata:
     "@altrugenix/kanban": "workspace:*"
     "@altrugenix/link": "workspace:*"
     "@altrugenix/list": "workspace:*"
+    "@altrugenix/marquee": "workspace:*"
     "@altrugenix/metric-card": "workspace:*"
     "@altrugenix/modal": "workspace:*"
+    "@altrugenix/navbar": "workspace:*"
+    "@altrugenix/pagination": "workspace:*"
+    "@altrugenix/paper": "workspace:*"
     "@altrugenix/popover": "workspace:*"
     "@altrugenix/progress-bar": "workspace:*"
     "@altrugenix/radio": "workspace:*"
@@ -1496,10 +1960,14 @@ __metadata:
     "@altrugenix/rich-text-editor": "workspace:*"
     "@altrugenix/select": "workspace:*"
     "@altrugenix/sheet": "workspace:*"
+    "@altrugenix/sidebar": "workspace:*"
     "@altrugenix/skeleton": "workspace:*"
     "@altrugenix/slider": "workspace:*"
     "@altrugenix/snackbar": "workspace:*"
+    "@altrugenix/spacer": "workspace:*"
     "@altrugenix/speed-dial": "workspace:*"
+    "@altrugenix/spinner": "workspace:*"
+    "@altrugenix/stack": "workspace:*"
     "@altrugenix/stepper": "workspace:*"
     "@altrugenix/switch": "workspace:*"
     "@altrugenix/table": "workspace:*"
@@ -1510,6 +1978,7 @@ __metadata:
     "@altrugenix/timeline": "workspace:*"
     "@altrugenix/toast": "workspace:*"
     "@altrugenix/toggle": "workspace:*"
+    "@altrugenix/tooltip": "workspace:*"
     "@altrugenix/transfer-list": "workspace:*"
     "@altrugenix/typography": "workspace:*"
     "@altrugenix/utilities": "workspace:*"
