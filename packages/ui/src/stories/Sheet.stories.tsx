@@ -15,7 +15,7 @@ export const Default: Story = {
     children: (
       <div className="space-y-2">
         <h3 className="font-bold">Basic Sheet</h3>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           This is a foundational surface component for grouping content.
         </p>
       </div>

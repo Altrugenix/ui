@@ -11,7 +11,7 @@ export default defineConfig({
       insertTypesEntry: true,
       include: ["src"],
       skipDiagnostics: false,
-     rollupTypes: true
+      rollupTypes: true,
     }),
   ],
   build: {

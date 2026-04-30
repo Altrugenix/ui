@@ -43,7 +43,7 @@ export const Default: StoryObj = {
         }
       >
         <h1 className="text-2xl font-bold">Welcome to the Dashboard</h1>
-        <p className="my-4 text-muted-foreground">
+        <p className="text-muted-foreground my-4">
           This is the main content area inside AppShell. It automatically adapts
           to the available space alongside the sidebar and navbar.
         </p>
@@ -51,7 +51,7 @@ export const Default: StoryObj = {
           {[1, 2, 3].map((n) => (
             <div
               key={n}
-              className="h-32 rounded-lg border bg-card p-4 shadow-sm"
+              className="bg-card h-32 rounded-lg border p-4 shadow-sm"
             >
               Card {n}
             </div>
@@ -75,7 +75,7 @@ export const NavbarOnly: StoryObj = {
         }
       >
         <h1 className="text-2xl font-bold">No Sidebar Layout</h1>
-        <p className="mt-4 text-muted-foreground">
+        <p className="text-muted-foreground mt-4">
           AppShell without a sidebar renders only the navbar and content.
         </p>
       </AppShell>

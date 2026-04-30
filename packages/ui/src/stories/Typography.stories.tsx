@@ -55,7 +55,7 @@ export const Customization: Story = {
         variant="h2"
         weight="black"
         align="center"
-        className="italic text-primary"
+        className="text-primary italic"
       >
         Bold Center Italic
       </Typography>

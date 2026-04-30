@@ -54,10 +54,10 @@ export const Gallery: Story = {
       {COMMON_ICONS.map((name) => (
         <div
           key={name}
-          className="flex flex-col items-center gap-2 rounded-lg border p-4 transition-colors hover:bg-muted/50"
+          className="hover:bg-muted/50 flex flex-col items-center gap-2 rounded-lg border p-4 transition-colors"
         >
           <Icon name={name} size={24} />
-          <span className="w-full truncate text-center font-mono text-[10px] text-muted-foreground">
+          <span className="text-muted-foreground w-full truncate text-center font-mono text-[10px]">
             {name}
           </span>
         </div>

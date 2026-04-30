@@ -10,7 +10,8 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
-    skipDiagnostics: false,  rollupTypes: true
+      skipDiagnostics: false,
+      rollupTypes: true,
     }),
   ],
   resolve: {
@@ -23,7 +24,7 @@ export default defineConfig({
             "@altrugenix/core": path.resolve(__dirname, "../core/src"),
           }
         : {}),
-    }
+    },
   },
   build: {
     lib: {

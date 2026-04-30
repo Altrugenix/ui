@@ -22,7 +22,7 @@ export const Default: Story = {
           onChange={setOtp}
           onComplete={(val) => alert(`Completed: ${val}`)}
         />
-        <p className="text-sm text-muted-foreground">Current Value: {otp}</p>
+        <p className="text-muted-foreground text-sm">Current Value: {otp}</p>
       </div>
     );
   },

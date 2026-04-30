@@ -8,7 +8,7 @@ const meta: Meta<typeof KanbanBoard> = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div className="min-h-screen bg-background p-10">
+      <div className="bg-background min-h-screen p-10">
         <Story />
       </div>
     ),

@@ -10,7 +10,8 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
-    skipDiagnostics: false,  rollupTypes: true
+      skipDiagnostics: false,
+      rollupTypes: true,
     }),
   ],
   resolve: {
@@ -22,7 +23,7 @@ export default defineConfig({
             "@altrugenix/popover": path.resolve(__dirname, "../popover/src"),
           }
         : {}),
-    }
+    },
   },
   build: {
     lib: {

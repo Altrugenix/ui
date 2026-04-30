@@ -15,7 +15,7 @@ export const Default: Story = {
     padding: "md",
     className: "rounded-lg border bg-card",
     children: (
-      <p className="text-sm text-muted-foreground">
+      <p className="text-muted-foreground text-sm">
         The Box is the most fundamental layout primitive. It renders a div with
         optional padding presets.
       </p>
@@ -27,7 +27,7 @@ export const PaddingSizes: Story = {
   render: () => (
     <div className="space-y-4">
       {(["none", "sm", "md", "lg", "xl"] as const).map((size) => (
-        <Box key={size} padding={size} className="rounded-lg border bg-card">
+        <Box key={size} padding={size} className="bg-card rounded-lg border">
           <p className="text-sm font-medium">padding=&quot;{size}&quot;</p>
         </Box>
       ))}
@@ -37,9 +37,9 @@ export const PaddingSizes: Story = {
 
 export const CustomElement: Story = {
   render: () => (
-    <Box as="section" padding="lg" className="rounded-lg border bg-primary/5">
+    <Box as="section" padding="lg" className="bg-primary/5 rounded-lg border">
       <h2 className="text-lg font-semibold">Rendered as &lt;section&gt;</h2>
-      <p className="mt-2 text-sm text-muted-foreground">
+      <p className="text-muted-foreground mt-2 text-sm">
         Box can render as any HTML element using the &quot;as&quot; prop.
       </p>
     </Box>

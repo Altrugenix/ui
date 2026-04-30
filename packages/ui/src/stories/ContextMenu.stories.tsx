@@ -16,23 +16,23 @@ export const Default: StoryObj = {
       <ContextMenu
         menu={
           <div className="flex flex-col">
-            <button className="flex items-center gap-2 rounded px-3 py-2 text-sm hover:bg-accent">
+            <button className="hover:bg-accent flex items-center gap-2 rounded px-3 py-2 text-sm">
               <Copy size={14} /> Copy
             </button>
-            <button className="flex items-center gap-2 rounded px-3 py-2 text-sm hover:bg-accent">
+            <button className="hover:bg-accent flex items-center gap-2 rounded px-3 py-2 text-sm">
               <Edit size={14} /> Edit
             </button>
-            <button className="flex items-center gap-2 rounded px-3 py-2 text-sm hover:bg-accent">
+            <button className="hover:bg-accent flex items-center gap-2 rounded px-3 py-2 text-sm">
               <Share size={14} /> Share
             </button>
-            <div className="my-1 h-[1px] bg-border" />
-            <button className="flex items-center gap-2 rounded px-3 py-2 text-sm text-destructive hover:bg-destructive/10">
+            <div className="bg-border my-1 h-[1px]" />
+            <button className="text-destructive hover:bg-destructive/10 flex items-center gap-2 rounded px-3 py-2 text-sm">
               <Trash size={14} /> Delete
             </button>
           </div>
         }
       >
-        <div className="p-20 text-center text-muted-foreground">
+        <div className="text-muted-foreground p-20 text-center">
           Right-click anywhere in this box to open the context menu.
         </div>
       </ContextMenu>
@@ -48,19 +48,19 @@ export const OnComponent: StoryObj = {
           key={id}
           menu={
             <div className="flex flex-col p-1">
-              <span className="px-3 py-1.5 text-xs font-semibold text-muted-foreground">
+              <span className="text-muted-foreground px-3 py-1.5 text-xs font-semibold">
                 Item {id} Options
               </span>
-              <button className="flex items-center gap-2 rounded px-3 py-2 text-sm hover:bg-accent">
+              <button className="hover:bg-accent flex items-center gap-2 rounded px-3 py-2 text-sm">
                 View Details
               </button>
-              <button className="flex items-center gap-2 rounded px-3 py-2 text-sm text-destructive hover:bg-accent">
+              <button className="text-destructive hover:bg-accent flex items-center gap-2 rounded px-3 py-2 text-sm">
                 Remove
               </button>
             </div>
           }
         >
-          <div className="flex h-24 w-40 items-center justify-center rounded-lg border bg-card shadow-sm">
+          <div className="bg-card flex h-24 w-40 items-center justify-center rounded-lg border shadow-sm">
             Card {id}
           </div>
         </ContextMenu>

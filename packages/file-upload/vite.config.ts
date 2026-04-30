@@ -10,7 +10,8 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
-    skipDiagnostics: false,  rollupTypes: true
+      skipDiagnostics: false,
+      rollupTypes: true,
     }),
   ],
   resolve: {
@@ -19,10 +20,13 @@ export default defineConfig({
         ? {
             "@altrugenix/button": path.resolve(__dirname, "../button/src"),
             "@altrugenix/core": path.resolve(__dirname, "../core/src"),
-            "@altrugenix/progress-bar": path.resolve(__dirname, "../progress-bar/src"),
+            "@altrugenix/progress-bar": path.resolve(
+              __dirname,
+              "../progress-bar/src"
+            ),
           }
         : {}),
-    }
+    },
   },
   build: {
     lib: {

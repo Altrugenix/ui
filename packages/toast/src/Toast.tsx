@@ -57,7 +57,7 @@ const ToastContainer: React.FC<{
   dismiss: (id: string) => void;
 }> = ({ toasts, dismiss }) => {
   return (
-    <div className="fixed bottom-4 right-4 z-[9999] flex w-full max-w-sm flex-col gap-2">
+    <div className="fixed right-4 bottom-4 z-[9999] flex w-full max-w-sm flex-col gap-2">
       <AnimatePresence>
         {toasts.map((t) => (
           <motion.div
@@ -87,7 +87,7 @@ const ToastContainer: React.FC<{
               {t.type === "info" && <Info className="h-5 w-5 text-sky-500" />}
             </div>
             <div className="min-w-0 flex-1 pr-6">
-              <h4 className="text-foreground text-sm font-semibold leading-tight">
+              <h4 className="text-foreground text-sm leading-tight font-semibold">
                 {t.title}
               </h4>
               {t.description && (
@@ -98,7 +98,7 @@ const ToastContainer: React.FC<{
             </div>
             <button
               onClick={() => dismiss(t.id)}
-              className="absolute right-4 top-4 opacity-50 transition-opacity hover:opacity-100"
+              className="absolute top-4 right-4 opacity-50 transition-opacity hover:opacity-100"
               aria-label="Dismiss"
             >
               <X className="h-4 w-4" />

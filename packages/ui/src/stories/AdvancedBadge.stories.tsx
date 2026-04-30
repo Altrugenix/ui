@@ -22,7 +22,7 @@ export const WithChildren: StoryObj = {
       </AdvancedBadge>
 
       <AdvancedBadge content="NEW" variant="success">
-        <div className="flex h-10 w-10 items-center justify-center rounded bg-muted">
+        <div className="bg-muted flex h-10 w-10 items-center justify-center rounded">
           IMG
         </div>
       </AdvancedBadge>
@@ -34,16 +34,16 @@ export const Placements: StoryObj = {
   render: () => (
     <div className="grid max-w-xs grid-cols-2 gap-12 p-10">
       <AdvancedBadge content={1} placement="top-right">
-        <div className="h-10 w-10 rounded bg-muted" />
+        <div className="bg-muted h-10 w-10 rounded" />
       </AdvancedBadge>
       <AdvancedBadge content={2} placement="top-left">
-        <div className="h-10 w-10 rounded bg-muted" />
+        <div className="bg-muted h-10 w-10 rounded" />
       </AdvancedBadge>
       <AdvancedBadge content={3} placement="bottom-right">
-        <div className="h-10 w-10 rounded bg-muted" />
+        <div className="bg-muted h-10 w-10 rounded" />
       </AdvancedBadge>
       <AdvancedBadge content={4} placement="bottom-left">
-        <div className="h-10 w-10 rounded bg-muted" />
+        <div className="bg-muted h-10 w-10 rounded" />
       </AdvancedBadge>
     </div>
   ),
@@ -53,11 +53,11 @@ export const Overlap: StoryObj = {
   render: () => (
     <div className="flex items-center gap-12 p-4">
       <AdvancedBadge content={5} overlap="rectangular">
-        <div className="h-12 w-12 rounded bg-primary" />
+        <div className="bg-primary h-12 w-12 rounded" />
       </AdvancedBadge>
 
       <AdvancedBadge content={5} overlap="circular">
-        <div className="h-12 w-12 rounded-full bg-primary" />
+        <div className="bg-primary h-12 w-12 rounded-full" />
       </AdvancedBadge>
     </div>
   ),

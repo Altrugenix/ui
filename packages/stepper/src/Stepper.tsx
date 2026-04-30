@@ -105,7 +105,7 @@ export const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
               {!isHorizontal && index < steps.length - 1 && (
                 <div
                   className={cn(
-                    "ml-4 mt-1 h-8 w-0.5 transition-colors duration-300",
+                    "mt-1 ml-4 h-8 w-0.5 transition-colors duration-300",
                     isCompleted ? "bg-primary" : "bg-muted-foreground/20"
                   )}
                 />

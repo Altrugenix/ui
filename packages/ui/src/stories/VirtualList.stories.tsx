@@ -30,9 +30,9 @@ export const Default: Story = {
     height: 400,
     rowHeight: 60,
     renderRow: (item: Item) => (
-      <div className="flex h-full flex-col justify-center border-b px-4 py-2 transition-colors hover:bg-muted/50">
+      <div className="hover:bg-muted/50 flex h-full flex-col justify-center border-b px-4 py-2 transition-colors">
         <span className="text-sm font-semibold">{item.title}</span>
-        <span className="text-xs text-muted-foreground">
+        <span className="text-muted-foreground text-xs">
           {item.description}
         </span>
       </div>

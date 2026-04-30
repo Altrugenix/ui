@@ -14,9 +14,9 @@ type Story = StoryObj<typeof Stack>;
 export const Vertical: Story = {
   render: () => (
     <Stack spacing="md">
-      <div className="rounded-lg border bg-card p-4 text-sm">First item</div>
-      <div className="rounded-lg border bg-card p-4 text-sm">Second item</div>
-      <div className="rounded-lg border bg-card p-4 text-sm">Third item</div>
+      <div className="bg-card rounded-lg border p-4 text-sm">First item</div>
+      <div className="bg-card rounded-lg border p-4 text-sm">Second item</div>
+      <div className="bg-card rounded-lg border p-4 text-sm">Third item</div>
     </Stack>
   ),
 };
@@ -39,9 +39,9 @@ export const SpacingSizes: Story = {
             spacing=&quot;{spacing}&quot;
           </p>
           <Stack spacing={spacing}>
-            <div className="rounded border bg-primary/5 p-2 text-xs">A</div>
-            <div className="rounded border bg-primary/5 p-2 text-xs">B</div>
-            <div className="rounded border bg-primary/5 p-2 text-xs">C</div>
+            <div className="bg-primary/5 rounded border p-2 text-xs">A</div>
+            <div className="bg-primary/5 rounded border p-2 text-xs">B</div>
+            <div className="bg-primary/5 rounded border p-2 text-xs">C</div>
           </Stack>
         </div>
       ))}

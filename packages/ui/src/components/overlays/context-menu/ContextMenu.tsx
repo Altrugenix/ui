@@ -51,7 +51,7 @@ export const ContextMenu = React.forwardRef<HTMLDivElement, ContextMenuProps>(
         {isOpen && (
           <div
             ref={menuRef}
-            className="fixed z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95"
+            className="bg-popover text-popover-foreground animate-in fade-in-0 zoom-in-95 fixed z-50 min-w-[8rem] overflow-hidden rounded-md border p-1 shadow-md"
             style={{ left: position.x, top: position.y }}
             role="menu"
             onClick={() => setIsOpen(false)}

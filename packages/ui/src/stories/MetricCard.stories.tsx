@@ -8,7 +8,7 @@ const meta: Meta<typeof MetricCard> = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div className="max-w-[350px] bg-muted/20 p-6">
+      <div className="bg-muted/20 max-w-[350px] p-6">
         <Story />
       </div>
     ),

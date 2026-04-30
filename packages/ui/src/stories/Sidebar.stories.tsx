@@ -28,7 +28,7 @@ export const Default: StoryObj = {
             {!collapsed && <span className="font-bold">App Name</span>}
             <button
               onClick={() => setCollapsed(!collapsed)}
-              className="rounded p-1 hover:bg-accent"
+              className="hover:bg-accent rounded p-1"
             >
               {collapsed ? "»" : "«"}
             </button>
@@ -60,9 +60,9 @@ export const Default: StoryObj = {
             </SidebarItem>
           </div>
         </Sidebar>
-        <div className="flex-1 bg-muted/20 p-8">
+        <div className="bg-muted/20 flex-1 p-8">
           <h1 className="text-2xl font-bold">Main Content Area</h1>
-          <p className="mt-4 text-muted-foreground">
+          <p className="text-muted-foreground mt-4">
             The sidebar is {collapsed ? "collapsed" : "expanded"}.
           </p>
         </div>

@@ -25,7 +25,7 @@ export const Default: StoryObj = {
         <span>Add</span>
       </Button>
 
-      <div className="mt-8 rounded-lg border bg-muted/30 p-4">
+      <div className="bg-muted/30 mt-8 rounded-lg border p-4">
         <h4 className="mb-2 font-bold">Accessibility Check:</h4>
         <p className="text-sm">
           A screen reader will announce{" "}

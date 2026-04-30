@@ -15,11 +15,11 @@ export const VerticalSizes: Story = {
     <div>
       {(["xs", "sm", "md", "lg", "xl", "2xl"] as const).map((size) => (
         <div key={size}>
-          <div className="rounded border bg-card p-2 text-xs">
+          <div className="bg-card rounded border p-2 text-xs">
             Content above (size=&quot;{size}&quot;)
           </div>
           <Spacer size={size} className="bg-primary/10" />
-          <div className="rounded border bg-card p-2 text-xs">
+          <div className="bg-card rounded border p-2 text-xs">
             Content below
           </div>
           <Spacer size="lg" />
@@ -32,9 +32,9 @@ export const VerticalSizes: Story = {
 export const Horizontal: Story = {
   render: () => (
     <div className="flex items-center">
-      <div className="rounded border bg-card p-3 text-xs">Left</div>
+      <div className="bg-card rounded border p-3 text-xs">Left</div>
       <Spacer axis="horizontal" size="xl" className="bg-primary/10" />
-      <div className="rounded border bg-card p-3 text-xs">Right</div>
+      <div className="bg-card rounded border p-3 text-xs">Right</div>
     </div>
   ),
 };

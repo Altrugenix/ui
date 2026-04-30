@@ -66,7 +66,7 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({
             disabled={disabled}
             className={cn(
               "border-input h-9 w-9 shrink-0 rounded-md border shadow-sm transition-all hover:scale-105 active:scale-95 disabled:opacity-50",
-              "ring-offset-background focus-visible:ring-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+              "ring-offset-background focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             )}
             style={{ backgroundColor: value }}
             title="Select color"
@@ -76,7 +76,7 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({
         }
       >
         <div className="space-y-3">
-          <div className="text-muted-foreground text-xs font-semibold uppercase tracking-wider">
+          <div className="text-muted-foreground text-xs font-semibold tracking-wider uppercase">
             Presets
           </div>
           <div className="grid grid-cols-7 gap-1.5">

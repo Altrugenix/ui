@@ -48,11 +48,11 @@ export const FormField: React.FC<FormFieldProps> = ({
       {label && (
         <label
           htmlFor={fieldId}
-          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
           {label}
           {required && (
-            <span className="ml-1 text-destructive" aria-hidden="true">
+            <span className="text-destructive ml-1" aria-hidden="true">
               *
             </span>
           )}

@@ -15,7 +15,7 @@ const InteractivePagination = () => {
   const [page, setPage] = useState(1);
   return (
     <div className="space-y-2 text-center">
-      <p className="text-sm text-muted-foreground">Page {page} of 20</p>
+      <p className="text-muted-foreground text-sm">Page {page} of 20</p>
       <Pagination currentPage={page} totalPages={20} onPageChange={setPage} />
     </div>
   );

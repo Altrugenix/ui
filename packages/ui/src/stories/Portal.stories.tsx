@@ -16,7 +16,7 @@ export const Default: Story = {
   render: () => {
     const [show, setShow] = useState(false);
     return (
-      <div className="relative overflow-hidden rounded-xl border bg-muted/20 p-10">
+      <div className="bg-muted/20 relative overflow-hidden rounded-xl border p-10">
         <Typography variant="body2" className="mb-4">
           This container has <code>overflow: hidden</code>. Click the button to
           see the portal in action.
@@ -27,7 +27,7 @@ export const Default: Story = {
 
         <Portal>
           {show && (
-            <div className="fixed left-1/2 top-20 z-[100] -translate-x-1/2 rounded-full bg-primary px-6 py-4 font-bold text-primary-foreground shadow-2xl">
+            <div className="bg-primary text-primary-foreground fixed top-20 left-1/2 z-[100] -translate-x-1/2 rounded-full px-6 py-4 font-bold shadow-2xl">
               I am rendered at the end of document.body!
             </div>
           )}

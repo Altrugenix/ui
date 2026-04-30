@@ -18,7 +18,7 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
           ref={ref}
           className={cn(
             "border-primary bg-background text-primary ring-offset-background checked:border-primary focus-visible:ring-ring peer aspect-square h-4 w-4 appearance-none rounded-full border focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-            "after:bg-primary relative after:absolute after:left-1/2 after:top-1/2 after:hidden after:h-2.5 after:w-2.5 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:content-[''] checked:after:block",
+            "after:bg-primary relative after:absolute after:top-1/2 after:left-1/2 after:hidden after:h-2.5 after:w-2.5 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:content-[''] checked:after:block",
             className
           )}
           {...props}
@@ -26,7 +26,7 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
         {label && (
           <label
             htmlFor={radioId}
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
           >
             {label}
           </label>

@@ -22,7 +22,7 @@ export const Default: StoryObj = {
           {active ? "Deactivate Trap" : "Activate Focus Trap"}
         </Button>
 
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           {active
             ? "Focus is now trapped! Try tabbing through the elements in the sheet below."
             : "Focus can move freely."}

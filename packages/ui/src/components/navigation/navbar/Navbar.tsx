@@ -19,7 +19,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
       <nav
         ref={ref}
         className={cn(
-          "z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
+          "bg-background/95 supports-[backdrop-filter]:bg-background/60 z-40 w-full border-b backdrop-blur",
           sticky && "sticky top-0",
           className
         )}
@@ -33,7 +33,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
 
           {/* Mobile toggle */}
           <button
-            className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:text-foreground md:hidden"
+            className="text-muted-foreground hover:text-foreground inline-flex items-center justify-center rounded-md p-2 md:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation"
             aria-expanded={mobileOpen}

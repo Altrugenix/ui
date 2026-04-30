@@ -24,11 +24,11 @@ export const Default: Story = {
     return (
       <div className="space-y-4">
         <RichTextEditor {...args} onChange={setContent} />
-        <div className="rounded-lg border bg-muted p-4">
-          <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+        <div className="bg-muted rounded-lg border p-4">
+          <p className="text-muted-foreground mb-2 text-xs font-bold tracking-wider uppercase">
             HTML Output:
           </p>
-          <code className="block break-all text-xs">{content}</code>
+          <code className="block text-xs break-all">{content}</code>
         </div>
       </div>
     );

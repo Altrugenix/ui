@@ -32,11 +32,11 @@ export const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(
         {...props}
       >
         <Loader2
-          className={cn("animate-spin text-primary", sizeMap[size])}
+          className={cn("text-primary animate-spin", sizeMap[size])}
           aria-hidden="true"
         />
         {label && (
-          <span className="text-sm text-muted-foreground">{label}</span>
+          <span className="text-muted-foreground text-sm">{label}</span>
         )}
         <span className="sr-only">{label || "Loading..."}</span>
       </div>

@@ -7,7 +7,7 @@ const meta: Meta<typeof Image> = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div className="aspect-video max-w-[500px] overflow-hidden rounded-xl border bg-muted/20">
+      <div className="bg-muted/20 aspect-video max-w-[500px] overflow-hidden rounded-xl border">
         <Story />
       </div>
     ),
@@ -38,7 +38,7 @@ export const WithFallback: Story = {
 export const Square: Story = {
   decorators: [
     (Story) => (
-      <div className="h-[300px] w-[300px] overflow-hidden rounded-full border-4 border-primary">
+      <div className="border-primary h-[300px] w-[300px] overflow-hidden rounded-full border-4">
         <Story />
       </div>
     ),

@@ -66,7 +66,7 @@ export const Autocomplete = React.forwardRef<
           {filteredOptions.map((option, index) => (
             <li
               key={index}
-              className="hover:bg-accent hover:text-accent-foreground relative flex w-full cursor-pointer select-none items-center rounded-sm px-3 py-1.5 text-sm outline-none"
+              className="hover:bg-accent hover:text-accent-foreground relative flex w-full cursor-pointer items-center rounded-sm px-3 py-1.5 text-sm outline-none select-none"
               onClick={() => handleOptionClick(option)}
             >
               {option}

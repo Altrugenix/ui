@@ -80,6 +80,7 @@
     "@altrugenix/rating": "workspace:*",
     "@altrugenix/rich-text-editor": "workspace:*",
     "@altrugenix/select": "workspace:*",
+    "@altrugenix/sheet": "workspace:*",
     "@altrugenix/skeleton": "workspace:*",
     "@altrugenix/slider": "workspace:*",
     "@altrugenix/snackbar": "workspace:*",

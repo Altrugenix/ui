@@ -47,7 +47,7 @@ export const KanbanBoard = ({
           <div className="flex items-center justify-between px-2">
             <div className="flex items-center gap-2">
               <div className={cn("h-2 w-2 rounded-full", column.color)} />
-              <h3 className="text-sm font-bold uppercase tracking-wider">
+              <h3 className="text-sm font-bold tracking-wider uppercase">
                 {column.label}
               </h3>
               <Badge
@@ -94,7 +94,7 @@ export const KanbanBoard = ({
                       </button>
                     </div>
 
-                    <h4 className="mb-4 text-sm font-semibold leading-snug">
+                    <h4 className="mb-4 text-sm leading-snug font-semibold">
                       {task.title}
                     </h4>
 

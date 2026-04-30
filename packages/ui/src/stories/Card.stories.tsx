@@ -27,7 +27,7 @@ export const Default: Story = {
       </CardHeader>
       <CardContent>
         <div className="flex flex-col space-y-4">
-          <p className="text-sm text-foreground/80">
+          <p className="text-foreground/80 text-sm">
             This is a sample card content area where you can place anything.
           </p>
         </div>

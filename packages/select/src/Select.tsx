@@ -19,7 +19,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
         {label && (
           <label
             htmlFor={selectId}
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
           >
             {label}
           </label>
@@ -40,7 +40,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           >
             {children}
           </select>
-          <ChevronDown className="pointer-events-none absolute right-3 top-3 h-4 w-4 opacity-50" />
+          <ChevronDown className="pointer-events-none absolute top-3 right-3 h-4 w-4 opacity-50" />
         </div>
         {errorText && (
           <p id={errorId} className="text-destructive text-xs font-medium">

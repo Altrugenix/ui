@@ -36,7 +36,7 @@ export const Default: Story = {
           }
         >
           <div className="space-y-4 py-4">
-            <p className="text-sm text-foreground/80">
+            <p className="text-foreground/80 text-sm">
               Please enter your password to confirm account deletion.
             </p>
             <Input label="Password" type="password" />
@@ -62,7 +62,7 @@ export const CustomSize: Story = {
           size="xl"
           footer={<Button onClick={() => setIsOpen(false)}>Close</Button>}
         >
-          <div className="mt-4 flex h-[400px] items-center justify-center rounded-lg border-2 border-dashed p-10 text-muted-foreground">
+          <div className="text-muted-foreground mt-4 flex h-[400px] items-center justify-center rounded-lg border-2 border-dashed p-10">
             Large content area
           </div>
         </Modal>

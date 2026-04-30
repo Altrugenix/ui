@@ -172,7 +172,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
               ) : (
                 Object.entries(groupedItems).map(([groupName, groupItems]) => (
                   <div key={groupName} className="mb-2 last:mb-0">
-                    <h3 className="text-muted-foreground px-3 py-2 text-xs font-semibold uppercase tracking-widest">
+                    <h3 className="text-muted-foreground px-3 py-2 text-xs font-semibold tracking-widest uppercase">
                       {groupName}
                     </h3>
                     {groupItems.map((item) => {

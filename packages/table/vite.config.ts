@@ -11,7 +11,7 @@ export default defineConfig({
       insertTypesEntry: true,
       include: ["src"],
       skipDiagnostics: false,
-     rollupTypes: true
+      rollupTypes: true,
     }),
   ],
   resolve: {
@@ -21,10 +21,13 @@ export default defineConfig({
             "@altrugenix/button": path.resolve(__dirname, "../button/src"),
             "@altrugenix/core": path.resolve(__dirname, "../core/src"),
             "@altrugenix/input": path.resolve(__dirname, "../input/src"),
-            "@altrugenix/virtual-list": path.resolve(__dirname, "../virtual-list/src"),
+            "@altrugenix/virtual-list": path.resolve(
+              __dirname,
+              "../virtual-list/src"
+            ),
           }
         : {}),
-    }
+    },
   },
   build: {
     lib: {

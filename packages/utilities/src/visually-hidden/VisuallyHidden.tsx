@@ -16,7 +16,7 @@ export const VisuallyHidden = React.forwardRef<
     <Component
       ref={ref}
       className={cn(
-        "absolute h-px w-px overflow-hidden whitespace-nowrap p-0",
+        "absolute h-px w-px overflow-hidden p-0 whitespace-nowrap",
         "clip-[rect(0,0,0,0)] border-0", // tailwind's sr-only equivalent
         className
       )}

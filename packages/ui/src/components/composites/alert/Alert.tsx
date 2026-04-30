@@ -54,7 +54,7 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
         <IconComponent className="mt-0.5 h-4 w-4 shrink-0" />
         <div className="flex-1 space-y-1">
           {title && (
-            <h5 className="text-sm font-semibold leading-none tracking-tight">
+            <h5 className="text-sm leading-none font-semibold tracking-tight">
               {title}
             </h5>
           )}
@@ -67,7 +67,7 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
         {onClose && (
           <button
             onClick={onClose}
-            className="absolute right-3 top-3 rounded-md p-0.5 opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+            className="ring-offset-background focus:ring-ring absolute top-3 right-3 rounded-md p-0.5 opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none"
             aria-label="Close alert"
           >
             <X className="h-4 w-4" />

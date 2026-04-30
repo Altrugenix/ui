@@ -11,7 +11,7 @@ export default meta;
 type Story = StoryObj<typeof Flex>;
 
 const Swatch = ({ label }: { label: string }) => (
-  <div className="flex h-16 w-16 items-center justify-center rounded-lg border bg-primary/10 text-xs font-medium">
+  <div className="bg-primary/10 flex h-16 w-16 items-center justify-center rounded-lg border text-xs font-medium">
     {label}
   </div>
 );
@@ -54,7 +54,7 @@ export const JustifyAndAlign: Story = {
     <div className="space-y-4">
       {(["start", "center", "end", "between"] as const).map((justify) => (
         <div key={justify}>
-          <p className="mb-1 text-xs text-muted-foreground">
+          <p className="text-muted-foreground mb-1 text-xs">
             justify=&quot;{justify}&quot;
           </p>
           <Flex

@@ -19,8 +19,8 @@ export const Default: Story = {
     children: (
       <div className="grid gap-4">
         <div className="space-y-2">
-          <h4 className="font-medium leading-none">Dimensions</h4>
-          <p className="text-sm text-muted-foreground">
+          <h4 className="leading-none font-medium">Dimensions</h4>
+          <p className="text-muted-foreground text-sm">
             Set the dimensions for the layer.
           </p>
         </div>
@@ -44,17 +44,17 @@ export const CustomContent: Story = {
     children: (
       <div className="space-y-4">
         <div className="flex items-center gap-4">
-          <div className="h-2 w-2 rounded-full bg-primary" />
+          <div className="bg-primary h-2 w-2 rounded-full" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium">New notification</p>
-            <p className="text-xs text-muted-foreground">2 minutes ago</p>
+            <p className="text-muted-foreground text-xs">2 minutes ago</p>
           </div>
         </div>
         <div className="flex items-center gap-4 opacity-50">
           <div className="h-2 w-2 rounded-full bg-transparent" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium">System update</p>
-            <p className="text-xs text-muted-foreground">1 hour ago</p>
+            <p className="text-muted-foreground text-xs">1 hour ago</p>
           </div>
         </div>
         <Button variant="ghost" size="sm" className="w-full">

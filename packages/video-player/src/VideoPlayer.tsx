@@ -195,7 +195,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
               </div>
             </div>
 
-            <div className="text-xs font-medium tabular-nums text-white/80">
+            <div className="text-xs font-medium text-white/80 tabular-nums">
               {formatTime(currentTime)} / {formatTime(duration)}
             </div>
           </div>

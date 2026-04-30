@@ -73,7 +73,7 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
             {title && <h2 className="text-lg font-semibold">{title}</h2>}
             <button
               onClick={onClose}
-              className="ring-offset-background focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2"
+              className="ring-offset-background focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none"
               aria-label="Close drawer"
             >
               <X className="h-4 w-4" />

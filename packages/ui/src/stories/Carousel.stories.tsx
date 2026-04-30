@@ -7,7 +7,7 @@ const meta: Meta<typeof Carousel> = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div className="h-[400px] w-full max-w-3xl overflow-hidden rounded-2xl border bg-muted/20">
+      <div className="bg-muted/20 h-[400px] w-full max-w-3xl overflow-hidden rounded-2xl border">
         <Story />
       </div>
     ),

@@ -77,7 +77,7 @@ export const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage <= 1}
-          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-input bg-background text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50"
+          className="border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-9 w-9 items-center justify-center rounded-md border text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50"
           aria-label="Previous page"
         >
           <ChevronLeft className="h-4 w-4" />
@@ -87,7 +87,7 @@ export const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
           page === "..." ? (
             <span
               key={`dots-${index}`}
-              className="flex h-9 w-9 items-center justify-center text-sm text-muted-foreground"
+              className="text-muted-foreground flex h-9 w-9 items-center justify-center text-sm"
             >
               …
             </span>
@@ -99,7 +99,7 @@ export const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
                 "inline-flex h-9 w-9 items-center justify-center rounded-md text-sm font-medium transition-colors",
                 currentPage === page
                   ? "bg-primary text-primary-foreground shadow-sm"
-                  : "border border-input bg-background hover:bg-accent hover:text-accent-foreground"
+                  : "border-input bg-background hover:bg-accent hover:text-accent-foreground border"
               )}
               aria-current={currentPage === page ? "page" : undefined}
             >
@@ -111,7 +111,7 @@ export const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage >= totalPages}
-          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-input bg-background text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50"
+          className="border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-9 w-9 items-center justify-center rounded-md border text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50"
           aria-label="Next page"
         >
           <ChevronRight className="h-4 w-4" />

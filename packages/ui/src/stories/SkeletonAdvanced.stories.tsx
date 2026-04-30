@@ -13,7 +13,7 @@ export const AnimationVariants: StoryObj = {
   render: () => (
     <div className="max-w-sm space-y-8">
       <div className="space-y-2">
-        <h4 className="text-sm font-bold uppercase text-muted-foreground">
+        <h4 className="text-muted-foreground text-sm font-bold uppercase">
           Pulse (Default)
         </h4>
         <Skeleton variant="text" />
@@ -21,7 +21,7 @@ export const AnimationVariants: StoryObj = {
       </div>
 
       <div className="space-y-2">
-        <h4 className="text-sm font-bold uppercase text-muted-foreground">
+        <h4 className="text-muted-foreground text-sm font-bold uppercase">
           Wave (Shimmer)
         </h4>
         <Skeleton variant="text" animation="wave" />
@@ -33,7 +33,7 @@ export const AnimationVariants: StoryObj = {
 
 export const ComplexLoading: StoryObj = {
   render: () => (
-    <div className="flex max-w-sm items-start gap-4 overflow-hidden rounded-xl border bg-card p-4">
+    <div className="bg-card flex max-w-sm items-start gap-4 overflow-hidden rounded-xl border p-4">
       <Skeleton variant="circular" width={48} height={48} animation="wave" />
       <div className="flex-1 space-y-3">
         <div className="space-y-1">

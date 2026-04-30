@@ -27,7 +27,7 @@ export const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(
       <aside
         ref={ref}
         className={cn(
-          "flex h-full flex-col border-r bg-background transition-all duration-300 ease-in-out",
+          "bg-background flex h-full flex-col border-r transition-all duration-300 ease-in-out",
           className
         )}
         style={{

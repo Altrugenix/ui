@@ -109,7 +109,7 @@ export const ListItemButton = React.forwardRef<
     <Component
       ref={ref}
       className={cn(
-        "hover:bg-accent/50 focus-visible:ring-ring flex w-full select-none items-center gap-3 px-4 py-3 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50",
+        "hover:bg-accent/50 focus-visible:ring-ring flex w-full items-center gap-3 px-4 py-3 text-left transition-colors select-none focus-visible:ring-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
         className
       )}
       {...props}

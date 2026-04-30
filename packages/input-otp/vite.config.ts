@@ -10,7 +10,8 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
-    skipDiagnostics: false,  rollupTypes: true
+      skipDiagnostics: false,
+      rollupTypes: true,
     }),
   ],
   resolve: {
@@ -18,9 +19,10 @@ export default defineConfig({
       ...(process.env.VITEST
         ? {
             "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+            "@altrugenix/input": path.resolve(__dirname, "../input/src"),
           }
         : {}),
-    }
+    },
   },
   build: {
     lib: {

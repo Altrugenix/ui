@@ -46,7 +46,7 @@ const ImageViewerContent: React.FC<Omit<ImageViewerProps, "isOpen">> = ({
       />
 
       {/* Header Controls */}
-      <div className="absolute right-4 top-4 z-10 flex items-center gap-2">
+      <div className="absolute top-4 right-4 z-10 flex items-center gap-2">
         <button
           onClick={handleZoomIn}
           className="rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
@@ -97,7 +97,7 @@ const ImageViewerContent: React.FC<Omit<ImageViewerProps, "isOpen">> = ({
           drag={scale > 1}
           dragConstraints={{ left: -500, right: 500, top: -500, bottom: 500 }}
           className={cn(
-            "h-full w-full select-none object-contain",
+            "h-full w-full object-contain select-none",
             scale > 1 ? "cursor-grab active:cursor-grabbing" : "cursor-default",
             className
           )}

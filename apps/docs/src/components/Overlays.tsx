@@ -114,7 +114,7 @@ export function Overlays({
             label="Email Address"
             type="email"
             placeholder="you@example.com"
-            leftAddon={<Mail className="h-4 w-4 text-muted-foreground" />}
+            leftAddon={<Mail className="text-muted-foreground h-4 w-4" />}
           />
           <Button className="mt-4 w-full">Create Account</Button>
         </div>
@@ -143,7 +143,7 @@ export function Overlays({
               <Checkbox label="Weekly Reports" />
             </div>
           </div>
-          <div className="flex gap-3 border-t bg-muted/5 p-6">
+          <div className="bg-muted/5 flex gap-3 border-t p-6">
             <Button className="flex-1">Save Changes</Button>
             <Button variant="outline" onClick={onDrawerClose}>
               Cancel

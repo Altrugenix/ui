@@ -47,7 +47,7 @@ export function AppShell({
   return (
     <div
       className={cn(
-        "relative flex min-h-screen flex-col bg-background selection:bg-primary/10",
+        "bg-background selection:bg-primary/10 relative flex min-h-screen flex-col",
         className
       )}
     >
@@ -63,7 +63,7 @@ export function AppShell({
           Visible only on larger screens. Includes a separator border.
         */}
         {sidebar && (
-          <div className="hidden border-r bg-background/50 backdrop-blur-sm lg:block">
+          <div className="bg-background/50 hidden border-r backdrop-blur-sm lg:block">
             {sidebar}
           </div>
         )}
@@ -95,7 +95,7 @@ export function AppShell({
               mainClassName
             )}
           >
-            <div className="mx-auto max-w-[1200px] duration-500 animate-in fade-in slide-in-from-bottom-4">
+            <div className="animate-in fade-in slide-in-from-bottom-4 mx-auto max-w-[1200px] duration-500">
               {children}
             </div>
           </main>
@@ -112,12 +112,12 @@ export function AppShell({
           variant="outline"
           size="icon"
           className={cn(
-            "fixed bottom-6 right-6 z-50 h-12 w-12 rounded-full border-primary/20 bg-background/80 shadow-2xl backdrop-blur-md transition-all hover:scale-110 active:scale-95 lg:hidden",
+            "border-primary/20 bg-background/80 fixed right-6 bottom-6 z-50 h-12 w-12 rounded-full shadow-2xl backdrop-blur-md transition-all hover:scale-110 active:scale-95 lg:hidden",
             isDrawerOpen && "scale-0 opacity-0"
           )}
           onClick={toggleDrawer}
         >
-          <Menu className="h-6 w-6 text-primary" />
+          <Menu className="text-primary h-6 w-6" />
         </Button>
       )}
     </div>

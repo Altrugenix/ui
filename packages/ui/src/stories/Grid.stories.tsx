@@ -11,7 +11,7 @@ export default meta;
 type Story = StoryObj<typeof Grid>;
 
 const GridItem = ({ n }: { n: number }) => (
-  <div className="flex h-24 items-center justify-center rounded-lg border bg-card text-sm font-medium shadow-sm">
+  <div className="bg-card flex h-24 items-center justify-center rounded-lg border text-sm font-medium shadow-sm">
     Item {n}
   </div>
 );

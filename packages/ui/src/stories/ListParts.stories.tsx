@@ -24,7 +24,7 @@ export default meta;
 
 export const InteractiveList: StoryObj = {
   render: () => (
-    <div className="max-w-sm rounded-xl border bg-card">
+    <div className="bg-card max-w-sm rounded-xl border">
       <List divided>
         <ListItemButton>
           <ListItemDecorator>
@@ -60,11 +60,11 @@ export const InteractiveList: StoryObj = {
 
 export const MixedContent: StoryObj = {
   render: () => (
-    <div className="max-w-sm rounded-xl border bg-card">
+    <div className="bg-card max-w-sm rounded-xl border">
       <List divided>
         <ListItem
           leading={<Settings className="h-5 w-5" />}
-          trailing={<div className="h-2 w-2 rounded-full bg-primary" />}
+          trailing={<div className="bg-primary h-2 w-2 rounded-full" />}
           secondary="Manage your application settings"
         >
           System Settings

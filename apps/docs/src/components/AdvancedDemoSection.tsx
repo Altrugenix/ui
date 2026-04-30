@@ -62,7 +62,7 @@ function ActivityFeed() {
               <p className="text-sm">
                 <span className="font-bold">{item.user}</span> {item.action}
               </p>
-              <p className="text-xs text-muted-foreground">{item.time}</p>
+              <p className="text-muted-foreground text-xs">{item.time}</p>
             </div>
           </div>
         ))}
@@ -117,14 +117,14 @@ function VirtualListDemo() {
               )}
             >
               <div className="flex items-center gap-4">
-                <span className="w-8 font-mono text-xs text-muted-foreground">
+                <span className="text-muted-foreground w-8 font-mono text-xs">
                   #{item.id}
                 </span>
                 <span className="text-sm font-semibold">{item.title}</span>
               </div>
               <div className="flex items-center gap-6">
                 <div className="flex w-32 flex-col gap-1">
-                  <div className="flex justify-between text-[10px] italic text-muted-foreground">
+                  <div className="text-muted-foreground flex justify-between text-[10px] italic">
                     <span>CPU Load</span>
                     <span>{item.load}%</span>
                   </div>

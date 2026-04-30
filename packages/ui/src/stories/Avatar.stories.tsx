@@ -36,10 +36,10 @@ export const Group: Story = {
       <Avatar
         src="https://github.com/shadcn.png"
         fallback="CN"
-        className="border-2 border-background"
+        className="border-background border-2"
       />
-      <Avatar fallback="AB" className="border-2 border-background" />
-      <Avatar fallback="QR" className="border-2 border-background" />
+      <Avatar fallback="AB" className="border-background border-2" />
+      <Avatar fallback="QR" className="border-background border-2" />
     </div>
   ),
 };

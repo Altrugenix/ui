@@ -14,7 +14,7 @@ export default {
 } satisfies Meta;
 
 const DemoBox = () => (
-  <div className="rounded bg-primary p-8 text-center font-bold text-primary-foreground shadow-lg">
+  <div className="bg-primary text-primary-foreground rounded p-8 text-center font-bold shadow-lg">
     Animated Element
   </div>
 );
@@ -25,7 +25,7 @@ export const FadeDemo: StoryObj = {
     return (
       <div className="space-y-4">
         <button
-          className="rounded bg-secondary px-4 py-2 text-secondary-foreground"
+          className="bg-secondary text-secondary-foreground rounded px-4 py-2"
           onClick={() => setInProp(!inProp)}
         >
           Toggle Fade
@@ -44,7 +44,7 @@ export const GrowDemo: StoryObj = {
     return (
       <div className="space-y-4">
         <button
-          className="rounded bg-secondary px-4 py-2 text-secondary-foreground"
+          className="bg-secondary text-secondary-foreground rounded px-4 py-2"
           onClick={() => setInProp(!inProp)}
         >
           Toggle Grow
@@ -63,7 +63,7 @@ export const SlideDemo: StoryObj = {
     return (
       <div className="space-y-4">
         <button
-          className="rounded bg-secondary px-4 py-2 text-secondary-foreground"
+          className="bg-secondary text-secondary-foreground rounded px-4 py-2"
           onClick={() => setInProp(!inProp)}
         >
           Toggle Slide (up)
@@ -82,7 +82,7 @@ export const ZoomDemo: StoryObj = {
     return (
       <div className="space-y-4">
         <button
-          className="rounded bg-secondary px-4 py-2 text-secondary-foreground"
+          className="bg-secondary text-secondary-foreground rounded px-4 py-2"
           onClick={() => setInProp(!inProp)}
         >
           Toggle Zoom
@@ -101,7 +101,7 @@ export const CollapseDemo: StoryObj = {
     return (
       <div className="space-y-4">
         <button
-          className="rounded bg-secondary px-4 py-2 text-secondary-foreground"
+          className="bg-secondary text-secondary-foreground rounded px-4 py-2"
           onClick={() => setInProp(!inProp)}
         >
           Toggle Collapse

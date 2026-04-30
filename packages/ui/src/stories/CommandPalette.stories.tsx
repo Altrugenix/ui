@@ -108,7 +108,7 @@ export const Default: Story = {
           <h2 className="text-2xl font-bold">Command Palette</h2>
           <p className="text-muted-foreground">
             Press{" "}
-            <kbd className="rounded border bg-muted px-1.5 font-sans font-medium text-muted-foreground opacity-100">
+            <kbd className="bg-muted text-muted-foreground rounded border px-1.5 font-sans font-medium opacity-100">
               ⌘K
             </kbd>{" "}
             to open the command palette.

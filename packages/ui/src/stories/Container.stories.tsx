@@ -12,9 +12,9 @@ type Story = StoryObj<typeof Container>;
 
 export const Default: Story = {
   render: () => (
-    <Container className="rounded-lg border bg-card p-8">
+    <Container className="bg-card rounded-lg border p-8">
       <h2 className="text-lg font-semibold">Default Container (XL)</h2>
-      <p className="mt-2 text-sm text-muted-foreground">
+      <p className="text-muted-foreground mt-2 text-sm">
         Content is centered and constrained to max-w-screen-xl by default.
       </p>
     </Container>
@@ -28,7 +28,7 @@ export const Sizes: Story = {
         <Container
           key={size}
           size={size}
-          className="rounded border bg-card/50 p-4"
+          className="bg-card/50 rounded border p-4"
         >
           <p className="text-sm font-medium">size=&quot;{size}&quot;</p>
         </Container>
@@ -43,7 +43,7 @@ export const NotCentered: Story = {
     size: "md",
     className: "rounded-lg border bg-card p-6",
     children: (
-      <p className="text-sm text-muted-foreground">
+      <p className="text-muted-foreground text-sm">
         This container is left-aligned (centered=false).
       </p>
     ),

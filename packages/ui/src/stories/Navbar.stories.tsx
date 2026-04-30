@@ -38,7 +38,7 @@ export const WithIcons: Story = {
         <Button variant="ghost" size="sm">
           Company
         </Button>
-        <div className="mx-2 h-4 w-[1px] bg-border" />
+        <div className="bg-border mx-2 h-4 w-[1px]" />
         <Button variant="ghost" size="icon">
           <ExternalLink className="h-5 w-5" />
         </Button>

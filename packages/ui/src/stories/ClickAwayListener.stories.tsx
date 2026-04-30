@@ -23,7 +23,7 @@ export const Default: StoryObj = {
             </Button>
 
             {open && (
-              <div className="absolute top-full z-10 mt-2 w-64 rounded-lg border bg-background p-4 shadow-xl">
+              <div className="bg-background absolute top-full z-10 mt-2 w-64 rounded-lg border p-4 shadow-xl">
                 <p className="text-sm font-medium">
                   Click outside of me to close!
                 </p>
@@ -36,7 +36,7 @@ export const Default: StoryObj = {
         </ClickAwayListener>
 
         {!open && (
-          <p className="text-sm italic text-muted-foreground">
+          <p className="text-muted-foreground text-sm italic">
             Dropdown is closed.
           </p>
         )}

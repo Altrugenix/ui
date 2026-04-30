@@ -11,7 +11,7 @@ export default defineConfig({
       insertTypesEntry: true,
       include: ["src"],
       skipDiagnostics: false,
-     rollupTypes: true
+      rollupTypes: true,
     }),
   ],
   resolve: {
@@ -21,7 +21,7 @@ export default defineConfig({
             "@altrugenix/core": path.resolve(__dirname, "../core/src"),
           }
         : {}),
-    }
+    },
   },
   build: {
     lib: {

@@ -132,7 +132,7 @@ export const CalendarView = ({
         {DAYS.map((day) => (
           <div
             key={day}
-            className="bg-muted/10 text-muted-foreground py-2 text-center text-xs font-semibold uppercase tracking-wider"
+            className="bg-muted/10 text-muted-foreground py-2 text-center text-xs font-semibold tracking-wider uppercase"
           >
             {day}
           </div>
@@ -143,7 +143,7 @@ export const CalendarView = ({
         {prevDays.map((day, i) => (
           <div
             key={`prev-${i}`}
-            className="bg-muted/5 border-b border-r p-2 opacity-40"
+            className="bg-muted/5 border-r border-b p-2 opacity-40"
           >
             <span className="text-sm font-medium">{day}</span>
           </div>
@@ -155,7 +155,7 @@ export const CalendarView = ({
             <div
               key={day}
               className={cn(
-                "hover:bg-muted/5 group relative border-b border-r p-2 transition-colors",
+                "hover:bg-muted/5 group relative border-r border-b p-2 transition-colors",
                 isToday(day) && "bg-primary/5"
               )}
             >
@@ -198,7 +198,7 @@ export const CalendarView = ({
         {nextDays.map((day, i) => (
           <div
             key={`next-${i}`}
-            className="bg-muted/5 border-b border-r p-2 opacity-40"
+            className="bg-muted/5 border-r border-b p-2 opacity-40"
           >
             <span className="text-sm font-medium">{day}</span>
           </div>

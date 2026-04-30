@@ -21,7 +21,7 @@ export default defineConfig({
             "@altrugenix/core": path.resolve(__dirname, "../core/src"),
           }
         : {}),
-    }
+    },
   },
   build: {
     lib: {

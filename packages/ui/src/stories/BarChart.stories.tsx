@@ -7,7 +7,7 @@ const meta: Meta<typeof BarChart> = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div className="max-w-[600px] rounded-xl border bg-card p-10">
+      <div className="bg-card max-w-[600px] rounded-xl border p-10">
         <Story />
       </div>
     ),

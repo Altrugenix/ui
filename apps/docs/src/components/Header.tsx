@@ -19,11 +19,11 @@ export function Header({ tokens, onSwitchTheme }: HeaderProps) {
   const { isDark, toggleTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background/80 shadow-sm backdrop-blur-md">
+    <header className="bg-background/80 sticky top-0 z-50 border-b shadow-sm backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg shadow-primary/20">
+            <div className="bg-primary text-primary-foreground shadow-primary/20 flex h-8 w-8 items-center justify-center rounded-lg shadow-lg">
               <Layers className="h-5 w-5" />
             </div>
             <span className="text-xl font-bold tracking-tight">Altrugenix</span>
@@ -50,7 +50,7 @@ export function Header({ tokens, onSwitchTheme }: HeaderProps) {
               Crimson
             </Button>
           </div>
-          <div className="mx-2 h-4 w-px bg-border" />
+          <div className="bg-border mx-2 h-4 w-px" />
           <Button
             variant="ghost"
             size="icon"

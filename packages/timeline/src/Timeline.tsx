@@ -32,7 +32,7 @@ export const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
             <div key={index} className="relative flex gap-4 pb-8 last:pb-0">
               {/* Line */}
               {!isLast && (
-                <div className="bg-border absolute left-[0.6875rem] top-6 h-full w-px" />
+                <div className="bg-border absolute top-6 left-[0.6875rem] h-full w-px" />
               )}
 
               {/* Dot / Icon */}

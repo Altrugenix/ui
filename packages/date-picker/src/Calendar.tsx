@@ -111,7 +111,7 @@ export const Calendar = ({ value, onChange, className }: CalendarProps) => {
         {DAYS.map((day) => (
           <div
             key={day}
-            className="text-muted-foreground text-center text-[10px] font-medium uppercase tracking-tight"
+            className="text-muted-foreground text-center text-[10px] font-medium tracking-tight uppercase"
           >
             {day[0]}
           </div>

@@ -111,7 +111,7 @@ export const Modal: React.FC<ModalProps> = ({
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="-mr-1 -mt-1 h-8 w-8 rounded-full"
+                  className="-mt-1 -mr-1 h-8 w-8 rounded-full"
                   onClick={onClose}
                   aria-label="Close modal"
                 >

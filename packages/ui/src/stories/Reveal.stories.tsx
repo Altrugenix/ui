@@ -50,7 +50,7 @@ export const Demo: Story = {
           <h3 className="mb-2 text-xl font-bold text-slate-400">
             Fade In Only
           </h3>
-          <p className="italic text-slate-400">
+          <p className="text-slate-400 italic">
             No movement, just a smooth fade.
           </p>
         </div>

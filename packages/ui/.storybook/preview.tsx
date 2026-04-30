@@ -25,7 +25,7 @@ const preview: Preview = {
     (Story) => (
       <ThemeProvider defaultTheme="light">
         <ToastProvider>
-          <div className="bg-background p-8 font-sans text-foreground antialiased transition-colors duration-300 selection:bg-primary/20">
+          <div className="bg-background text-foreground selection:bg-primary/20 p-8 font-sans antialiased transition-colors duration-300">
             <Story />
           </div>
         </ToastProvider>

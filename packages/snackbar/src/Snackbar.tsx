@@ -87,7 +87,7 @@ export const Snackbar: React.FC<SnackbarProps> = ({
             y: position.startsWith("bottom") ? 20 : -20,
           }}
           className={cn(
-            "fixed z-[9999] flex min-w-[320px] max-w-[500px] items-center justify-between gap-4 rounded-lg px-4 py-3 shadow-lg",
+            "fixed z-[9999] flex max-w-[500px] min-w-[320px] items-center justify-between gap-4 rounded-lg px-4 py-3 shadow-lg",
             positionClasses[position],
             variantClasses[variant],
             className
@@ -103,7 +103,7 @@ export const Snackbar: React.FC<SnackbarProps> = ({
                 size="sm"
                 onClick={onAction}
                 className={cn(
-                  "h-8 px-2 text-xs font-bold uppercase tracking-wider",
+                  "h-8 px-2 text-xs font-bold tracking-wider uppercase",
                   variant === "inverted"
                     ? "text-background hover:bg-background/10"
                     : "text-primary hover:bg-primary/10"

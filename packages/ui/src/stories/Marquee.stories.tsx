@@ -36,7 +36,7 @@ export const Default: Story = {
         {logos.map((logo) => (
           <div
             key={logo}
-            className="mx-8 whitespace-nowrap text-2xl font-bold opacity-30 transition-opacity hover:opacity-100"
+            className="mx-8 text-2xl font-bold whitespace-nowrap opacity-30 transition-opacity hover:opacity-100"
           >
             {logo}
           </div>
@@ -55,7 +55,7 @@ export const SlowRight: Story = {
         {logos.map((logo) => (
           <div
             key={logo}
-            className="mx-8 whitespace-nowrap text-3xl font-black uppercase italic tracking-widest text-primary opacity-20"
+            className="text-primary mx-8 text-3xl font-black tracking-widest whitespace-nowrap uppercase italic opacity-20"
           >
             {logo}
           </div>

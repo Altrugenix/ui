@@ -25,7 +25,7 @@ const DrawerDemo = ({ side = "right" }: { side?: "left" | "right" }) => {
         title={`${side.charAt(0).toUpperCase() + side.slice(1)} Drawer`}
       >
         <div className="space-y-4">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             This drawer slides in from the {side}. Press Escape or click the
             backdrop to close.
           </p>
