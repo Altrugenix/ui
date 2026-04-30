@@ -10,16 +10,21 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
+    skipDiagnostics: false,  rollupTypes: true
     }),
   ],
   resolve: {
     alias: {
-      "@altrugenix/core": path.resolve(__dirname, "../core/src"),
-      "@altrugenix/button": path.resolve(__dirname, "../button/src"),
-      "@altrugenix/card": path.resolve(__dirname, "../card/src"),
-      "@altrugenix/checkbox": path.resolve(__dirname, "../checkbox/src"),
-      "@altrugenix/list": path.resolve(__dirname, "../list/src"),
-    },
+      ...(process.env.VITEST
+        ? {
+            "@altrugenix/button": path.resolve(__dirname, "../button/src"),
+            "@altrugenix/card": path.resolve(__dirname, "../card/src"),
+            "@altrugenix/checkbox": path.resolve(__dirname, "../checkbox/src"),
+            "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+            "@altrugenix/list": path.resolve(__dirname, "../list/src"),
+          }
+        : {}),
+    }
   },
   build: {
     lib: {

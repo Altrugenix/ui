@@ -10,14 +10,19 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
+    skipDiagnostics: false,  rollupTypes: true
     }),
   ],
   resolve: {
     alias: {
-      "@altrugenix/core": path.resolve(__dirname, "../core/src"),
-      "@altrugenix/button": path.resolve(__dirname, "../button/src"),
-      "@altrugenix/progress-bar": path.resolve(__dirname, "../progress-bar/src"),
-    },
+      ...(process.env.VITEST
+        ? {
+            "@altrugenix/button": path.resolve(__dirname, "../button/src"),
+            "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+            "@altrugenix/progress-bar": path.resolve(__dirname, "../progress-bar/src"),
+          }
+        : {}),
+    }
   },
   build: {
     lib: {

@@ -12,6 +12,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alloc/quick-lru@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "@alloc/quick-lru@npm:5.2.0"
+  checksum: 10c0/7b878c48b9d25277d0e1a9b8b2f2312a314af806b4129dc902f2bc29ab09b58236e53964689feec187b28c80d2203aff03829754773a707a8a5987f1b7682d92
+  languageName: node
+  linkType: hard
+
 "@altrugenix/accordion@workspace:*, @altrugenix/accordion@workspace:packages/accordion":
   version: 0.0.0-use.local
   resolution: "@altrugenix/accordion@workspace:packages/accordion"
@@ -23,6 +30,9 @@ __metadata:
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -42,6 +52,9 @@ __metadata:
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -63,6 +76,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -82,6 +98,9 @@ __metadata:
     "@types/react-dom": "npm:^19.2.3"
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -101,6 +120,9 @@ __metadata:
     "@types/react-dom": "npm:^19.2.3"
     framer-motion: "npm:^12.38.0"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -120,7 +142,9 @@ __metadata:
     "@types/react-dom": "npm:^19.2.3"
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
     vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -163,6 +187,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -184,6 +211,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -203,6 +233,9 @@ __metadata:
     "@types/react-dom": "npm:^19.2.3"
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -224,6 +257,9 @@ __metadata:
     framer-motion: "npm:^12.38.0"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -243,6 +279,9 @@ __metadata:
     "@types/react-dom": "npm:^19.2.3"
     framer-motion: "npm:^12.38.0"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -261,6 +300,9 @@ __metadata:
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -281,6 +323,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -368,6 +413,9 @@ __metadata:
     clsx: "npm:^2.1.1"
     jsdom: "npm:^29.1.0"
     tailwind-merge: "npm:^3.5.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -387,6 +435,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -409,6 +460,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -429,6 +483,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -519,6 +576,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -539,6 +599,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -558,6 +621,9 @@ __metadata:
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -621,6 +687,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -641,6 +710,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -660,6 +732,9 @@ __metadata:
     "@types/react-dom": "npm:^19.2.3"
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -683,6 +758,9 @@ __metadata:
     framer-motion: "npm:^12.38.0"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -701,6 +779,9 @@ __metadata:
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -718,6 +799,9 @@ __metadata:
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -764,6 +848,9 @@ __metadata:
     framer-motion: "npm:^12.38.0"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -785,6 +872,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -805,6 +895,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -823,6 +916,9 @@ __metadata:
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -867,6 +963,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -886,6 +985,9 @@ __metadata:
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -906,6 +1008,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -926,6 +1031,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -944,6 +1052,9 @@ __metadata:
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -965,6 +1076,9 @@ __metadata:
     framer-motion: "npm:^12.38.0"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -1029,6 +1143,9 @@ __metadata:
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -1052,6 +1169,9 @@ __metadata:
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -1093,6 +1213,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -1113,6 +1236,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -1131,6 +1257,9 @@ __metadata:
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -1153,6 +1282,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -1173,6 +1305,9 @@ __metadata:
     framer-motion: "npm:^12.38.0"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -1241,6 +1376,9 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     jsdom: "npm:^29.1.0"
     lucide-react: "npm:^1.14.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     framer-motion: ^11.0.0 || ^12.0.0
@@ -1425,6 +1563,9 @@ __metadata:
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     jsdom: "npm:^29.1.0"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.10"
+    vite-plugin-dts: "npm:^4.5.4"
     vitest: "npm:^4.1.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -1986,7 +2127,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emnapi/core@npm:1.10.0":
+"@emnapi/core@npm:1.10.0, @emnapi/core@npm:^1.8.1":
   version: 1.10.0
   resolution: "@emnapi/core@npm:1.10.0"
   dependencies:
@@ -2006,7 +2147,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emnapi/runtime@npm:1.10.0":
+"@emnapi/runtime@npm:1.10.0, @emnapi/runtime@npm:^1.8.1":
   version: 1.10.0
   resolution: "@emnapi/runtime@npm:1.10.0"
   dependencies:
@@ -2024,7 +2165,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emnapi/wasi-threads@npm:1.2.1":
+"@emnapi/wasi-threads@npm:1.2.1, @emnapi/wasi-threads@npm:^1.1.0":
   version: 1.2.1
   resolution: "@emnapi/wasi-threads@npm:1.2.1"
   dependencies:
@@ -2517,6 +2658,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@napi-rs/wasm-runtime@npm:^1.1.1, @napi-rs/wasm-runtime@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "@napi-rs/wasm-runtime@npm:1.1.4"
+  dependencies:
+    "@tybys/wasm-util": "npm:^0.10.1"
+  peerDependencies:
+    "@emnapi/core": ^1.7.1
+    "@emnapi/runtime": ^1.7.1
+  checksum: 10c0/2e88e1955258949ccf2d18c79975821ad38071b465ef126a5e14110977b97868867b016c1ad046e963cccc42c0bd9db6c8ff5fd1ebb61b87bb3487f339041658
+  languageName: node
+  linkType: hard
+
 "@napi-rs/wasm-runtime@npm:^1.1.3":
   version: 1.1.3
   resolution: "@napi-rs/wasm-runtime@npm:1.1.3"
@@ -2526,18 +2679,6 @@ __metadata:
     "@emnapi/core": ^1.7.1
     "@emnapi/runtime": ^1.7.1
   checksum: 10c0/745bb32a023b95095a18d93658bf4564403c2283ca0500a043afcf566ac6082bd0611792f14636276bab07dc2ce6d862591c8aabddae02ec697245b05bc6f144
-  languageName: node
-  linkType: hard
-
-"@napi-rs/wasm-runtime@npm:^1.1.4":
-  version: 1.1.4
-  resolution: "@napi-rs/wasm-runtime@npm:1.1.4"
-  dependencies:
-    "@tybys/wasm-util": "npm:^0.10.1"
-  peerDependencies:
-    "@emnapi/core": ^1.7.1
-    "@emnapi/runtime": ^1.7.1
-  checksum: 10c0/2e88e1955258949ccf2d18c79975821ad38071b465ef126a5e14110977b97868867b016c1ad046e963cccc42c0bd9db6c8ff5fd1ebb61b87bb3487f339041658
   languageName: node
   linkType: hard
 
@@ -3277,6 +3418,183 @@ __metadata:
   dependencies:
     "@swc/counter": "npm:^0.1.3"
   checksum: 10c0/8449341e8bbff81c14e9918c25421143cf605dff20f70f048847e1f7cede396f8dd73903cbef331a809b4a8e15d0db374a5f6809003e7b440f93df1dd4934d28
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/node@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/node@npm:4.2.4"
+  dependencies:
+    "@jridgewell/remapping": "npm:^2.3.5"
+    enhanced-resolve: "npm:^5.19.0"
+    jiti: "npm:^2.6.1"
+    lightningcss: "npm:1.32.0"
+    magic-string: "npm:^0.30.21"
+    source-map-js: "npm:^1.2.1"
+    tailwindcss: "npm:4.2.4"
+  checksum: 10c0/58a0b8c4b8e8425e34a5240e58d90f6ef462705f790b93e6e74ae0bbd05d228457b8438a34a272b447393bfdb2ea1605400ccc5b0edb87d9dd9d092f1d8a0bb2
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-android-arm64@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-android-arm64@npm:4.2.4"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-darwin-arm64@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-darwin-arm64@npm:4.2.4"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-darwin-x64@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-darwin-x64@npm:4.2.4"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-freebsd-x64@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-freebsd-x64@npm:4.2.4"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-linux-arm-gnueabihf@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-linux-arm-gnueabihf@npm:4.2.4"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-linux-arm64-gnu@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-linux-arm64-gnu@npm:4.2.4"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-linux-arm64-musl@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-linux-arm64-musl@npm:4.2.4"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-linux-x64-gnu@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-linux-x64-gnu@npm:4.2.4"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-linux-x64-musl@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-linux-x64-musl@npm:4.2.4"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-wasm32-wasi@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-wasm32-wasi@npm:4.2.4"
+  dependencies:
+    "@emnapi/core": "npm:^1.8.1"
+    "@emnapi/runtime": "npm:^1.8.1"
+    "@emnapi/wasi-threads": "npm:^1.1.0"
+    "@napi-rs/wasm-runtime": "npm:^1.1.1"
+    "@tybys/wasm-util": "npm:^0.10.1"
+    tslib: "npm:^2.8.1"
+  conditions: cpu=wasm32
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-win32-arm64-msvc@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-win32-arm64-msvc@npm:4.2.4"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide-win32-x64-msvc@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-win32-x64-msvc@npm:4.2.4"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/oxide@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide@npm:4.2.4"
+  dependencies:
+    "@tailwindcss/oxide-android-arm64": "npm:4.2.4"
+    "@tailwindcss/oxide-darwin-arm64": "npm:4.2.4"
+    "@tailwindcss/oxide-darwin-x64": "npm:4.2.4"
+    "@tailwindcss/oxide-freebsd-x64": "npm:4.2.4"
+    "@tailwindcss/oxide-linux-arm-gnueabihf": "npm:4.2.4"
+    "@tailwindcss/oxide-linux-arm64-gnu": "npm:4.2.4"
+    "@tailwindcss/oxide-linux-arm64-musl": "npm:4.2.4"
+    "@tailwindcss/oxide-linux-x64-gnu": "npm:4.2.4"
+    "@tailwindcss/oxide-linux-x64-musl": "npm:4.2.4"
+    "@tailwindcss/oxide-wasm32-wasi": "npm:4.2.4"
+    "@tailwindcss/oxide-win32-arm64-msvc": "npm:4.2.4"
+    "@tailwindcss/oxide-win32-x64-msvc": "npm:4.2.4"
+  dependenciesMeta:
+    "@tailwindcss/oxide-android-arm64":
+      optional: true
+    "@tailwindcss/oxide-darwin-arm64":
+      optional: true
+    "@tailwindcss/oxide-darwin-x64":
+      optional: true
+    "@tailwindcss/oxide-freebsd-x64":
+      optional: true
+    "@tailwindcss/oxide-linux-arm-gnueabihf":
+      optional: true
+    "@tailwindcss/oxide-linux-arm64-gnu":
+      optional: true
+    "@tailwindcss/oxide-linux-arm64-musl":
+      optional: true
+    "@tailwindcss/oxide-linux-x64-gnu":
+      optional: true
+    "@tailwindcss/oxide-linux-x64-musl":
+      optional: true
+    "@tailwindcss/oxide-wasm32-wasi":
+      optional: true
+    "@tailwindcss/oxide-win32-arm64-msvc":
+      optional: true
+    "@tailwindcss/oxide-win32-x64-msvc":
+      optional: true
+  checksum: 10c0/f9fe3d19d4384e754155030482f664c6747c7d5d1556795a510c517c2a3408bebbe60c25cebb1da47187c347c04d993585b9c2580e43df9f522e1c7692ae25fc
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/postcss@npm:^4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/postcss@npm:4.2.4"
+  dependencies:
+    "@alloc/quick-lru": "npm:^5.2.0"
+    "@tailwindcss/node": "npm:4.2.4"
+    "@tailwindcss/oxide": "npm:4.2.4"
+    postcss: "npm:^8.5.6"
+    tailwindcss: "npm:4.2.4"
+  checksum: 10c0/e6abad7065558bf3c39d30f392100c934c3381a572df21d934dd5a9399e0a62e16ba3d74a51ec0b1d670b1990ae73d01dfc560db0bf0e24bad827e00be0e62c2
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/vite@npm:^4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/vite@npm:4.2.4"
+  dependencies:
+    "@tailwindcss/node": "npm:4.2.4"
+    "@tailwindcss/oxide": "npm:4.2.4"
+    tailwindcss: "npm:4.2.4"
+  peerDependencies:
+    vite: ^5.2.0 || ^6 || ^7 || ^8
+  checksum: 10c0/dcd7f947e152d1cc05c560a7254d3fb8d4e0631a437778e30b929b2cdacdd9dc8672bba68867b5f0de0e1d09d07f3dcf91a30fd65ff91251f3063cd25d1675fb
   languageName: node
   linkType: hard
 
@@ -4168,6 +4486,8 @@ __metadata:
   dependencies:
     "@changesets/cli": "npm:^2.31.0"
     "@eslint/js": "npm:^10.0.1"
+    "@tailwindcss/postcss": "npm:^4.2.4"
+    "@tailwindcss/vite": "npm:^4.2.4"
     "@vitejs/plugin-react": "npm:^6.0.1"
     eslint: "npm:^10.2.1"
     eslint-config-prettier: "npm:^10.1.8"
@@ -4717,6 +5037,16 @@ __metadata:
   version: 2.0.0
   resolution: "empathic@npm:2.0.0"
   checksum: 10c0/7d3b14b04a93b35c47bcc950467ec914fd241cd9acc0269b0ea160f13026ec110f520c90fae64720fde72cc1757b57f3f292fb606617b7fccac1f4d008a76506
+  languageName: node
+  linkType: hard
+
+"enhanced-resolve@npm:^5.19.0":
+  version: 5.21.0
+  resolution: "enhanced-resolve@npm:5.21.0"
+  dependencies:
+    graceful-fs: "npm:^4.2.4"
+    tapable: "npm:^2.3.3"
+  checksum: 10c0/8d25b9eb7cbaaf6bac7ca52cefb6aa8a723a3cea754aa3c52f269bdae3b6d5f3219fadbaf4362ed7d53f027e0b83bfbeb4c646640123cf62e6dbe52f28604c77
   languageName: node
   linkType: hard
 
@@ -5380,7 +5710,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.5, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.6":
+"graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.5, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6":
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: 10c0/386d011a553e02bc594ac2ca0bd6d9e4c22d7fa8cfbfc448a6d148c59ea881b092db9dbe3547ae4b88e55f1b01f7c4a2ecc53b310c042793e63aa44cf6c257f2
@@ -5657,6 +5987,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jiti@npm:^2.6.1":
+  version: 2.6.1
+  resolution: "jiti@npm:2.6.1"
+  bin:
+    jiti: lib/jiti-cli.mjs
+  checksum: 10c0/79b2e96a8e623f66c1b703b98ec1b8be4500e1d217e09b09e343471bbb9c105381b83edbb979d01cef18318cc45ce6e153571b6c83122170eefa531c64b6789b
+  languageName: node
+  linkType: hard
+
 "jju@npm:~1.4.0":
   version: 1.4.0
   resolution: "jju@npm:1.4.0"
@@ -5909,7 +6248,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lightningcss@npm:^1.32.0":
+"lightningcss@npm:1.32.0, lightningcss@npm:^1.32.0":
   version: 1.32.0
   resolution: "lightningcss@npm:1.32.0"
   dependencies:
@@ -6623,7 +6962,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.5.10, postcss@npm:^8.5.12":
+"postcss@npm:^8.5.10, postcss@npm:^8.5.12, postcss@npm:^8.5.6":
   version: 8.5.12
   resolution: "postcss@npm:8.5.12"
   dependencies:
@@ -7351,10 +7690,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^4.2.4":
+"tailwindcss@npm:4.2.4, tailwindcss@npm:^4.2.4":
   version: 4.2.4
   resolution: "tailwindcss@npm:4.2.4"
   checksum: 10c0/1069304b6bf2855daa029ac4af382abb95ed26ae4d05bc09ea01a56e6af3de8b6fb1b4d508d8bbb39abf30a69766e6f2f75835e112ac6fc39ed94ae5d4901048
+  languageName: node
+  linkType: hard
+
+"tapable@npm:^2.3.3":
+  version: 2.3.3
+  resolution: "tapable@npm:2.3.3"
+  checksum: 10c0/47992e861053f861154e92fb4a98ac4ab47b6463717e60792dd1e8c755da0c4964cd8bb68c308a9066d6da89000b6310457b4d5d985c30de4ccc29066068cc17
   languageName: node
   linkType: hard
 
@@ -7509,7 +7855,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.1, tslib@npm:^2.4.0":
+"tslib@npm:^2.0.1, tslib@npm:^2.4.0, tslib@npm:^2.8.1":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62

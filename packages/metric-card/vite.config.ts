@@ -10,13 +10,18 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
+    skipDiagnostics: false,  rollupTypes: true
     }),
   ],
   resolve: {
     alias: {
-      "@altrugenix/core": path.resolve(__dirname, "../core/src"),
-      "@altrugenix/card": path.resolve(__dirname, "../card/src"),
-    },
+      ...(process.env.VITEST
+        ? {
+            "@altrugenix/card": path.resolve(__dirname, "../card/src"),
+            "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+          }
+        : {}),
+    }
   },
   build: {
     lib: {

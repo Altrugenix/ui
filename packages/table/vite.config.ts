@@ -10,18 +10,21 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
+      skipDiagnostics: false,
+     rollupTypes: true
     }),
   ],
   resolve: {
     alias: {
-      "@altrugenix/core": path.resolve(__dirname, "../core/src"),
-      "@altrugenix/button": path.resolve(__dirname, "../button/src"),
-      "@altrugenix/input": path.resolve(__dirname, "../input/src"),
-      "@altrugenix/virtual-list": path.resolve(
-        __dirname,
-        "../virtual-list/src"
-      ),
-    },
+      ...(process.env.VITEST
+        ? {
+            "@altrugenix/button": path.resolve(__dirname, "../button/src"),
+            "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+            "@altrugenix/input": path.resolve(__dirname, "../input/src"),
+            "@altrugenix/virtual-list": path.resolve(__dirname, "../virtual-list/src"),
+          }
+        : {}),
+    }
   },
   build: {
     lib: {

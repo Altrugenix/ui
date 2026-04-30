@@ -10,13 +10,18 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
+    skipDiagnostics: false,  rollupTypes: true
     }),
   ],
   resolve: {
     alias: {
-      "@altrugenix/core": path.resolve(__dirname, "../core/src"),
-      "@altrugenix/slider": path.resolve(__dirname, "../slider/src"),
-    },
+      ...(process.env.VITEST
+        ? {
+            "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+            "@altrugenix/slider": path.resolve(__dirname, "../slider/src"),
+          }
+        : {}),
+    }
   },
   build: {
     lib: {

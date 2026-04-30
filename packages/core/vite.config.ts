@@ -10,6 +10,8 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
+      skipDiagnostics: false,
+     rollupTypes: true
     }),
   ],
   build: {
