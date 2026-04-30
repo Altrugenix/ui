@@ -73,7 +73,7 @@ export const FullWidth: Story = {
 
 export const Mixed: Story = {
   render: () => (
-    <ButtonGroup variant="outline">
+    <ButtonGroup>
       <Button variant="outline">Primary</Button>
       <IconButton variant="outline">
         <Settings className="h-4 w-4" />

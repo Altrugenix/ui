@@ -23,8 +23,6 @@ export default defineConfig({
         "src/App.tsx",
         "src/main.tsx",
       ],
-      skipDiagnostics: false,
-      rollupTypes: true,
     }),
   ],
   resolve: {

@@ -38,7 +38,7 @@ export const Default: Story = {
 export const Success: Story = {
   args: {
     children: "Claim Reward 🏆",
-    variant: "success",
+    variant: "primary",
     size: "lg",
   },
 };

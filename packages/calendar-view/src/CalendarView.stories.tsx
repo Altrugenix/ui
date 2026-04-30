@@ -56,6 +56,7 @@ const CalendarViewStory1Render = () => {
         {
           id: Math.random().toString(36).substr(2, 9),
           title,
+          color: "border-blue-500 bg-blue-500/10 text-blue-600",
           date,
         },
       ]);

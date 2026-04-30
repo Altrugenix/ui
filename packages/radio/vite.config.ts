@@ -19,8 +19,6 @@ export default defineConfig({
         "src/**/*.stories.tsx",
         "src/**/*.stories.ts",
       ],
-      skipDiagnostics: false,
-      rollupTypes: true,
     }),
   ],
   resolve: {

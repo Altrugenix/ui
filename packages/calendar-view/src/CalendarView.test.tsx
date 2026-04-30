@@ -5,7 +5,7 @@ import { CalendarView } from "./CalendarView";
 
 describe("CalendarView component", () => {
   it("renders correctly", () => {
-    const { container, getByText } = render(<CalendarView>Test</CalendarView>);
+    const { container, getByText } = render(<CalendarView />);
     expect(container.firstChild).toHaveClass("bg-card");
     // Check if current month is rendered
     const today = new Date();

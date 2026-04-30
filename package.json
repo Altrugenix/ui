@@ -18,6 +18,7 @@
     "dev:storybook": "storybook dev -p 6006",
     "lint": "yarn workspaces foreach -A run lint",
     "test": "yarn workspaces foreach -A run test",
+    "type-check": "tsc --noEmit",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "build:all": "yarn build && yarn build:docs && yarn build:storybook",
     "change": "changeset",

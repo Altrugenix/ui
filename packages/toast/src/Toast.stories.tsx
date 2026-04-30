@@ -43,8 +43,7 @@ const DefaultToastStory = () => {
           toast({
             type: "warning",
             title: "Connection reset",
-            description:
-              "The connection was interrupted but we are retrying.",
+            description: "The connection was interrupted but we are retrying.",
           })
         }
       >
