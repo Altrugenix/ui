@@ -18,23 +18,29 @@ const meta: Meta<typeof DatePicker> = {
 export default meta;
 type Story = StoryObj<typeof DatePicker>;
 
+const DefaultRender = (args: React.ComponentProps<typeof DatePicker>) => {
+  const [date, setDate] = useState<Date | undefined>(new Date());
+  return <DatePicker {...args} value={date} onChange={setDate} />;
+};
+
 export const Default: Story = {
-  render: (args) => {
-    const [date, setDate] = useState<Date | undefined>(new Date());
-    return <DatePicker {...args} value={date} onChange={setDate} />;
-  },
+  render: (args) => <DefaultRender {...args} />,
+};
+
+const WithPlaceholderRender = (
+  args: React.ComponentProps<typeof DatePicker>
+) => {
+  const [date, setDate] = useState<Date | undefined>();
+  return (
+    <DatePicker
+      {...args}
+      value={date}
+      onChange={setDate}
+      placeholder="Select your birthday"
+    />
+  );
 };
 
 export const WithPlaceholder: Story = {
-  render: (args) => {
-    const [date, setDate] = useState<Date | undefined>();
-    return (
-      <DatePicker
-        {...args}
-        value={date}
-        onChange={setDate}
-        placeholder="Select your birthday"
-      />
-    );
-  },
+  render: (args) => <WithPlaceholderRender {...args} />,
 };

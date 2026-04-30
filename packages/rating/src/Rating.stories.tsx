@@ -20,14 +20,14 @@ export const Default: Story = {
 };
 
 const RatingStory1Render = () => {
-    const [value, setValue] = useState(2);
-    return (
-      <div className="flex flex-col gap-4">
-        <Rating value={value} onChange={setValue} size="lg" />
-        <p className="text-sm font-medium">Your rating: {value} stars</p>
-      </div>
-    );
-  };
+  const [value, setValue] = useState(2);
+  return (
+    <div className="flex flex-col gap-4">
+      <Rating value={value} onChange={setValue} size="lg" />
+      <p className="text-sm font-medium">Your rating: {value} stars</p>
+    </div>
+  );
+};
 
 export const Interactive: Story = {
   render: () => <RatingStory1Render />,

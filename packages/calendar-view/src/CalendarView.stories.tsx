@@ -46,24 +46,24 @@ export const Default: Story = {
 };
 
 const CalendarViewStory1Render = () => {
-    const [events, setEvents] = useState(MOCK_EVENTS);
+  const [events, setEvents] = useState(MOCK_EVENTS);
 
-    const handleAddEvent = (date: Date) => {
-      const title = window.prompt("Enter event title:");
-      if (title) {
-        setEvents([
-          ...events,
-          {
-            id: Math.random().toString(36).substr(2, 9),
-            title,
-            date,
-          },
-        ]);
-      }
-    };
-
-    return <CalendarView events={events} onAddEvent={handleAddEvent} />;
+  const handleAddEvent = (date: Date) => {
+    const title = window.prompt("Enter event title:");
+    if (title) {
+      setEvents([
+        ...events,
+        {
+          id: Math.random().toString(36).substr(2, 9),
+          title,
+          date,
+        },
+      ]);
+    }
   };
+
+  return <CalendarView events={events} onAddEvent={handleAddEvent} />;
+};
 
 export const Interactive: Story = {
   render: () => <CalendarViewStory1Render />,

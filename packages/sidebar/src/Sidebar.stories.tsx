@@ -19,55 +19,55 @@ const meta: Meta<typeof Sidebar> = {
 export default meta;
 
 const SidebarStory1Render = () => {
-    const [collapsed, setCollapsed] = useState(false);
-    return (
-      <div className="flex h-[600px] overflow-hidden rounded-lg border">
-        <Sidebar collapsed={collapsed}>
-          <div className="flex items-center justify-between border-b p-4">
-            {!collapsed && <span className="font-bold">App Name</span>}
-            <button
-              onClick={() => setCollapsed(!collapsed)}
-              className="hover:bg-accent rounded p-1"
-            >
-              {collapsed ? "»" : "«"}
-            </button>
-          </div>
-          <div className="flex-1 space-y-1 p-2">
-            <SidebarItem
-              icon={<LayoutDashboard size={20} />}
-              active
-              collapsed={collapsed}
-            >
-              Dashboard
-            </SidebarItem>
-            <SidebarItem icon={<Users size={20} />} collapsed={collapsed}>
-              Users
-            </SidebarItem>
-            <SidebarItem icon={<Mail size={20} />} collapsed={collapsed}>
-              Messages
-            </SidebarItem>
-            <SidebarItem icon={<Bell size={20} />} collapsed={collapsed}>
-              Notifications
-            </SidebarItem>
-          </div>
-          <div className="space-y-1 border-t p-2">
-            <SidebarItem icon={<Settings size={20} />} collapsed={collapsed}>
-              Settings
-            </SidebarItem>
-            <SidebarItem icon={<HelpCircle size={20} />} collapsed={collapsed}>
-              Support
-            </SidebarItem>
-          </div>
-        </Sidebar>
-        <div className="bg-muted/20 flex-1 p-8">
-          <h1 className="text-2xl font-bold">Main Content Area</h1>
-          <p className="text-muted-foreground mt-4">
-            The sidebar is {collapsed ? "collapsed" : "expanded"}.
-          </p>
+  const [collapsed, setCollapsed] = useState(false);
+  return (
+    <div className="flex h-[600px] overflow-hidden rounded-lg border">
+      <Sidebar collapsed={collapsed}>
+        <div className="flex items-center justify-between border-b p-4">
+          {!collapsed && <span className="font-bold">App Name</span>}
+          <button
+            onClick={() => setCollapsed(!collapsed)}
+            className="hover:bg-accent rounded p-1"
+          >
+            {collapsed ? "»" : "«"}
+          </button>
         </div>
+        <div className="flex-1 space-y-1 p-2">
+          <SidebarItem
+            icon={<LayoutDashboard size={20} />}
+            active
+            collapsed={collapsed}
+          >
+            Dashboard
+          </SidebarItem>
+          <SidebarItem icon={<Users size={20} />} collapsed={collapsed}>
+            Users
+          </SidebarItem>
+          <SidebarItem icon={<Mail size={20} />} collapsed={collapsed}>
+            Messages
+          </SidebarItem>
+          <SidebarItem icon={<Bell size={20} />} collapsed={collapsed}>
+            Notifications
+          </SidebarItem>
+        </div>
+        <div className="space-y-1 border-t p-2">
+          <SidebarItem icon={<Settings size={20} />} collapsed={collapsed}>
+            Settings
+          </SidebarItem>
+          <SidebarItem icon={<HelpCircle size={20} />} collapsed={collapsed}>
+            Support
+          </SidebarItem>
+        </div>
+      </Sidebar>
+      <div className="bg-muted/20 flex-1 p-8">
+        <h1 className="text-2xl font-bold">Main Content Area</h1>
+        <p className="text-muted-foreground mt-4">
+          The sidebar is {collapsed ? "collapsed" : "expanded"}.
+        </p>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 export const Default: StoryObj = {
   render: () => <SidebarStory1Render />,

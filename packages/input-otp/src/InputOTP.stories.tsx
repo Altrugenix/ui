@@ -11,21 +11,23 @@ const meta: Meta<typeof InputOTP> = {
 export default meta;
 type Story = StoryObj<typeof InputOTP>;
 
+const DefaultRender = (args: React.ComponentProps<typeof InputOTP>) => {
+  const [otp, setOtp] = useState("");
+  return (
+    <div className="flex flex-col items-center gap-4 p-10">
+      <InputOTP
+        {...args}
+        value={otp}
+        onChange={setOtp}
+        onComplete={(val) => alert(`Completed: ${val}`)}
+      />
+      <p className="text-muted-foreground text-sm">Current Value: {otp}</p>
+    </div>
+  );
+};
+
 export const Default: Story = {
-  render: (args) => {
-    const [otp, setOtp] = useState("");
-    return (
-      <div className="flex flex-col items-center gap-4 p-10">
-        <InputOTP
-          {...args}
-          value={otp}
-          onChange={setOtp}
-          onComplete={(val) => alert(`Completed: ${val}`)}
-        />
-        <p className="text-muted-foreground text-sm">Current Value: {otp}</p>
-      </div>
-    );
-  },
+  render: (args) => <DefaultRender {...args} />,
 };
 
 export const Short: Story = {

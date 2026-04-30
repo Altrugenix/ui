@@ -17,7 +17,7 @@ export default defineConfig({
         "src/App.tsx",
         "src/main.tsx",
         "src/**/*.stories.tsx",
-        "src/**/*.stories.ts"
+        "src/**/*.stories.ts",
       ],
       rollupTypes: true,
       skipDiagnostics: false,

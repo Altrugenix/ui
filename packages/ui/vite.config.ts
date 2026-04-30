@@ -162,10 +162,7 @@ export default defineConfig({
               __dirname,
               "../virtual-list/src"
             ),
-            "@altrugenix/alert": path.resolve(
-              __dirname,
-              "../alert/src"
-            ),
+            "@altrugenix/alert": path.resolve(__dirname, "../alert/src"),
             "@altrugenix/form-field": path.resolve(
               __dirname,
               "../form-field/src"
@@ -182,66 +179,33 @@ export default defineConfig({
               __dirname,
               "../pagination/src"
             ),
-            "@altrugenix/spinner": path.resolve(
-              __dirname,
-              "../spinner/src"
-            ),
+            "@altrugenix/spinner": path.resolve(__dirname, "../spinner/src"),
             "@altrugenix/app-shell": path.resolve(
               __dirname,
               "../app-shell/src"
             ),
-            "@altrugenix/box": path.resolve(
-              __dirname,
-              "../box/src"
-            ),
+            "@altrugenix/box": path.resolve(__dirname, "../box/src"),
             "@altrugenix/container": path.resolve(
               __dirname,
               "../container/src"
             ),
-            "@altrugenix/flex": path.resolve(
-              __dirname,
-              "../flex/src"
-            ),
-            "@altrugenix/grid": path.resolve(
-              __dirname,
-              "../grid/src"
-            ),
-            "@altrugenix/marquee": path.resolve(
-              __dirname,
-              "../marquee/src"
-            ),
-            "@altrugenix/paper": path.resolve(
-              __dirname,
-              "../paper/src"
-            ),
-            "@altrugenix/spacer": path.resolve(
-              __dirname,
-              "../spacer/src"
-            ),
-            "@altrugenix/stack": path.resolve(
-              __dirname,
-              "../stack/src"
-            ),
+            "@altrugenix/flex": path.resolve(__dirname, "../flex/src"),
+            "@altrugenix/grid": path.resolve(__dirname, "../grid/src"),
+            "@altrugenix/marquee": path.resolve(__dirname, "../marquee/src"),
+            "@altrugenix/paper": path.resolve(__dirname, "../paper/src"),
+            "@altrugenix/spacer": path.resolve(__dirname, "../spacer/src"),
+            "@altrugenix/stack": path.resolve(__dirname, "../stack/src"),
             "@altrugenix/dropdown-menu": path.resolve(
               __dirname,
               "../dropdown-menu/src"
             ),
-            "@altrugenix/navbar": path.resolve(
-              __dirname,
-              "../navbar/src"
-            ),
-            "@altrugenix/sidebar": path.resolve(
-              __dirname,
-              "../sidebar/src"
-            ),
+            "@altrugenix/navbar": path.resolve(__dirname, "../navbar/src"),
+            "@altrugenix/sidebar": path.resolve(__dirname, "../sidebar/src"),
             "@altrugenix/context-menu": path.resolve(
               __dirname,
               "../context-menu/src"
             ),
-            "@altrugenix/tooltip": path.resolve(
-              __dirname,
-              "../tooltip/src"
-            ),
+            "@altrugenix/tooltip": path.resolve(__dirname, "../tooltip/src"),
             "~": path.resolve(__dirname, "./src"),
           }
         : {}),

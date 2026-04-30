@@ -17,7 +17,7 @@ export default defineConfig({
         "src/App.tsx",
         "src/main.tsx",
         "src/**/*.stories.tsx",
-        "src/**/*.stories.ts"
+        "src/**/*.stories.ts",
       ],
       rollupTypes: true,
       skipDiagnostics: false,
@@ -41,7 +41,13 @@ export default defineConfig({
         `altrugenix-paper.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", "react", "react-dom", "@altrugenix/core", "class-variance-authority"],
+      external: [
+        "react/jsx-runtime",
+        "react",
+        "react-dom",
+        "@altrugenix/core",
+        "class-variance-authority",
+      ],
       output: {
         globals: {
           react: "React",

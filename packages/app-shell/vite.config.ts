@@ -17,7 +17,7 @@ export default defineConfig({
         "src/App.tsx",
         "src/main.tsx",
         "src/**/*.stories.tsx",
-        "src/**/*.stories.ts"
+        "src/**/*.stories.ts",
       ],
       rollupTypes: true,
       skipDiagnostics: false,
@@ -43,7 +43,14 @@ export default defineConfig({
         `altrugenix-app-shell.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: ["react/jsx-runtime", "react", "react-dom", "@altrugenix/core", "@altrugenix/button", "lucide-react"],
+      external: [
+        "react/jsx-runtime",
+        "react",
+        "react-dom",
+        "@altrugenix/core",
+        "@altrugenix/button",
+        "lucide-react",
+      ],
       output: {
         globals: {
           react: "React",
