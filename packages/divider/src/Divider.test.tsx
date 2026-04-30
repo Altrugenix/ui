@@ -5,13 +5,13 @@ import { Divider } from "./Divider";
 
 describe("Divider component", () => {
   it("renders correctly", () => {
-    const { container } = render(<Divider />);
+    const { container } = render(<Divider>Test</Divider>);
     expect(container.firstChild).toHaveAttribute("role", "separator");
   });
 
   it("renders with label correctly", () => {
     const { getByText } = render(<Divider label="OR" />);
-    expect(getByText("OR")).toBeInTheDocument();
+    expect(getByText("OR")).toBeTruthy();
   });
 
   it("renders vertical orientation", () => {

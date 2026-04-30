@@ -5,7 +5,7 @@ import { ContextMenu } from "./index";
 
 describe("ContextMenu", () => {
   it("should render without crashing", () => {
-    const { container } = render(<ContextMenu />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<ContextMenu>Test</ContextMenu>);
+    expect(container).toBeTruthy();
   });
 });

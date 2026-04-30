@@ -10,12 +10,12 @@ describe("ImageList", () => {
         <ImageListItem data-testid="item-2">Item 2</ImageListItem>
       </ImageList>
     );
-    expect(screen.getByTestId("item-1")).toBeInTheDocument();
-    expect(screen.getByTestId("item-2")).toBeInTheDocument();
+    expect(screen.getByTestId("item-1")).toBeTruthy();
+    expect(screen.getByTestId("item-2")).toBeTruthy();
   });
 
   it("applies default grid styles", () => {
-    const { container } = render(<ImageList />);
+    const { container } = render(<ImageList>Test</ImageList>);
     const grid = container.firstChild as HTMLElement;
     expect(grid).toHaveClass("grid");
     expect(grid).toHaveStyle({

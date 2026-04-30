@@ -4,9 +4,9 @@ import { CircularProgress } from "./CircularProgress";
 
 describe("CircularProgress", () => {
   it("renders correctly with default props", () => {
-    const { container } = render(<CircularProgress />);
+    const { container } = render(<CircularProgress>Test</CircularProgress>);
     const svg = container.querySelector("svg");
-    expect(svg).toBeInTheDocument();
+    expect(svg).toBeTruthy();
     expect(svg).toHaveAttribute("width", "40"); // default 'md' size
     expect(svg).toHaveAttribute("height", "40");
   });

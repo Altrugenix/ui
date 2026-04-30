@@ -16,6 +16,6 @@ describe("Sheet component", () => {
 
   it("renders as a different component", () => {
     const { container } = render(<Sheet as="section">Content</Sheet>);
-    expect(container.querySelector("section")).toBeInTheDocument();
+    expect(container.querySelector("section")).toBeTruthy();
   });
 });

@@ -26,10 +26,10 @@ describe("Card", () => {
       </Card>
     );
 
-    expect(screen.getByText("Card Title")).toBeInTheDocument();
-    expect(screen.getByText("Card Description")).toBeInTheDocument();
-    expect(screen.getByText("Card Content")).toBeInTheDocument();
-    expect(screen.getByText("Card Footer")).toBeInTheDocument();
+    expect(screen.getByText("Card Title")).toBeTruthy();
+    expect(screen.getByText("Card Description")).toBeTruthy();
+    expect(screen.getByText("Card Content")).toBeTruthy();
+    expect(screen.getByText("Card Footer")).toBeTruthy();
   });
 
   it("applies custom background and hover styles", () => {

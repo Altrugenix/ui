@@ -5,7 +5,7 @@ import { Spacer } from "./index";
 
 describe("Spacer", () => {
   it("should render without crashing", () => {
-    const { container } = render(<Spacer />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<Spacer>Test</Spacer>);
+    expect(container).toBeTruthy();
   });
 });

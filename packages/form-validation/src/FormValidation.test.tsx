@@ -5,7 +5,7 @@ import { FormValidation } from "./index";
 
 describe("FormValidation", () => {
   it("should render without crashing", () => {
-    const { container } = render(<FormValidation />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<FormValidation>Test</FormValidation>);
+    expect(container).toBeTruthy();
   });
 });

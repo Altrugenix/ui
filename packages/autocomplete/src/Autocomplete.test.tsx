@@ -12,10 +12,10 @@ describe("Autocomplete component", () => {
     );
     const input = getByRole("textbox");
 
-    expect(queryByText("Apple")).not.toBeInTheDocument();
+    expect(queryByText("Apple")).not.toBeTruthy();
 
     fireEvent.focus(input);
-    expect(queryByText("Apple")).toBeInTheDocument();
+    expect(queryByText("Apple")).toBeTruthy();
   });
 
   it("filters options based on input", () => {
@@ -27,7 +27,7 @@ describe("Autocomplete component", () => {
     fireEvent.focus(input);
     fireEvent.change(input, { target: { value: "App" } });
 
-    expect(queryByText("Apple")).toBeInTheDocument();
-    expect(queryByText("Banana")).not.toBeInTheDocument();
+    expect(queryByText("Apple")).toBeTruthy();
+    expect(queryByText("Banana")).not.toBeTruthy();
   });
 });

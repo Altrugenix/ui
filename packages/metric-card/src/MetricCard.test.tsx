@@ -10,15 +10,15 @@ describe("MetricCard", () => {
 
   it("renders the title and value correctly", () => {
     render(<MetricCard {...defaultProps} />);
-    expect(screen.getByText("Total Revenue")).toBeInTheDocument();
-    expect(screen.getByText("$45,231.89")).toBeInTheDocument();
+    expect(screen.getByText("Total Revenue")).toBeTruthy();
+    expect(screen.getByText("$45,231.89")).toBeTruthy();
   });
 
   it("renders the description when provided", () => {
     render(
       <MetricCard {...defaultProps} description="+20.1% from last month" />
     );
-    expect(screen.getByText("+20.1% from last month")).toBeInTheDocument();
+    expect(screen.getByText("+20.1% from last month")).toBeTruthy();
   });
 
   it("renders the trend correctly (up)", () => {
@@ -28,8 +28,8 @@ describe("MetricCard", () => {
         trend={{ value: "+2.5%", direction: "up", label: "vs last week" }}
       />
     );
-    expect(screen.getByText("+2.5%")).toBeInTheDocument();
-    expect(screen.getByText("vs last week")).toBeInTheDocument();
+    expect(screen.getByText("+2.5%")).toBeTruthy();
+    expect(screen.getByText("vs last week")).toBeTruthy();
     // Check if it has success color class (though testing classes can be brittle, it's good for verifying trend logic)
     expect(screen.getByText("+2.5%").parentElement).toHaveClass("text-success");
   });
@@ -41,7 +41,7 @@ describe("MetricCard", () => {
         trend={{ value: "-1.2%", direction: "down" }}
       />
     );
-    expect(screen.getByText("-1.2%")).toBeInTheDocument();
+    expect(screen.getByText("-1.2%")).toBeTruthy();
     expect(screen.getByText("-1.2%").parentElement).toHaveClass(
       "text-destructive"
     );
@@ -54,7 +54,7 @@ describe("MetricCard", () => {
         icon={<span data-testid="custom-icon">Icon</span>}
       />
     );
-    expect(screen.getByTestId("custom-icon")).toBeInTheDocument();
+    expect(screen.getByTestId("custom-icon")).toBeTruthy();
   });
 
   it("renders a sparkline when chartData is provided", () => {
@@ -62,6 +62,6 @@ describe("MetricCard", () => {
       <MetricCard {...defaultProps} chartData={[10, 20, 15, 30]} />
     );
     const svg = container.querySelector("svg");
-    expect(svg).toBeInTheDocument();
+    expect(svg).toBeTruthy();
   });
 });

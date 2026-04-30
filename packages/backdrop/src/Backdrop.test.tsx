@@ -6,7 +6,7 @@ describe("Backdrop", () => {
   it("renders when open is true", () => {
     render(<Backdrop open={true} data-testid="backdrop" />);
     const backdrop = screen.getByTestId("backdrop");
-    expect(backdrop).toBeInTheDocument();
+    expect(backdrop).toBeTruthy();
     expect(backdrop).toHaveClass("bg-black/50");
   });
 
@@ -27,6 +27,6 @@ describe("Backdrop", () => {
         <div data-testid="child">Backdrop Child</div>
       </Backdrop>
     );
-    expect(screen.getByTestId("child")).toBeInTheDocument();
+    expect(screen.getByTestId("child")).toBeTruthy();
   });
 });

@@ -5,7 +5,7 @@ import { Navbar } from "./index";
 
 describe("Navbar", () => {
   it("should render without crashing", () => {
-    const { container } = render(<Navbar />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<Navbar>Test</Navbar>);
+    expect(container).toBeTruthy();
   });
 });

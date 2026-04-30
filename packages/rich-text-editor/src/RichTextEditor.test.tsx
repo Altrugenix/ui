@@ -8,13 +8,13 @@ describe("RichTextEditor component", () => {
     const { getByRole } = render(<RichTextEditor placeholder="Enter text" />);
     // Check for toolbar buttons (Bold is a good candidate)
     const editor = getByRole("textbox");
-    expect(editor).toBeInTheDocument();
+    expect(editor).toBeTruthy();
   });
 
   it("renders initial value", () => {
     const { getByText } = render(
       <RichTextEditor initialValue="<p>Hello World</p>" />
     );
-    expect(getByText("Hello World")).toBeInTheDocument();
+    expect(getByText("Hello World")).toBeTruthy();
   });
 });

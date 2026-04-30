@@ -6,6 +6,6 @@ import { Text } from "./Text";
 describe("Text component", () => {
   it("renders correctly", () => {
     render(<Text>Hello Text</Text>);
-    expect(screen.getByText("Hello Text")).toBeInTheDocument();
+    expect(screen.getByText("Hello Text")).toBeTruthy();
   });
 });

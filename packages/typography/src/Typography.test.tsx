@@ -6,13 +6,13 @@ import { Typography } from "./Typography";
 describe("Typography component", () => {
   it("renders correctly with default variant", () => {
     const { container } = render(<Typography>Hello</Typography>);
-    expect(container.querySelector("p")).toBeInTheDocument();
+    expect(container.querySelector("p")).toBeTruthy();
     expect(container.firstChild).toHaveClass("leading-7");
   });
 
   it("renders with h1 variant", () => {
     const { container } = render(<Typography variant="h1">Title</Typography>);
-    expect(container.querySelector("h1")).toBeInTheDocument();
+    expect(container.querySelector("h1")).toBeTruthy();
     expect(container.firstChild).toHaveClass("text-4xl");
   });
 
@@ -22,7 +22,7 @@ describe("Typography component", () => {
         Content
       </Typography>
     );
-    expect(container.querySelector("section")).toBeInTheDocument();
+    expect(container.querySelector("section")).toBeTruthy();
     expect(container.firstChild).toHaveClass("text-sm");
   });
 });

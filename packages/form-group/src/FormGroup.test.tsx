@@ -5,7 +5,7 @@ import { FormGroup } from "./index";
 
 describe("FormGroup", () => {
   it("should render without crashing", () => {
-    const { container } = render(<FormGroup />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<FormGroup>Test</FormGroup>);
+    expect(container).toBeTruthy();
   });
 });

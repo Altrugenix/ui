@@ -6,6 +6,6 @@ import { Image } from "./Image";
 describe("Image component", () => {
   it("renders correctly", () => {
     render(<Image src="/test.jpg" alt="Test Image" />);
-    expect(screen.getByRole("img")).toBeInTheDocument();
+    expect(screen.getByRole("img")).toBeTruthy();
   });
 });

@@ -5,7 +5,7 @@ import { AppShell } from "./index";
 
 describe("AppShell", () => {
   it("should render without crashing", () => {
-    const { container } = render(<AppShell />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<AppShell>Test</AppShell>);
+    expect(container).toBeTruthy();
   });
 });

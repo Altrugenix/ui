@@ -5,7 +5,7 @@ import { Flex } from "./index";
 
 describe("Flex", () => {
   it("should render without crashing", () => {
-    const { container } = render(<Flex />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<Flex>Test</Flex>);
+    expect(container).toBeTruthy();
   });
 });

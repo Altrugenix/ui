@@ -5,7 +5,7 @@ import { Grid } from "./index";
 
 describe("Grid", () => {
   it("should render without crashing", () => {
-    const { container } = render(<Grid />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<Grid>Test</Grid>);
+    expect(container).toBeTruthy();
   });
 });

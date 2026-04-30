@@ -18,8 +18,8 @@ const items = [
 describe("Accordion", () => {
   it("renders all items", () => {
     render(<Accordion items={items} />);
-    expect(screen.getByText("Item 1")).toBeInTheDocument();
-    expect(screen.getByText("Item 2")).toBeInTheDocument();
+    expect(screen.getByText("Item 1")).toBeTruthy();
+    expect(screen.getByText("Item 2")).toBeTruthy();
   });
 
   it("toggles content visibility when clicking the trigger", () => {

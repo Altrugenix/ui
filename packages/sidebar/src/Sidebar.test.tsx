@@ -5,7 +5,7 @@ import { Sidebar } from "./index";
 
 describe("Sidebar", () => {
   it("should render without crashing", () => {
-    const { container } = render(<Sidebar />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<Sidebar>Test</Sidebar>);
+    expect(container).toBeTruthy();
   });
 });

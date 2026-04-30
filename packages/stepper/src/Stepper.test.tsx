@@ -11,14 +11,14 @@ describe("Stepper", () => {
 
   it("renders all steps", () => {
     render(<Stepper steps={mockSteps} activeStep={0} />);
-    expect(screen.getByText("Step 1")).toBeInTheDocument();
-    expect(screen.getByText("Step 2")).toBeInTheDocument();
-    expect(screen.getByText("Step 3")).toBeInTheDocument();
+    expect(screen.getByText("Step 1")).toBeTruthy();
+    expect(screen.getByText("Step 2")).toBeTruthy();
+    expect(screen.getByText("Step 3")).toBeTruthy();
   });
 
   it("renders descriptions correctly", () => {
     render(<Stepper steps={mockSteps} activeStep={0} />);
-    expect(screen.getByText("First step")).toBeInTheDocument();
+    expect(screen.getByText("First step")).toBeTruthy();
   });
 
   it("indicates active step correctly", () => {

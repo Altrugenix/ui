@@ -11,9 +11,9 @@ describe("Timeline component", () => {
 
   it("renders correctly", () => {
     const { getByText } = render(<Timeline items={items} />);
-    expect(getByText("Event 1")).toBeInTheDocument();
-    expect(getByText("Event 2")).toBeInTheDocument();
-    expect(getByText("Desc 1")).toBeInTheDocument();
-    expect(getByText("2024-01-01")).toBeInTheDocument();
+    expect(getByText("Event 1")).toBeTruthy();
+    expect(getByText("Event 2")).toBeTruthy();
+    expect(getByText("Desc 1")).toBeTruthy();
+    expect(getByText("2024-01-01")).toBeTruthy();
   });
 });

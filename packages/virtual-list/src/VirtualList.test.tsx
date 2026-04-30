@@ -34,6 +34,6 @@ describe("VirtualList", () => {
       />
     );
 
-    expect(screen.getByText("Item 0")).toBeInTheDocument();
+    expect(screen.getByText("Item 0")).toBeTruthy();
   });
 });

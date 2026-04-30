@@ -11,11 +11,11 @@ describe("Popover component", () => {
       </Popover>
     );
 
-    expect(getByText("Open")).toBeInTheDocument();
-    expect(queryByText("Content")).not.toBeInTheDocument();
+    expect(getByText("Open")).toBeTruthy();
+    expect(queryByText("Content")).not.toBeTruthy();
 
     fireEvent.click(getByText("Open"));
-    expect(getByText("Content")).toBeInTheDocument();
+    expect(getByText("Content")).toBeTruthy();
   });
 
   it("closes on click outside", () => {
@@ -26,9 +26,9 @@ describe("Popover component", () => {
     );
 
     fireEvent.click(getByText("Open"));
-    expect(getByText("Content")).toBeInTheDocument();
+    expect(getByText("Content")).toBeTruthy();
 
     fireEvent.mouseDown(document.body);
-    expect(queryByText("Content")).not.toBeInTheDocument();
+    expect(queryByText("Content")).not.toBeTruthy();
   });
 });

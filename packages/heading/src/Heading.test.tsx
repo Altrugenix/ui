@@ -6,6 +6,6 @@ import { Heading } from "./Heading";
 describe("Heading component", () => {
   it("renders correctly", () => {
     render(<Heading>Hello Heading</Heading>);
-    expect(screen.getByText("Hello Heading")).toBeInTheDocument();
+    expect(screen.getByText("Hello Heading")).toBeTruthy();
   });
 });

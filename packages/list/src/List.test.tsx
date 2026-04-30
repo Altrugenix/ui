@@ -11,8 +11,8 @@ describe("List", () => {
       </List>
     );
 
-    expect(screen.getByText("Item 1")).toBeInTheDocument();
-    expect(screen.getByText("Item 2")).toBeInTheDocument();
+    expect(screen.getByText("Item 1")).toBeTruthy();
+    expect(screen.getByText("Item 2")).toBeTruthy();
   });
 
   it("renders as an ordered list when 'ordered' is true", () => {
@@ -21,8 +21,8 @@ describe("List", () => {
         <ListItem>Item 1</ListItem>
       </List>
     );
-    expect(container.querySelector("ol")).toBeInTheDocument();
-    expect(container.querySelector("ul")).not.toBeInTheDocument();
+    expect(container.querySelector("ol")).toBeTruthy();
+    expect(container.querySelector("ul")).not.toBeTruthy();
   });
 
   it("renders with dividers when 'divided' is true", () => {
@@ -46,9 +46,9 @@ describe("List", () => {
       </ListItem>
     );
 
-    expect(screen.getByTestId("leading")).toBeInTheDocument();
-    expect(screen.getByTestId("trailing")).toBeInTheDocument();
-    expect(screen.getByText("Main Content")).toBeInTheDocument();
+    expect(screen.getByTestId("leading")).toBeTruthy();
+    expect(screen.getByTestId("trailing")).toBeTruthy();
+    expect(screen.getByText("Main Content")).toBeTruthy();
   });
 
   it("renders ListItemButton correctly", () => {
@@ -59,7 +59,7 @@ describe("List", () => {
     );
 
     const button = screen.getByRole("button", { name: /clickable item/i });
-    expect(button).toBeInTheDocument();
+    expect(button).toBeTruthy();
     expect(button).toHaveClass("hover:bg-accent/50");
   });
 });

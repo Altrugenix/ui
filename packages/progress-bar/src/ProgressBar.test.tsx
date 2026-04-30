@@ -5,9 +5,9 @@ import { ProgressBar } from "./ProgressBar";
 
 describe("ProgressBar component", () => {
   it("renders correctly with default value", () => {
-    const { getByRole } = render(<ProgressBar />);
+    const { getByRole } = render(<ProgressBar>Test</ProgressBar>);
     const bar = getByRole("progressbar");
-    expect(bar).toBeInTheDocument();
+    expect(bar).toBeTruthy();
     expect(bar).toHaveAttribute("aria-valuenow", "0");
   });
 
@@ -22,7 +22,7 @@ describe("ProgressBar component", () => {
     const { getByText } = render(
       <ProgressBar value={25} label="Loading" showValue />
     );
-    expect(getByText("Loading")).toBeInTheDocument();
-    expect(getByText("25%")).toBeInTheDocument();
+    expect(getByText("Loading")).toBeTruthy();
+    expect(getByText("25%")).toBeTruthy();
   });
 });

@@ -5,7 +5,7 @@ import { Container } from "./index";
 
 describe("Container", () => {
   it("should render without crashing", () => {
-    const { container } = render(<Container />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<Container>Test</Container>);
+    expect(container).toBeTruthy();
   });
 });

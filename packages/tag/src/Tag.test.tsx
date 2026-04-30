@@ -6,6 +6,6 @@ import { Tag } from "./Tag";
 describe("Tag component", () => {
   it("renders correctly", () => {
     render(<Tag>Hello Tag</Tag>);
-    expect(screen.getByText("Hello Tag")).toBeInTheDocument();
+    expect(screen.getByText("Hello Tag")).toBeTruthy();
   });
 });

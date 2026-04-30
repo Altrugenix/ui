@@ -5,7 +5,7 @@ import { DropdownMenu } from "./index";
 
 describe("DropdownMenu", () => {
   it("should render without crashing", () => {
-    const { container } = render(<DropdownMenu />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<DropdownMenu>Test</DropdownMenu>);
+    expect(container).toBeTruthy();
   });
 });

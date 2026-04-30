@@ -5,7 +5,7 @@ import { Spinner } from "./index";
 
 describe("Spinner", () => {
   it("should render without crashing", () => {
-    const { container } = render(<Spinner />);
-    expect(container).toBeInTheDocument();
+    const { container } = render(<Spinner>Test</Spinner>);
+    expect(container).toBeTruthy();
   });
 });

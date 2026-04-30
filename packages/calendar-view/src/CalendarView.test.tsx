@@ -5,7 +5,7 @@ import { CalendarView } from "./CalendarView";
 
 describe("CalendarView component", () => {
   it("renders correctly", () => {
-    const { container, getByText } = render(<CalendarView />);
+    const { container, getByText } = render(<CalendarView>Test</CalendarView>);
     expect(container.firstChild).toHaveClass("bg-card");
     // Check if current month is rendered
     const today = new Date();
@@ -25,13 +25,13 @@ describe("CalendarView component", () => {
     ];
     expect(
       getByText(new RegExp(monthNames[today.getMonth()]))
-    ).toBeInTheDocument();
+    ).toBeTruthy();
   });
 
   it("renders events correctly", () => {
     const today = new Date();
     const events = [{ id: "1", title: "Test Event", date: today }];
     const { getByText } = render(<CalendarView events={events} />);
-    expect(getByText("Test Event")).toBeInTheDocument();
+    expect(getByText("Test Event")).toBeTruthy();
   });
 });
