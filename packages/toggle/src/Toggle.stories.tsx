@@ -36,7 +36,7 @@ export const SingleToggle: StoryObj = {
   render: () => <ToggleStory1Render />,
 };
 
-const ToggleStory1Render = () => {
+const ToggleStory2Render = () => {
   const [alignment, setAlignment] = useState("left");
   return (
     <div className="space-y-4">
@@ -60,10 +60,10 @@ const ToggleStory1Render = () => {
 };
 
 export const SingleGroup: StoryObj = {
-  render: () => <ToggleStory1Render />,
+  render: () => <ToggleStory2Render />,
 };
 
-const ToggleStory1Render = () => {
+const ToggleStory3Render = () => {
   const [formats, setFormats] = useState(["bold"]);
   return (
     <div className="space-y-4">
@@ -84,5 +84,5 @@ const ToggleStory1Render = () => {
 };
 
 export const MultipleGroup: StoryObj = {
-  render: () => <ToggleStory1Render />,
+  render: () => <ToggleStory3Render />,
 };

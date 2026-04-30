@@ -34,7 +34,7 @@ export const FadeDemo: StoryObj = {
   render: () => <AnimationWrappersStory1Render />,
 };
 
-const AnimationWrappersStory1Render = () => {
+const AnimationWrappersStory2Render = () => {
   const [inProp, setInProp] = useState(true);
   return (
     <div className="space-y-4">
@@ -52,10 +52,10 @@ const AnimationWrappersStory1Render = () => {
 };
 
 export const GrowDemo: StoryObj = {
-  render: () => <AnimationWrappersStory1Render />,
+  render: () => <AnimationWrappersStory2Render />,
 };
 
-const AnimationWrappersStory1Render = () => {
+const AnimationWrappersStory3Render = () => {
   const [inProp, setInProp] = useState(true);
   return (
     <div className="space-y-4">
@@ -73,10 +73,10 @@ const AnimationWrappersStory1Render = () => {
 };
 
 export const SlideDemo: StoryObj = {
-  render: () => <AnimationWrappersStory1Render />,
+  render: () => <AnimationWrappersStory3Render />,
 };
 
-const AnimationWrappersStory1Render = () => {
+const AnimationWrappersStory4Render = () => {
   const [inProp, setInProp] = useState(true);
   return (
     <div className="space-y-4">
@@ -94,10 +94,10 @@ const AnimationWrappersStory1Render = () => {
 };
 
 export const ZoomDemo: StoryObj = {
-  render: () => <AnimationWrappersStory1Render />,
+  render: () => <AnimationWrappersStory4Render />,
 };
 
-const AnimationWrappersStory1Render = () => {
+const AnimationWrappersStory5Render = () => {
   const [inProp, setInProp] = useState(true);
   return (
     <div className="space-y-4">
@@ -115,5 +115,5 @@ const AnimationWrappersStory1Render = () => {
 };
 
 export const CollapseDemo: StoryObj = {
-  render: () => <AnimationWrappersStory1Render />,
+  render: () => <AnimationWrappersStory5Render />,
 };

@@ -49,7 +49,7 @@ export const Default: Story = {
   render: () => <ModalStory1Render />,
 };
 
-const ModalStory1Render = () => {
+const ModalStory2Render = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex flex-col items-start gap-4">
@@ -72,5 +72,5 @@ const ModalStory1Render = () => {
 };
 
 export const CustomSize: Story = {
-  render: () => <ModalStory1Render />,
+  render: () => <ModalStory2Render />,
 };

@@ -132,7 +132,7 @@ export const Default: Story = {
   render: () => <CommandPaletteStory1Render />,
 };
 
-const CommandPaletteStory1Render = () => {
+const CommandPaletteStory2Render = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const items = Array.from({ length: 50 }).map((_, i) => ({
@@ -164,5 +164,5 @@ const CommandPaletteStory1Render = () => {
 };
 
 export const LargeDataSet: Story = {
-  render: () => <CommandPaletteStory1Render />,
+  render: () => <CommandPaletteStory2Render />,
 };

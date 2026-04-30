@@ -19,7 +19,7 @@
     "lint": "yarn workspaces foreach -A run lint",
     "test": "yarn workspaces foreach -A run test",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "build:all": "yarn build:lib && yarn build:docs && yarn build:storybook",
+    "build:all": "yarn build && yarn build:docs && yarn build:storybook",
     "change": "changeset",
     "version:ci": "changeset version",
     "release": "changeset publish",
