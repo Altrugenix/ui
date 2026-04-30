@@ -13,8 +13,7 @@ const meta: Meta<typeof FocusTrap> = {
 
 export default meta;
 
-export const Default: StoryObj = {
-  render: () => {
+const FocusTrapStory1Render = () => {
     const [active, setActive] = useState(false);
     return (
       <div className="space-y-4 p-10">
@@ -51,5 +50,8 @@ export const Default: StoryObj = {
         </div>
       </div>
     );
-  },
+  };
+
+export const Default: StoryObj = {
+  render: () => <FocusTrapStory1Render />,
 };

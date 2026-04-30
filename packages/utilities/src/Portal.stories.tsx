@@ -12,8 +12,7 @@ const meta: Meta<typeof Portal> = {
 export default meta;
 type Story = StoryObj<typeof Portal>;
 
-export const Default: Story = {
-  render: () => {
+const PortalStory1Render = () => {
     const [show, setShow] = useState(false);
     return (
       <div className="bg-muted/20 relative overflow-hidden rounded-xl border p-10">
@@ -34,7 +33,10 @@ export const Default: Story = {
         </Portal>
       </div>
     );
-  },
+  };
+
+export const Default: Story = {
+  render: () => <PortalStory1Render />,
 };
 
 import { Typography } from "@altrugenix/typography";

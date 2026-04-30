@@ -18,8 +18,7 @@ const meta: Meta<typeof Toggle> = {
 
 export default meta;
 
-export const SingleToggle: StoryObj = {
-  render: () => {
+const ToggleStory1Render = () => {
     const [pressed, setPressed] = useState(false);
     return (
       <Toggle
@@ -31,11 +30,13 @@ export const SingleToggle: StoryObj = {
         Bold
       </Toggle>
     );
-  },
+  };
+
+export const SingleToggle: StoryObj = {
+  render: () => <ToggleStory1Render />,
 };
 
-export const SingleGroup: StoryObj = {
-  render: () => {
+const ToggleStory1Render = () => {
     const [alignment, setAlignment] = useState("left");
     return (
       <div className="space-y-4">
@@ -56,11 +57,13 @@ export const SingleGroup: StoryObj = {
         <p className="text-sm">Active alignment: {alignment}</p>
       </div>
     );
-  },
+  };
+
+export const SingleGroup: StoryObj = {
+  render: () => <ToggleStory1Render />,
 };
 
-export const MultipleGroup: StoryObj = {
-  render: () => {
+const ToggleStory1Render = () => {
     const [formats, setFormats] = useState(["bold"]);
     return (
       <div className="space-y-4">
@@ -80,5 +83,8 @@ export const MultipleGroup: StoryObj = {
         </p>
       </div>
     );
-  },
+  };
+
+export const MultipleGroup: StoryObj = {
+  render: () => <ToggleStory1Render />,
 };

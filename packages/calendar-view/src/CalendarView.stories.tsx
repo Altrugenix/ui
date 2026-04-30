@@ -45,8 +45,7 @@ export const Default: Story = {
   },
 };
 
-export const Interactive: Story = {
-  render: () => {
+const CalendarViewStory1Render = () => {
     const [events, setEvents] = useState(MOCK_EVENTS);
 
     const handleAddEvent = (date: Date) => {
@@ -64,5 +63,8 @@ export const Interactive: Story = {
     };
 
     return <CalendarView events={events} onAddEvent={handleAddEvent} />;
-  },
+  };
+
+export const Interactive: Story = {
+  render: () => <CalendarViewStory1Render />,
 };

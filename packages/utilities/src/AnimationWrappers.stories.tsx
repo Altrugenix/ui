@@ -19,8 +19,7 @@ const DemoBox = () => (
   </div>
 );
 
-export const FadeDemo: StoryObj = {
-  render: () => {
+const AnimationWrappersStory1Render = () => {
     const [inProp, setInProp] = useState(true);
     return (
       <div className="space-y-4">
@@ -35,11 +34,13 @@ export const FadeDemo: StoryObj = {
         </Fade>
       </div>
     );
-  },
+  };
+
+export const FadeDemo: StoryObj = {
+  render: () => <AnimationWrappersStory1Render />,
 };
 
-export const GrowDemo: StoryObj = {
-  render: () => {
+const AnimationWrappersStory1Render = () => {
     const [inProp, setInProp] = useState(true);
     return (
       <div className="space-y-4">
@@ -54,11 +55,13 @@ export const GrowDemo: StoryObj = {
         </Grow>
       </div>
     );
-  },
+  };
+
+export const GrowDemo: StoryObj = {
+  render: () => <AnimationWrappersStory1Render />,
 };
 
-export const SlideDemo: StoryObj = {
-  render: () => {
+const AnimationWrappersStory1Render = () => {
     const [inProp, setInProp] = useState(true);
     return (
       <div className="space-y-4">
@@ -73,11 +76,13 @@ export const SlideDemo: StoryObj = {
         </Slide>
       </div>
     );
-  },
+  };
+
+export const SlideDemo: StoryObj = {
+  render: () => <AnimationWrappersStory1Render />,
 };
 
-export const ZoomDemo: StoryObj = {
-  render: () => {
+const AnimationWrappersStory1Render = () => {
     const [inProp, setInProp] = useState(true);
     return (
       <div className="space-y-4">
@@ -92,11 +97,13 @@ export const ZoomDemo: StoryObj = {
         </Zoom>
       </div>
     );
-  },
+  };
+
+export const ZoomDemo: StoryObj = {
+  render: () => <AnimationWrappersStory1Render />,
 };
 
-export const CollapseDemo: StoryObj = {
-  render: () => {
+const AnimationWrappersStory1Render = () => {
     const [inProp, setInProp] = useState(true);
     return (
       <div className="space-y-4">
@@ -111,5 +118,8 @@ export const CollapseDemo: StoryObj = {
         </Collapse>
       </div>
     );
-  },
+  };
+
+export const CollapseDemo: StoryObj = {
+  render: () => <AnimationWrappersStory1Render />,
 };

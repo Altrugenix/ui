@@ -18,8 +18,7 @@ const meta: Meta<typeof Sidebar> = {
 
 export default meta;
 
-export const Default: StoryObj = {
-  render: () => {
+const SidebarStory1Render = () => {
     const [collapsed, setCollapsed] = useState(false);
     return (
       <div className="flex h-[600px] overflow-hidden rounded-lg border">
@@ -68,7 +67,10 @@ export const Default: StoryObj = {
         </div>
       </div>
     );
-  },
+  };
+
+export const Default: StoryObj = {
+  render: () => <SidebarStory1Render />,
 };
 
 export const CollapsedOnly: StoryObj<typeof Sidebar> = {

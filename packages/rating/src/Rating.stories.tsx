@@ -19,8 +19,7 @@ export const Default: Story = {
   },
 };
 
-export const Interactive: Story = {
-  render: () => {
+const RatingStory1Render = () => {
     const [value, setValue] = useState(2);
     return (
       <div className="flex flex-col gap-4">
@@ -28,7 +27,10 @@ export const Interactive: Story = {
         <p className="text-sm font-medium">Your rating: {value} stars</p>
       </div>
     );
-  },
+  };
+
+export const Interactive: Story = {
+  render: () => <RatingStory1Render />,
 };
 
 export const ReadOnly: Story = {

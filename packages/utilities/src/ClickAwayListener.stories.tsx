@@ -11,8 +11,7 @@ const meta: Meta<typeof ClickAwayListener> = {
 
 export default meta;
 
-export const Default: StoryObj = {
-  render: () => {
+const ClickAwayListenerStory1Render = () => {
     const [open, setOpen] = useState(false);
     return (
       <div className="flex flex-col items-center gap-4 py-20">
@@ -42,5 +41,8 @@ export const Default: StoryObj = {
         )}
       </div>
     );
-  },
+  };
+
+export const Default: StoryObj = {
+  render: () => <ClickAwayListenerStory1Render />,
 };

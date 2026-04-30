@@ -12,19 +12,21 @@ const meta: Meta<typeof Backdrop> = {
 
 export default meta;
 
+const DefaultStory = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="p-10">
+      <Button onClick={() => setOpen(true)}>Show Backdrop</Button>
+      <Backdrop open={open} onClick={() => setOpen(false)}>
+        <div className="text-center text-white">
+          <CircularProgress indeterminate className="mb-4 text-white" />
+          <p className="font-bold">Loading... Click anywhere to close.</p>
+        </div>
+      </Backdrop>
+    </div>
+  );
+};
+
 export const Default: StoryObj = {
-  render: () => {
-    const [open, setOpen] = useState(false);
-    return (
-      <div className="p-10">
-        <Button onClick={() => setOpen(true)}>Show Backdrop</Button>
-        <Backdrop open={open} onClick={() => setOpen(false)}>
-          <div className="text-center text-white">
-            <CircularProgress indeterminate className="mb-4 text-white" />
-            <p className="font-bold">Loading... Click anywhere to close.</p>
-          </div>
-        </Backdrop>
-      </div>
-    );
-  },
+  render: () => <DefaultStory />,
 };

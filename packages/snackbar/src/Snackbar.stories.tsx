@@ -12,8 +12,7 @@ const meta: Meta<typeof Snackbar> = {
 export default meta;
 type Story = StoryObj<typeof Snackbar>;
 
-export const Default: Story = {
-  render: () => {
+const SnackbarStory1Render = () => {
     const [open, setOpen] = useState(false);
     return (
       <>
@@ -28,7 +27,10 @@ export const Default: Story = {
         />
       </>
     );
-  },
+  };
+
+export const Default: Story = {
+  render: () => <SnackbarStory1Render />,
 };
 
 export const Variants: Story = {

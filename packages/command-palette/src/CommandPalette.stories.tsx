@@ -24,8 +24,7 @@ const meta: Meta<typeof CommandPalette> = {
 export default meta;
 type Story = StoryObj<typeof CommandPalette>;
 
-export const Default: Story = {
-  render: () => {
+const CommandPaletteStory1Render = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -128,11 +127,13 @@ export const Default: Story = {
         />
       </div>
     );
-  },
+  };
+
+export const Default: Story = {
+  render: () => <CommandPaletteStory1Render />,
 };
 
-export const LargeDataSet: Story = {
-  render: () => {
+const CommandPaletteStory1Render = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const items = Array.from({ length: 50 }).map((_, i) => ({
@@ -161,5 +162,8 @@ export const LargeDataSet: Story = {
         />
       </div>
     );
-  },
+  };
+
+export const LargeDataSet: Story = {
+  render: () => <CommandPaletteStory1Render />,
 };

@@ -12,8 +12,7 @@ const meta: Meta<typeof ImageViewer> = {
 export default meta;
 type Story = StoryObj<typeof ImageViewer>;
 
-export const Default: Story = {
-  render: () => {
+const ImageViewerStory1Render = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
       <div className="flex flex-col items-center gap-6 p-10">
@@ -38,5 +37,8 @@ export const Default: Story = {
         />
       </div>
     );
-  },
+  };
+
+export const Default: Story = {
+  render: () => <ImageViewerStory1Render />,
 };

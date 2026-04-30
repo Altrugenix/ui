@@ -13,8 +13,7 @@ const meta: Meta<typeof Modal> = {
 export default meta;
 type Story = StoryObj<typeof Modal>;
 
-export const Default: Story = {
-  render: () => {
+const ModalStory1Render = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
       <div className="flex flex-col items-start gap-4">
@@ -44,11 +43,13 @@ export const Default: Story = {
         </Modal>
       </div>
     );
-  },
+  };
+
+export const Default: Story = {
+  render: () => <ModalStory1Render />,
 };
 
-export const CustomSize: Story = {
-  render: () => {
+const ModalStory1Render = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
       <div className="flex flex-col items-start gap-4">
@@ -68,5 +69,8 @@ export const CustomSize: Story = {
         </Modal>
       </div>
     );
-  },
+  };
+
+export const CustomSize: Story = {
+  render: () => <ModalStory1Render />,
 };
