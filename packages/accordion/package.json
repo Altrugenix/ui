@@ -27,6 +27,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@altrugenix/core": "workspace:*",
     "lucide-react": "^1.14.0"
   },
   "devDependencies": {

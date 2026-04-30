@@ -27,9 +27,9 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@altrugenix/button": "1.0.0-alpha.0",
-    "@altrugenix/core": "1.0.0-alpha.0",
-    "@altrugenix/popover": "1.0.0-alpha.0",
+    "@altrugenix/button": "workspace:*",
+    "@altrugenix/core": "workspace:*",
+    "@altrugenix/popover": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^1.14.0"
   },
