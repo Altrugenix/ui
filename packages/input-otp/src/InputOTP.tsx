@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { cn } from "@altrugenix/core";
 import { Input } from "@altrugenix/input";
 
@@ -38,11 +38,14 @@ export const InputOTP = ({
 
   // Sync internal state if used uncontrolled
   const [internalValue, setInternalValue] = useState(value);
-  const currentValue = value || internalValue;
+  const [prevValue, setPrevValue] = useState(value);
 
-  useEffect(() => {
+  if (value !== prevValue) {
     setInternalValue(value);
-  }, [value]);
+    setPrevValue(value);
+  }
+
+  const currentValue = value || internalValue;
 
   const handleChange = (index: number, val: string) => {
     if (disabled) return;

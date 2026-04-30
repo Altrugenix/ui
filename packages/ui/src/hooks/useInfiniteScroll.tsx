@@ -38,7 +38,14 @@ export function useInfiniteScroll<T>({
 
   // Initial load
   useEffect(() => {
-    loadMore();
+    let ignore = false;
+    if (!ignore) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      loadMore();
+    }
+    return () => {
+      ignore = true;
+    };
   }, [loadMore]);
 
   return { items, loading, hasMore, loadMore, error };
