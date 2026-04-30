@@ -29,11 +29,13 @@
   "dependencies": {
     "@altrugenix/button": "1.0.0-alpha.0",
     "@altrugenix/core": "1.0.0-alpha.0",
+    "@altrugenix/drawer": "1.0.0-alpha.0",
     "lucide-react": "^1.14.0"
   },
   "devDependencies": {
     "@altrugenix/button": "workspace:*",
     "@altrugenix/core": "workspace:*",
+    "@altrugenix/drawer": "workspace:*",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.14",

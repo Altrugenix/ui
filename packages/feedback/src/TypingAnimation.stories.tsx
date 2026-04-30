@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { TypingAnimation } from "../components/feedback/TypingAnimation";
+import { TypingAnimation } from "@altrugenix/feedback";
 
 const meta: Meta<typeof TypingAnimation> = {
   title: "Components/Feedback/TypingAnimation",

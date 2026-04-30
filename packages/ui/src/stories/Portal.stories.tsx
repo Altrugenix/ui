@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Portal } from "../components/utilities/portal/Portal";
+import { Portal } from "@altrugenix/utilities";
 import { useState } from "react";
 import { Button } from "@altrugenix/button";
 
@@ -37,4 +37,4 @@ export const Default: Story = {
   },
 };
 
-import { Typography } from "../components/ui/typography";
+import { Typography } from "@altrugenix/typography";

@@ -28,6 +28,7 @@ export default defineConfig({
       ...(process.env.VITEST
         ? {
             "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+            "@altrugenix/drawer": path.resolve(__dirname, "../drawer/src"),
             "@altrugenix/button": path.resolve(__dirname, "../button/src"),
           }
         : {}),
@@ -51,6 +52,7 @@ export default defineConfig({
           "react/jsx-runtime": "jsxRuntime",
           "@altrugenix/button": "AltrugenixButton",
           "lucide-react": "Lucide",
+          "@altrugenix/drawer": "AltrugenixDrawer",
         },
       },
     },

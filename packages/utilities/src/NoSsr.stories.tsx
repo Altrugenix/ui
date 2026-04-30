@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { NoSsr } from "../components/utilities/no-ssr/NoSsr";
+import { NoSsr } from "@altrugenix/utilities";
 
 export default {
   title: "Utilities/NoSsr",

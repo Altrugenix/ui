@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Reveal } from "../components/effects/Reveal";
+import { Reveal } from "@altrugenix/effects";
 
 const meta: Meta<typeof Reveal> = {
   title: "Components/Effects/Reveal",

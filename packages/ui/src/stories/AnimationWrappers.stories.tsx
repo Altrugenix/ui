@@ -6,7 +6,7 @@ import {
   Slide,
   Zoom,
   Collapse,
-} from "../components/utilities/animation";
+} from "@altrugenix/utilities";
 
 export default {
   title: "Utilities/AnimationWrappers",

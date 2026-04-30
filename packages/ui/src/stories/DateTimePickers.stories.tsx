@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { TimePicker, DateTimePicker } from "../components/ui/date-picker";
+import { TimePicker, DateTimePicker } from "@altrugenix/date-picker";
 
 const meta: Meta = {
   title: "UI/DatePicker/Advanced",

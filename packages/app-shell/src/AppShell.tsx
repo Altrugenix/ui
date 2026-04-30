@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { cn } from "@altrugenix/core";
-import { Drawer } from "../../navigation/drawer/Drawer";
+import { Drawer } from "@altrugenix/drawer";
 import { Menu } from "lucide-react";
 import { Button } from "@altrugenix/button";
 

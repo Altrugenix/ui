@@ -1,5 +1,5 @@
 import type { Meta } from "@storybook/react-vite";
-import { Confetti } from "../components/feedback/Confetti";
+import { Confetti } from "@altrugenix/feedback";
 import { Button } from "@altrugenix/button";
 
 const meta: Meta = {
