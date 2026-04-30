@@ -33,7 +33,7 @@ export const TypingAnimation: React.FC<TypingAnimationProps> = ({
   const isFinished = index >= text.length;
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    let timeout: ReturnType<typeof setTimeout>;
 
     if (delay > 0 && index === 0 && !isFinished) {
       timeout = setTimeout(() => {

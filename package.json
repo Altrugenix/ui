@@ -9,7 +9,7 @@
     "apps/*"
   ],
   "scripts": {
-    "build": "yarn workspaces foreach -A run build",
+    "build": "yarn workspaces foreach -At run build",
     "dev:ui": "yarn workspace @altrugenix/ui dev",
     "build:lib": "yarn workspace @altrugenix/ui build",
     "dev:docs": "yarn workspace altrugenix-docs dev",
