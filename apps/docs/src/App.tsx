@@ -79,7 +79,7 @@ function AppContent({
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-500">
+    <div className="bg-background text-foreground min-h-screen transition-colors duration-500">
       <Header tokens={tokens} onSwitchTheme={switchTheme} />
 
       <main className="container mx-auto space-y-12 px-6 py-12">

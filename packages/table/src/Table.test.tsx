@@ -27,8 +27,8 @@ describe("Table", () => {
       </Table>
     );
 
-    expect(screen.getByText("Header")).toBeInTheDocument();
-    expect(screen.getByText("Cell")).toBeInTheDocument();
+    expect(screen.getByText("Header")).toBeTruthy();
+    expect(screen.getByText("Cell")).toBeTruthy();
   });
 });
 
@@ -52,14 +52,14 @@ describe("DataTable", () => {
   it("renders data correctly", () => {
     render(<DataTable columns={columns} data={data} />);
 
-    expect(screen.getByText("John Doe")).toBeInTheDocument();
-    expect(screen.getByText("Jane Smith")).toBeInTheDocument();
-    expect(screen.getByText("30")).toBeInTheDocument();
-    expect(screen.getByText("25")).toBeInTheDocument();
+    expect(screen.getByText("John Doe")).toBeTruthy();
+    expect(screen.getByText("Jane Smith")).toBeTruthy();
+    expect(screen.getByText("30")).toBeTruthy();
+    expect(screen.getByText("25")).toBeTruthy();
   });
 
   it("renders search input when searchKey is provided", () => {
     render(<DataTable columns={columns} data={data} searchKey="name" />);
-    expect(screen.getByPlaceholderText(/search/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/search/i)).toBeTruthy();
   });
 });

@@ -17,7 +17,7 @@ export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
           id={switchId}
           ref={ref}
           className={cn(
-            "bg-input checked:bg-primary focus-visible:ring-ring focus-visible:ring-offset-background peer inline-flex h-6 w-11 shrink-0 cursor-pointer appearance-none items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+            "bg-input checked:bg-primary focus-visible:ring-ring focus-visible:ring-offset-background peer inline-flex h-6 w-11 shrink-0 cursor-pointer appearance-none items-center rounded-full border-2 border-transparent transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
             "after:bg-background relative after:pointer-events-none after:absolute after:block after:h-5 after:w-5 after:translate-x-0 after:rounded-full after:shadow-lg after:ring-0 after:transition-transform after:content-[''] checked:after:translate-x-5",
             className
           )}
@@ -26,7 +26,7 @@ export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
         {label && (
           <label
             htmlFor={switchId}
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
           >
             {label}
           </label>

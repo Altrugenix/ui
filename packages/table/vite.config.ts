@@ -10,17 +10,30 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
+      exclude: [
+        "src/test",
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx",
+        "src/App.tsx",
+        "src/main.tsx",
+        "src/**/*.stories.tsx",
+        "src/**/*.stories.ts",
+      ],
     }),
   ],
   resolve: {
     alias: {
-      "@altrugenix/core": path.resolve(__dirname, "../core/src"),
-      "@altrugenix/button": path.resolve(__dirname, "../button/src"),
-      "@altrugenix/input": path.resolve(__dirname, "../input/src"),
-      "@altrugenix/virtual-list": path.resolve(
-        __dirname,
-        "../virtual-list/src"
-      ),
+      ...(process.env.VITEST
+        ? {
+            "@altrugenix/button": path.resolve(__dirname, "../button/src"),
+            "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+            "@altrugenix/input": path.resolve(__dirname, "../input/src"),
+            "@altrugenix/virtual-list": path.resolve(
+              __dirname,
+              "../virtual-list/src"
+            ),
+          }
+        : {}),
     },
   },
   build: {

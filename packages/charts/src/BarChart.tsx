@@ -49,13 +49,13 @@ export const BarChart = ({
                   point.color || "bg-primary"
                 )}
               >
-                <div className="bg-background absolute -top-10 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-md border px-2 py-1 text-xs font-bold opacity-0 shadow-sm transition-opacity group-hover:opacity-100">
+                <div className="bg-background absolute -top-10 left-1/2 z-10 -translate-x-1/2 rounded-md border px-2 py-1 text-xs font-bold whitespace-nowrap opacity-0 shadow-sm transition-opacity group-hover:opacity-100">
                   {point.value}
                 </div>
               </motion.div>
             </div>
             {showLabels && (
-              <span className="text-muted-foreground w-full truncate text-center text-[10px] uppercase tracking-wider">
+              <span className="text-muted-foreground w-full truncate text-center text-[10px] tracking-wider uppercase">
                 {point.label}
               </span>
             )}

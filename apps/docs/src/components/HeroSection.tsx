@@ -8,11 +8,11 @@ export function HeroSection() {
       </Badge>
       <Heading
         level={1}
-        className="mx-auto max-w-4xl text-6xl font-black leading-tight lg:text-7xl"
+        className="mx-auto max-w-4xl text-6xl leading-tight font-black lg:text-7xl"
       >
-        Design System for <span className="italic text-primary">Winners</span>
+        Design System for <span className="text-primary italic">Winners</span>
       </Heading>
-      <Text className="mx-auto max-w-2xl text-xl text-muted-foreground">
+      <Text className="text-muted-foreground mx-auto max-w-2xl text-xl">
         A comprehensive set of high-performance React components meticulously
         crafted for enterprise-grade SaaS platforms.
       </Text>

@@ -1,0 +1,10 @@
+import { render } from "@testing-library/react";
+import { describe, it, expect } from "vitest";
+import { Box } from "./index";
+
+describe("Box", () => {
+  it("should render without crashing", () => {
+    const { container } = render(<Box>Test</Box>);
+    expect(container).toBeTruthy();
+  });
+});

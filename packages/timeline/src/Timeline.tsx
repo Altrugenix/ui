@@ -1,0 +1,82 @@
+import React from "react";
+import { cn } from "@altrugenix/core";
+
+export interface TimelineItem {
+  title: string;
+  description?: string;
+  date?: string;
+  icon?: React.ReactNode;
+  variant?: "default" | "success" | "warning" | "destructive";
+}
+
+export interface TimelineProps extends React.HTMLAttributes<HTMLDivElement> {
+  items: TimelineItem[];
+}
+
+const dotVariants = {
+  default: "border-primary bg-primary",
+  success: "border-success bg-success",
+  warning: "border-warning bg-warning",
+  destructive: "border-destructive bg-destructive",
+};
+
+export const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
+  ({ className, items, ...props }, ref) => {
+    return (
+      <div ref={ref} className={cn("relative space-y-0", className)} {...props}>
+        {items.map((item, index) => {
+          const variant = item.variant || "default";
+          const isLast = index === items.length - 1;
+
+          return (
+            <div key={index} className="relative flex gap-4 pb-8 last:pb-0">
+              {/* Line */}
+              {!isLast && (
+                <div className="bg-border absolute top-6 left-[0.6875rem] h-full w-px" />
+              )}
+
+              {/* Dot / Icon */}
+              <div className="relative z-10 flex shrink-0">
+                {item.icon ? (
+                  <div
+                    className={cn(
+                      "bg-background flex h-6 w-6 items-center justify-center rounded-full border-2",
+                      dotVariants[variant].replace("bg-", "border-")
+                    )}
+                  >
+                    <span className="h-3 w-3">{item.icon}</span>
+                  </div>
+                ) : (
+                  <div
+                    className={cn(
+                      "mt-1 h-3.5 w-3.5 rounded-full border-2",
+                      dotVariants[variant]
+                    )}
+                  />
+                )}
+              </div>
+
+              {/* Content */}
+              <div className="flex-1 space-y-1">
+                <div className="flex items-center justify-between">
+                  <p className="text-sm font-semibold">{item.title}</p>
+                  {item.date && (
+                    <time className="text-muted-foreground text-xs">
+                      {item.date}
+                    </time>
+                  )}
+                </div>
+                {item.description && (
+                  <p className="text-muted-foreground text-sm">
+                    {item.description}
+                  </p>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+);
+Timeline.displayName = "Timeline";

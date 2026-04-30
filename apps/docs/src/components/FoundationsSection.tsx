@@ -7,13 +7,13 @@ export function FoundationsSection() {
       <div className="space-y-8">
         <div className="space-y-4">
           <Heading level={3}>Typography</Heading>
-          <div className="space-y-2 rounded-xl border bg-muted/5 p-6">
+          <div className="bg-muted/5 space-y-2 rounded-xl border p-6">
             <Heading level={1}>Heading 1</Heading>
             <Heading level={2}>Heading 2</Heading>
             <Heading level={3}>Heading 3</Heading>
             <Heading level={4}>Heading 4</Heading>
             <Text>Standard body text for long content.</Text>
-            <Text className="text-sm text-muted-foreground">
+            <Text className="text-muted-foreground text-sm">
               Small text for metadata and captions.
             </Text>
             <Link href="#" className="mt-4 flex items-center gap-1">
@@ -23,7 +23,7 @@ export function FoundationsSection() {
         </div>
         <div className="space-y-4">
           <Heading level={3}>Buttons & Badges</Heading>
-          <div className="flex flex-wrap items-center gap-4 rounded-xl border bg-muted/5 p-6">
+          <div className="bg-muted/5 flex flex-wrap items-center gap-4 rounded-xl border p-6">
             <Button>Primary</Button>
             <Button variant="secondary">Secondary</Button>
             <Button variant="outline">Outline</Button>

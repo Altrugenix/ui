@@ -107,7 +107,7 @@ export const Carousel = ({
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-4 top-1/2 z-10 -translate-y-1/2 scale-90 rounded-full border-white/20 bg-black/20 text-white opacity-0 backdrop-blur-md transition-all hover:scale-100 hover:bg-black/40 group-hover:opacity-100 dark:bg-white/10 dark:hover:bg-white/20"
+            className="absolute top-1/2 left-4 z-10 -translate-y-1/2 scale-90 rounded-full border-white/20 bg-black/20 text-white opacity-0 backdrop-blur-md transition-all group-hover:opacity-100 hover:scale-100 hover:bg-black/40 dark:bg-white/10 dark:hover:bg-white/20"
             onClick={(e) => {
               e.stopPropagation();
               prev();
@@ -119,7 +119,7 @@ export const Carousel = ({
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-4 top-1/2 z-10 -translate-y-1/2 scale-90 rounded-full border-white/20 bg-black/20 text-white opacity-0 backdrop-blur-md transition-all hover:scale-100 hover:bg-black/40 group-hover:opacity-100 dark:bg-white/10 dark:hover:bg-white/20"
+            className="absolute top-1/2 right-4 z-10 -translate-y-1/2 scale-90 rounded-full border-white/20 bg-black/20 text-white opacity-0 backdrop-blur-md transition-all group-hover:opacity-100 hover:scale-100 hover:bg-black/40 dark:bg-white/10 dark:hover:bg-white/20"
             onClick={(e) => {
               e.stopPropagation();
               next();

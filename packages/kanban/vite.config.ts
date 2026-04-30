@@ -10,14 +10,27 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
+      exclude: [
+        "src/test",
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx",
+        "src/App.tsx",
+        "src/main.tsx",
+        "src/**/*.stories.tsx",
+        "src/**/*.stories.ts",
+      ],
     }),
   ],
   resolve: {
     alias: {
-      "@altrugenix/core": path.resolve(__dirname, "../core/src"),
-      "@altrugenix/button": path.resolve(__dirname, "../button/src"),
-      "@altrugenix/badge": path.resolve(__dirname, "../badge/src"),
-      "@altrugenix/avatar": path.resolve(__dirname, "../avatar/src"),
+      ...(process.env.VITEST
+        ? {
+            "@altrugenix/avatar": path.resolve(__dirname, "../avatar/src"),
+            "@altrugenix/badge": path.resolve(__dirname, "../badge/src"),
+            "@altrugenix/button": path.resolve(__dirname, "../button/src"),
+            "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+          }
+        : {}),
     },
   },
   build: {

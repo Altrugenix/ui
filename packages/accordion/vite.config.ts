@@ -10,11 +10,24 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ["src"],
+      exclude: [
+        "src/test",
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx",
+        "src/App.tsx",
+        "src/main.tsx",
+        "src/**/*.stories.tsx",
+        "src/**/*.stories.ts",
+      ],
     }),
   ],
   resolve: {
     alias: {
-      "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+      ...(process.env.VITEST
+        ? {
+            "@altrugenix/core": path.resolve(__dirname, "../core/src"),
+          }
+        : {}),
     },
   },
   build: {
@@ -26,21 +39,12 @@ export default defineConfig({
         `altrugenix-accordion.${format === "es" ? "js" : "umd.cjs"}`,
     },
     rollupOptions: {
-      external: [
-        "react/jsx-runtime",
-        "react",
-        "react-dom",
-        "lucide-react",
-        "@altrugenix/core",
-        "framer-motion",
-      ],
+      external: ["react/jsx-runtime", "react", "react-dom", "@altrugenix/core"],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
-          "lucide-react": "Lucide",
           "@altrugenix/core": "AltrugenixCore",
-          "framer-motion": "Motion",
           "react/jsx-runtime": "jsxRuntime",
         },
       },

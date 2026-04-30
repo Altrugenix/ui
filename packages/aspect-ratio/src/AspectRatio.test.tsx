@@ -10,7 +10,7 @@ describe("AspectRatio", () => {
       </AspectRatio>
     );
 
-    expect(getByText("Content")).toBeInTheDocument();
+    expect(getByText("Content")).toBeTruthy();
   });
 
   it("applies the correct padding for the aspect ratio", () => {

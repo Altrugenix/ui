@@ -27,17 +27,21 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@altrugenix/core": "1.0.0-alpha.0",
+    "@altrugenix/core": "workspace:*",
     "class-variance-authority": "^0.7.1"
   },
   "devDependencies": {
+    "@altrugenix/core": "workspace:*",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "jsdom": "^29.0.1",
-    "vite": "^8.0.1",
-    "vitest": "^4.1.2"
+    "eslint": "^10.2.1",
+    "jsdom": "^29.1.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10",
+    "vite-plugin-dts": "^5.0.0",
+    "vitest": "^4.1.5"
   },
   "peerDependencies": {
     "framer-motion": "^11.0.0 || ^12.0.0",

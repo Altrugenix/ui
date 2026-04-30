@@ -1,0 +1,50 @@
+{
+  "name": "@altrugenix/circular-progress",
+  "version": "1.0.0-alpha.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/altrugenix-circular-progress.umd.cjs",
+  "module": "./dist/altrugenix-circular-progress.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/altrugenix-circular-progress.js",
+      "require": "./dist/altrugenix-circular-progress.umd.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@altrugenix/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@altrugenix/core": "workspace:*",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.2.1",
+    "jsdom": "^29.1.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10",
+    "vite-plugin-dts": "^5.0.0",
+    "vitest": "^4.1.5"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  }
+}

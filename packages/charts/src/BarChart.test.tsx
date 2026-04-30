@@ -11,17 +11,17 @@ describe("BarChart", () => {
 
   it("renders correctly with labels", () => {
     render(<BarChart data={data} />);
-    expect(screen.getByText("Jan")).toBeInTheDocument();
-    expect(screen.getByText("Feb")).toBeInTheDocument();
-    expect(screen.getByText("Mar")).toBeInTheDocument();
-    expect(screen.getByText("10")).toBeInTheDocument();
-    expect(screen.getByText("20")).toBeInTheDocument();
-    expect(screen.getByText("30")).toBeInTheDocument();
+    expect(screen.getByText("Jan")).toBeTruthy();
+    expect(screen.getByText("Feb")).toBeTruthy();
+    expect(screen.getByText("Mar")).toBeTruthy();
+    expect(screen.getByText("10")).toBeTruthy();
+    expect(screen.getByText("20")).toBeTruthy();
+    expect(screen.getByText("30")).toBeTruthy();
   });
 
   it("does not render labels if showLabels is false", () => {
     render(<BarChart data={data} showLabels={false} />);
     expect(screen.queryByText("Jan")).toBeNull();
-    expect(screen.getByText("10")).toBeInTheDocument();
+    expect(screen.getByText("10")).toBeTruthy();
   });
 });

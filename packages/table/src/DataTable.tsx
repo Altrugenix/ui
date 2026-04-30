@@ -85,7 +85,7 @@ export function DataTable<TData, TValue>({
                 }
                 className="h-9 pl-9"
               />
-              <Filter className="text-muted-foreground/70 absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
+              <Filter className="text-muted-foreground/70 absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
             </div>
           )}
         </div>
@@ -114,7 +114,7 @@ export function DataTable<TData, TValue>({
                           )}
                           onClick={header.column.getToggleSortingHandler()}
                         >
-                          <span className="text-muted-foreground/70 text-xs font-semibold uppercase tracking-wider">
+                          <span className="text-muted-foreground/70 text-xs font-semibold tracking-wider uppercase">
                             {flexRender(
                               header.column.columnDef.header,
                               header.getContext()
