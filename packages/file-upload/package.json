@@ -1,6 +1,6 @@
 {
   "name": "@altrugenix/file-upload",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "main": "./dist/altrugenix-file-upload.umd.cjs",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@altrugenix/button": "workspace:*",
     "@altrugenix/core": "workspace:*",
-    "@altrugenix/progress-bar": "1.0.0-alpha.0",
+    "@altrugenix/progress-bar": "1.0.0",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^1.14.0"
   },

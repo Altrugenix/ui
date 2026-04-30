@@ -1,6 +1,6 @@
 {
   "name": "@altrugenix/sidebar",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "main": "./dist/altrugenix-sidebar.umd.cjs",
@@ -27,7 +27,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@altrugenix/core": "1.0.0-alpha.0"
+    "@altrugenix/core": "1.0.0"
   },
   "devDependencies": {
     "@altrugenix/core": "workspace:*",

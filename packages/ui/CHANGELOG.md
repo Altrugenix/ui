@@ -1,0 +1,93 @@
+# @altrugenix/ui
+
+## 1.0.0
+
+### Patch Changes
+
+- 365f00d: separate packages release
+- 027c5d4: initial publish
+- Updated dependencies [365f00d]
+- Updated dependencies [027c5d4]
+  - @altrugenix/aspect-ratio@1.0.0
+  - @altrugenix/virtual-list@1.0.0
+  - @altrugenix/accordion@1.0.0
+  - @altrugenix/backdrop@1.0.0
+  - @altrugenix/carousel@1.0.0
+  - @altrugenix/checkbox@1.0.0
+  - @altrugenix/snackbar@1.0.0
+  - @altrugenix/textarea@1.0.0
+  - @altrugenix/avatar@1.0.0
+  - @altrugenix/button@1.0.0
+  - @altrugenix/charts@1.0.0
+  - @altrugenix/kanban@1.0.0
+  - @altrugenix/select@1.0.0
+  - @altrugenix/slider@1.0.0
+  - @altrugenix/switch@1.0.0
+  - @altrugenix/badge@1.0.0
+  - @altrugenix/input@1.0.0
+  - @altrugenix/modal@1.0.0
+  - @altrugenix/radio@1.0.0
+  - @altrugenix/table@1.0.0
+  - @altrugenix/toast@1.0.0
+  - @altrugenix/card@1.0.0
+  - @altrugenix/chip@1.0.0
+  - @altrugenix/core@1.0.0
+  - @altrugenix/icon@1.0.0
+  - @altrugenix/link@1.0.0
+  - @altrugenix/list@1.0.0
+  - @altrugenix/circular-progress@1.0.0
+  - @altrugenix/rich-text-editor@1.0.0
+  - @altrugenix/command-palette@1.0.0
+  - @altrugenix/calendar-view@1.0.0
+  - @altrugenix/transfer-list@1.0.0
+  - @altrugenix/autocomplete@1.0.0
+  - @altrugenix/color-picker@1.0.0
+  - @altrugenix/css-baseline@1.0.0
+  - @altrugenix/image-viewer@1.0.0
+  - @altrugenix/progress-bar@1.0.0
+  - @altrugenix/video-player@1.0.0
+  - @altrugenix/breadcrumbs@1.0.0
+  - @altrugenix/date-picker@1.0.0
+  - @altrugenix/file-upload@1.0.0
+  - @altrugenix/metric-card@1.0.0
+  - @altrugenix/image-list@1.0.0
+  - @altrugenix/speed-dial@1.0.0
+  - @altrugenix/typography@1.0.0
+  - @altrugenix/input-otp@1.0.0
+  - @altrugenix/utilities@1.0.0
+  - @altrugenix/feedback@1.0.0
+  - @altrugenix/skeleton@1.0.0
+  - @altrugenix/timeline@1.0.0
+  - @altrugenix/divider@1.0.0
+  - @altrugenix/effects@1.0.0
+  - @altrugenix/heading@1.0.0
+  - @altrugenix/popover@1.0.0
+  - @altrugenix/stepper@1.0.0
+  - @altrugenix/drawer@1.0.0
+  - @altrugenix/rating@1.0.0
+  - @altrugenix/toggle@1.0.0
+  - @altrugenix/image@1.0.0
+  - @altrugenix/sheet@1.0.0
+  - @altrugenix/tabs@1.0.0
+  - @altrugenix/text@1.0.0
+  - @altrugenix/tag@1.0.0
+  - @altrugenix/app-shell@1.0.0
+  - @altrugenix/alert@1.0.0
+  - @altrugenix/box@1.0.0
+  - @altrugenix/container@1.0.0
+  - @altrugenix/context-menu@1.0.0
+  - @altrugenix/dropdown-menu@1.0.0
+  - @altrugenix/flex@1.0.0
+  - @altrugenix/form-field@1.0.0
+  - @altrugenix/form-group@1.0.0
+  - @altrugenix/form-validation@1.0.0
+  - @altrugenix/grid@1.0.0
+  - @altrugenix/marquee@1.0.0
+  - @altrugenix/navbar@1.0.0
+  - @altrugenix/pagination@1.0.0
+  - @altrugenix/paper@1.0.0
+  - @altrugenix/sidebar@1.0.0
+  - @altrugenix/spacer@1.0.0
+  - @altrugenix/spinner@1.0.0
+  - @altrugenix/stack@1.0.0
+  - @altrugenix/tooltip@1.0.0
