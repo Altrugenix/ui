@@ -23,9 +23,7 @@ describe("CalendarView component", () => {
       "November",
       "December",
     ];
-    expect(
-      getByText(new RegExp(monthNames[today.getMonth()]))
-    ).toBeTruthy();
+    expect(getByText(new RegExp(monthNames[today.getMonth()]))).toBeTruthy();
   });
 
   it("renders events correctly", () => {
