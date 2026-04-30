@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { cn } from "@altrugenix/core";
 import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
 import { Button } from "@altrugenix/button";
