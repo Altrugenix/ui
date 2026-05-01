@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Stepper } from "./Stepper";
@@ -46,5 +47,32 @@ describe("Stepper", () => {
   it("applies vertical orientation correctly", () => {
     render(<Stepper steps={mockSteps} activeStep={0} orientation="vertical" />);
     expect(screen.getByRole("list")).toHaveClass("flex-col");
+  });
+
+  it("forwards ref correctly", () => {
+    const ref = React.createRef<HTMLDivElement>();
+    render(<Stepper steps={mockSteps} activeStep={0} ref={ref} />);
+    expect(ref.current).toBeInstanceOf(HTMLDivElement);
+  });
+
+  it("applies custom className and passes through additional props", () => {
+    render(
+      <Stepper
+        steps={mockSteps}
+        activeStep={0}
+        className="custom-stepper"
+        data-testid="stepper"
+        id="stepper-id"
+      />
+    );
+    const stepper = screen.getByTestId("stepper");
+    expect(stepper).toHaveClass("custom-stepper");
+    expect(stepper.id).toBe("stepper-id");
+  });
+
+  it("has correct ARIA roles and labels", () => {
+    render(<Stepper steps={mockSteps} activeStep={0} aria-label="Progress Bar" />);
+    expect(screen.getByRole("list")).toHaveAttribute("aria-label", "Progress Bar");
+    expect(screen.getAllByRole("listitem")).toHaveLength(3);
   });
 });

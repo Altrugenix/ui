@@ -69,8 +69,37 @@ describe("VideoPlayer", () => {
     const playerContainer = container.firstChild as HTMLElement;
 
     fireEvent.mouseMove(playerContainer);
-    // Controls should have opacity-100
     const controls = container.querySelector(".bg-gradient-to-t");
     expect(controls).toHaveClass("opacity-100");
+  });
+
+  it("applies autoPlay and loop props", () => {
+    const { container } = render(<VideoPlayer src={src} autoPlay loop />);
+    const video = container.querySelector("video")!;
+    expect(video.autoplay).toBe(true);
+    expect(video.loop).toBe(true);
+  });
+
+  it("handles volume change", () => {
+    const { container } = render(<VideoPlayer src={src} />);
+    const video = container.querySelector("video")!;
+    const volumeSlider = container.querySelectorAll("input[type='range']")[1];
+    
+    fireEvent.change(volumeSlider, { target: { value: "0.5" } });
+    expect(video.volume).toBe(0.5);
+  });
+
+  it("handles seek", () => {
+    const { container } = render(<VideoPlayer src={src} />);
+    const video = container.querySelector("video")!;
+    const progressSlider = container.querySelectorAll("input[type='range']")[0];
+    
+    fireEvent.change(progressSlider, { target: { value: "50" } });
+    expect(video.currentTime).toBe(50);
+  });
+
+  it("applies custom className", () => {
+    const { container } = render(<VideoPlayer src={src} className="custom-player" />);
+    expect(container.firstChild).toHaveClass("custom-player");
   });
 });

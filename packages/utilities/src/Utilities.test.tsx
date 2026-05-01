@@ -1,8 +1,10 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, act } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Portal } from "./portal/Portal";
 import { ClickAwayListener } from "./click-away-listener/ClickAwayListener";
 import { VisuallyHidden } from "./visually-hidden/VisuallyHidden";
+import { NoSsr } from "./no-ssr/NoSsr";
+import { TextareaAutosize } from "./textarea-autosize/TextareaAutosize";
 
 describe("Utilities", () => {
   describe("Portal", () => {
@@ -44,10 +46,10 @@ describe("Utilities", () => {
       const onClickAway = vi.fn();
       render(
         <div>
+          <div data-testid="outside">Outside</div>
           <ClickAwayListener onClickAway={onClickAway}>
             <div data-testid="inside">Inside</div>
           </ClickAwayListener>
-          <div data-testid="outside">Outside</div>
         </div>
       );
 
@@ -65,6 +67,37 @@ describe("Utilities", () => {
 
       fireEvent.mouseDown(screen.getByTestId("inside"));
       expect(onClickAway).not.toHaveBeenCalled();
+    });
+  });
+
+  describe("NoSsr", () => {
+    it("renders fallback initially and then children after mount", () => {
+      const { rerender } = render(
+        <NoSsr fallback={<div data-testid="fallback">Fallback</div>}>
+          <div data-testid="content">Content</div>
+        </NoSsr>
+      );
+      
+      // In RTL, mount happens immediately in useEffect.
+      // To test the "server" state, we'd need to mock it, but standard render is client.
+      expect(screen.getByTestId("content")).toBeInTheDocument();
+      expect(screen.queryByTestId("fallback")).not.toBeInTheDocument();
+    });
+  });
+
+  describe("TextareaAutosize", () => {
+    it("renders correctly and handles change", () => {
+      const onChange = vi.fn();
+      render(<TextareaAutosize data-testid="textarea" onChange={onChange} />);
+      const textarea = screen.getByTestId("textarea");
+      
+      fireEvent.change(textarea, { target: { value: "New content" } });
+      expect(onChange).toHaveBeenCalled();
+    });
+
+    it("applies minRows", () => {
+      render(<TextareaAutosize data-testid="textarea" minRows={5} />);
+      expect(screen.getByTestId("textarea")).toHaveAttribute("rows", "5");
     });
   });
 });

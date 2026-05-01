@@ -62,4 +62,36 @@ describe("Snackbar", () => {
     });
     expect(handleClose).toHaveBeenCalledTimes(1);
   });
+
+  it("applies position classes correctly", () => {
+    const { rerender } = render(
+      <Snackbar open={true} message="Test" position="top-right" />
+    );
+    expect(screen.getByText("Test").parentElement).toHaveClass("top-4 right-4");
+
+    rerender(<Snackbar open={true} message="Test" position="bottom-left" />);
+    expect(screen.getByText("Test").parentElement).toHaveClass("bottom-4 left-4");
+  });
+
+  it("applies variant classes correctly", () => {
+    const { rerender } = render(
+      <Snackbar open={true} message="Test" variant="success" />
+    );
+    expect(screen.getByText("Test").parentElement).toHaveClass("bg-success");
+
+    rerender(<Snackbar open={true} message="Test" variant="error" />);
+    expect(screen.getByText("Test").parentElement).toHaveClass("bg-destructive");
+  });
+
+  it("applies custom className and passes through additional props", () => {
+    render(
+      <Snackbar
+        open={true}
+        message="Test"
+        className="custom-snackbar"
+        data-testid="snackbar"
+      />
+    );
+    expect(screen.getByTestId("snackbar")).toHaveClass("custom-snackbar");
+  });
 });

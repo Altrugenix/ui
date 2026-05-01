@@ -53,4 +53,22 @@ describe("Rating", () => {
     rerender(<Rating size="lg" />);
     expect(container.querySelector("svg")).toHaveClass("h-8 w-8");
   });
+
+  it("applies custom active and inactive colors", () => {
+    const { container } = render(
+      <Rating
+        value={2}
+        max={5}
+        activeColor="text-red-500"
+        inactiveColor="text-gray-200"
+      />
+    );
+    expect(container.querySelectorAll(".text-red-500")).toHaveLength(2);
+    expect(container.querySelectorAll(".text-gray-200")).toHaveLength(3);
+  });
+
+  it("applies custom className", () => {
+    const { container } = render(<Rating className="custom-rating" />);
+    expect(container.firstChild).toHaveClass("custom-rating");
+  });
 });

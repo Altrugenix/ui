@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { Drawer } from "./Drawer";
@@ -79,5 +80,41 @@ describe("Drawer", () => {
       </Drawer>
     );
     expect(screen.getByRole("dialog")).toHaveClass("right-0");
+  });
+
+  it("forwards ref correctly", () => {
+    const ref = React.createRef<HTMLDivElement>();
+    render(<Drawer {...defaultProps} ref={ref}>Content</Drawer>);
+    expect(ref.current).toBeInstanceOf(HTMLDivElement);
+  });
+
+  it("has correct ARIA attributes", () => {
+    render(<Drawer {...defaultProps}>Content</Drawer>);
+    const dialog = screen.getByRole("dialog");
+    expect(dialog).toHaveAttribute("aria-modal", "true");
+    expect(screen.getByLabelText("Close drawer")).toBeInTheDocument();
+  });
+
+  it("applies custom className and passes through additional props", () => {
+    render(
+      <Drawer
+        {...defaultProps}
+        className="custom-drawer"
+        data-testid="drawer-panel"
+        id="drawer-id"
+      >
+        Content
+      </Drawer>
+    );
+    const panel = screen.getByTestId("drawer-panel");
+    expect(panel).toHaveClass("custom-drawer");
+    expect(panel.id).toBe("drawer-id");
+  });
+
+  it("cleans up body overflow on unmount", () => {
+    const { unmount } = render(<Drawer {...defaultProps}>Content</Drawer>);
+    expect(document.body.style.overflow).toBe("hidden");
+    unmount();
+    expect(document.body.style.overflow).toBe("");
   });
 });

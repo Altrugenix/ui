@@ -72,4 +72,25 @@ describe("SpeedDial", () => {
       .closest("div")?.parentElement;
     expect(actionsContainer).toHaveClass("flex-row");
   });
+
+  it("renders custom trigger icons", () => {
+    render(
+      <SpeedDial
+        actions={mockActions}
+        icon={<span data-testid="custom-plus">+</span>}
+        openIcon={<span data-testid="custom-x">x</span>}
+      />
+    );
+    expect(screen.getByTestId("custom-plus")).toBeInTheDocument();
+    
+    fireEvent.click(screen.getByRole("button"));
+    expect(screen.getByTestId("custom-x")).toBeInTheDocument();
+  });
+
+  it("applies custom className", () => {
+    const { container } = render(
+      <SpeedDial actions={mockActions} className="custom-speed-dial" />
+    );
+    expect(container.firstChild).toHaveClass("custom-speed-dial");
+  });
 });

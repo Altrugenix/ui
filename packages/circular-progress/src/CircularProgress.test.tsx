@@ -1,3 +1,4 @@
+import React from "react";
 import { render } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { CircularProgress } from "./CircularProgress";
@@ -68,5 +69,33 @@ describe("CircularProgress", () => {
     const svg = container.querySelector("svg");
     expect(svg).toHaveAttribute("data-testid", "progress");
     expect(svg).toHaveAttribute("aria-label", "loading");
+  });
+
+  it("applies thickness correctly", () => {
+    const { container } = render(<CircularProgress thickness={10} />);
+    const circles = container.querySelectorAll("circle");
+    expect(circles[0]).toHaveAttribute("stroke-width", "10");
+    expect(circles[1]).toHaveAttribute("stroke-width", "10");
+  });
+
+  it("forwards ref correctly", () => {
+    const ref = React.createRef<SVGSVGElement>();
+    render(<CircularProgress ref={ref} />);
+    expect(ref.current).toBeInstanceOf(SVGSVGElement);
+  });
+
+  it("has correct dashoffset at 0% value", () => {
+    const { container } = render(<CircularProgress value={0} />);
+    const progressCircle = container.querySelectorAll("circle")[1];
+    const circumference = 2 * Math.PI * 20;
+    const offset = parseFloat(progressCircle.getAttribute("stroke-dashoffset") || "0");
+    expect(offset).toBeCloseTo(circumference, 1);
+  });
+
+  it("has 0 dashoffset at 100% value", () => {
+    const { container } = render(<CircularProgress value={100} />);
+    const progressCircle = container.querySelectorAll("circle")[1];
+    const offset = parseFloat(progressCircle.getAttribute("stroke-dashoffset") || "0");
+    expect(offset).toBe(0);
   });
 });
