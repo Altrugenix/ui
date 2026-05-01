@@ -25,10 +25,10 @@
     "version:ci": "changeset version",
     "release": "changeset publish",
     "release:github": "changeset publish",
-    "log:test": "yarn test > test.log 2>&1 || grep -iE \"stderr\" test.log",
+    "log:test": "yarn test --reporter=json > test.log 2>&1 || cat test.log",
     "log:type-check": "yarn type-check > type-check.log 2>&1 || grep -E \"error TS|TS[0-9]+|Cannot|not assignable|found|expected\" type-check.log",
-    "log:lint": "yarn lint > lint.log 2>&1 || grep -E \"error|Error|✖\" lint.log",
-    "log:build": "yarn build > build.log 2>&1 || grep -iE 'fail|error|✕' build.log",
+    "log:lint": "yarn lint > lint.log 2>&1 || grep -E \"error|Error\" lint.log",
+    "log:build": "yarn build > build.log 2>&1 || grep -iE 'fail|error' build.log",
     "log:all": "yarn format && yarn log:lint && yarn log:type-check && yarn log:test && yarn log:build"
   },
   "dependencies": {

@@ -32,9 +32,9 @@ const DefaultDemo = () => {
   return (
     <div className="bg-muted/20 relative max-w-md overflow-hidden rounded-xl border p-10">
       <p className="mb-4 text-sm">
-        This container has <code>overflow: hidden</code>. If the tooltip
-        wasn't portaled, it would be cut off by the container edges. Click the
-        button to see the portal escape the container.
+        This container has <code>overflow: hidden</code>. If the tooltip wasn't
+        portaled, it would be cut off by the container edges. Click the button
+        to see the portal escape the container.
       </p>
       <Button onClick={() => setShow(!show)}>
         {show ? "Hide Portaled Element" : "Show Portaled Element"}

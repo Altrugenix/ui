@@ -44,9 +44,16 @@ const meta: Meta<typeof VirtualList> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof VirtualList>;
 
-const MOCK_DATA = Array.from({ length: 10000 }).map((_, i) => ({
+type MockUser = {
+  id: number;
+  name: string;
+  email: string;
+};
+
+type Story = StoryObj<typeof VirtualList<MockUser>>;
+
+const MOCK_DATA: MockUser[] = Array.from({ length: 10000 }).map((_, i) => ({
   id: i,
   name: `User ${i + 1}`,
   email: `user${i + 1}@example.com`,
@@ -57,8 +64,11 @@ export const Default: Story = {
     items: MOCK_DATA,
     height: 400,
     rowHeight: 60,
-    renderRow: (item: any) => (
-      <div className="hover:bg-muted/30 flex h-full items-center border-b px-4">
+    renderRow: (item: MockUser, index: number) => (
+      <div
+        key={index}
+        className="hover:bg-muted/30 flex h-full items-center border-b px-4"
+      >
         <div className="bg-primary/10 text-primary flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-medium">
           {item.id}
         </div>
@@ -106,7 +116,7 @@ const ContactListDemo = () => {
         items={filteredData}
         height={350}
         rowHeight={50}
-        renderRow={(item: any) => (
+        renderRow={(item: MockUser) => (
           <div className="hover:bg-muted/50 flex h-full cursor-pointer items-center px-4">
             <span className="text-sm font-medium">{item.name}</span>
           </div>
