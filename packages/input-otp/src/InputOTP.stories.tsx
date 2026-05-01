@@ -118,33 +118,35 @@ export const Disabled: Story = {
   },
 };
 
-export const VerificationFlow: Story = {
-  render: () => {
-    const [otp, setOtp] = useState("");
-    const [verified, setVerified] = useState(false);
-    return (
-      <div className="flex flex-col items-center gap-4 p-10">
-        <h3 className="text-foreground text-lg font-semibold">
-          Verify Your Email
-        </h3>
-        <p className="text-muted-foreground max-w-xs text-center text-sm">
-          We sent a 6-digit code to your email. Enter it below to verify your
-          account.
+const VerificationFlowDemo = () => {
+  const [otp, setOtp] = useState("");
+  const [verified, setVerified] = useState(false);
+  return (
+    <div className="flex flex-col items-center gap-4 p-10">
+      <h3 className="text-foreground text-lg font-semibold">
+        Verify Your Email
+      </h3>
+      <p className="text-muted-foreground max-w-xs text-center text-sm">
+        We sent a 6-digit code to your email. Enter it below to verify your
+        account.
+      </p>
+      <InputOTP
+        value={otp}
+        onChange={setOtp}
+        onComplete={() => setVerified(true)}
+        disabled={verified}
+      />
+      {verified && (
+        <p className="text-sm font-medium text-emerald-600">
+          ✓ Email verified successfully!
         </p>
-        <InputOTP
-          value={otp}
-          onChange={setOtp}
-          onComplete={() => setVerified(true)}
-          disabled={verified}
-        />
-        {verified && (
-          <p className="text-sm font-medium text-emerald-600">
-            ✓ Email verified successfully!
-          </p>
-        )}
-      </div>
-    );
-  },
+      )}
+    </div>
+  );
+};
+
+export const VerificationFlow: Story = {
+  render: () => <VerificationFlowDemo />,
   parameters: {
     docs: {
       description: {

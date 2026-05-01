@@ -21,25 +21,27 @@ const DemoBox = () => (
   </div>
 );
 
-export const FadeDemo: StoryObj = {
-  render: () => {
-    const [inProp, setInProp] = useState(true);
-    return (
-      <div className="space-y-4">
-        <button
-          className="bg-secondary text-secondary-foreground rounded-md px-4 py-2 font-medium"
-          onClick={() => setInProp(!inProp)}
-        >
-          Toggle Fade
-        </button>
-        <div className="h-40">
-          <Fade in={inProp}>
-            <DemoBox />
-          </Fade>
-        </div>
+const FadeDemoComponent = () => {
+  const [inProp, setInProp] = useState(true);
+  return (
+    <div className="space-y-4">
+      <button
+        className="bg-secondary text-secondary-foreground rounded-md px-4 py-2 font-medium"
+        onClick={() => setInProp(!inProp)}
+      >
+        Toggle Fade
+      </button>
+      <div className="h-40">
+        <Fade in={inProp}>
+          <DemoBox />
+        </Fade>
       </div>
-    );
-  },
+    </div>
+  );
+};
+
+export const FadeDemo: StoryObj = {
+  render: () => <FadeDemoComponent />,
   parameters: {
     docs: {
       description: {
@@ -49,25 +51,27 @@ export const FadeDemo: StoryObj = {
   },
 };
 
-export const GrowDemo: StoryObj = {
-  render: () => {
-    const [inProp, setInProp] = useState(true);
-    return (
-      <div className="space-y-4">
-        <button
-          className="bg-secondary text-secondary-foreground rounded-md px-4 py-2 font-medium"
-          onClick={() => setInProp(!inProp)}
-        >
-          Toggle Grow
-        </button>
-        <div className="h-40">
-          <Grow in={inProp}>
-            <DemoBox />
-          </Grow>
-        </div>
+const GrowDemoComponent = () => {
+  const [inProp, setInProp] = useState(true);
+  return (
+    <div className="space-y-4">
+      <button
+        className="bg-secondary text-secondary-foreground rounded-md px-4 py-2 font-medium"
+        onClick={() => setInProp(!inProp)}
+      >
+        Toggle Grow
+      </button>
+      <div className="h-40">
+        <Grow in={inProp}>
+          <DemoBox />
+        </Grow>
       </div>
-    );
-  },
+    </div>
+  );
+};
+
+export const GrowDemo: StoryObj = {
+  render: () => <GrowDemoComponent />,
   parameters: {
     docs: {
       description: {
@@ -78,25 +82,27 @@ export const GrowDemo: StoryObj = {
   },
 };
 
-export const SlideDemo: StoryObj = {
-  render: () => {
-    const [inProp, setInProp] = useState(true);
-    return (
-      <div className="bg-muted/10 space-y-4 overflow-hidden rounded-xl border p-4">
-        <button
-          className="bg-secondary text-secondary-foreground rounded-md px-4 py-2 font-medium"
-          onClick={() => setInProp(!inProp)}
-        >
-          Toggle Slide (up)
-        </button>
-        <div className="relative h-40">
-          <Slide in={inProp} direction="up">
-            <DemoBox />
-          </Slide>
-        </div>
+const SlideDemoComponent = () => {
+  const [inProp, setInProp] = useState(true);
+  return (
+    <div className="bg-muted/10 space-y-4 overflow-hidden rounded-xl border p-4">
+      <button
+        className="bg-secondary text-secondary-foreground rounded-md px-4 py-2 font-medium"
+        onClick={() => setInProp(!inProp)}
+      >
+        Toggle Slide (up)
+      </button>
+      <div className="relative h-40">
+        <Slide in={inProp} direction="up">
+          <DemoBox />
+        </Slide>
       </div>
-    );
-  },
+    </div>
+  );
+};
+
+export const SlideDemo: StoryObj = {
+  render: () => <SlideDemoComponent />,
   parameters: {
     docs: {
       description: {
@@ -107,25 +113,27 @@ export const SlideDemo: StoryObj = {
   },
 };
 
-export const ZoomDemo: StoryObj = {
-  render: () => {
-    const [inProp, setInProp] = useState(true);
-    return (
-      <div className="space-y-4">
-        <button
-          className="bg-secondary text-secondary-foreground rounded-md px-4 py-2 font-medium"
-          onClick={() => setInProp(!inProp)}
-        >
-          Toggle Zoom
-        </button>
-        <div className="h-40">
-          <Zoom in={inProp}>
-            <DemoBox />
-          </Zoom>
-        </div>
+const ZoomDemoComponent = () => {
+  const [inProp, setInProp] = useState(true);
+  return (
+    <div className="space-y-4">
+      <button
+        className="bg-secondary text-secondary-foreground rounded-md px-4 py-2 font-medium"
+        onClick={() => setInProp(!inProp)}
+      >
+        Toggle Zoom
+      </button>
+      <div className="h-40">
+        <Zoom in={inProp}>
+          <DemoBox />
+        </Zoom>
       </div>
-    );
-  },
+    </div>
+  );
+};
+
+export const ZoomDemo: StoryObj = {
+  render: () => <ZoomDemoComponent />,
   parameters: {
     docs: {
       description: {
@@ -135,28 +143,30 @@ export const ZoomDemo: StoryObj = {
   },
 };
 
+const CollapseDemoComponent = () => {
+  const [inProp, setInProp] = useState(true);
+  return (
+    <div className="max-w-sm space-y-4">
+      <button
+        className="bg-secondary text-secondary-foreground w-full rounded-md px-4 py-2 font-medium"
+        onClick={() => setInProp(!inProp)}
+      >
+        Toggle Collapse
+      </button>
+      <Collapse in={inProp}>
+        <div className="bg-card text-card-foreground rounded-xl border p-6 shadow-sm">
+          <p>
+            This content is inside a collapse wrapper. It animates its height
+            from 0 to auto seamlessly.
+          </p>
+        </div>
+      </Collapse>
+    </div>
+  );
+};
+
 export const CollapseDemo: StoryObj = {
-  render: () => {
-    const [inProp, setInProp] = useState(true);
-    return (
-      <div className="max-w-sm space-y-4">
-        <button
-          className="bg-secondary text-secondary-foreground w-full rounded-md px-4 py-2 font-medium"
-          onClick={() => setInProp(!inProp)}
-        >
-          Toggle Collapse
-        </button>
-        <Collapse in={inProp}>
-          <div className="bg-card text-card-foreground rounded-xl border p-6 shadow-sm">
-            <p>
-              This content is inside a collapse wrapper. It animates its height
-              from 0 to auto seamlessly.
-            </p>
-          </div>
-        </Collapse>
-      </div>
-    );
-  },
+  render: () => <CollapseDemoComponent />,
   parameters: {
     docs: {
       description: {

@@ -52,11 +52,13 @@ export const Default: Story = {
   render: () => <ControlledDatePicker />,
 };
 
+const WithPreselectedDateDemo = () => {
+  const [date, setDate] = useState<Date | undefined>(new Date("2026-05-01"));
+  return <DatePicker value={date} onChange={setDate} />;
+};
+
 export const WithPreselectedDate: Story = {
-  render: () => {
-    const [date, setDate] = useState<Date | undefined>(new Date("2026-05-01"));
-    return <DatePicker value={date} onChange={setDate} />;
-  },
+  render: () => <WithPreselectedDateDemo />,
   parameters: {
     docs: {
       description: {
@@ -66,15 +68,17 @@ export const WithPreselectedDate: Story = {
   },
 };
 
+const CustomPlaceholderDemo = () => {
+  const [date, setDate] = useState<Date | undefined>(undefined);
+  return (
+    <DatePicker
+      value={date}
+      onChange={setDate}
+      placeholder="Select your birth date"
+    />
+  );
+};
+
 export const CustomPlaceholder: Story = {
-  render: () => {
-    const [date, setDate] = useState<Date | undefined>(undefined);
-    return (
-      <DatePicker
-        value={date}
-        onChange={setDate}
-        placeholder="Select your birth date"
-      />
-    );
-  },
+  render: () => <CustomPlaceholderDemo />,
 };
