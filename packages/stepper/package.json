@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@altrugenix/core": "workspace:*",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.14",
@@ -39,6 +40,8 @@
     "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^10.2.1",
     "jsdom": "^29.1.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "typescript": "^6.0.3",
     "vite": "^8.0.10",
     "vite-plugin-dts": "^5.0.0",
