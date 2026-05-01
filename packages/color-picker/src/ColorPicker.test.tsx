@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { ColorPicker, type ColorPickerProps } from "./ColorPicker";
+import "@testing-library/jest-dom";
 
 describe("ColorPicker", () => {
   let defaultProps: ColorPickerProps;
@@ -80,5 +81,23 @@ describe("ColorPicker", () => {
 
     expect(trigger).toBeDisabled();
     expect(input).toBeDisabled();
+  });
+
+  it("renders custom presets", () => {
+    const customPresets = ["#111111", "#222222"];
+    render(<ColorPicker {...defaultProps} presets={customPresets} />);
+    fireEvent.click(screen.getByTitle("Select color"));
+    
+    const buttons = screen.getAllByRole("button");
+    const found1 = buttons.find(b => b.getAttribute("style")?.includes("rgb(17, 17, 17)"));
+    const found2 = buttons.find(b => b.getAttribute("style")?.includes("rgb(34, 34, 34)"));
+    
+    expect(found1).toBeInTheDocument();
+    expect(found2).toBeInTheDocument();
+  });
+
+  it("applies custom className", () => {
+    const { container } = render(<ColorPicker {...defaultProps} className="custom-picker" />);
+    expect(container.firstChild).toHaveClass("custom-picker");
   });
 });

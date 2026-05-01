@@ -43,6 +43,7 @@ export const AdvancedBadge = React.forwardRef<
     const isHidden = content === 0 && !showZero;
 
     if (!children) {
+      if (isHidden) return null;
       return (
         <Badge ref={ref} variant={variant} className={className} {...props}>
           {displayContent}

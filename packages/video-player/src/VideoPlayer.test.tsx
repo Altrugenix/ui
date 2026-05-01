@@ -1,6 +1,7 @@
 import { render, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { VideoPlayer } from "./VideoPlayer";
+import "@testing-library/jest-dom";
 
 describe("VideoPlayer", () => {
   const src = "test-video.mp4";

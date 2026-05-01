@@ -2,6 +2,7 @@ import * as React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Pagination } from "./index";
+import "@testing-library/jest-dom";
 
 describe("Pagination", () => {
   const defaultProps = {
@@ -79,5 +80,13 @@ describe("Pagination", () => {
     const nav = screen.getByTestId("pagination");
     expect(nav).toHaveClass("custom-pagination");
     expect(nav.id).toBe("pagination-id");
+  });
+
+  it("respects siblingCount prop", () => {
+    // currentPage 5, totalPages 10, siblingCount 0: 1 ... 5 ... 10
+    render(<Pagination {...defaultProps} currentPage={5} totalPages={10} siblingCount={0} />);
+    expect(screen.queryByText("4")).not.toBeInTheDocument();
+    expect(screen.queryByText("6")).not.toBeInTheDocument();
+    expect(screen.getByText("5")).toBeInTheDocument();
   });
 });

@@ -64,4 +64,10 @@ describe("ProgressBar component", () => {
     expect(progress).toHaveClass("custom-progress");
     expect(progress.id).toBe("progress-id");
   });
+
+  it("renders label and showValue percentage correctly", () => {
+    render(<ProgressBar label="Loading..." showValue value={75} />);
+    expect(screen.getByText("Loading...")).toBeInTheDocument();
+    expect(screen.getByText("75%")).toBeInTheDocument();
+  });
 });

@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Radio } from "./Radio";
+import "@testing-library/jest-dom";
 
 describe("Radio", () => {
   it("renders correctly with a label", () => {

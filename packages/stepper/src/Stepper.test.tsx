@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Stepper } from "./Stepper";
+import "@testing-library/jest-dom";
 
 describe("Stepper", () => {
   const mockSteps = [

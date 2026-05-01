@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Rating } from "./Rating";
+import "@testing-library/jest-dom";
 
 describe("Rating", () => {
   it("renders the correct number of stars", () => {
@@ -12,6 +13,8 @@ describe("Rating", () => {
     const { container } = render(<Rating value={3} max={5} />);
     const activeStars = container.querySelectorAll(".text-amber-400");
     expect(activeStars).toHaveLength(3);
+    // Check for default fill class
+    expect(activeStars[0]).toHaveClass("fill-amber-400");
   });
 
   it("calls onChange when a star is clicked", () => {

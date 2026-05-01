@@ -2,6 +2,7 @@ import * as React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Marquee } from "./Marquee";
+import "@testing-library/jest-dom";
 
 describe("Marquee", () => {
   it("renders children and duplicates them", () => {
@@ -26,7 +27,7 @@ describe("Marquee", () => {
 
   it("applies pause on hover class by default", () => {
     const { container } = render(<Marquee>Test</Marquee>);
-    const motionDiv = container.querySelector(".flex-shrink-0");
+    const motionDiv = container.querySelector(".shrink-0");
     expect(motionDiv).toHaveClass("group-hover:[animation-play-state:paused]");
   });
 

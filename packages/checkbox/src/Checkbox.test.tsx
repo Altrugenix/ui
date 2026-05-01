@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Checkbox } from "./Checkbox";
+import "@testing-library/jest-dom";
 
 describe("Checkbox", () => {
   it("renders correctly with a label", () => {

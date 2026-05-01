@@ -1,6 +1,7 @@
 import { render, act } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { TypingAnimation } from "./TypingAnimation";
+import "@testing-library/jest-dom";
 
 describe("TypingAnimation", () => {
   it("renders with the initial character after speed delay", () => {

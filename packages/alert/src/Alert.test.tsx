@@ -2,6 +2,7 @@ import * as React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Alert } from "./index";
+import "@testing-library/jest-dom";
 
 describe("Alert", () => {
   it("renders the title and content correctly", () => {

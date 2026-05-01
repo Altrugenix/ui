@@ -2,6 +2,7 @@ import * as React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Spinner } from "./Spinner";
+import "@testing-library/jest-dom";
 
 describe("Spinner", () => {
   it("renders correctly with default props", () => {
@@ -12,10 +13,10 @@ describe("Spinner", () => {
 
   it("renders with a label", () => {
     render(<Spinner label="Processing" />);
-    expect(screen.getByText("Processing")).toBeInTheDocument();
-    // Check sr-only label too
-    const srOnly = screen.getAllByText("Processing");
-    expect(srOnly).toHaveLength(2); 
+    const labels = screen.getAllByText("Processing");
+    expect(labels).toHaveLength(2);
+    expect(labels[0]).not.toHaveClass("sr-only");
+    expect(labels[1]).toHaveClass("sr-only");
   });
 
   it("applies different size classes", () => {

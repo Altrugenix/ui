@@ -2,6 +2,7 @@ import * as React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Paper } from "./index";
+import "@testing-library/jest-dom";
 
 describe("Paper", () => {
   it("should render correctly with default props", () => {

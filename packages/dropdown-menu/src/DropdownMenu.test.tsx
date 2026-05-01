@@ -2,6 +2,7 @@ import * as React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { DropdownMenu, DropdownMenuItem, DropdownMenuSeparator } from "./DropdownMenu";
+import "@testing-library/jest-dom";
 
 describe("DropdownMenu", () => {
   it("toggles the menu when the trigger is clicked", () => {

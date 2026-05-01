@@ -2,6 +2,7 @@ import * as React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { ContextMenu } from "./ContextMenu";
+import "@testing-library/jest-dom";
 
 describe("ContextMenu", () => {
   it("opens the menu on right click and sets position", () => {

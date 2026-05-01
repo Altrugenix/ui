@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { CircularProgress } from "./CircularProgress";
+import "@testing-library/jest-dom";
 
 describe("CircularProgress", () => {
   it("renders correctly with default props", () => {

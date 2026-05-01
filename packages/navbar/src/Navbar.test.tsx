@@ -2,6 +2,7 @@ import * as React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Navbar } from "./index";
+import "@testing-library/jest-dom";
 
 describe("Navbar", () => {
   it("renders the brand correctly", () => {

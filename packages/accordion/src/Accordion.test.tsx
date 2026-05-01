@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Accordion } from "./Accordion";
+import "@testing-library/jest-dom";
 
 const items = [
   {

@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Backdrop } from "./Backdrop";
+import "@testing-library/jest-dom";
 
 describe("Backdrop", () => {
   it("renders when open is true", () => {

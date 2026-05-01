@@ -1,6 +1,8 @@
+import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Breadcrumbs, type BreadcrumbItem } from "./Breadcrumbs";
+import "@testing-library/jest-dom";
 
 describe("Breadcrumbs", () => {
   const items: BreadcrumbItem[] = [
@@ -72,5 +74,19 @@ describe("Breadcrumbs", () => {
 
     const item = screen.getByText("Home");
     expect(item.tagName).toBe("SPAN");
+  });
+
+  it("forwards ref correctly", () => {
+    const ref = React.createRef<HTMLElement>();
+    render(<Breadcrumbs items={items} ref={ref} />);
+    expect(ref.current).toBeInstanceOf(HTMLElement);
+  });
+
+  it("applies custom className and passes through additional props", () => {
+    const { container } = render(
+      <Breadcrumbs items={items} className="custom-crumbs" id="crumbs-id" />
+    );
+    expect(container.firstChild).toHaveClass("custom-crumbs");
+    expect(container.firstChild).toHaveAttribute("id", "crumbs-id");
   });
 });

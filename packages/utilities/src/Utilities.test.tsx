@@ -5,6 +5,7 @@ import { ClickAwayListener } from "./click-away-listener/ClickAwayListener";
 import { VisuallyHidden } from "./visually-hidden/VisuallyHidden";
 import { NoSsr } from "./no-ssr/NoSsr";
 import { TextareaAutosize } from "./textarea-autosize/TextareaAutosize";
+import "@testing-library/jest-dom";
 
 describe("Utilities", () => {
   describe("Portal", () => {

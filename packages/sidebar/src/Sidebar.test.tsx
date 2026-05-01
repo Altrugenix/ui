@@ -2,6 +2,7 @@ import * as React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Sidebar, SidebarItem } from "./index";
+import "@testing-library/jest-dom";
 
 describe("Sidebar", () => {
   it("renders correctly in expanded state by default", () => {

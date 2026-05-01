@@ -2,6 +2,7 @@ import * as React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Box } from "./index";
+import "@testing-library/jest-dom";
 
 describe("Box", () => {
   it("renders children correctly", () => {
@@ -13,6 +14,11 @@ describe("Box", () => {
     render(<Box as="section">Test Content</Box>);
     const element = screen.getByText("Test Content");
     expect(element.tagName).toBe("SECTION");
+  });
+
+  it("renders as a div by default", () => {
+    render(<Box>Test Content</Box>);
+    expect(screen.getByText("Test Content").tagName).toBe("DIV");
   });
 
   it("applies padding classes correctly", () => {

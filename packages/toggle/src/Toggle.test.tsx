@@ -1,7 +1,9 @@
+import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Toggle } from "./Toggle";
 import { ToggleGroup } from "./ToggleGroup";
+import "@testing-library/jest-dom";
 
 describe("Toggle", () => {
   it("renders correctly", () => {
@@ -26,9 +28,30 @@ describe("Toggle", () => {
     render(<Toggle disabled>Toggle</Toggle>);
     expect(screen.getByRole("button")).toBeDisabled();
   });
+  it("applies variant and size classes", () => {
+    const { rerender } = render(<Toggle variant="outline">Toggle</Toggle>);
+    expect(screen.getByRole("button")).toHaveClass("border-input");
+
+    rerender(<Toggle size="sm">Toggle</Toggle>);
+    expect(screen.getByRole("button")).toHaveClass("h-9");
+  });
+
+  it("forwards ref correctly", () => {
+    const ref = React.createRef<HTMLButtonElement>();
+    render(<Toggle ref={ref}>Toggle</Toggle>);
+    expect(ref.current).toBeInstanceOf(HTMLButtonElement);
+  });
 });
 
 describe("ToggleGroup", () => {
+  it("applies custom className", () => {
+    const { container } = render(
+      <ToggleGroup className="custom-group">
+        <Toggle value="1">1</Toggle>
+      </ToggleGroup>
+    );
+    expect(container.firstChild).toHaveClass("custom-group");
+  });
   it("handles single selection correctly", () => {
     const onValueChange = vi.fn();
     render(

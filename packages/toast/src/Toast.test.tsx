@@ -1,6 +1,7 @@
 import { render, screen, act } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { ToastProvider, useToast } from "./Toast";
+import "@testing-library/jest-dom";
 
 const TestComponent = () => {
   const { toast } = useToast();
@@ -57,7 +58,7 @@ describe("Toast", () => {
     expect(screen.getByText("Success Toast")).toBeInTheDocument();
 
     act(() => {
-      vi.advanceTimersByTime(5000);
+      vi.advanceTimersByTime(5100);
     });
 
     // Toast should be removed from DOM

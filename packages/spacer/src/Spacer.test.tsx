@@ -2,6 +2,7 @@ import * as React from "react";
 import { render } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Spacer } from "./Spacer";
+import "@testing-library/jest-dom";
 
 describe("Spacer", () => {
   it("renders vertical spacer by default", () => {

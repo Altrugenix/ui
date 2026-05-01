@@ -1,6 +1,7 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { BarChart, type ChartDataPoint } from "./BarChart";
+import "@testing-library/jest-dom";
 
 describe("BarChart", () => {
   const data: ChartDataPoint[] = [
@@ -25,13 +26,15 @@ describe("BarChart", () => {
     expect(bars[1]).toHaveClass("bg-primary");
   });
 
-  it("calculates bar heights correctly based on maxValue", () => {
+  it("calculates bar heights correctly based on maxValue", async () => {
     const { container } = render(<BarChart data={data} />);
     const bars = container.querySelectorAll(".rounded-t-md");
     // Max value is 30, so "Jan" (10) should be 33.33%, "Feb" (20) should be 66.66%, "Mar" (30) 100%
-    // Since we use motion.div with animate={{ height: ... }}, we check the animate prop if possible or just existence.
-    // In RTL, we can check the style attribute if it's rendered.
-    expect(bars[0]).toHaveStyle({ height: "33.33333333333333%" });
+    
+    // We use waitFor because of framer-motion animations
+    await waitFor(() => {
+      expect(bars[0]).toHaveStyle({ height: "33.33333333333333%" });
+    });
     expect(bars[1]).toHaveStyle({ height: "66.66666666666666%" });
     expect(bars[2]).toHaveStyle({ height: "100%" });
   });

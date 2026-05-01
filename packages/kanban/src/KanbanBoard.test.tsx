@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { KanbanBoard, type KanbanTask } from "./KanbanBoard";
+import "@testing-library/jest-dom";
 
 describe("KanbanBoard", () => {
   const tasks: KanbanTask[] = [
@@ -57,5 +58,29 @@ describe("KanbanBoard", () => {
     // First left button is for Task 2.
     fireEvent.click(allLeftButtons[0]);
     expect(handleMove).toHaveBeenCalledWith("2", "todo");
+  });
+
+  it("renders column headers and task counts", () => {
+    render(<KanbanBoard tasks={tasks} />);
+    expect(screen.getByText(/Backlog/i)).toBeInTheDocument();
+    expect(screen.getByText(/In Progress/i)).toBeInTheDocument();
+    expect(screen.getByText(/Completed/i)).toBeInTheDocument();
+    
+    // Check counts in badges. 
+    // "Task 1" is in todo, "Task 2" is in-progress, "Task 3" is done.
+    // So each should have 1.
+    const counts = screen.getAllByText("1");
+    expect(counts.length).toBeGreaterThanOrEqual(3);
+  });
+
+  it("renders task priority and assignee fallback", () => {
+    render(<KanbanBoard tasks={tasks} />);
+    expect(screen.getByText("high")).toBeInTheDocument();
+    expect(screen.getByText("A")).toBeInTheDocument(); // Alice's fallback
+  });
+
+  it("applies custom className", () => {
+    const { container } = render(<KanbanBoard tasks={tasks} className="custom-kanban" />);
+    expect(container.firstChild).toHaveClass("custom-kanban");
   });
 });

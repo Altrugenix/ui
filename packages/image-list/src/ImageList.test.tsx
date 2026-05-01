@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { ImageList, ImageListItem } from "./ImageList";
+import "@testing-library/jest-dom";
 
 describe("ImageList", () => {
   it("renders children correctly", () => {
@@ -38,6 +39,16 @@ describe("ImageList", () => {
     const grid = container.firstChild as HTMLElement;
     expect(grid).toHaveClass("columns-2 md:columns-3");
     expect(grid.style.gridTemplateColumns).toBe("");
+  });
+
+  it("applies custom className and passes through additional props", () => {
+    const { container } = render(
+      <ImageList className="custom-list" id="list-id" data-testid="list">
+        Test
+      </ImageList>
+    );
+    expect(container.firstChild).toHaveClass("custom-list");
+    expect(screen.getByTestId("list")).toHaveAttribute("id", "list-id");
   });
 });
 

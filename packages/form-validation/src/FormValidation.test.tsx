@@ -2,6 +2,7 @@ import * as React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { FormValidation, type ValidationMessage } from "./FormValidation";
+import "@testing-library/jest-dom";
 
 describe("FormValidation", () => {
   it("renders nothing when messages are empty", () => {

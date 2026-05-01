@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { TransferList } from "./TransferList";
+import "@testing-library/jest-dom";
 
 describe("TransferList", () => {
   const items = ["Apple", "Banana", "Cherry", "Date"];
