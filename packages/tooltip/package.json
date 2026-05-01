@@ -27,7 +27,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@altrugenix/core": "1.0.0"
+    "@altrugenix/core": "workspace:*"
   },
   "devDependencies": {
     "@altrugenix/core": "workspace:*",
