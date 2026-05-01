@@ -17,11 +17,11 @@
 # Altrugenix
 
 
-A premium, scalable, and production-ready UI component library built with React, TypeScript, and Tailwind CSS.
+An open-source, scalable, and production-ready UI component library built with React, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- 💎 **Premium Design**: Modern aesthetics with glassmorphism, smooth animations, and curated color palettes.
+- 💎 **Modern Design**: Modern aesthetics with glassmorphism, smooth animations, and curated color palettes.
 - ⚡ **Performance**: Built on Vite with tree-shakeable exports.
 - 🎨 **Tailwind Powered**: Full customization via `tailwind.config.ts` and design tokens.
 - 🌓 **Dark Mode**: Built-in support for light and dark modes with a simple context provider.

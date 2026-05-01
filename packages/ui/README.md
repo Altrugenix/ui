@@ -14,11 +14,11 @@
 
 </div>
 
-A premium, accessible, and high-performance React component library built with Tailwind CSS and Framer Motion. Designed for building modern, state-of-the-art web applications with ease.
+An open-source, accessible, and high-performance React component library built with Tailwind CSS and Framer Motion. Designed for building modern, state-of-the-art web applications with ease.
 
 ## Features
 
-- 💎 **Premium Aesthetic**: Modern design with glassmorphism, smooth animations, and curated color palettes.
+- 💎 **Modern Aesthetic**: Modern design with glassmorphism, smooth animations, and curated color palettes.
 - ♿ **Accessible**: Built with accessibility in mind, ensuring your UI is usable by everyone.
 - ⚡ **Performant**: Optimized for speed and small bundle sizes.
 - 🎨 **Fully Customizable**: Deep integration with Tailwind CSS for easy styling and theming.

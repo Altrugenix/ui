@@ -14,7 +14,7 @@
 
 </div>
 
-A premium, accessible, and high-performance React Virtual List component.
+An open-source, accessible, and high-performance React Virtual List component.
 
 ## Installation
 
@@ -24,6 +24,6 @@ yarn add @altrugenix/virtual-list
 
 ## Features
 
-- 💎 **Premium Aesthetic**: Modern design with glassmorphism and smooth animations.
+- 💎 **Modern Aesthetic**: Modern design with glassmorphism and smooth animations.
 - ♿ **Accessible**: Built with accessibility in mind.
 - 🧩 **Polymorphic**: Supports the `as` prop for ultimate flexibility (where applicable).
