@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp README.md dist/",
     "preview": "vite preview",
     "lint": "eslint .",
     "test": "echo 'skipped'"
