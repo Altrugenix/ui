@@ -3,6 +3,27 @@ import { dirname } from "node:path";
 import type { StorybookConfig } from "@storybook/react-vite";
 import tailwindcss from "@tailwindcss/vite";
 import { mergeConfig } from "vite";
+import fs from "fs";
+import path from "path";
+
+const rootDir = dirname(fileURLToPath(import.meta.url));
+const packagesDir = path.resolve(rootDir, "../packages");
+const packages = fs
+  .readdirSync(packagesDir)
+  .filter((f) => fs.statSync(path.join(packagesDir, f)).isDirectory());
+
+const packageAliases = packages.reduce(
+  (acc, pkg) => {
+    if (pkg !== "ui") {
+      acc[`@altrugenix/${pkg}`] = path.resolve(
+        rootDir,
+        `../packages/${pkg}/src`
+      );
+    }
+    return acc;
+  },
+  {} as Record<string, string>
+);
 
 const config: StorybookConfig = {
   stories: [
@@ -20,6 +41,16 @@ const config: StorybookConfig = {
   viteFinal: async (config) => {
     return mergeConfig(config, {
       plugins: [tailwindcss()],
+      resolve: {
+        alias: {
+          ...packageAliases,
+          "~": path.resolve(rootDir, "../packages/ui/src"),
+          "@altrugenix/ui": path.resolve(
+            rootDir,
+            "../packages/ui/src/index.ts"
+          ),
+        },
+      },
       build: {
         chunkSizeWarningLimit: 2000,
         rolldownOptions: {
