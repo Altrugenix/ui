@@ -96,9 +96,9 @@ describe("DataTable", () => {
   it("filters data when typing in search input", () => {
     render(<DataTable columns={columns} data={data} searchKey="name" />);
     const input = screen.getByPlaceholderText(/search/i);
-    
+
     fireEvent.change(input, { target: { value: "Jane" } });
-    
+
     expect(screen.getByText("Jane Smith")).toBeInTheDocument();
     expect(screen.queryByText("John Doe")).not.toBeInTheDocument();
   });
@@ -106,9 +106,9 @@ describe("DataTable", () => {
   it("displays no results message when search matches nothing", () => {
     render(<DataTable columns={columns} data={data} searchKey="name" />);
     const input = screen.getByPlaceholderText(/search/i);
-    
+
     fireEvent.change(input, { target: { value: "Nonexistent" } });
-    
+
     expect(screen.getByText(/no results/i)).toBeInTheDocument();
   });
 

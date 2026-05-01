@@ -65,8 +65,7 @@ export const SingleToggle: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story:
-          "A standalone toggle button with controlled pressed state.",
+        story: "A standalone toggle button with controlled pressed state.",
       },
     },
   },

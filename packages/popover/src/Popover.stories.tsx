@@ -90,7 +90,8 @@ export const TopSide: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Popover positioned above the trigger — useful when there's no space below.",
+        story:
+          "Popover positioned above the trigger — useful when there's no space below.",
       },
     },
   },

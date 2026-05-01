@@ -72,7 +72,8 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A basic table wrapped in a border. Features a caption, header, and body rows with badges.",
+        story:
+          "A basic table wrapped in a border. Features a caption, header, and body rows with badges.",
       },
     },
   },

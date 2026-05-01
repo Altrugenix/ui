@@ -108,7 +108,9 @@ export const StatsCards: Story = {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">12,489</div>
-          <p className="text-muted-foreground text-xs">+20.1% from last month</p>
+          <p className="text-muted-foreground text-xs">
+            +20.1% from last month
+          </p>
         </CardContent>
       </Card>
       <Card>
@@ -118,7 +120,9 @@ export const StatsCards: Story = {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">$45,231</div>
-          <p className="text-muted-foreground text-xs">+15.3% from last month</p>
+          <p className="text-muted-foreground text-xs">
+            +15.3% from last month
+          </p>
         </CardContent>
       </Card>
       <Card>
@@ -169,7 +173,8 @@ export const WithBadge: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A card with a badge indicating feature status — useful for beta or preview features.",
+        story:
+          "A card with a badge indicating feature status — useful for beta or preview features.",
       },
     },
   },

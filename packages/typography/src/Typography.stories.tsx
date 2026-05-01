@@ -16,13 +16,32 @@ const meta: Meta<typeof Typography> = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["h1", "h2", "h3", "h4", "h5", "h6", "body1", "body2", "caption", "overline"],
+      options: [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "body1",
+        "body2",
+        "caption",
+        "overline",
+      ],
       description: "Semantic text style variant.",
       table: { category: "Appearance" },
     },
     weight: {
       control: "select",
-      options: ["light", "normal", "medium", "semibold", "bold", "extrabold", "black"],
+      options: [
+        "light",
+        "normal",
+        "medium",
+        "semibold",
+        "bold",
+        "extrabold",
+        "black",
+      ],
       description: "Font weight override.",
       table: { category: "Appearance" },
     },
@@ -64,7 +83,9 @@ export const Variants: Story = {
   render: () => (
     <div className="space-y-6">
       <div className="space-y-1">
-        <Typography variant="overline" className="text-muted-foreground">Headings</Typography>
+        <Typography variant="overline" className="text-muted-foreground">
+          Headings
+        </Typography>
         <Typography variant="h1">Heading 1</Typography>
         <Typography variant="h2">Heading 2</Typography>
         <Typography variant="h3">Heading 3</Typography>
@@ -73,7 +94,9 @@ export const Variants: Story = {
         <Typography variant="h6">Heading 6</Typography>
       </div>
       <div className="space-y-2">
-        <Typography variant="overline" className="text-muted-foreground">Body Text</Typography>
+        <Typography variant="overline" className="text-muted-foreground">
+          Body Text
+        </Typography>
         <Typography variant="body1">
           Body 1: The quick brown fox jumps over the lazy dog. This is the
           default text style for paragraphs and long-form content.
@@ -84,7 +107,9 @@ export const Variants: Story = {
         </Typography>
       </div>
       <div className="space-y-2">
-        <Typography variant="overline" className="text-muted-foreground">Metadata</Typography>
+        <Typography variant="overline" className="text-muted-foreground">
+          Metadata
+        </Typography>
         <div className="flex flex-col gap-1">
           <Typography variant="caption">
             Caption: Last updated 2 minutes ago
@@ -131,7 +156,8 @@ export const Customization: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Demonstrates weight overrides, text truncation (`noWrap`), and bottom margins (`gutter`).",
+        story:
+          "Demonstrates weight overrides, text truncation (`noWrap`), and bottom margins (`gutter`).",
       },
     },
   },

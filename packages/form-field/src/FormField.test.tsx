@@ -49,11 +49,7 @@ describe("FormField", () => {
 
   it("prioritizes error over helper text", () => {
     render(
-      <FormField
-        label="Email"
-        helperText="Helper text"
-        error="Error message"
-      >
+      <FormField label="Email" helperText="Helper text" error="Error message">
         <input />
       </FormField>
     );

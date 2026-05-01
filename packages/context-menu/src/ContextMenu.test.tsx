@@ -11,12 +11,12 @@ describe("ContextMenu", () => {
         <div data-testid="trigger">Right click me</div>
       </ContextMenu>
     );
-    
+
     const trigger = screen.getByTestId("trigger");
     expect(screen.queryByTestId("menu-item")).not.toBeInTheDocument();
-    
+
     fireEvent.contextMenu(trigger, { clientX: 100, clientY: 200 });
-    
+
     const menu = screen.getByRole("menu");
     expect(menu).toBeInTheDocument();
     expect(menu).toHaveStyle({ left: "100px", top: "200px" });
@@ -32,7 +32,7 @@ describe("ContextMenu", () => {
         </ContextMenu>
       </div>
     );
-    
+
     fireEvent.contextMenu(screen.getByText("Trigger"));
     expect(screen.getByRole("menu")).toBeInTheDocument();
 
@@ -52,14 +52,18 @@ describe("ContextMenu", () => {
   it("closes the menu when an item is clicked", () => {
     render(<ContextMenu menu={<button>Action</button>}>Trigger</ContextMenu>);
     fireEvent.contextMenu(screen.getByText("Trigger"));
-    
+
     fireEvent.click(screen.getByText("Action"));
     expect(screen.queryByRole("menu")).not.toBeInTheDocument();
   });
 
   it("forwards ref correctly", () => {
     const ref = React.createRef<HTMLDivElement>();
-    render(<ContextMenu menu={<div>Menu</div>} ref={ref}>Trigger</ContextMenu>);
+    render(
+      <ContextMenu menu={<div>Menu</div>} ref={ref}>
+        Trigger
+      </ContextMenu>
+    );
     expect(ref.current).toBeInstanceOf(HTMLDivElement);
   });
 });

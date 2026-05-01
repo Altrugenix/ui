@@ -21,7 +21,11 @@ describe("Grid", () => {
   });
 
   it("applies correct layout classes", () => {
-    const { container, rerender } = render(<Grid cols={4} gap="xl">Grid Content</Grid>);
+    const { container, rerender } = render(
+      <Grid cols={4} gap="xl">
+        Grid Content
+      </Grid>
+    );
     let el = container.firstChild;
     expect(el).toHaveClass("grid");
     expect(el).toHaveClass("grid-cols-1"); // sm:grid-cols-2 lg:grid-cols-4

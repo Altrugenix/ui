@@ -76,7 +76,8 @@ export const ReverseDirection: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "Scrolling from left to right instead of the default right to left.",
+        story:
+          "Scrolling from left to right instead of the default right to left.",
       },
     },
   },

@@ -69,6 +69,12 @@ export const WithPreselectedDate: Story = {
 export const CustomPlaceholder: Story = {
   render: () => {
     const [date, setDate] = useState<Date | undefined>(undefined);
-    return <DatePicker value={date} onChange={setDate} placeholder="Select your birth date" />;
+    return (
+      <DatePicker
+        value={date}
+        onChange={setDate}
+        placeholder="Select your birth date"
+      />
+    );
   },
 };

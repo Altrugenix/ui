@@ -40,7 +40,11 @@ export default meta;
 type Story = StoryObj<typeof SpeedDial>;
 
 const defaultActions = [
-  { icon: <FileText className="h-4 w-4" />, label: "Document", onClick: () => {} },
+  {
+    icon: <FileText className="h-4 w-4" />,
+    label: "Document",
+    onClick: () => {},
+  },
   { icon: <Image className="h-4 w-4" />, label: "Image", onClick: () => {} },
   { icon: <Video className="h-4 w-4" />, label: "Video", onClick: () => {} },
   { icon: <Music className="h-4 w-4" />, label: "Audio", onClick: () => {} },
@@ -49,7 +53,7 @@ const defaultActions = [
 export const Default: Story = {
   render: () => (
     <div className="relative h-80">
-      <div className="absolute bottom-4 right-4">
+      <div className="absolute right-4 bottom-4">
         <SpeedDial
           icon={<Plus className="h-5 w-5" />}
           actions={defaultActions}
@@ -62,7 +66,7 @@ export const Default: Story = {
 
 export const Directions: Story = {
   render: () => (
-    <div className="relative h-96 rounded-lg border-2 border-dashed border-border">
+    <div className="border-border relative h-96 rounded-lg border-2 border-dashed">
       <div className="absolute top-4 left-4">
         <SpeedDial actions={defaultActions} direction="down" />
       </div>
@@ -72,7 +76,7 @@ export const Directions: Story = {
       <div className="absolute bottom-4 left-4">
         <SpeedDial actions={defaultActions} direction="right" />
       </div>
-      <div className="absolute bottom-4 right-4">
+      <div className="absolute right-4 bottom-4">
         <SpeedDial actions={defaultActions} direction="up" />
       </div>
     </div>
@@ -80,7 +84,8 @@ export const Directions: Story = {
   parameters: {
     docs: {
       description: {
-        story: "All four expansion directions demonstrated in each corner of a container.",
+        story:
+          "All four expansion directions demonstrated in each corner of a container.",
       },
     },
   },

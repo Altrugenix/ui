@@ -2,16 +2,28 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Carousel } from "@altrugenix/carousel";
 
 const slides = [
-  <div key="1" className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-2xl font-bold text-white">
+  <div
+    key="1"
+    className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-2xl font-bold text-white"
+  >
     Slide 1 — Welcome
   </div>,
-  <div key="2" className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-2xl font-bold text-white">
+  <div
+    key="2"
+    className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-2xl font-bold text-white"
+  >
     Slide 2 — Features
   </div>,
-  <div key="3" className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-2xl font-bold text-white">
+  <div
+    key="3"
+    className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-2xl font-bold text-white"
+  >
     Slide 3 — Pricing
   </div>,
-  <div key="4" className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-rose-500 to-pink-600 text-2xl font-bold text-white">
+  <div
+    key="4"
+    className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-rose-500 to-pink-600 text-2xl font-bold text-white"
+  >
     Slide 4 — Get Started
   </div>,
 ];

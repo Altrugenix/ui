@@ -8,7 +8,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: "A collection of easy-to-use animation wrapper components powered by Framer Motion. Wrap any component to animate its entrance/exit.",
+        component:
+          "A collection of easy-to-use animation wrapper components powered by Framer Motion. Wrap any component to animate its entrance/exit.",
       },
     },
   },
@@ -70,7 +71,8 @@ export const GrowDemo: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "Grows an element out from its center by animating scale and opacity.",
+        story:
+          "Grows an element out from its center by animating scale and opacity.",
       },
     },
   },
@@ -80,14 +82,14 @@ export const SlideDemo: StoryObj = {
   render: () => {
     const [inProp, setInProp] = useState(true);
     return (
-      <div className="space-y-4 overflow-hidden p-4 border rounded-xl bg-muted/10">
+      <div className="bg-muted/10 space-y-4 overflow-hidden rounded-xl border p-4">
         <button
           className="bg-secondary text-secondary-foreground rounded-md px-4 py-2 font-medium"
           onClick={() => setInProp(!inProp)}
         >
           Toggle Slide (up)
         </button>
-        <div className="h-40 relative">
+        <div className="relative h-40">
           <Slide in={inProp} direction="up">
             <DemoBox />
           </Slide>
@@ -98,7 +100,8 @@ export const SlideDemo: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "Slides an element from the edge of its container. Supports `up`, `down`, `left`, `right` directions.",
+        story:
+          "Slides an element from the edge of its container. Supports `up`, `down`, `left`, `right` directions.",
       },
     },
   },
@@ -136,16 +139,19 @@ export const CollapseDemo: StoryObj = {
   render: () => {
     const [inProp, setInProp] = useState(true);
     return (
-      <div className="space-y-4 max-w-sm">
+      <div className="max-w-sm space-y-4">
         <button
-          className="bg-secondary text-secondary-foreground rounded-md px-4 py-2 font-medium w-full"
+          className="bg-secondary text-secondary-foreground w-full rounded-md px-4 py-2 font-medium"
           onClick={() => setInProp(!inProp)}
         >
           Toggle Collapse
         </button>
         <Collapse in={inProp}>
-          <div className="bg-card text-card-foreground p-6 border rounded-xl shadow-sm">
-            <p>This content is inside a collapse wrapper. It animates its height from 0 to auto seamlessly.</p>
+          <div className="bg-card text-card-foreground rounded-xl border p-6 shadow-sm">
+            <p>
+              This content is inside a collapse wrapper. It animates its height
+              from 0 to auto seamlessly.
+            </p>
           </div>
         </Collapse>
       </div>
@@ -154,7 +160,8 @@ export const CollapseDemo: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "Animates an element's height. Crucial for accordions and expandable menus.",
+        story:
+          "Animates an element's height. Crucial for accordions and expandable menus.",
       },
     },
   },

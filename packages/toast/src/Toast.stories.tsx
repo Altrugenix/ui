@@ -148,9 +148,18 @@ const MultipleToastsStory = () => {
   return (
     <Button
       onClick={() => {
-        toast({ type: "info", title: "Uploading...", description: "Preparing your files." });
+        toast({
+          type: "info",
+          title: "Uploading...",
+          description: "Preparing your files.",
+        });
         setTimeout(
-          () => toast({ type: "success", title: "Upload complete!", description: "All files uploaded successfully." }),
+          () =>
+            toast({
+              type: "success",
+              title: "Upload complete!",
+              description: "All files uploaded successfully.",
+            }),
           1500
         );
       }}

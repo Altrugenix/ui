@@ -55,8 +55,12 @@ export const WithIcons: Story = {
     brand: <span className="text-xl font-bold tracking-tight">Altrugenix</span>,
     children: (
       <>
-        <Button variant="ghost" size="sm">Product</Button>
-        <Button variant="ghost" size="sm">Company</Button>
+        <Button variant="ghost" size="sm">
+          Product
+        </Button>
+        <Button variant="ghost" size="sm">
+          Company
+        </Button>
         <div className="bg-border mx-2 h-4 w-[1px]" />
         <Button variant="ghost" size="icon">
           <Search className="h-5 w-5" />
@@ -70,7 +74,8 @@ export const WithIcons: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Nav links with icon-only buttons separated by a vertical divider.",
+        story:
+          "Nav links with icon-only buttons separated by a vertical divider.",
       },
     },
   },
@@ -79,7 +84,9 @@ export const WithIcons: Story = {
 export const NotSticky: Story = {
   args: {
     sticky: false,
-    brand: <span className="text-xl font-bold tracking-tight">Static Navbar</span>,
+    brand: (
+      <span className="text-xl font-bold tracking-tight">Static Navbar</span>
+    ),
     children: <Button variant="outline">Sign In</Button>,
   },
   parameters: {
@@ -96,18 +103,29 @@ export const WithAvatar: Story = {
     brand: <span className="text-xl font-bold tracking-tight">Dashboard</span>,
     children: (
       <>
-        <Button variant="ghost" size="sm">Overview</Button>
-        <Button variant="ghost" size="sm">Reports</Button>
-        <Button variant="ghost" size="sm">Settings</Button>
+        <Button variant="ghost" size="sm">
+          Overview
+        </Button>
+        <Button variant="ghost" size="sm">
+          Reports
+        </Button>
+        <Button variant="ghost" size="sm">
+          Settings
+        </Button>
         <div className="bg-border mx-2 h-4 w-[1px]" />
-        <Avatar src="https://github.com/shadcn.png" fallback="JD" className="h-8 w-8" />
+        <Avatar
+          src="https://github.com/shadcn.png"
+          fallback="JD"
+          className="h-8 w-8"
+        />
       </>
     ),
   },
   parameters: {
     docs: {
       description: {
-        story: "A dashboard navbar with user avatar — common for authenticated app headers.",
+        story:
+          "A dashboard navbar with user avatar — common for authenticated app headers.",
       },
     },
   },

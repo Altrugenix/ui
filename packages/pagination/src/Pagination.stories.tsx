@@ -32,7 +32,8 @@ const meta: Meta<typeof Pagination> = {
     },
     siblingCount: {
       control: { type: "number", min: 0, max: 3 },
-      description: "Number of sibling pages shown on each side of the current page.",
+      description:
+        "Number of sibling pages shown on each side of the current page.",
       table: { category: "Appearance" },
     },
   },
@@ -41,7 +42,13 @@ const meta: Meta<typeof Pagination> = {
 export default meta;
 type Story = StoryObj<typeof Pagination>;
 
-const InteractivePagination = ({ totalPages = 10, siblingCount }: { totalPages?: number; siblingCount?: number }) => {
+const InteractivePagination = ({
+  totalPages = 10,
+  siblingCount,
+}: {
+  totalPages?: number;
+  siblingCount?: number;
+}) => {
   const [page, setPage] = useState(1);
   return (
     <div className="space-y-4">
@@ -51,7 +58,7 @@ const InteractivePagination = ({ totalPages = 10, siblingCount }: { totalPages?:
         onPageChange={setPage}
         siblingCount={siblingCount}
       />
-      <p className="text-muted-foreground text-sm text-center">
+      <p className="text-muted-foreground text-center text-sm">
         Page <span className="font-mono font-semibold">{page}</span> of{" "}
         <span className="font-mono font-semibold">{totalPages}</span>
       </p>
@@ -91,7 +98,8 @@ export const WideSiblings: Story = {
   parameters: {
     docs: {
       description: {
-        story: "With `siblingCount={2}`, more page numbers are visible around the current page.",
+        story:
+          "With `siblingCount={2}`, more page numbers are visible around the current page.",
       },
     },
   },

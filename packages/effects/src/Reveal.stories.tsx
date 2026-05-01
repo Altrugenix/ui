@@ -32,7 +32,8 @@ const meta: Meta<typeof Reveal> = {
     },
     once: {
       control: "boolean",
-      description: "Whether the animation only plays once (vs. every time it enters viewport).",
+      description:
+        "Whether the animation only plays once (vs. every time it enters viewport).",
       table: { category: "Behavior" },
     },
     width: {
@@ -52,7 +53,7 @@ export const Default: Story = {
     <Reveal>
       <div className="bg-card rounded-lg border p-8 text-center">
         <h3 className="text-lg font-semibold">Hello World</h3>
-        <p className="text-muted-foreground text-sm mt-1">
+        <p className="text-muted-foreground mt-1 text-sm">
           This element revealed from below.
         </p>
       </div>
@@ -84,16 +85,19 @@ export const AllDirections: Story = {
 
 export const StaggeredList: Story = {
   render: () => (
-    <div className="space-y-4 max-w-md">
-      {["Feature 1: Lightning Fast", "Feature 2: Fully Accessible", "Feature 3: Dark Mode Ready", "Feature 4: Type-Safe"].map(
-        (feature, i) => (
-          <Reveal key={feature} delay={0.1 * i}>
-            <div className="bg-card rounded-lg border p-4">
-              <p className="text-sm font-medium">{feature}</p>
-            </div>
-          </Reveal>
-        )
-      )}
+    <div className="max-w-md space-y-4">
+      {[
+        "Feature 1: Lightning Fast",
+        "Feature 2: Fully Accessible",
+        "Feature 3: Dark Mode Ready",
+        "Feature 4: Type-Safe",
+      ].map((feature, i) => (
+        <Reveal key={feature} delay={0.1 * i}>
+          <div className="bg-card rounded-lg border p-4">
+            <p className="text-sm font-medium">{feature}</p>
+          </div>
+        </Reveal>
+      ))}
     </div>
   ),
   parameters: {

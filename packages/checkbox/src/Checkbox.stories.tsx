@@ -83,7 +83,8 @@ export const DisabledChecked: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A locked-on checkbox — useful for mandatory, non-negotiable settings.",
+        story:
+          "A locked-on checkbox — useful for mandatory, non-negotiable settings.",
       },
     },
   },

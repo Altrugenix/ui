@@ -65,8 +65,8 @@ describe("KanbanBoard", () => {
     expect(screen.getByText(/Backlog/i)).toBeInTheDocument();
     expect(screen.getByText(/In Progress/i)).toBeInTheDocument();
     expect(screen.getByText(/Completed/i)).toBeInTheDocument();
-    
-    // Check counts in badges. 
+
+    // Check counts in badges.
     // "Task 1" is in todo, "Task 2" is in-progress, "Task 3" is done.
     // So each should have 1.
     const counts = screen.getAllByText("1");
@@ -80,7 +80,9 @@ describe("KanbanBoard", () => {
   });
 
   it("applies custom className", () => {
-    const { container } = render(<KanbanBoard tasks={tasks} className="custom-kanban" />);
+    const { container } = render(
+      <KanbanBoard tasks={tasks} className="custom-kanban" />
+    );
     expect(container.firstChild).toHaveClass("custom-kanban");
   });
 });

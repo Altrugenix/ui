@@ -11,7 +11,9 @@ describe("Spacer", () => {
   });
 
   it("applies correct size and axis classes", () => {
-    const { rerender, container } = render(<Spacer size="xl" axis="horizontal" />);
+    const { rerender, container } = render(
+      <Spacer size="xl" axis="horizontal" />
+    );
     expect(container.firstChild).toHaveClass("w-12");
 
     rerender(<Spacer size="sm" axis="vertical" />);

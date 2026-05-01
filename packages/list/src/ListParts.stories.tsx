@@ -21,7 +21,8 @@ const meta: Meta<typeof List> = {
   parameters: {
     docs: {
       description: {
-        component: "Advanced compositions for the List component using subcomponents like `ListItemButton` and `ListItemDecorator`.",
+        component:
+          "Advanced compositions for the List component using subcomponents like `ListItemButton` and `ListItemDecorator`.",
       },
     },
   },
@@ -66,7 +67,8 @@ export const InteractiveList: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "An interactive menu using `ListItemButton` for hover/active states, typically used in sidebars or dropdowns.",
+        story:
+          "An interactive menu using `ListItemButton` for hover/active states, typically used in sidebars or dropdowns.",
       },
     },
   },
@@ -95,7 +97,8 @@ export const MixedContent: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "List items displaying primary text alongside `secondary` subtitle text.",
+        story:
+          "List items displaying primary text alongside `secondary` subtitle text.",
       },
     },
   },

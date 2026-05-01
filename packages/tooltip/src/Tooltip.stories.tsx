@@ -143,7 +143,8 @@ export const LongContent: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A tooltip with longer text content to verify wrapping behavior.",
+        story:
+          "A tooltip with longer text content to verify wrapping behavior.",
       },
     },
   },

@@ -56,7 +56,8 @@ export const HeroSection: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Typing animation applied to large, gradient-colored text. Perfect for hero sections.",
+        story:
+          "Typing animation applied to large, gradient-colored text. Perfect for hero sections.",
       },
     },
   },

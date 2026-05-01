@@ -44,14 +44,16 @@ export const Default: Story = {
 export const WithFallback: Story = {
   args: {
     src: "https://broken-url.example/image.png",
-    fallback: "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=400&h=300&fit=crop",
+    fallback:
+      "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=400&h=300&fit=crop",
     alt: "Fallback demo",
     className: "w-80 rounded-lg",
   },
   parameters: {
     docs: {
       description: {
-        story: "When the primary `src` fails to load, the `fallback` image is displayed instead.",
+        story:
+          "When the primary `src` fails to load, the `fallback` image is displayed instead.",
       },
     },
   },

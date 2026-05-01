@@ -17,7 +17,8 @@ const meta: Meta<typeof CircularProgress> = {
   argTypes: {
     value: {
       control: { type: "range", min: 0, max: 100 },
-      description: "Current progress value (0–100). Only applies in determinate mode.",
+      description:
+        "Current progress value (0–100). Only applies in determinate mode.",
       table: { category: "State" },
     },
     indeterminate: {
@@ -115,7 +116,9 @@ export const ProgressValues: Story = {
       {[0, 25, 50, 75, 100].map((val) => (
         <div key={val} className="flex flex-col items-center gap-2">
           <CircularProgress value={val} size="lg" />
-          <span className="text-muted-foreground text-xs font-mono">{val}%</span>
+          <span className="text-muted-foreground font-mono text-xs">
+            {val}%
+          </span>
         </div>
       ))}
     </div>
@@ -123,8 +126,7 @@ export const ProgressValues: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          "Determinate progress at various values, from 0% to 100%.",
+        story: "Determinate progress at various values, from 0% to 100%.",
       },
     },
   },

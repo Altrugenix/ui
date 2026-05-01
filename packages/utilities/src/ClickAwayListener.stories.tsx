@@ -29,13 +29,13 @@ export const Default: StoryObj = {
   render: () => {
     const [open, setOpen] = useState(false);
     return (
-      <div className="flex flex-col items-center gap-4 py-20 min-h-[300px]">
+      <div className="flex min-h-[300px] flex-col items-center gap-4 py-20">
         <ClickAwayListener onClickAway={() => setOpen(false)}>
           <div className="relative">
             <Button onClick={() => setOpen(!open)}>
               Toggle Dropdown-like UI
             </Button>
-  
+
             {open && (
               <div className="bg-background absolute top-full z-10 mt-2 w-64 rounded-lg border p-4 shadow-xl">
                 <p className="text-sm font-medium">
@@ -48,7 +48,7 @@ export const Default: StoryObj = {
             )}
           </div>
         </ClickAwayListener>
-  
+
         {!open && (
           <p className="text-muted-foreground text-sm italic">
             Dropdown is closed.
@@ -60,7 +60,8 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "A common use case: detecting clicks outside a custom dropdown menu.",
+        story:
+          "A common use case: detecting clicks outside a custom dropdown menu.",
       },
     },
   },

@@ -34,17 +34,23 @@ export default meta;
 
 const ViewerDemo = () => {
   const [open, setOpen] = useState(false);
-  const imgUrl = "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=1600&q=80";
-  const thumbUrl = "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=400&q=80";
+  const imgUrl =
+    "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=1600&q=80";
+  const thumbUrl =
+    "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=400&q=80";
 
   return (
     <div className="p-10">
       <p className="mb-4 text-sm font-medium">Click the image to expand:</p>
-      <button 
+      <button
         onClick={() => setOpen(true)}
-        className="overflow-hidden rounded-lg outline-none ring-primary transition-all hover:ring-2"
+        className="ring-primary overflow-hidden rounded-lg transition-all outline-none hover:ring-2"
       >
-        <img src={thumbUrl} alt="Thumbnail" className="h-48 w-72 object-cover" />
+        <img
+          src={thumbUrl}
+          alt="Thumbnail"
+          className="h-48 w-72 object-cover"
+        />
       </button>
 
       <ImageViewer
@@ -62,7 +68,8 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "Click the thumbnail to open the lightbox. Inside, you can double-click to zoom, drag to pan, or click the backdrop to close.",
+        story:
+          "Click the thumbnail to open the lightbox. Inside, you can double-click to zoom, drag to pan, or click the backdrop to close.",
       },
     },
   },

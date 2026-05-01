@@ -37,7 +37,8 @@ export const SideCannons = () => (
 SideCannons.parameters = {
   docs: {
     description: {
-      story: "Shoots confetti from the bottom left and bottom right corners simultaneously.",
+      story:
+        "Shoots confetti from the bottom left and bottom right corners simultaneously.",
     },
   },
 };
@@ -49,7 +50,8 @@ export const Rain = () => (
 Rain.parameters = {
   docs: {
     description: {
-      story: "A continuous rain of confetti from the top of the screen. Drops slowly and constantly over a few seconds.",
+      story:
+        "A continuous rain of confetti from the top of the screen. Drops slowly and constantly over a few seconds.",
     },
   },
 };

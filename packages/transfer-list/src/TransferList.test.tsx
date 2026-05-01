@@ -61,7 +61,10 @@ describe("TransferList", () => {
 
     fireEvent.click(screen.getByLabelText("move selected right"));
 
-    expect(onChange).toHaveBeenCalledWith(["Cherry", "Date"], ["Apple", "Banana"]);
+    expect(onChange).toHaveBeenCalledWith(
+      ["Cherry", "Date"],
+      ["Apple", "Banana"]
+    );
   });
 
   it("applies custom className", () => {

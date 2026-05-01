@@ -35,17 +35,25 @@ describe("Popover", () => {
   it("works in controlled mode", () => {
     const onOpenChange = vi.fn();
     const { rerender } = render(
-      <Popover open={false} onOpenChange={onOpenChange} trigger={<button>Open</button>}>
+      <Popover
+        open={false}
+        onOpenChange={onOpenChange}
+        trigger={<button>Open</button>}
+      >
         <div>Content</div>
       </Popover>
     );
     expect(screen.queryByText("Content")).not.toBeInTheDocument();
-    
+
     fireEvent.click(screen.getByText("Open"));
     expect(onOpenChange).toHaveBeenCalledWith(true);
-    
+
     rerender(
-      <Popover open={true} onOpenChange={onOpenChange} trigger={<button>Open</button>}>
+      <Popover
+        open={true}
+        onOpenChange={onOpenChange}
+        trigger={<button>Open</button>}
+      >
         <div>Content</div>
       </Popover>
     );

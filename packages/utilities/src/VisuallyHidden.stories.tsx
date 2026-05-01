@@ -21,7 +21,7 @@ export default meta;
 
 export const Default: StoryObj = {
   render: () => (
-    <div className="space-y-4 p-10 max-w-md">
+    <div className="max-w-md space-y-4 p-10">
       <p className="text-sm">
         The button below contains an icon and a visually hidden label for screen
         readers.
@@ -34,8 +34,8 @@ export const Default: StoryObj = {
       </Button>
 
       <div className="bg-muted/30 mt-8 rounded-lg border p-4">
-        <h4 className="mb-2 font-bold text-sm">Accessibility Check:</h4>
-        <p className="text-sm text-muted-foreground">
+        <h4 className="mb-2 text-sm font-bold">Accessibility Check:</h4>
+        <p className="text-muted-foreground text-sm">
           A screen reader will announce{" "}
           <strong>"Add Create new project"</strong> or{" "}
           <strong>"Create new project Add"</strong> depending on the reader,
@@ -47,7 +47,8 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "A standard example showing VisuallyHidden providing context to an icon button.",
+        story:
+          "A standard example showing VisuallyHidden providing context to an icon button.",
       },
     },
   },

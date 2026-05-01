@@ -20,7 +20,8 @@ const meta: Meta<typeof Avatar> = {
       table: { category: "Content" },
     },
     alt: {
-      description: "Alt text for the image. Also used for fallback initials if `fallback` is not provided.",
+      description:
+        "Alt text for the image. Also used for fallback initials if `fallback` is not provided.",
       table: { category: "Content" },
     },
     fallback: {
@@ -72,10 +73,22 @@ export const BrokenImage: Story = {
 export const Sizes: Story = {
   render: () => (
     <div className="flex items-center gap-4">
-      <Avatar src="https://github.com/shadcn.png" fallback="SM" className="h-8 w-8 text-xs" />
+      <Avatar
+        src="https://github.com/shadcn.png"
+        fallback="SM"
+        className="h-8 w-8 text-xs"
+      />
       <Avatar src="https://github.com/shadcn.png" fallback="MD" />
-      <Avatar src="https://github.com/shadcn.png" fallback="LG" className="h-14 w-14 text-lg" />
-      <Avatar src="https://github.com/shadcn.png" fallback="XL" className="h-20 w-20 text-xl" />
+      <Avatar
+        src="https://github.com/shadcn.png"
+        fallback="LG"
+        className="h-14 w-14 text-lg"
+      />
+      <Avatar
+        src="https://github.com/shadcn.png"
+        fallback="XL"
+        className="h-20 w-20 text-xl"
+      />
     </div>
   ),
   parameters: {
@@ -99,10 +112,7 @@ export const Group: Story = {
       <Avatar fallback="AB" className="border-background border-2" />
       <Avatar fallback="QR" className="border-background border-2" />
       <Avatar fallback="JK" className="border-background border-2" />
-      <Avatar
-        fallback="+3"
-        className="border-background border-2 text-xs"
-      />
+      <Avatar fallback="+3" className="border-background border-2 text-xs" />
     </div>
   ),
   parameters: {

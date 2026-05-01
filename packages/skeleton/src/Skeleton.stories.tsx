@@ -87,7 +87,8 @@ export const Rounded: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A rounded rectangle skeleton, typically used for cards or images.",
+        story:
+          "A rounded rectangle skeleton, typically used for cards or images.",
       },
     },
   },
@@ -113,7 +114,8 @@ export const CardSkeleton: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A complete card skeleton composed of multiple skeleton variants.",
+        story:
+          "A complete card skeleton composed of multiple skeleton variants.",
       },
     },
   },

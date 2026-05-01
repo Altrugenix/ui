@@ -61,11 +61,17 @@ describe("List", () => {
 
   it("applies interactive styles to ListItem", () => {
     render(<ListItem interactive>Interactive Item</ListItem>);
-    expect(screen.getByText("Interactive Item").closest("li")).toHaveClass("cursor-pointer");
+    expect(screen.getByText("Interactive Item").closest("li")).toHaveClass(
+      "cursor-pointer"
+    );
   });
 
   it("renders ListItemButton as a different element", () => {
-    render(<ListItemButton as="a" href="#">Link Item</ListItemButton>);
+    render(
+      <ListItemButton as="a" href="#">
+        Link Item
+      </ListItemButton>
+    );
     expect(screen.getByRole("link")).toHaveAttribute("href", "#");
   });
 

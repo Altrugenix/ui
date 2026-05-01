@@ -40,7 +40,10 @@ describe("Switch", () => {
 
   it("uses custom id if provided", () => {
     render(<Switch label="Toggle" id="custom-switch" />);
-    expect(screen.getByLabelText("Toggle")).toHaveAttribute("id", "custom-switch");
+    expect(screen.getByLabelText("Toggle")).toHaveAttribute(
+      "id",
+      "custom-switch"
+    );
   });
 
   it("applies custom className to input element", () => {

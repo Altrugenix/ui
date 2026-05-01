@@ -11,10 +11,10 @@ describe("DropdownMenu", () => {
         <DropdownMenuItem>Item 1</DropdownMenuItem>
       </DropdownMenu>
     );
-    
+
     const trigger = screen.getByText("Open");
     expect(screen.queryByText("Item 1")).not.toBeInTheDocument();
-    
+
     fireEvent.click(trigger);
     expect(screen.getByText("Item 1")).toBeInTheDocument();
     expect(trigger.parentElement).toHaveAttribute("aria-expanded", "true");
@@ -33,7 +33,7 @@ describe("DropdownMenu", () => {
         </DropdownMenu>
       </div>
     );
-    
+
     fireEvent.click(screen.getByText("Open"));
     expect(screen.getByText("Item 1")).toBeInTheDocument();
 
@@ -66,10 +66,10 @@ describe("DropdownMenu", () => {
       </DropdownMenu>
     );
     fireEvent.click(screen.getByText("Open"));
-    
+
     const disabledItem = screen.getByText("Disabled Item");
     const destructiveItem = screen.getByText("Delete Item");
-    
+
     expect(disabledItem).toHaveClass("pointer-events-none");
     expect(destructiveItem).toHaveClass("text-destructive");
   });
@@ -77,13 +77,13 @@ describe("DropdownMenu", () => {
   it("forwards refs correctly", () => {
     const menuRef = React.createRef<HTMLDivElement>();
     const itemRef = React.createRef<HTMLDivElement>();
-    
+
     render(
       <DropdownMenu trigger={<button>Open</button>} ref={menuRef}>
         <DropdownMenuItem ref={itemRef}>Item 1</DropdownMenuItem>
       </DropdownMenu>
     );
-    
+
     fireEvent.click(screen.getByText("Open"));
     expect(menuRef.current).toBeInstanceOf(HTMLDivElement);
     expect(itemRef.current).toBeInstanceOf(HTMLDivElement);

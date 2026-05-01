@@ -39,7 +39,11 @@ describe("Container", () => {
 
   it("applies custom className and passes through additional props", () => {
     render(
-      <Container className="custom-container" data-testid="container" id="container-id">
+      <Container
+        className="custom-container"
+        data-testid="container"
+        id="container-id"
+      >
         Test
       </Container>
     );

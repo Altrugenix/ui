@@ -7,7 +7,8 @@ const meta: Meta = {
   parameters: {
     docs: {
       description: {
-        component: "Additional picker variants for selecting time and both date/time simultaneously.",
+        component:
+          "Additional picker variants for selecting time and both date/time simultaneously.",
       },
     },
   },

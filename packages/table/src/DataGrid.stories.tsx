@@ -23,7 +23,8 @@ const meta: Meta<typeof DataGrid<UserData>> = {
   },
   argTypes: {
     columns: {
-      description: "Array of column definitions with header, accessorKey, width, and optional custom cell renderer.",
+      description:
+        "Array of column definitions with header, accessorKey, width, and optional custom cell renderer.",
       table: { category: "Data" },
     },
     data: {
@@ -72,7 +73,8 @@ export const Performance1000Rows: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "A demonstration of 1,000 rows rendering smoothly thanks to DOM virtualization.",
+        story:
+          "A demonstration of 1,000 rows rendering smoothly thanks to DOM virtualization.",
       },
     },
   },

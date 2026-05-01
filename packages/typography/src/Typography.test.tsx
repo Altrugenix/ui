@@ -49,7 +49,11 @@ describe("Typography", () => {
 
   it("forwards ref correctly", () => {
     const ref = React.createRef<HTMLHeadingElement>();
-    render(<Typography variant="h1" ref={ref}>Ref Title</Typography>);
+    render(
+      <Typography variant="h1" ref={ref}>
+        Ref Title
+      </Typography>
+    );
     expect(ref.current).toBeInstanceOf(HTMLHeadingElement);
   });
 

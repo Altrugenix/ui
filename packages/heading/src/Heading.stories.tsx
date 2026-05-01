@@ -16,7 +16,8 @@ const meta: Meta<typeof Heading> = {
   argTypes: {
     level: {
       control: { type: "number", min: 1, max: 6 },
-      description: "The heading level (1–6), determines the HTML element and size.",
+      description:
+        "The heading level (1–6), determines the HTML element and size.",
       table: { category: "Appearance" },
     },
     children: {

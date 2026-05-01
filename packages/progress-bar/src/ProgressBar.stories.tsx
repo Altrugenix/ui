@@ -116,7 +116,8 @@ export const AllVariants: Story = {
   parameters: {
     docs: {
       description: {
-        story: "All four semantic variants compared at different progress values.",
+        story:
+          "All four semantic variants compared at different progress values.",
       },
     },
   },

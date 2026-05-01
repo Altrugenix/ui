@@ -30,7 +30,14 @@ describe("Icon", () => {
   });
 
   it("applies custom className and passes through additional props", () => {
-    render(<Icon name="User" className="custom-icon" id="icon-id" data-testid="icon" />);
+    render(
+      <Icon
+        name="User"
+        className="custom-icon"
+        id="icon-id"
+        data-testid="icon"
+      />
+    );
     const icon = screen.getByTestId("icon");
     expect(icon).toHaveClass("custom-icon");
     expect(icon).toHaveAttribute("id", "icon-id");

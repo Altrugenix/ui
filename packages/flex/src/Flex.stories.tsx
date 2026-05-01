@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Flex } from "@altrugenix/flex";
 
 const Box = ({ children }: { children: React.ReactNode }) => (
-  <div className="bg-primary/10 text-primary rounded border border-primary/20 px-4 py-2 text-sm font-medium">
+  <div className="bg-primary/10 text-primary border-primary/20 rounded border px-4 py-2 text-sm font-medium">
     {children}
   </div>
 );
@@ -112,7 +112,8 @@ export const WrapDemo: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Wrapping flex — items flow to the next line when the container width is exceeded.",
+        story:
+          "Wrapping flex — items flow to the next line when the container width is exceeded.",
       },
     },
   },
@@ -120,7 +121,11 @@ export const WrapDemo: Story = {
 
 export const Centered: Story = {
   render: () => (
-    <Flex justify="center" align="center" className="h-48 rounded-lg border-2 border-dashed border-border">
+    <Flex
+      justify="center"
+      align="center"
+      className="border-border h-48 rounded-lg border-2 border-dashed"
+    >
       <Box>Centered content</Box>
     </Flex>
   ),

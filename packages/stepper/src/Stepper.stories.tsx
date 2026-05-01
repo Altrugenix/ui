@@ -73,7 +73,8 @@ export const Vertical: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Vertical layout suitable for sidebar navigation or mobile flows.",
+        story:
+          "Vertical layout suitable for sidebar navigation or mobile flows.",
       },
     },
   },
@@ -92,7 +93,8 @@ export const CheckoutFlow: Story = {
   parameters: {
     docs: {
       description: {
-        story: "An e-commerce checkout flow showing the payment step as active.",
+        story:
+          "An e-commerce checkout flow showing the payment step as active.",
       },
     },
   },

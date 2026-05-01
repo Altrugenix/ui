@@ -36,7 +36,7 @@ export const Default: Story = {
     size: "lg",
     centered: true,
     children: (
-      <div className="rounded-lg border-2 border-dashed border-border bg-muted/30 p-8 text-center text-sm">
+      <div className="border-border bg-muted/30 rounded-lg border-2 border-dashed p-8 text-center text-sm">
         Content constrained to <code className="font-mono">lg</code> width
       </div>
     ),
@@ -48,7 +48,7 @@ export const AllSizes: Story = {
     <div className="space-y-4">
       {(["sm", "md", "lg", "xl", "2xl", "full"] as const).map((size) => (
         <Container key={size} size={size} centered>
-          <div className="rounded border bg-muted/20 p-4 text-center text-sm font-mono">
+          <div className="bg-muted/20 rounded border p-4 text-center font-mono text-sm">
             size=&quot;{size}&quot;
           </div>
         </Container>

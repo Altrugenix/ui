@@ -128,7 +128,8 @@ const ControlledDemo = () => {
         onChange={setValue}
       />
       <p className="text-muted-foreground text-sm">
-        Selected: <span className="font-mono font-semibold">{value || "—"}</span>
+        Selected:{" "}
+        <span className="font-mono font-semibold">{value || "—"}</span>
       </p>
     </div>
   );

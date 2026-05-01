@@ -37,9 +37,9 @@ export const Default: Story = {
   render: () => {
     const [html, setHtml] = useState("");
     return (
-      <div className="space-y-4 max-w-2xl">
+      <div className="max-w-2xl space-y-4">
         <RichTextEditor onChange={setHtml} />
-        <div className="bg-muted/30 rounded-lg p-4 font-mono text-xs text-muted-foreground break-all">
+        <div className="bg-muted/30 text-muted-foreground rounded-lg p-4 font-mono text-xs break-all">
           {html || "HTML Output will appear here..."}
         </div>
       </div>
@@ -49,7 +49,9 @@ export const Default: Story = {
 
 export const PreFilled: Story = {
   render: () => {
-    const [html, setHtml] = useState("<p>Hello <b>World</b>!</p><ul><li>One</li><li>Two</li></ul>");
+    const [html, setHtml] = useState(
+      "<p>Hello <b>World</b>!</p><ul><li>One</li><li>Two</li></ul>"
+    );
     return (
       <div className="max-w-2xl">
         <RichTextEditor initialValue={html} onChange={setHtml} />

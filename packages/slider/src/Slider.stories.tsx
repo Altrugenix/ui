@@ -93,7 +93,8 @@ export const FineGrained: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A slider with step=1 for precise, fine-grained value selection.",
+        story:
+          "A slider with step=1 for precise, fine-grained value selection.",
       },
     },
   },
@@ -110,7 +111,7 @@ const LiveValueDemo = () => {
         value={value}
         onChange={(e) => setValue(Number(e.target.value))}
       />
-      <p className="text-muted-foreground text-sm text-center">
+      <p className="text-muted-foreground text-center text-sm">
         Current value: <span className="font-mono font-semibold">{value}%</span>
       </p>
     </div>
@@ -122,7 +123,8 @@ export const WithLiveValue: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A controlled slider that displays the current value in real-time.",
+        story:
+          "A controlled slider that displays the current value in real-time.",
       },
     },
   },

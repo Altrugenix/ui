@@ -28,7 +28,9 @@ const columns: ColumnDef<Payment>[] = [
         failed: "text-destructive bg-destructive/10",
       };
       return (
-        <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-medium capitalize ${colors[status] || ""}`}>
+        <span
+          className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-medium capitalize ${colors[status] || ""}`}
+        >
           {status}
         </span>
       );
@@ -41,12 +43,12 @@ const columns: ColumnDef<Payment>[] = [
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="-ml-4 h-8 data-[state=open]:bg-accent"
+          className="data-[state=open]:bg-accent -ml-4 h-8"
         >
           Email
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
-      )
+      );
     },
   },
   {
@@ -70,20 +72,45 @@ const columns: ColumnDef<Payment>[] = [
             <MoreHorizontal className="h-4 w-4" />
           </Button>
         </div>
-      )
+      );
     },
   },
 ];
 
 const data: Payment[] = [
-  { id: "INV001", amount: 316.0, status: "success", email: "alice@example.com" },
+  {
+    id: "INV001",
+    amount: 316.0,
+    status: "success",
+    email: "alice@example.com",
+  },
   { id: "INV002", amount: 242.0, status: "pending", email: "bob@example.com" },
-  { id: "INV003", amount: 837.0, status: "processing", email: "carol@example.com" },
+  {
+    id: "INV003",
+    amount: 837.0,
+    status: "processing",
+    email: "carol@example.com",
+  },
   { id: "INV004", amount: 874.0, status: "failed", email: "dave@example.com" },
   { id: "INV005", amount: 721.0, status: "success", email: "eve@example.com" },
-  { id: "INV006", amount: 120.5, status: "success", email: "frank@example.com" },
-  { id: "INV007", amount: 450.0, status: "pending", email: "grace@example.com" },
-  { id: "INV008", amount: 99.99, status: "processing", email: "hank@example.com" },
+  {
+    id: "INV006",
+    amount: 120.5,
+    status: "success",
+    email: "frank@example.com",
+  },
+  {
+    id: "INV007",
+    amount: 450.0,
+    status: "pending",
+    email: "grace@example.com",
+  },
+  {
+    id: "INV008",
+    amount: 99.99,
+    status: "processing",
+    email: "hank@example.com",
+  },
 ];
 
 const meta: Meta<typeof DataTable> = {
@@ -109,7 +136,8 @@ const meta: Meta<typeof DataTable> = {
     },
     searchKey: {
       control: "text",
-      description: "The object key (column) to use for global search filtering.",
+      description:
+        "The object key (column) to use for global search filtering.",
       table: { category: "Features" },
     },
     searchPlaceholder: {
@@ -132,7 +160,8 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "A basic data table with custom cell rendering for status badges and formatted currency.",
+        story:
+          "A basic data table with custom cell rendering for status badges and formatted currency.",
       },
     },
   },
@@ -150,7 +179,8 @@ export const WithSearch: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "Data table with a search input attached to a specific column (`email`), allowing quick client-side filtering.",
+        story:
+          "Data table with a search input attached to a specific column (`email`), allowing quick client-side filtering.",
       },
     },
   },
@@ -168,7 +198,8 @@ export const NoColumnVisibility: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "The 'Columns' dropdown button is disabled via `enableColumnVisibility={false}`.",
+        story:
+          "The 'Columns' dropdown button is disabled via `enableColumnVisibility={false}`.",
       },
     },
   },

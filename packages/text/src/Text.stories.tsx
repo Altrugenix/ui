@@ -45,7 +45,8 @@ export const Muted: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Muted text using the `text-muted-foreground` utility for secondary content.",
+        story:
+          "Muted text using the `text-muted-foreground` utility for secondary content.",
       },
     },
   },
@@ -74,7 +75,8 @@ export const AsSpan: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Using the `as` prop to render as an inline `<span>` instead of a block `<p>`.",
+        story:
+          "Using the `as` prop to render as an inline `<span>` instead of a block `<p>`.",
       },
     },
   },

@@ -15,7 +15,8 @@ const meta: Meta<typeof FormValidation> = {
   },
   argTypes: {
     messages: {
-      description: "Array of validation messages with `message` and `type` (error | success | info).",
+      description:
+        "Array of validation messages with `message` and `type` (error | success | info).",
       table: { category: "Data" },
     },
   },
@@ -35,7 +36,8 @@ export const AllTypes: Story = {
   parameters: {
     docs: {
       description: {
-        story: "All three message types displayed together — error, success, and info.",
+        story:
+          "All three message types displayed together — error, success, and info.",
       },
     },
   },

@@ -75,7 +75,9 @@ describe("MetricCard", () => {
       />
     );
     expect(screen.getByText("0%")).toBeInTheDocument();
-    expect(screen.getByText("0%").parentElement).toHaveClass("text-muted-foreground");
+    expect(screen.getByText("0%").parentElement).toHaveClass(
+      "text-muted-foreground"
+    );
   });
 
   it("forwards ref correctly", () => {

@@ -1,5 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { DropdownMenu, DropdownMenuItem, DropdownMenuSeparator } from "@altrugenix/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "@altrugenix/dropdown-menu";
 import { Button } from "@altrugenix/button";
 import { User, Settings, LogOut, Plus, FileText, Trash2 } from "lucide-react";
 

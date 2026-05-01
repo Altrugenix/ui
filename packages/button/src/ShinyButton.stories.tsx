@@ -17,7 +17,14 @@ const meta: Meta<typeof ShinyButton> = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["primary", "secondary", "outline", "ghost", "danger", "success"],
+      options: [
+        "primary",
+        "secondary",
+        "outline",
+        "ghost",
+        "danger",
+        "success",
+      ],
       description: "Semantic color variant for the button.",
       table: { category: "Appearance" },
     },
@@ -69,7 +76,8 @@ export const Outline: Story = {
   parameters: {
     docs: {
       description: {
-        story: "An outline variant with a subtle shine effect, suitable for secondary actions.",
+        story:
+          "An outline variant with a subtle shine effect, suitable for secondary actions.",
       },
     },
   },
@@ -92,21 +100,29 @@ export const Danger: Story = {
 
 export const MarketingHero: Story = {
   render: () => (
-    <div className="flex flex-col items-center justify-center space-y-6 text-center max-w-md">
-      <h2 className="text-3xl font-bold tracking-tight">Supercharge Your Workflow</h2>
+    <div className="flex max-w-md flex-col items-center justify-center space-y-6 text-center">
+      <h2 className="text-3xl font-bold tracking-tight">
+        Supercharge Your Workflow
+      </h2>
       <p className="text-muted-foreground">
-        Join thousands of developers building faster and smarter with our premium toolset.
+        Join thousands of developers building faster and smarter with our
+        premium toolset.
       </p>
       <div className="flex items-center gap-4">
-        <ShinyButton size="lg" variant="primary">Start Free Trial</ShinyButton>
-        <ShinyButton size="lg" variant="outline">View Demo</ShinyButton>
+        <ShinyButton size="lg" variant="primary">
+          Start Free Trial
+        </ShinyButton>
+        <ShinyButton size="lg" variant="outline">
+          View Demo
+        </ShinyButton>
       </div>
     </div>
   ),
   parameters: {
     docs: {
       description: {
-        story: "A hero section composition showing how ShinyButton attracts attention alongside standard buttons.",
+        story:
+          "A hero section composition showing how ShinyButton attracts attention alongside standard buttons.",
       },
     },
   },

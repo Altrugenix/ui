@@ -22,25 +22,41 @@ const ITEMS = [
     value: "profile",
     label: "Profile",
     icon: <User className="h-4 w-4" />,
-    content: <div className="rounded border p-4 text-sm bg-card text-card-foreground">Profile Settings Content</div>,
+    content: (
+      <div className="bg-card text-card-foreground rounded border p-4 text-sm">
+        Profile Settings Content
+      </div>
+    ),
   },
   {
     value: "account",
     label: "Account",
     icon: <Lock className="h-4 w-4" />,
-    content: <div className="rounded border p-4 text-sm bg-card text-card-foreground">Account Security Content</div>,
+    content: (
+      <div className="bg-card text-card-foreground rounded border p-4 text-sm">
+        Account Security Content
+      </div>
+    ),
   },
   {
     value: "notifications",
     label: "Notifications",
     icon: <Bell className="h-4 w-4" />,
-    content: <div className="rounded border p-4 text-sm bg-card text-card-foreground">Notification Preferences</div>,
+    content: (
+      <div className="bg-card text-card-foreground rounded border p-4 text-sm">
+        Notification Preferences
+      </div>
+    ),
   },
   {
     value: "settings",
     label: "General",
     icon: <Settings className="h-4 w-4" />,
-    content: <div className="rounded border p-4 text-sm bg-card text-card-foreground">General Settings</div>,
+    content: (
+      <div className="bg-card text-card-foreground rounded border p-4 text-sm">
+        General Settings
+      </div>
+    ),
   },
 ];
 
@@ -53,7 +69,8 @@ export const VerticalPills: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "A vertical tab list using the pills variant, commonly used for sidebar settings menus.",
+        story:
+          "A vertical tab list using the pills variant, commonly used for sidebar settings menus.",
       },
     },
   },
@@ -68,7 +85,8 @@ export const VerticalUnderline: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "A vertical tab list using the underline variant, creating a minimal border-indicator effect.",
+        story:
+          "A vertical tab list using the underline variant, creating a minimal border-indicator effect.",
       },
     },
   },
@@ -85,12 +103,20 @@ export const ScrollableList: StoryObj = {
             value: "help",
             label: "Help Center",
             icon: <HelpCircle className="h-4 w-4" />,
-            content: <div className="rounded border p-4 text-sm bg-card text-card-foreground">Help documentation here</div>,
+            content: (
+              <div className="bg-card text-card-foreground rounded border p-4 text-sm">
+                Help documentation here
+              </div>
+            ),
           },
-          { 
-            value: "extra", 
-            label: "Extra Long Tab Name For Testing", 
-            content: <div className="rounded border p-4 text-sm bg-card text-card-foreground">Extra content</div> 
+          {
+            value: "extra",
+            label: "Extra Long Tab Name For Testing",
+            content: (
+              <div className="bg-card text-card-foreground rounded border p-4 text-sm">
+                Extra content
+              </div>
+            ),
           },
         ]}
       />
@@ -99,7 +125,8 @@ export const ScrollableList: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "When the tab list exceeds its container width, `scrollable` enables horizontal scrolling (or wrapping depending on the variant).",
+        story:
+          "When the tab list exceeds its container width, `scrollable` enables horizontal scrolling (or wrapping depending on the variant).",
       },
     },
   },

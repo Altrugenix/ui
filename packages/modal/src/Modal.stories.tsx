@@ -200,7 +200,7 @@ const WarningModalDemo = () => {
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-100">
             <AlertTriangle className="h-5 w-5 text-amber-600" />
           </div>
-          <p className="text-sm text-foreground/80">
+          <p className="text-foreground/80 text-sm">
             If you leave this page, your changes will not be saved. This action
             cannot be reversed.
           </p>

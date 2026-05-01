@@ -63,7 +63,9 @@ export const InlineUsage: Story = {
   render: () => (
     <div className="flex items-center gap-2">
       <Spinner size="sm" />
-      <span className="text-muted-foreground text-sm">Processing your request...</span>
+      <span className="text-muted-foreground text-sm">
+        Processing your request...
+      </span>
     </div>
   ),
   parameters: {

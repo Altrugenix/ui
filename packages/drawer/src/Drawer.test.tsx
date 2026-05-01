@@ -85,7 +85,11 @@ describe("Drawer", () => {
 
   it("forwards ref correctly", () => {
     const ref = React.createRef<HTMLDivElement>();
-    render(<Drawer {...defaultProps} ref={ref}>Content</Drawer>);
+    render(
+      <Drawer {...defaultProps} ref={ref}>
+        Content
+      </Drawer>
+    );
     expect(ref.current).toBeInstanceOf(HTMLDivElement);
   });
 

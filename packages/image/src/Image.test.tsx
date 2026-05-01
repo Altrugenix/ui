@@ -9,7 +9,7 @@ describe("Image component", () => {
     const handleLoad = vi.fn();
     render(<Image src="/test.jpg" alt="Test" onLoad={handleLoad} />);
     const img = screen.getByRole("img");
-    
+
     // Simulate load
     fireEvent.load(img);
     expect(handleLoad).toHaveBeenCalled();
@@ -27,7 +27,7 @@ describe("Image component", () => {
       />
     );
     const img = screen.getByRole("img");
-    
+
     // Simulate error
     fireEvent.error(img);
     expect(handleError).toHaveBeenCalled();

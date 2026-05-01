@@ -55,7 +55,8 @@ const DefaultRender = (args: React.ComponentProps<typeof InputOTP>) => {
         onComplete={(val) => alert(`Completed: ${val}`)}
       />
       <p className="text-muted-foreground text-sm">
-        Current Value: <span className="font-mono font-semibold">{otp || "—"}</span>
+        Current Value:{" "}
+        <span className="font-mono font-semibold">{otp || "—"}</span>
       </p>
     </div>
   );
@@ -127,7 +128,8 @@ export const VerificationFlow: Story = {
           Verify Your Email
         </h3>
         <p className="text-muted-foreground max-w-xs text-center text-sm">
-          We sent a 6-digit code to your email. Enter it below to verify your account.
+          We sent a 6-digit code to your email. Enter it below to verify your
+          account.
         </p>
         <InputOTP
           value={otp}

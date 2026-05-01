@@ -65,7 +65,7 @@ export const WithTrendDown: Story = {
 
 export const DashboardGrid: Story = {
   render: () => (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
       <MetricCard
         title="Total Active Users"
         value="2,420"
@@ -88,7 +88,8 @@ export const DashboardGrid: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A responsive grid of metric cards — the core building block of admin dashboards.",
+        story:
+          "A responsive grid of metric cards — the core building block of admin dashboards.",
       },
     },
   },

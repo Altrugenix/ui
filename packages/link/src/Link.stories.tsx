@@ -75,18 +75,22 @@ export const InParagraph: Story = {
 export const NavigationList: Story = {
   render: () => (
     <nav className="space-y-2">
-      {["Getting Started", "Components", "Theming", "API Reference", "Changelog"].map(
-        (item) => (
-          <Link
-            key={item}
-            href="#"
-            className="flex items-center justify-between gap-2 rounded-md px-3 py-2 transition-colors hover:bg-muted"
-          >
-            {item}
-            <ArrowRight className="text-muted-foreground h-4 w-4" />
-          </Link>
-        )
-      )}
+      {[
+        "Getting Started",
+        "Components",
+        "Theming",
+        "API Reference",
+        "Changelog",
+      ].map((item) => (
+        <Link
+          key={item}
+          href="#"
+          className="hover:bg-muted flex items-center justify-between gap-2 rounded-md px-3 py-2 transition-colors"
+        >
+          {item}
+          <ArrowRight className="text-muted-foreground h-4 w-4" />
+        </Link>
+      ))}
     </nav>
   ),
   parameters: {

@@ -72,8 +72,13 @@ describe("Stepper", () => {
   });
 
   it("has correct ARIA roles and labels", () => {
-    render(<Stepper steps={mockSteps} activeStep={0} aria-label="Progress Bar" />);
-    expect(screen.getByRole("list")).toHaveAttribute("aria-label", "Progress Bar");
+    render(
+      <Stepper steps={mockSteps} activeStep={0} aria-label="Progress Bar" />
+    );
+    expect(screen.getByRole("list")).toHaveAttribute(
+      "aria-label",
+      "Progress Bar"
+    );
     expect(screen.getAllByRole("listitem")).toHaveLength(3);
   });
 });

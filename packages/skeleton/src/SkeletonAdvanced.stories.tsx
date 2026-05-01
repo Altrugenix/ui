@@ -8,7 +8,8 @@ const meta: Meta<typeof Skeleton> = {
   parameters: {
     docs: {
       description: {
-        component: "Advanced compositions and animation variations for the Skeleton component.",
+        component:
+          "Advanced compositions and animation variations for the Skeleton component.",
       },
     },
   },
@@ -47,7 +48,8 @@ export const AnimationVariants: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "Skeleton supports three animation modes: `pulse`, `wave`, and `none`.",
+        story:
+          "Skeleton supports three animation modes: `pulse`, `wave`, and `none`.",
       },
     },
   },
@@ -73,7 +75,8 @@ export const ComplexLoading: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "A complex dashboard card loading state using the `wave` animation.",
+        story:
+          "A complex dashboard card loading state using the `wave` animation.",
       },
     },
   },

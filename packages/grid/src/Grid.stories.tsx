@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Grid } from "@altrugenix/grid";
 
 const Cell = ({ children }: { children: React.ReactNode }) => (
-  <div className="bg-primary/10 text-primary flex items-center justify-center rounded border border-primary/20 p-4 text-sm font-medium">
+  <div className="bg-primary/10 text-primary border-primary/20 flex items-center justify-center rounded border p-4 text-sm font-medium">
     {children}
   </div>
 );
@@ -42,7 +42,9 @@ export const ThreeColumns: Story = {
   args: {
     cols: 3,
     gap: "md",
-    children: Array.from({ length: 6 }, (_, i) => <Cell key={i}>Cell {i + 1}</Cell>),
+    children: Array.from({ length: 6 }, (_, i) => (
+      <Cell key={i}>Cell {i + 1}</Cell>
+    )),
   },
 };
 
@@ -50,7 +52,9 @@ export const FourColumns: Story = {
   args: {
     cols: 4,
     gap: "md",
-    children: Array.from({ length: 8 }, (_, i) => <Cell key={i}>Cell {i + 1}</Cell>),
+    children: Array.from({ length: 8 }, (_, i) => (
+      <Cell key={i}>Cell {i + 1}</Cell>
+    )),
   },
 };
 
@@ -58,7 +62,9 @@ export const TwoColumns: Story = {
   args: {
     cols: 2,
     gap: "lg",
-    children: Array.from({ length: 4 }, (_, i) => <Cell key={i}>Cell {i + 1}</Cell>),
+    children: Array.from({ length: 4 }, (_, i) => (
+      <Cell key={i}>Cell {i + 1}</Cell>
+    )),
   },
 };
 
@@ -67,7 +73,7 @@ export const AllColumnCounts: Story = {
     <div className="space-y-8">
       {([2, 3, 4, 6] as const).map((cols) => (
         <div key={cols}>
-          <p className="text-sm font-medium mb-2">cols={cols}</p>
+          <p className="mb-2 text-sm font-medium">cols={cols}</p>
           <Grid cols={cols} gap="sm">
             {Array.from({ length: cols * 2 }, (_, i) => (
               <Cell key={i}>{i + 1}</Cell>
@@ -80,7 +86,8 @@ export const AllColumnCounts: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Grid at 2, 3, 4, and 6 column counts. Resize the browser to see responsive breakpoints.",
+        story:
+          "Grid at 2, 3, 4, and 6 column counts. Resize the browser to see responsive breakpoints.",
       },
     },
   },

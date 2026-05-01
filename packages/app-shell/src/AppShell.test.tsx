@@ -23,16 +23,12 @@ describe("AppShell", () => {
   });
 
   it("handles internal drawer toggle", () => {
-    render(
-      <AppShell sidebar={<aside>Sidebar</aside>}>
-        Main Content
-      </AppShell>
-    );
-    
+    render(<AppShell sidebar={<aside>Sidebar</aside>}>Main Content</AppShell>);
+
     // Find mobile toggle button
     const toggle = screen.getByRole("button");
     fireEvent.click(toggle);
-    
+
     // Drawer should be open (contains sidebar)
     // The sidebar is rendered twice: once for desktop (hidden) and once for drawer.
     // screen.getAllByText("Sidebar") should find both.
@@ -42,18 +38,18 @@ describe("AppShell", () => {
   it("works with controlled drawer state", () => {
     const onDrawerToggle = vi.fn();
     render(
-      <AppShell 
-        sidebar={<aside>Sidebar</aside>} 
-        drawerOpen={false} 
+      <AppShell
+        sidebar={<aside>Sidebar</aside>}
+        drawerOpen={false}
         onDrawerToggle={onDrawerToggle}
       >
         Content
       </AppShell>
     );
-    
+
     const toggle = screen.getByRole("button");
     fireEvent.click(toggle);
-    
+
     expect(onDrawerToggle).toHaveBeenCalledWith(true);
   });
 

@@ -15,7 +15,8 @@ const meta: Meta<typeof NoSsr> = {
   },
   argTypes: {
     fallback: {
-      description: "Optional content to render on the server while waiting for the client to mount.",
+      description:
+        "Optional content to render on the server while waiting for the client to mount.",
       table: { category: "Appearance" },
     },
   },
@@ -39,7 +40,8 @@ export const Default: StoryObj<typeof NoSsr> = {
   parameters: {
     docs: {
       description: {
-        story: "Basic usage showing how a fallback can be provided before hydration.",
+        story:
+          "Basic usage showing how a fallback can be provided before hydration.",
       },
     },
   },

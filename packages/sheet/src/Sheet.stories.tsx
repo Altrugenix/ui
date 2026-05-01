@@ -110,7 +110,7 @@ export const Elevations: Story = {
 export const ContentCard: Story = {
   render: () => (
     <Sheet variant="outlined" className="max-w-sm">
-      <h3 className="text-lg font-semibold mb-2">Sheet as a Card</h3>
+      <h3 className="mb-2 text-lg font-semibold">Sheet as a Card</h3>
       <p className="text-muted-foreground text-sm">
         Sheets can serve as general-purpose content containers. Use variant and
         elevation props to match your design intent.

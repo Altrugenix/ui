@@ -103,12 +103,22 @@ export const LoginDivider: Story = {
 export const ToolbarSeparator: Story = {
   render: () => (
     <div className="flex items-center gap-3">
-      <Button variant="ghost" size="sm">Cut</Button>
-      <Button variant="ghost" size="sm">Copy</Button>
-      <Button variant="ghost" size="sm">Paste</Button>
+      <Button variant="ghost" size="sm">
+        Cut
+      </Button>
+      <Button variant="ghost" size="sm">
+        Copy
+      </Button>
+      <Button variant="ghost" size="sm">
+        Paste
+      </Button>
       <Divider orientation="vertical" className="h-6" />
-      <Button variant="ghost" size="sm">Undo</Button>
-      <Button variant="ghost" size="sm">Redo</Button>
+      <Button variant="ghost" size="sm">
+        Undo
+      </Button>
+      <Button variant="ghost" size="sm">
+        Redo
+      </Button>
     </div>
   ),
   parameters: {

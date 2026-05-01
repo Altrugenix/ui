@@ -28,7 +28,11 @@ describe("Divider component", () => {
 
   it("applies custom className and passes through additional props", () => {
     render(
-      <Divider className="custom-divider" data-testid="divider" id="divider-id" />
+      <Divider
+        className="custom-divider"
+        data-testid="divider"
+        id="divider-id"
+      />
     );
     const divider = screen.getByTestId("divider");
     expect(divider).toHaveClass("custom-divider");

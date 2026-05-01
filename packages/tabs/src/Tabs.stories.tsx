@@ -123,7 +123,8 @@ export const Underline: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Underline-style tabs — a clean, minimal look for content-heavy pages.",
+        story:
+          "Underline-style tabs — a clean, minimal look for content-heavy pages.",
       },
     },
   },
@@ -138,7 +139,8 @@ export const Vertical: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Vertical orientation — suitable for settings pages and sidepanel navigation.",
+        story:
+          "Vertical orientation — suitable for settings pages and sidepanel navigation.",
       },
     },
   },
@@ -148,15 +150,15 @@ export const AllVariants: Story = {
   render: () => (
     <div className="space-y-8">
       <div>
-        <p className="text-sm font-medium mb-2">Default</p>
+        <p className="mb-2 text-sm font-medium">Default</p>
         <Tabs items={tabItems} defaultValue="overview" />
       </div>
       <div>
-        <p className="text-sm font-medium mb-2">Pills</p>
+        <p className="mb-2 text-sm font-medium">Pills</p>
         <Tabs items={tabItems} defaultValue="analytics" variant="pills" />
       </div>
       <div>
-        <p className="text-sm font-medium mb-2">Underline</p>
+        <p className="mb-2 text-sm font-medium">Underline</p>
         <Tabs items={tabItems} defaultValue="settings" variant="underline" />
       </div>
     </div>

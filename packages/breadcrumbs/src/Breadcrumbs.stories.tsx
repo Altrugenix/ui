@@ -87,7 +87,8 @@ export const SingleItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A breadcrumb with a single item (root page) — no separators are rendered.",
+        story:
+          "A breadcrumb with a single item (root page) — no separators are rendered.",
       },
     },
   },

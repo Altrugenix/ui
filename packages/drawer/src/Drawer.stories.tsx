@@ -103,7 +103,11 @@ const WideDrawerDemo = () => {
             <option value="editor">Editor</option>
             <option value="viewer">Viewer</option>
           </Select>
-          <Textarea label="Bio" placeholder="Tell us about yourself..." rows={4} />
+          <Textarea
+            label="Bio"
+            placeholder="Tell us about yourself..."
+            rows={4}
+          />
           <div className="flex gap-2 pt-2">
             <Button onClick={() => setOpen(false)}>Save Changes</Button>
             <Button variant="ghost" onClick={() => setOpen(false)}>

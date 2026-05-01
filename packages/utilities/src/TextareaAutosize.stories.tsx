@@ -34,7 +34,8 @@ export const Default: Story = {
   args: {
     placeholder: "Type something long to see me grow vertically...",
     minRows: 3,
-    className: "w-full max-w-sm rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+    className:
+      "w-full max-w-sm rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
   },
   parameters: {
     docs: {
@@ -50,12 +51,14 @@ export const WithValue: Story = {
     defaultValue:
       "This is a pre-filled textarea.\nIt has multiple lines.\nWatch it adjust its height automatically to fit all this content without showing a scrollbar.",
     minRows: 2,
-    className: "w-full max-w-sm rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+    className:
+      "w-full max-w-sm rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
   },
   parameters: {
     docs: {
       description: {
-        story: "Automatically calculates height for pre-filled defaultValue content.",
+        story:
+          "Automatically calculates height for pre-filled defaultValue content.",
       },
     },
   },

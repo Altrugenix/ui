@@ -58,7 +58,11 @@ const FullSidebarDemo = () => {
           </button>
         </div>
         <div className="flex-1 space-y-1 p-2">
-          <SidebarItem icon={<LayoutDashboard size={20} />} active collapsed={collapsed}>
+          <SidebarItem
+            icon={<LayoutDashboard size={20} />}
+            active
+            collapsed={collapsed}
+          >
             Dashboard
           </SidebarItem>
           <SidebarItem icon={<Users size={20} />} collapsed={collapsed}>

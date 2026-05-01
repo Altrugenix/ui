@@ -85,7 +85,7 @@ describe("VideoPlayer", () => {
     const { container } = render(<VideoPlayer src={src} />);
     const video = container.querySelector("video")!;
     const volumeSlider = container.querySelectorAll("input[type='range']")[1];
-    
+
     fireEvent.change(volumeSlider, { target: { value: "0.5" } });
     expect(video.volume).toBe(0.5);
   });
@@ -94,13 +94,15 @@ describe("VideoPlayer", () => {
     const { container } = render(<VideoPlayer src={src} />);
     const video = container.querySelector("video")!;
     const progressSlider = container.querySelectorAll("input[type='range']")[0];
-    
+
     fireEvent.change(progressSlider, { target: { value: "50" } });
     expect(video.currentTime).toBe(50);
   });
 
   it("applies custom className", () => {
-    const { container } = render(<VideoPlayer src={src} className="custom-player" />);
+    const { container } = render(
+      <VideoPlayer src={src} className="custom-player" />
+    );
     expect(container.firstChild).toHaveClass("custom-player");
   });
 });

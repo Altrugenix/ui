@@ -22,7 +22,8 @@ const meta: Meta<typeof BarChart> = {
   },
   argTypes: {
     data: {
-      description: "Array of data points containing label, value, and color (Tailwind class).",
+      description:
+        "Array of data points containing label, value, and color (Tailwind class).",
       table: { category: "Data" },
     },
     height: {
@@ -62,7 +63,8 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A standard bar chart with multiple colors indicating different data points or categories.",
+        story:
+          "A standard bar chart with multiple colors indicating different data points or categories.",
       },
     },
   },
@@ -75,7 +77,8 @@ export const Monochromatic: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A unified color palette where all bars use the theme's primary color.",
+        story:
+          "A unified color palette where all bars use the theme's primary color.",
       },
     },
   },

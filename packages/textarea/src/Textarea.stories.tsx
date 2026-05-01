@@ -99,7 +99,8 @@ export const CustomRows: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A taller textarea suitable for long-form content like articles or descriptions.",
+        story:
+          "A taller textarea suitable for long-form content like articles or descriptions.",
       },
     },
   },

@@ -25,16 +25,16 @@ describe("Navbar", () => {
         <span data-testid="mobile-link">Mobile Link</span>
       </Navbar>
     );
-    
+
     // Initially the mobile menu is not rendered (it's inside mobileOpen && ...)
     expect(screen.queryByTestId("mobile-link")).toBeInTheDocument(); // It's in the desktop div too, but hidden by CSS
-    
+
     const toggleButton = screen.getByLabelText("Toggle navigation");
     expect(toggleButton).toHaveAttribute("aria-expanded", "false");
 
     fireEvent.click(toggleButton);
     expect(toggleButton).toHaveAttribute("aria-expanded", "true");
-    
+
     // X icon should be visible (mocking icons might be hard, but we check aria)
     fireEvent.click(toggleButton);
     expect(toggleButton).toHaveAttribute("aria-expanded", "false");
@@ -57,9 +57,7 @@ describe("Navbar", () => {
   });
 
   it("passes through additional props and className", () => {
-    render(
-      <Navbar className="custom-nav" data-testid="navbar" id="nav-id" />
-    );
+    render(<Navbar className="custom-nav" data-testid="navbar" id="nav-id" />);
     const nav = screen.getByTestId("navbar");
     expect(nav).toHaveClass("custom-nav");
     expect(nav.id).toBe("nav-id");

@@ -43,7 +43,7 @@ export const Square: Story = {
   render: () => (
     <div className="max-w-64">
       <AspectRatio ratio={1}>
-        <div className="flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 text-white font-bold">
+        <div className="flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 font-bold text-white">
           1:1
         </div>
       </AspectRatio>
@@ -53,7 +53,7 @@ export const Square: Story = {
 
 export const CommonRatios: Story = {
   render: () => (
-    <div className="grid grid-cols-2 gap-6 max-w-2xl">
+    <div className="grid max-w-2xl grid-cols-2 gap-6">
       {[
         { ratio: 1, label: "1:1 Square" },
         { ratio: 4 / 3, label: "4:3 Classic" },
@@ -61,9 +61,9 @@ export const CommonRatios: Story = {
         { ratio: 21 / 9, label: "21:9 Ultrawide" },
       ].map(({ ratio, label }) => (
         <div key={label}>
-          <p className="text-sm font-medium mb-2">{label}</p>
+          <p className="mb-2 text-sm font-medium">{label}</p>
           <AspectRatio ratio={ratio}>
-            <div className="flex h-full w-full items-center justify-center rounded-lg border-2 border-dashed border-border bg-muted/30 text-muted-foreground text-sm font-mono">
+            <div className="border-border bg-muted/30 text-muted-foreground flex h-full w-full items-center justify-center rounded-lg border-2 border-dashed font-mono text-sm">
               {ratio.toFixed(2)}
             </div>
           </AspectRatio>
@@ -74,7 +74,8 @@ export const CommonRatios: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Comparison of four common aspect ratios — 1:1, 4:3, 16:9, and 21:9.",
+        story:
+          "Comparison of four common aspect ratios — 1:1, 4:3, 16:9, and 21:9.",
       },
     },
   },

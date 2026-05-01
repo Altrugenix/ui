@@ -17,7 +17,7 @@ describe("FormValidation", () => {
       { message: "Info message", type: "info" },
     ];
     render(<FormValidation messages={messages} />);
-    
+
     const errorMsg = screen.getByText("Error message");
     const successMsg = screen.getByText("Success message");
     const infoMsg = screen.getByText("Info message");
@@ -29,7 +29,12 @@ describe("FormValidation", () => {
 
   it("forwards ref correctly", () => {
     const ref = React.createRef<HTMLDivElement>();
-    render(<FormValidation messages={[{ message: "test", type: "info" }]} ref={ref} />);
+    render(
+      <FormValidation
+        messages={[{ message: "test", type: "info" }]}
+        ref={ref}
+      />
+    );
     expect(ref.current).toBeInstanceOf(HTMLDivElement);
   });
 

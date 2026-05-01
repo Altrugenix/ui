@@ -30,12 +30,14 @@ const meta: Meta<typeof VirtualList> = {
       table: { category: "Layout" },
     },
     renderRow: {
-      description: "Render function for each row: `(item, index) => ReactNode`.",
+      description:
+        "Render function for each row: `(item, index) => ReactNode`.",
       table: { category: "Rendering" },
     },
     overscan: {
       control: "number",
-      description: "Number of extra rows to render outside the viewport to prevent flickering.",
+      description:
+        "Number of extra rows to render outside the viewport to prevent flickering.",
       table: { category: "Rendering" },
     },
   },
@@ -56,13 +58,13 @@ export const Default: Story = {
     height: 400,
     rowHeight: 60,
     renderRow: (item: any) => (
-      <div className="flex h-full items-center border-b px-4 hover:bg-muted/30">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-medium text-sm">
+      <div className="hover:bg-muted/30 flex h-full items-center border-b px-4">
+        <div className="bg-primary/10 text-primary flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-medium">
           {item.id}
         </div>
         <div className="ml-4 flex-1 overflow-hidden">
-          <p className="truncate font-medium text-sm">{item.name}</p>
-          <p className="truncate text-muted-foreground text-xs">{item.email}</p>
+          <p className="truncate text-sm font-medium">{item.name}</p>
+          <p className="text-muted-foreground truncate text-xs">{item.email}</p>
         </div>
       </div>
     ),
@@ -87,17 +89,17 @@ const ContactListDemo = () => {
   }, [filter]);
 
   return (
-    <div className="w-[400px] overflow-hidden rounded-lg border bg-card shadow-sm">
+    <div className="bg-card w-[400px] overflow-hidden rounded-lg border shadow-sm">
       <div className="border-b p-3">
         <input
           type="text"
           placeholder="Search contacts..."
-          className="w-full rounded-md border bg-muted/30 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/20"
+          className="bg-muted/30 focus:ring-primary/20 w-full rounded-md border px-3 py-2 text-sm outline-none focus:ring-2"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         />
       </div>
-      <div className="bg-muted/5 p-2 text-xs font-medium text-muted-foreground">
+      <div className="bg-muted/5 text-muted-foreground p-2 text-xs font-medium">
         {filteredData.length} contacts found
       </div>
       <VirtualList
@@ -105,7 +107,7 @@ const ContactListDemo = () => {
         height={350}
         rowHeight={50}
         renderRow={(item: any) => (
-          <div className="flex h-full items-center px-4 hover:bg-muted/50 cursor-pointer">
+          <div className="hover:bg-muted/50 flex h-full cursor-pointer items-center px-4">
             <span className="text-sm font-medium">{item.name}</span>
           </div>
         )}

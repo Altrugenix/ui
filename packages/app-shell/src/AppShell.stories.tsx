@@ -23,7 +23,8 @@ const meta: Meta<typeof AppShell> = {
       table: { category: "Components" },
     },
     sidebar: {
-      description: "Sidebar component to display on the left (or in a drawer on mobile).",
+      description:
+        "Sidebar component to display on the left (or in a drawer on mobile).",
       table: { category: "Components" },
     },
     children: {
@@ -53,7 +54,9 @@ export const Default: Story = {
             <Button variant="ghost" size="icon">
               <Bell className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="sm">Help</Button>
+            <Button variant="ghost" size="sm">
+              Help
+            </Button>
           </Navbar>
         }
         sidebar={
@@ -74,14 +77,15 @@ export const Default: Story = {
         <div className="space-y-4">
           <h1 className="text-2xl font-bold">Welcome to the Dashboard</h1>
           <p className="text-muted-foreground">
-            This is the main content area inside AppShell. It automatically adapts
-            to the available space alongside the sidebar and navbar. Try resizing your browser window.
+            This is the main content area inside AppShell. It automatically
+            adapts to the available space alongside the sidebar and navbar. Try
+            resizing your browser window.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {[1, 2, 3].map((n) => (
               <div
                 key={n}
-                className="bg-card flex h-32 items-center justify-center rounded-lg border shadow-sm font-medium"
+                className="bg-card flex h-32 items-center justify-center rounded-lg border font-medium shadow-sm"
               >
                 Metric Card {n}
               </div>
@@ -94,7 +98,8 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A complete dashboard layout composing Navbar, Sidebar, and a main content area.",
+        story:
+          "A complete dashboard layout composing Navbar, Sidebar, and a main content area.",
       },
     },
   },
@@ -105,7 +110,9 @@ export const NavbarOnly: Story = {
     <div className="h-[400px] overflow-hidden rounded-lg border shadow-sm">
       <AppShell
         navbar={
-          <Navbar brand={<span className="text-lg font-bold">Marketing Site</span>}>
+          <Navbar
+            brand={<span className="text-lg font-bold">Marketing Site</span>}
+          >
             <Button variant="ghost">About</Button>
             <Button variant="ghost">Pricing</Button>
             <Button variant="primary">Sign Up</Button>
@@ -115,7 +122,8 @@ export const NavbarOnly: Story = {
         <div className="flex h-full flex-col items-center justify-center space-y-4 text-center">
           <h1 className="text-3xl font-bold tracking-tight">Build Faster</h1>
           <p className="text-muted-foreground max-w-md">
-            AppShell without a sidebar renders only the navbar and centered content. Ideal for marketing pages or simple web apps.
+            AppShell without a sidebar renders only the navbar and centered
+            content. Ideal for marketing pages or simple web apps.
           </p>
           <Button size="lg">Get Started Today</Button>
         </div>
@@ -125,7 +133,8 @@ export const NavbarOnly: Story = {
   parameters: {
     docs: {
       description: {
-        story: "AppShell with only a Navbar, resulting in a full-width content area suitable for landing pages.",
+        story:
+          "AppShell with only a Navbar, resulting in a full-width content area suitable for landing pages.",
       },
     },
   },

@@ -43,7 +43,7 @@ export const Default: Story = {
 
 export const Divided: Story = {
   render: () => (
-    <List divided className="max-w-md border rounded-lg">
+    <List divided className="max-w-md rounded-lg border">
       <ListItem>First item in the list</ListItem>
       <ListItem>Second item in the list</ListItem>
       <ListItem>Third item in the list</ListItem>
@@ -77,22 +77,26 @@ export const Ordered: Story = {
 
 export const RichItems: Story = {
   render: () => (
-    <List divided className="max-w-md border rounded-lg">
+    <List divided className="max-w-md rounded-lg border">
       <ListItem
-        leading={<Folder className="text-blue-500 h-5 w-5" />}
+        leading={<Folder className="h-5 w-5 text-blue-500" />}
         trailing={<span className="text-muted-foreground text-xs">Today</span>}
       >
         Documents
       </ListItem>
       <ListItem
-        leading={<FileText className="text-amber-500 h-5 w-5" />}
-        trailing={<span className="text-muted-foreground text-xs">Yesterday</span>}
+        leading={<FileText className="h-5 w-5 text-amber-500" />}
+        trailing={
+          <span className="text-muted-foreground text-xs">Yesterday</span>
+        }
       >
         Invoice_2026.pdf
       </ListItem>
       <ListItem
-        leading={<CheckCircle2 className="text-emerald-500 h-5 w-5" />}
-        trailing={<span className="text-muted-foreground text-xs">Completed</span>}
+        leading={<CheckCircle2 className="h-5 w-5 text-emerald-500" />}
+        trailing={
+          <span className="text-muted-foreground text-xs">Completed</span>
+        }
       >
         Task List
       </ListItem>
@@ -101,7 +105,8 @@ export const RichItems: Story = {
   parameters: {
     docs: {
       description: {
-        story: "List items using `leading` and `trailing` props for icons and metadata.",
+        story:
+          "List items using `leading` and `trailing` props for icons and metadata.",
       },
     },
   },

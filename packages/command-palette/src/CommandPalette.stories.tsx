@@ -25,7 +25,8 @@ const meta: Meta<typeof CommandPalette> = {
       table: { category: "Events" },
     },
     items: {
-      description: "Array of command items with label, group, icon, and onSelect.",
+      description:
+        "Array of command items with label, group, icon, and onSelect.",
       table: { category: "Data" },
     },
     placeholder: {
@@ -41,8 +42,18 @@ const defaultItems = [
   { id: "1", label: "Home", group: "Pages", onSelect: () => {} },
   { id: "2", label: "Dashboard", group: "Pages", onSelect: () => {} },
   { id: "3", label: "Settings", group: "Pages", onSelect: () => {} },
-  { id: "4", label: "Create New Project", group: "Actions", onSelect: () => {} },
-  { id: "5", label: "Invite Team Member", group: "Actions", onSelect: () => {} },
+  {
+    id: "4",
+    label: "Create New Project",
+    group: "Actions",
+    onSelect: () => {},
+  },
+  {
+    id: "5",
+    label: "Invite Team Member",
+    group: "Actions",
+    onSelect: () => {},
+  },
   { id: "6", label: "Toggle Dark Mode", group: "Actions", onSelect: () => {} },
   { id: "7", label: "Button", group: "Components", onSelect: () => {} },
   { id: "8", label: "Modal", group: "Components", onSelect: () => {} },
@@ -70,7 +81,8 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "Click the button to open the palette. Use arrow keys to navigate and Enter to select.",
+        story:
+          "Click the button to open the palette. Use arrow keys to navigate and Enter to select.",
       },
     },
   },
@@ -87,11 +99,31 @@ const CustomPlaceholderDemo = () => {
         isOpen={open}
         onClose={() => setOpen(false)}
         items={[
-          { id: "1", label: "Getting Started", group: "Guides", onSelect: () => {} },
-          { id: "2", label: "Installation", group: "Guides", onSelect: () => {} },
+          {
+            id: "1",
+            label: "Getting Started",
+            group: "Guides",
+            onSelect: () => {},
+          },
+          {
+            id: "2",
+            label: "Installation",
+            group: "Guides",
+            onSelect: () => {},
+          },
           { id: "3", label: "Theming", group: "Guides", onSelect: () => {} },
-          { id: "4", label: "Changelog", group: "Reference", onSelect: () => {} },
-          { id: "5", label: "API Reference", group: "Reference", onSelect: () => {} },
+          {
+            id: "4",
+            label: "Changelog",
+            group: "Reference",
+            onSelect: () => {},
+          },
+          {
+            id: "5",
+            label: "API Reference",
+            group: "Reference",
+            onSelect: () => {},
+          },
         ]}
         placeholder="Search docs, components, or guides..."
       />
@@ -104,7 +136,8 @@ export const CustomPlaceholder: StoryObj = {
   parameters: {
     docs: {
       description: {
-        story: "A documentation search palette with custom placeholder text and different item groups.",
+        story:
+          "A documentation search palette with custom placeholder text and different item groups.",
       },
     },
   },

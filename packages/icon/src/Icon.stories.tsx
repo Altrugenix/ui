@@ -16,7 +16,8 @@ const meta: Meta<typeof Icon> = {
   },
   argTypes: {
     name: {
-      description: "The name of the Lucide icon (e.g. 'Home', 'Settings', 'User').",
+      description:
+        "The name of the Lucide icon (e.g. 'Home', 'Settings', 'User').",
       table: { category: "Content" },
     },
     size: {
@@ -60,18 +61,42 @@ export const Sizes: Story = {
 export const IconGrid: Story = {
   render: () => {
     const icons = [
-      "Home", "User", "Settings", "Search", "Bell", "Mail",
-      "Heart", "Star", "Trash2", "Edit", "Plus", "X",
-      "Check", "ChevronDown", "ChevronRight", "ArrowRight",
-      "Download", "Upload", "Share2", "Copy",
-      "Eye", "EyeOff", "Lock", "Unlock",
+      "Home",
+      "User",
+      "Settings",
+      "Search",
+      "Bell",
+      "Mail",
+      "Heart",
+      "Star",
+      "Trash2",
+      "Edit",
+      "Plus",
+      "X",
+      "Check",
+      "ChevronDown",
+      "ChevronRight",
+      "ArrowRight",
+      "Download",
+      "Upload",
+      "Share2",
+      "Copy",
+      "Eye",
+      "EyeOff",
+      "Lock",
+      "Unlock",
     ] as const;
     return (
       <div className="grid grid-cols-6 gap-4">
         {icons.map((name) => (
-          <div key={name} className="flex flex-col items-center gap-2 rounded-lg border p-3 hover:bg-muted/50 transition-colors">
+          <div
+            key={name}
+            className="hover:bg-muted/50 flex flex-col items-center gap-2 rounded-lg border p-3 transition-colors"
+          >
             <Icon name={name} size={24} />
-            <span className="text-muted-foreground text-[10px] font-mono">{name}</span>
+            <span className="text-muted-foreground font-mono text-[10px]">
+              {name}
+            </span>
           </div>
         ))}
       </div>
@@ -80,7 +105,8 @@ export const IconGrid: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A grid showing commonly used icons with their names. The full Lucide library is available.",
+        story:
+          "A grid showing commonly used icons with their names. The full Lucide library is available.",
       },
     },
   },

@@ -64,19 +64,27 @@ export const RadioGroup: Story = {
       </legend>
       <div>
         <Radio label="Free" name="plan" value="free" />
-        <p className="pl-6 text-sm text-muted-foreground">Basic access with community support.</p>
+        <p className="text-muted-foreground pl-6 text-sm">
+          Basic access with community support.
+        </p>
       </div>
       <div>
         <Radio label="Pro" name="plan" value="pro" defaultChecked />
-        <p className="pl-6 text-sm text-muted-foreground">$29/month — unlimited projects and priority support.</p>
+        <p className="text-muted-foreground pl-6 text-sm">
+          $29/month — unlimited projects and priority support.
+        </p>
       </div>
       <div>
         <Radio label="Enterprise" name="plan" value="enterprise" />
-        <p className="pl-6 text-sm text-muted-foreground">Custom pricing — dedicated account manager and SLA.</p>
+        <p className="text-muted-foreground pl-6 text-sm">
+          Custom pricing — dedicated account manager and SLA.
+        </p>
       </div>
       <div>
         <Radio label="Legacy" name="plan" value="legacy" disabled />
-        <p className="pl-6 text-sm text-muted-foreground">No longer available for new accounts.</p>
+        <p className="text-muted-foreground pl-6 text-sm">
+          No longer available for new accounts.
+        </p>
       </div>
     </fieldset>
   ),

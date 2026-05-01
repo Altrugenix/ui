@@ -75,7 +75,9 @@ export const AllSpacings: Story = {
     <div className="space-y-8">
       {(["xs", "sm", "md", "lg", "xl"] as const).map((spacing) => (
         <div key={spacing}>
-          <p className="text-sm font-medium mb-2">spacing=&quot;{spacing}&quot;</p>
+          <p className="mb-2 text-sm font-medium">
+            spacing=&quot;{spacing}&quot;
+          </p>
           <Stack direction="horizontal" spacing={spacing}>
             <Item>A</Item>
             <Item>B</Item>
@@ -105,7 +107,8 @@ export const ButtonGroup: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A horizontal button group — one of the most common Stack use cases.",
+        story:
+          "A horizontal button group — one of the most common Stack use cases.",
       },
     },
   },

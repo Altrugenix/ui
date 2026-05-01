@@ -98,7 +98,8 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: "An interactive Kanban board with mock tasks. Drag and drop tasks between columns.",
+        story:
+          "An interactive Kanban board with mock tasks. Drag and drop tasks between columns.",
       },
     },
   },

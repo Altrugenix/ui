@@ -17,7 +17,8 @@ const meta: Meta<typeof Paper> = {
   argTypes: {
     elevation: {
       control: { type: "number", min: 0, max: 6 },
-      description: "Shadow depth level (0–6). Only applies to the `elevation` variant.",
+      description:
+        "Shadow depth level (0–6). Only applies to the `elevation` variant.",
       table: { category: "Appearance" },
     },
     variant: {
@@ -56,7 +57,8 @@ export const Outlined: Story = {
   parameters: {
     docs: {
       description: {
-        story: "The `outlined` variant replaces shadow elevation with a subtle border.",
+        story:
+          "The `outlined` variant replaces shadow elevation with a subtle border.",
       },
     },
   },
@@ -75,7 +77,11 @@ export const ElevationLevels: Story = {
   render: () => (
     <div className="flex flex-wrap items-center gap-6">
       {([0, 1, 2, 3, 4, 5, 6] as const).map((level) => (
-        <Paper key={level} elevation={level} className="flex h-24 w-24 items-center justify-center">
+        <Paper
+          key={level}
+          elevation={level}
+          className="flex h-24 w-24 items-center justify-center"
+        >
           <span className="text-muted-foreground text-sm font-medium">
             {level}
           </span>
@@ -96,9 +102,11 @@ export const ElevationLevels: Story = {
 export const Nested: Story = {
   render: () => (
     <Paper elevation={1} className="p-6">
-      <p className="text-sm mb-4">Outer paper (elevation 1)</p>
+      <p className="mb-4 text-sm">Outer paper (elevation 1)</p>
       <Paper elevation={3} className="p-4">
-        <p className="text-sm">Inner paper (elevation 3) — nested containers create visual hierarchy.</p>
+        <p className="text-sm">
+          Inner paper (elevation 3) — nested containers create visual hierarchy.
+        </p>
       </Paper>
     </Paper>
   ),

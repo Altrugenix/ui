@@ -25,7 +25,8 @@ const meta: Meta<typeof ColorPicker> = {
       table: { category: "Events" },
     },
     presets: {
-      description: "Array of hex color strings for quick-select preset swatches.",
+      description:
+        "Array of hex color strings for quick-select preset swatches.",
       table: { category: "Data" },
     },
     disabled: {
@@ -39,7 +40,11 @@ const meta: Meta<typeof ColorPicker> = {
 export default meta;
 type Story = StoryObj<typeof ColorPicker>;
 
-const ControlledDemo = ({ initialColor = "#3b82f6" }: { initialColor?: string }) => {
+const ControlledDemo = ({
+  initialColor = "#3b82f6",
+}: {
+  initialColor?: string;
+}) => {
   const [color, setColor] = useState(initialColor);
   return (
     <div className="space-y-4">
@@ -49,7 +54,7 @@ const ControlledDemo = ({ initialColor = "#3b82f6" }: { initialColor?: string })
           className="h-8 w-8 rounded border"
           style={{ backgroundColor: color }}
         />
-        <span className="text-sm font-mono">{color}</span>
+        <span className="font-mono text-sm">{color}</span>
       </div>
     </div>
   );
@@ -98,9 +103,7 @@ export const CustomPresets: Story = {
 };
 
 export const Disabled: Story = {
-  render: () => (
-    <ColorPicker value="#9c27b0" onChange={() => {}} disabled />
-  ),
+  render: () => <ColorPicker value="#9c27b0" onChange={() => {}} disabled />,
   parameters: {
     docs: {
       description: {
@@ -117,18 +120,24 @@ export const BrandColorSelector: Story = {
     return (
       <div className="space-y-6">
         <div>
-          <p className="text-sm font-medium mb-2">Primary Color</p>
+          <p className="mb-2 text-sm font-medium">Primary Color</p>
           <ColorPicker value={primary} onChange={setPrimary} />
         </div>
         <div>
-          <p className="text-sm font-medium mb-2">Secondary Color</p>
+          <p className="mb-2 text-sm font-medium">Secondary Color</p>
           <ColorPicker value={secondary} onChange={setSecondary} />
         </div>
         <div className="flex gap-2 pt-2">
-          <div className="rounded-lg px-4 py-2 text-sm text-white font-medium" style={{ backgroundColor: primary }}>
+          <div
+            className="rounded-lg px-4 py-2 text-sm font-medium text-white"
+            style={{ backgroundColor: primary }}
+          >
             Primary
           </div>
-          <div className="rounded-lg px-4 py-2 text-sm text-white font-medium" style={{ backgroundColor: secondary }}>
+          <div
+            className="rounded-lg px-4 py-2 text-sm font-medium text-white"
+            style={{ backgroundColor: secondary }}
+          >
             Secondary
           </div>
         </div>
@@ -138,7 +147,8 @@ export const BrandColorSelector: Story = {
   parameters: {
     docs: {
       description: {
-        story: "A brand color configuration panel with two color pickers and live preview buttons.",
+        story:
+          "A brand color configuration panel with two color pickers and live preview buttons.",
       },
     },
   },
