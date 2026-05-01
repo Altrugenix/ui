@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
+      - name: Type Check
+        run: yarn type-check
+
       - name: Lint
         run: yarn lint
 
@@ -40,9 +43,6 @@ jobs:
 
       - name: Test
         run: yarn test
-
-      - name: Build UI Library and Components
-        run: yarn build
 
       - name: Build Docs App
         run: yarn build:docs
