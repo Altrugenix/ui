@@ -1,6 +1,8 @@
+import React from "react";
 import { render } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { AspectRatio } from "./AspectRatio";
+import "@testing-library/jest-dom";
 
 describe("AspectRatio", () => {
   it("renders children correctly", () => {
@@ -33,5 +35,21 @@ describe("AspectRatio", () => {
 
     const wrapper = container.firstChild as HTMLElement;
     expect(wrapper.style.paddingBottom).toBe("100%");
+  });
+
+  it("forwards ref correctly", () => {
+    const ref = React.createRef<HTMLDivElement>();
+    render(<AspectRatio ref={ref}>Ref Content</AspectRatio>);
+    expect(ref.current).toBeInstanceOf(HTMLDivElement);
+  });
+
+  it("applies custom className and passes through additional props", () => {
+    const { container } = render(
+      <AspectRatio className="custom-aspect" data-testid="aspect" id="aspect-id">
+        Content
+      </AspectRatio>
+    );
+    expect(container.firstChild).toHaveClass("custom-aspect");
+    expect(container.firstChild).toHaveAttribute("id", "aspect-id");
   });
 });

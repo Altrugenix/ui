@@ -82,7 +82,7 @@ export const TransferList: React.FC<TransferListProps> = ({
             <ListItem
               key={value}
               onClick={handleToggle(value)}
-              leading={<Checkbox checked={checked.indexOf(value) !== -1} />}
+              leading={<Checkbox checked={checked.indexOf(value) !== -1} readOnly />}
               className="hover:bg-muted/50 cursor-pointer py-1.5 transition-colors"
             >
               <span className="text-sm">{value}</span>

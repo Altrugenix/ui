@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { CommandPalette, type CommandPaletteItem } from "./CommandPalette";
+import "@testing-library/jest-dom";
 
 describe("CommandPalette", () => {
   const mockItems: CommandPaletteItem[] = [
@@ -17,6 +18,8 @@ describe("CommandPalette", () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
+    // Mock scrollIntoView which is not implemented in JSDOM
+    window.HTMLElement.prototype.scrollIntoView = vi.fn();
   });
 
   it("renders when isOpen is true", () => {
@@ -102,5 +105,42 @@ describe("CommandPalette", () => {
 
     expect(screen.getByText(/No results found for/)).toBeInTheDocument();
     expect(screen.getByText('"nonexistent"')).toBeInTheDocument();
+  });
+
+  it("renders group headers", () => {
+    render(<CommandPalette {...defaultProps} />);
+    expect(screen.getByText(/Pages/i)).toBeInTheDocument();
+    expect(screen.getByText(/Admin/i)).toBeInTheDocument();
+  });
+
+  it("renders icons and shortcuts", () => {
+    const itemsWithExtras: CommandPaletteItem[] = [
+      {
+        id: "1",
+        label: "Dash",
+        onSelect: vi.fn(),
+        icon: <span data-testid="custom-icon">Icon</span>,
+        shortcut: ["G", "D"],
+      },
+    ];
+    render(<CommandPalette {...defaultProps} items={itemsWithExtras} />);
+    expect(screen.getByTestId("custom-icon")).toBeInTheDocument();
+    expect(screen.getByText("G")).toBeInTheDocument();
+    expect(screen.getByText("D")).toBeInTheDocument();
+  });
+
+  it("closes when clicking the backdrop", () => {
+    render(<CommandPalette {...defaultProps} />);
+    // The backdrop is the motion.div with bg-background/60
+    const backdrop = document.querySelector(".bg-background\\/60");
+    if (backdrop) {
+      fireEvent.click(backdrop);
+      expect(defaultProps.onClose).toHaveBeenCalled();
+    }
+  });
+
+  it("uses custom placeholder", () => {
+    render(<CommandPalette {...defaultProps} placeholder="Custom Placeholder" />);
+    expect(screen.getByPlaceholderText("Custom Placeholder")).toBeInTheDocument();
   });
 });

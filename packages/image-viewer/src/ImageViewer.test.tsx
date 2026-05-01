@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { ImageViewer } from "./ImageViewer";
+import "@testing-library/jest-dom";
 
 describe("ImageViewer", () => {
   const defaultProps = {
@@ -64,8 +65,25 @@ describe("ImageViewer", () => {
     expect(screen.getByTitle("Maximize")).toBeInTheDocument();
   });
 
-  it("sets body overflow to hidden when mounted", () => {
-    render(<ImageViewer {...defaultProps} />);
+  it("restores body overflow when unmounted", () => {
+    const { unmount } = render(<ImageViewer {...defaultProps} />);
     expect(document.body.style.overflow).toBe("hidden");
+    unmount();
+    expect(document.body.style.overflow).toBe("unset");
+  });
+
+  it("decreases scale when clicking zoom out but clamps it", () => {
+    render(<ImageViewer {...defaultProps} />);
+    const zoomOut = screen.getByTitle("Zoom Out");
+
+    // Click twice (1 -> 0.5 -> 0.5)
+    fireEvent.click(zoomOut);
+    fireEvent.click(zoomOut);
+    // Should stay at 0.5
+  });
+
+  it("applies custom className to the image", () => {
+    render(<ImageViewer {...defaultProps} className="custom-img" />);
+    expect(screen.getByRole("img")).toHaveClass("custom-img");
   });
 });

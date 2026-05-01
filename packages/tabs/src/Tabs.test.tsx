@@ -1,6 +1,8 @@
+import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Tabs, type TabItem } from "./Tabs";
+import "@testing-library/jest-dom";
 
 describe("Tabs", () => {
   const mockItems: TabItem[] = [
@@ -108,5 +110,46 @@ describe("Tabs", () => {
     );
     expect(container.firstChild).toHaveClass("flex");
     expect(screen.getByRole("tablist")).toHaveClass("flex-col");
+  });
+
+  it("applies scrollable classes when prop is true", () => {
+    const { rerender } = render(<Tabs items={mockItems} scrollable />);
+    const tabList = screen.getByRole("tablist");
+    expect(tabList).toHaveClass("scrollbar-hide");
+    expect(tabList).toHaveClass("overflow-x-auto");
+
+    rerender(<Tabs items={mockItems} scrollable orientation="vertical" />);
+    expect(tabList).toHaveClass("overflow-y-auto");
+  });
+
+  it("forwards ref correctly", () => {
+    const ref = React.createRef<HTMLDivElement>();
+    render(<Tabs items={mockItems} ref={ref} />);
+    expect(ref.current).toBeInstanceOf(HTMLDivElement);
+  });
+
+  it("has correct ARIA attributes", () => {
+    render(<Tabs items={mockItems} />);
+    const accountTab = screen.getByRole("tab", { name: "Account" });
+    const passwordTab = screen.getByRole("tab", { name: "Password" });
+    const tabpanel = screen.getByRole("tabpanel");
+
+    expect(accountTab).toHaveAttribute("aria-selected", "true");
+    expect(passwordTab).toHaveAttribute("aria-selected", "false");
+    expect(accountTab).toHaveAttribute("aria-controls", tabpanel.id);
+  });
+
+  it("applies custom className and passes through additional props", () => {
+    render(
+      <Tabs
+        items={mockItems}
+        className="custom-tabs"
+        data-testid="tabs-container"
+        id="tabs-id"
+      />
+    );
+    const container = screen.getByTestId("tabs-container");
+    expect(container).toHaveClass("custom-tabs");
+    expect(container.id).toBe("tabs-id");
   });
 });

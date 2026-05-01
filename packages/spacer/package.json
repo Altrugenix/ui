@@ -1,6 +1,6 @@
 {
   "name": "@altrugenix/spacer",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "type": "module",
   "main": "./dist/altrugenix-spacer.umd.cjs",
@@ -20,7 +20,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && cp README.md dist/",
     "lint": "eslint .",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest",
@@ -52,5 +52,11 @@
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0",
     "tailwindcss": "^3.0.0 || ^4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Altrugenix/ui.git",
+    "directory": "packages/spacer"
+  },
+  "homepage": "https://altrugenix.js.org/"
 }

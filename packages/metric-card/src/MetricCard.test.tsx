@@ -1,6 +1,8 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { MetricCard } from "./MetricCard";
+import "@testing-library/jest-dom";
 
 describe("MetricCard", () => {
   const defaultProps = {
@@ -63,5 +65,36 @@ describe("MetricCard", () => {
     );
     const svg = container.querySelector("svg");
     expect(svg).toBeTruthy();
+  });
+
+  it("renders the trend correctly (neutral)", () => {
+    render(
+      <MetricCard
+        {...defaultProps}
+        trend={{ value: "0%", direction: "neutral" }}
+      />
+    );
+    expect(screen.getByText("0%")).toBeInTheDocument();
+    expect(screen.getByText("0%").parentElement).toHaveClass("text-muted-foreground");
+  });
+
+  it("forwards ref correctly", () => {
+    const ref = React.createRef<HTMLDivElement>();
+    render(<MetricCard {...defaultProps} ref={ref} />);
+    expect(ref.current).toBeInstanceOf(HTMLDivElement);
+  });
+
+  it("applies custom className and passes through additional props", () => {
+    render(
+      <MetricCard
+        {...defaultProps}
+        className="custom-card"
+        id="test-card"
+        data-testid="metric-card"
+      />
+    );
+    const card = screen.getByTestId("metric-card");
+    expect(card).toHaveClass("custom-card");
+    expect(card.id).toBe("test-card");
   });
 });

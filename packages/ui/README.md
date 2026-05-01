@@ -1,10 +1,24 @@
-# @altrugenix/ui
+<div align="center">
+  <a href="https://altrugenix.js.org/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://altrugenix.js.org/logo-dark.png">
+      <img alt="Altrugenix logo" src="https://avatars.githubusercontent.com/u/272279351" height="128">
+    </picture>
+  </a>
+  <h1>@altrugenix/ui</h1>
 
-A premium, accessible, and high-performance React component library built with Tailwind CSS and Framer Motion. Designed for building modern, state-of-the-art web applications with ease.
+<a href="https://altrugenix.js.org/"><img alt="Altrugenix logo" src="https://img.shields.io/badge/MADE%20BY%20Altrugenix-000000.svg?style=for-the-badge&logo=Altrugenix&labelColor=000"></a>
+<a href="https://www.npmjs.com/package/@altrugenix/ui"><img alt="NPM version" src="https://img.shields.io/npm/v/@altrugenix/ui.svg?style=for-the-badge&labelColor=000000"></a>
+<a href="https://github.com/Altrugenix/ui/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/npm/l/@altrugenix/ui.svg?style=for-the-badge&labelColor=000000"></a>
+<a href="https://github.com/Altrugenix/ui/discussions"><img alt="Join the community on GitHub" src="https://img.shields.io/badge/Join%20the%20community-blueviolet.svg?style=for-the-badge&logo=GitHub&labelColor=000000&logoWidth=20"></a>
+
+</div>
+
+An open-source, accessible, and high-performance React component library built with Tailwind CSS and Framer Motion. Designed for building modern, state-of-the-art web applications with ease.
 
 ## Features
 
-- 💎 **Premium Aesthetic**: Modern design with glassmorphism, smooth animations, and curated color palettes.
+- 💎 **Modern Aesthetic**: Modern design with glassmorphism, smooth animations, and curated color palettes.
 - ♿ **Accessible**: Built with accessibility in mind, ensuring your UI is usable by everyone.
 - ⚡ **Performant**: Optimized for speed and small bundle sizes.
 - 🎨 **Fully Customizable**: Deep integration with Tailwind CSS for easy styling and theming.

@@ -1,10 +1,27 @@
+<div align="center">
+  <a href="https://altrugenix.js.org/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://altrugenix.js.org/logo-dark.png">
+      <img alt="Altrugenix logo" src="https://altrugenix.js.org/logo-light.png" height="128">
+    </picture>
+  </a>
+  <h1>Altrugenix UI</h1>
+
+<a href="https://altrugenix.js.org/"><img alt="Altrugenix logo" src="https://img.shields.io/badge/MADE%20BY%20Altrugenix-000000.svg?style=for-the-badge&logo=Altrugenix&labelColor=000"></a>
+<a href="https://www.npmjs.com/package/@altrugenix/ui"><img alt="NPM version" src="https://img.shields.io/npm/v/@altrugenix/ui.svg?style=for-the-badge&labelColor=000000"></a>
+<a href="https://github.com/Altrugenix/ui/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/npm/l/@altrugenix/ui.svg?style=for-the-badge&labelColor=000000"></a>
+<a href="https://github.com/Altrugenix/ui/discussions"><img alt="Join the community on GitHub" src="https://img.shields.io/badge/Join%20the%20community-blueviolet.svg?style=for-the-badge&logo=GitHub&labelColor=000000&logoWidth=20"></a>
+
+</div>
+
 # Altrugenix
 
-A premium, scalable, and production-ready UI component library built with React, TypeScript, and Tailwind CSS.
+
+An open-source, scalable, and production-ready UI component library built with React, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- 💎 **Premium Design**: Modern aesthetics with glassmorphism, smooth animations, and curated color palettes.
+- 💎 **Modern Design**: Modern aesthetics with glassmorphism, smooth animations, and curated color palettes.
 - ⚡ **Performance**: Built on Vite with tree-shakeable exports.
 - 🎨 **Tailwind Powered**: Full customization via `tailwind.config.ts` and design tokens.
 - 🌓 **Dark Mode**: Built-in support for light and dark modes with a simple context provider.

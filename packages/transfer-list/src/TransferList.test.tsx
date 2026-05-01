@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { TransferList } from "./TransferList";
+import "@testing-library/jest-dom";
 
 describe("TransferList", () => {
   const items = ["Apple", "Banana", "Cherry", "Date"];
@@ -49,5 +50,24 @@ describe("TransferList", () => {
     render(<TransferList items={items} />);
     expect(screen.getByLabelText("move selected right")).toBeDisabled();
     expect(screen.getByLabelText("move selected left")).toBeDisabled();
+  });
+
+  it("moves multiple items at once", () => {
+    const onChange = vi.fn();
+    render(<TransferList items={items} onChange={onChange} />);
+
+    fireEvent.click(screen.getByText("Apple"));
+    fireEvent.click(screen.getByText("Banana"));
+
+    fireEvent.click(screen.getByLabelText("move selected right"));
+
+    expect(onChange).toHaveBeenCalledWith(["Cherry", "Date"], ["Apple", "Banana"]);
+  });
+
+  it("applies custom className", () => {
+    const { container } = render(
+      <TransferList items={items} className="custom-transfer" />
+    );
+    expect(container.firstChild).toHaveClass("custom-transfer");
   });
 });

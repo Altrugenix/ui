@@ -1,6 +1,7 @@
-import { render, screen } from "@testing-library/react";
-import { describe, it, expect } from "vitest";
+import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, it, expect, vi } from "vitest";
 import { Backdrop } from "./Backdrop";
+import "@testing-library/jest-dom";
 
 describe("Backdrop", () => {
   it("renders when open is true", () => {
@@ -28,5 +29,17 @@ describe("Backdrop", () => {
       </Backdrop>
     );
     expect(screen.getByTestId("child")).toBeTruthy();
+  });
+
+  it("calls onClick when clicked", () => {
+    const onClick = vi.fn();
+    render(<Backdrop open={true} onClick={onClick} data-testid="backdrop" />);
+    fireEvent.click(screen.getByTestId("backdrop"));
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
+
+  it("applies custom className", () => {
+    render(<Backdrop open={true} className="custom-backdrop" data-testid="backdrop" />);
+    expect(screen.getByTestId("backdrop")).toHaveClass("custom-backdrop");
   });
 });

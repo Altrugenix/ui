@@ -1,6 +1,8 @@
+import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Radio } from "./Radio";
+import "@testing-library/jest-dom";
 
 describe("Radio", () => {
   it("renders correctly with a label", () => {
@@ -20,5 +22,33 @@ describe("Radio", () => {
   it("disables correctly", () => {
     render(<Radio label="Option 1" disabled />);
     expect(screen.getByLabelText(/option 1/i)).toBeDisabled();
+  });
+
+  it("forwards ref correctly", () => {
+    const ref = React.createRef<HTMLInputElement>();
+    render(<Radio label="Option 1" ref={ref} />);
+    expect(ref.current).toBeInstanceOf(HTMLInputElement);
+  });
+
+  it("links label and input with a custom id", () => {
+    render(<Radio label="Custom ID" id="custom-id" />);
+    const radio = screen.getByRole("radio");
+    const label = screen.getByText("Custom ID");
+    expect(radio.id).toBe("custom-id");
+    expect(label).toHaveAttribute("for", "custom-id");
+  });
+
+  it("applies custom className and passes through additional props", () => {
+    render(
+      <Radio
+        label="Test"
+        className="custom-radio"
+        data-testid="radio-input"
+        name="test-group"
+      />
+    );
+    const radio = screen.getByTestId("radio-input");
+    expect(radio).toHaveClass("custom-radio");
+    expect(radio).toHaveAttribute("name", "test-group");
   });
 });

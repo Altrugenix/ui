@@ -96,6 +96,7 @@ ListItem.displayName = "ListItem";
 /* ─── ListItemButton ─── */
 export interface ListItemButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   as?: React.ElementType;
+  [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
 /**

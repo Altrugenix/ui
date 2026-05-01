@@ -1,6 +1,6 @@
 {
   "name": "@altrugenix/breadcrumbs",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "type": "module",
   "main": "./dist/altrugenix-breadcrumbs.umd.cjs",
@@ -20,7 +20,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && cp README.md dist/",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -47,5 +47,11 @@
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Altrugenix/ui.git",
+    "directory": "packages/breadcrumbs"
+  },
+  "homepage": "https://altrugenix.js.org/"
 }

@@ -1,6 +1,7 @@
 import { render, act } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { TypingAnimation } from "./TypingAnimation";
+import "@testing-library/jest-dom";
 
 describe("TypingAnimation", () => {
   it("renders with the initial character after speed delay", () => {
@@ -66,5 +67,35 @@ describe("TypingAnimation", () => {
     );
     // Since there's only one span (the text), the last child is the text span
     expect(container.querySelectorAll("span")).toHaveLength(1);
+  });
+
+  it("repeats the animation if repeat=true", () => {
+    vi.useFakeTimers();
+    const { container } = render(<TypingAnimation text="A" speed={100} repeat />);
+
+    act(() => {
+      vi.advanceTimersByTime(100);
+    });
+    expect(container.querySelector("span")?.textContent).toBe("A");
+
+    // Wait for repeat timeout (2000ms)
+    act(() => {
+      vi.advanceTimersByTime(2000);
+    });
+    expect(container.querySelector("span")?.textContent).toBe("");
+
+    act(() => {
+      vi.advanceTimersByTime(100);
+    });
+    expect(container.querySelector("span")?.textContent).toBe("A");
+
+    vi.useRealTimers();
+  });
+
+  it("applies custom className", () => {
+    const { container } = render(
+      <TypingAnimation text="Test" className="custom-typing" />
+    );
+    expect(container.firstChild).toHaveClass("custom-typing");
   });
 });

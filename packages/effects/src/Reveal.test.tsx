@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Reveal } from "./Reveal";
+import "@testing-library/jest-dom";
 
 // Mock framer-motion's useInView to always return true for tests
 vi.mock("framer-motion", async () => {
@@ -47,5 +48,14 @@ describe("Reveal", () => {
       </Reveal>
     );
     expect(container.firstChild).toHaveStyle({ width: "fit-content" });
+  });
+
+  it("renders with direction 'none'", () => {
+    const { container } = render(
+      <Reveal direction="none">
+        <div>Content</div>
+      </Reveal>
+    );
+    expect(container.firstChild).toBeInTheDocument();
   });
 });
