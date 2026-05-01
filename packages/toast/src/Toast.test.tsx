@@ -9,11 +9,26 @@ vi.mock("framer-motion", async () => {
   const actual = await vi.importActual("framer-motion");
   return {
     ...actual,
-    AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+    AnimatePresence: ({ children }: { children: React.ReactNode }) => (
+      <>{children}</>
+    ),
     motion: {
-      div: React.forwardRef(({ children, ...props }: { children?: React.ReactNode }, ref: React.ForwardedRef<HTMLDivElement>) => (
-        <div {...(props as React.HTMLAttributes<HTMLDivElement>)} ref={ref}>{children}</div>
-      )),
+      div: React.forwardRef(
+        (
+          {
+            children,
+            ...props
+          }: {
+            children?: React.ReactNode;
+            [key: string]: unknown;
+          },
+          ref: React.ForwardedRef<HTMLDivElement>
+        ) => (
+          <div {...(props as React.HTMLAttributes<HTMLDivElement>)} ref={ref}>
+            {children}
+          </div>
+        )
+      ),
     },
   };
 });
@@ -129,7 +144,11 @@ describe("Toast", () => {
     const InfiniteTester = () => {
       const { toast } = useToast();
       return (
-        <button onClick={() => toast({ type: "info", title: "Inf", duration: Infinity })}>
+        <button
+          onClick={() =>
+            toast({ type: "info", title: "Inf", duration: Infinity })
+          }
+        >
           Show Inf
         </button>
       );
