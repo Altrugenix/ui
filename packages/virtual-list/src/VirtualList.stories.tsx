@@ -55,7 +55,7 @@ export const Default: Story = {
     items: MOCK_DATA,
     height: 400,
     rowHeight: 60,
-    renderRow: (item, index) => (
+    renderRow: (item: any) => (
       <div className="flex h-full items-center border-b px-4 hover:bg-muted/30">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-medium text-sm">
           {item.id}
@@ -104,7 +104,7 @@ const ContactListDemo = () => {
         items={filteredData}
         height={350}
         rowHeight={50}
-        renderRow={(item) => (
+        renderRow={(item: any) => (
           <div className="flex h-full items-center px-4 hover:bg-muted/50 cursor-pointer">
             <span className="text-sm font-medium">{item.name}</span>
           </div>

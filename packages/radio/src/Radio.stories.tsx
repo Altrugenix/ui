@@ -19,10 +19,7 @@ const meta: Meta<typeof Radio> = {
       description: "Primary label text for the radio option.",
       table: { category: "Content" },
     },
-    description: {
-      description: "Secondary description text rendered below the label.",
-      table: { category: "Content" },
-    },
+
     disabled: {
       control: "boolean",
       description: "Prevents interaction with the radio button.",
@@ -44,8 +41,7 @@ export const Default: Story = {
 
 export const WithDescription: Story = {
   args: {
-    label: "Pro Plan",
-    description: "$29/month — unlimited projects and priority support.",
+    label: "Pro Plan ($29/month — unlimited projects and priority support)",
     name: "plan",
     value: "pro",
   },
@@ -66,32 +62,22 @@ export const RadioGroup: Story = {
       <legend className="text-foreground mb-2 text-sm font-semibold">
         Choose a plan
       </legend>
-      <Radio
-        label="Free"
-        description="Basic access with community support."
-        name="plan"
-        value="free"
-      />
-      <Radio
-        label="Pro"
-        description="$29/month — unlimited projects and priority support."
-        name="plan"
-        value="pro"
-        defaultChecked
-      />
-      <Radio
-        label="Enterprise"
-        description="Custom pricing — dedicated account manager and SLA."
-        name="plan"
-        value="enterprise"
-      />
-      <Radio
-        label="Legacy"
-        description="No longer available for new accounts."
-        name="plan"
-        value="legacy"
-        disabled
-      />
+      <div>
+        <Radio label="Free" name="plan" value="free" />
+        <p className="pl-6 text-sm text-muted-foreground">Basic access with community support.</p>
+      </div>
+      <div>
+        <Radio label="Pro" name="plan" value="pro" defaultChecked />
+        <p className="pl-6 text-sm text-muted-foreground">$29/month — unlimited projects and priority support.</p>
+      </div>
+      <div>
+        <Radio label="Enterprise" name="plan" value="enterprise" />
+        <p className="pl-6 text-sm text-muted-foreground">Custom pricing — dedicated account manager and SLA.</p>
+      </div>
+      <div>
+        <Radio label="Legacy" name="plan" value="legacy" disabled />
+        <p className="pl-6 text-sm text-muted-foreground">No longer available for new accounts.</p>
+      </div>
     </fieldset>
   ),
   parameters: {

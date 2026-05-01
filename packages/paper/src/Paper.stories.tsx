@@ -74,7 +74,7 @@ export const Square: Story = {
 export const ElevationLevels: Story = {
   render: () => (
     <div className="flex flex-wrap items-center gap-6">
-      {[0, 1, 2, 3, 4, 5, 6].map((level) => (
+      {([0, 1, 2, 3, 4, 5, 6] as const).map((level) => (
         <Paper key={level} elevation={level} className="flex h-24 w-24 items-center justify-center">
           <span className="text-muted-foreground text-sm font-medium">
             {level}

@@ -32,7 +32,7 @@ export const Default: StoryObj = {
     const [active, setActive] = useState(false);
     return (
       <div className="space-y-4 p-10 bg-muted/10 rounded-xl border">
-        <Button onClick={() => setActive(!active)} variant={active ? "danger" : "primary"}>
+        <Button onClick={() => setActive(!active)} variant={active ? "destructive" : "primary"}>
           {active ? "Deactivate Trap" : "Activate Focus Trap"}
         </Button>
   

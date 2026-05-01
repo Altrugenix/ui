@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Input } from "@altrugenix/input";
-import { Search, Eye, Mail, Lock } from "lucide-react";
+import { Search, Mail } from "lucide-react";
 
 const meta: Meta<typeof Input> = {
   title: "Forms/Input",

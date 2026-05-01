@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MetricCard } from "@altrugenix/metric-card";
-import { Users, ArrowUpRight, ArrowDownRight, DollarSign, Activity } from "lucide-react";
+import { Users, DollarSign, Activity } from "lucide-react";
 
 const meta: Meta<typeof MetricCard> = {
   title: "Data Display/MetricCard",
@@ -27,12 +27,7 @@ const meta: Meta<typeof MetricCard> = {
       description: "Change indicator value (e.g. '+12.5%').",
       table: { category: "Content" },
     },
-    trendDirection: {
-      control: "select",
-      options: ["up", "down", "neutral"],
-      description: "Determines trend color (green/red/gray).",
-      table: { category: "Appearance" },
-    },
+
     icon: {
       description: "Top-right icon representing the metric.",
       table: { category: "Content" },
@@ -54,8 +49,7 @@ export const WithTrendUp: Story = {
   args: {
     title: "Monthly Revenue",
     value: "$45,231.89",
-    trend: "+20.1% from last month",
-    trendDirection: "up",
+    trend: { value: "+20.1%", direction: "up", label: "from last month" },
     icon: <DollarSign className="text-muted-foreground h-4 w-4" />,
   },
 };
@@ -64,8 +58,7 @@ export const WithTrendDown: Story = {
   args: {
     title: "Bounce Rate",
     value: "42.3%",
-    trend: "-4.5% from last week",
-    trendDirection: "down",
+    trend: { value: "-4.5%", direction: "down", label: "from last week" },
     icon: <Activity className="text-muted-foreground h-4 w-4" />,
   },
 };
@@ -76,22 +69,19 @@ export const DashboardGrid: Story = {
       <MetricCard
         title="Total Active Users"
         value="2,420"
-        trend="+4.1%"
-        trendDirection="up"
+        trend={{ value: "+4.1%", direction: "up" }}
         icon={<Users className="text-muted-foreground h-4 w-4" />}
       />
       <MetricCard
         title="Avg. Session Duration"
         value="4m 12s"
-        trend="-1.2%"
-        trendDirection="down"
+        trend={{ value: "-1.2%", direction: "down" }}
         icon={<Activity className="text-muted-foreground h-4 w-4" />}
       />
       <MetricCard
         title="Server Uptime"
         value="99.9%"
-        trend="Stable"
-        trendDirection="neutral"
+        trend={{ value: "Stable", direction: "neutral" }}
       />
     </div>
   ),

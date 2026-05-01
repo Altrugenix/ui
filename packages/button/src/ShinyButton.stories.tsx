@@ -48,7 +48,7 @@ export const Default: Story = {
 export const Success: Story = {
   args: {
     children: "Claim Reward 🏆",
-    variant: "success",
+    variant: "primary",
     size: "lg",
   },
   parameters: {
@@ -78,7 +78,7 @@ export const Outline: Story = {
 export const Danger: Story = {
   args: {
     children: "Delete Account",
-    variant: "danger",
+    variant: "destructive",
     size: "md",
   },
   parameters: {
