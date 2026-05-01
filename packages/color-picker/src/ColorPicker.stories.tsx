@@ -3,69 +3,143 @@ import { ColorPicker } from "@altrugenix/color-picker";
 import { useState } from "react";
 
 const meta: Meta<typeof ColorPicker> = {
-  title: "UI/ColorPicker",
+  title: "Forms/ColorPicker",
   component: ColorPicker,
   tags: ["autodocs"],
-  decorators: [
-    (Story) => (
-      <div className="max-w-[400px] p-10">
-        <Story />
-      </div>
-    ),
-  ],
+  parameters: {
+    layout: "centered",
+    docs: {
+      description: {
+        component:
+          "An interactive color picker with a gradient area, hue slider, hex input, and optional preset color swatches. Fully controlled via `value` and `onChange`.",
+      },
+    },
+  },
+  argTypes: {
+    value: {
+      description: "The current hex color value.",
+      table: { category: "State" },
+    },
+    onChange: {
+      description: "Callback triggered when the color changes.",
+      table: { category: "Events" },
+    },
+    presets: {
+      description: "Array of hex color strings for quick-select preset swatches.",
+      table: { category: "Data" },
+    },
+    disabled: {
+      control: "boolean",
+      description: "Prevents interaction.",
+      table: { category: "State" },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof ColorPicker>;
 
-const DefaultRender = (args: React.ComponentProps<typeof ColorPicker>) => {
-  const [color, setColor] = useState("#6366f1");
-  return <ColorPicker {...args} value={color} onChange={setColor} />;
-};
-
-export const Default: Story = {
-  render: (args) => <DefaultRender {...args} />,
-};
-
-const WithCustomPresetsRender = (
-  args: React.ComponentProps<typeof ColorPicker>
-) => {
-  const [color, setColor] = useState("#ec4899");
-  const presets = [
-    "#ef4444",
-    "#f97316",
-    "#f59e0b",
-    "#eab308",
-    "#84cc16",
-    "#22c55e",
-    "#10b981",
-    "#06b6d4",
-    "#0ea5e9",
-    "#3b82f6",
-    "#6366f1",
-    "#8b5cf6",
-    "#a855f7",
-    "#d946ef",
-    "#ec4899",
-    "#f43f5e",
-  ];
+const ControlledDemo = ({ initialColor = "#3b82f6" }: { initialColor?: string }) => {
+  const [color, setColor] = useState(initialColor);
   return (
-    <ColorPicker
-      {...args}
-      value={color}
-      onChange={setColor}
-      presets={presets}
-    />
+    <div className="space-y-4">
+      <ColorPicker value={color} onChange={setColor} />
+      <div className="flex items-center gap-3">
+        <div
+          className="h-8 w-8 rounded border"
+          style={{ backgroundColor: color }}
+        />
+        <span className="text-sm font-mono">{color}</span>
+      </div>
+    </div>
   );
 };
 
-export const WithCustomPresets: Story = {
-  render: (args) => <WithCustomPresetsRender {...args} />,
+export const Default: Story = {
+  render: () => <ControlledDemo />,
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "A controlled color picker with live preview swatch and hex display.",
+      },
+    },
+  },
+};
+
+export const CustomPresets: Story = {
+  render: () => {
+    const [color, setColor] = useState("#e91e63");
+    return (
+      <ColorPicker
+        value={color}
+        onChange={setColor}
+        presets={[
+          "#f44336",
+          "#e91e63",
+          "#9c27b0",
+          "#2196f3",
+          "#4caf50",
+          "#ff9800",
+          "#795548",
+          "#607d8b",
+        ]}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "A color picker with custom brand preset swatches for quick access to approved colors.",
+      },
+    },
+  },
 };
 
 export const Disabled: Story = {
-  args: {
-    value: "#6366f1",
-    disabled: true,
+  render: () => (
+    <ColorPicker value="#9c27b0" onChange={() => {}} disabled />
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story: "A disabled color picker — all interaction is prevented.",
+      },
+    },
+  },
+};
+
+export const BrandColorSelector: Story = {
+  render: () => {
+    const [primary, setPrimary] = useState("#3b82f6");
+    const [secondary, setSecondary] = useState("#10b981");
+    return (
+      <div className="space-y-6">
+        <div>
+          <p className="text-sm font-medium mb-2">Primary Color</p>
+          <ColorPicker value={primary} onChange={setPrimary} />
+        </div>
+        <div>
+          <p className="text-sm font-medium mb-2">Secondary Color</p>
+          <ColorPicker value={secondary} onChange={setSecondary} />
+        </div>
+        <div className="flex gap-2 pt-2">
+          <div className="rounded-lg px-4 py-2 text-sm text-white font-medium" style={{ backgroundColor: primary }}>
+            Primary
+          </div>
+          <div className="rounded-lg px-4 py-2 text-sm text-white font-medium" style={{ backgroundColor: secondary }}>
+            Secondary
+          </div>
+        </div>
+      </div>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "A brand color configuration panel with two color pickers and live preview buttons.",
+      },
+    },
   },
 };

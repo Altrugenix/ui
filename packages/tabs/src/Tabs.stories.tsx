@@ -1,15 +1,51 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Tabs } from "@altrugenix/tabs";
-import { Settings, User, BarChart } from "lucide-react";
 
 const meta: Meta<typeof Tabs> = {
-  title: "Composites/Tabs",
+  title: "Navigation/Tabs",
   component: Tabs,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A tabbed navigation component for switching between content panels. Supports default, pill, and underline visual variants, horizontal and vertical orientation, and scrollable overflow.",
+      },
+    },
+  },
   argTypes: {
+    value: {
+      description: "Controlled active tab value.",
+      table: { category: "State" },
+    },
+    defaultValue: {
+      description: "Default active tab (uncontrolled).",
+      table: { category: "State" },
+    },
+    onValueChange: {
+      description: "Callback triggered when the active tab changes.",
+      table: { category: "Events" },
+    },
     variant: {
       control: "select",
       options: ["default", "pills", "underline"],
+      description: "Visual style of the tab list.",
+      table: { category: "Appearance" },
+    },
+    orientation: {
+      control: "select",
+      options: ["horizontal", "vertical"],
+      description: "Direction of the tab list.",
+      table: { category: "Appearance" },
+    },
+    scrollable: {
+      control: "boolean",
+      description: "Whether the tab list scrolls on overflow.",
+      table: { category: "Behavior" },
+    },
+    items: {
+      description: "Array of tab items with value, label, and content.",
+      table: { category: "Data" },
     },
   },
 };
@@ -19,24 +55,39 @@ type Story = StoryObj<typeof Tabs>;
 
 const tabItems = [
   {
-    label: "Overview",
     value: "overview",
+    label: "Overview",
     content: (
-      <p className="text-muted-foreground text-sm">Overview content panel.</p>
+      <div className="space-y-2">
+        <h3 className="font-semibold">Overview</h3>
+        <p className="text-muted-foreground text-sm">
+          A high-level summary of your project metrics and recent activity.
+        </p>
+      </div>
     ),
   },
   {
-    label: "Analytics",
     value: "analytics",
+    label: "Analytics",
     content: (
-      <p className="text-muted-foreground text-sm">Analytics content panel.</p>
+      <div className="space-y-2">
+        <h3 className="font-semibold">Analytics</h3>
+        <p className="text-muted-foreground text-sm">
+          Detailed charts and metrics about usage, performance, and engagement.
+        </p>
+      </div>
     ),
   },
   {
-    label: "Settings",
     value: "settings",
+    label: "Settings",
     content: (
-      <p className="text-muted-foreground text-sm">Settings content panel.</p>
+      <div className="space-y-2">
+        <h3 className="font-semibold">Settings</h3>
+        <p className="text-muted-foreground text-sm">
+          Configure your project preferences and integrations.
+        </p>
+      </div>
     ),
   },
 ];
@@ -44,65 +95,77 @@ const tabItems = [
 export const Default: Story = {
   args: {
     items: tabItems,
-    variant: "default",
+    defaultValue: "overview",
   },
 };
 
 export const Pills: Story = {
   args: {
     items: tabItems,
+    defaultValue: "overview",
     variant: "pills",
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "Pill-style tabs with rounded backgrounds for the active state.",
+      },
+    },
   },
 };
 
 export const Underline: Story = {
   args: {
     items: tabItems,
+    defaultValue: "overview",
     variant: "underline",
   },
-};
-
-export const WithIcons: Story = {
-  args: {
-    variant: "default",
-    items: [
-      {
-        label: "Profile",
-        value: "profile",
-        icon: <User className="h-4 w-4" />,
-        content: (
-          <p className="text-muted-foreground text-sm">Profile settings.</p>
-        ),
+  parameters: {
+    docs: {
+      description: {
+        story: "Underline-style tabs — a clean, minimal look for content-heavy pages.",
       },
-      {
-        label: "Analytics",
-        value: "analytics",
-        icon: <BarChart className="h-4 w-4" />,
-        content: (
-          <p className="text-muted-foreground text-sm">Analytics data.</p>
-        ),
-      },
-      {
-        label: "Settings",
-        value: "settings",
-        icon: <Settings className="h-4 w-4" />,
-        content: <p className="text-muted-foreground text-sm">App settings.</p>,
-      },
-    ],
+    },
   },
 };
 
-export const WithDisabled: Story = {
+export const Vertical: Story = {
   args: {
-    variant: "default",
-    items: [
-      ...tabItems,
-      {
-        label: "Billing",
-        value: "billing",
-        disabled: true,
-        content: <p>Billing (disabled)</p>,
+    items: tabItems,
+    defaultValue: "overview",
+    orientation: "vertical",
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "Vertical orientation — suitable for settings pages and sidepanel navigation.",
       },
-    ],
+    },
+  },
+};
+
+export const AllVariants: Story = {
+  render: () => (
+    <div className="space-y-8">
+      <div>
+        <p className="text-sm font-medium mb-2">Default</p>
+        <Tabs items={tabItems} defaultValue="overview" />
+      </div>
+      <div>
+        <p className="text-sm font-medium mb-2">Pills</p>
+        <Tabs items={tabItems} defaultValue="analytics" variant="pills" />
+      </div>
+      <div>
+        <p className="text-sm font-medium mb-2">Underline</p>
+        <Tabs items={tabItems} defaultValue="settings" variant="underline" />
+      </div>
+    </div>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story: "Side-by-side comparison of all three tab variants.",
+      },
+    },
   },
 };

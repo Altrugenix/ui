@@ -1,168 +1,111 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { CommandPalette } from "@altrugenix/command-palette";
 import { Button } from "@altrugenix/button";
-import { useState, useEffect } from "react";
-import {
-  Plus,
-  Search,
-  Settings,
-  User,
-  Mail,
-  Layout,
-  Code,
-  FileText,
-  ExternalLink,
-  Calendar,
-} from "lucide-react";
+import { useState } from "react";
 
 const meta: Meta<typeof CommandPalette> = {
-  title: "Navigation/CommandPalette",
+  title: "Overlays/CommandPalette",
   component: CommandPalette,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A ⌘K-style command palette with fuzzy search, keyboard navigation (↑↓ + Enter), and grouped items. Opens as a centered modal overlay.",
+      },
+    },
+  },
+  argTypes: {
+    isOpen: {
+      description: "Controls the visibility of the palette.",
+      table: { category: "State" },
+    },
+    onClose: {
+      description: "Callback triggered on dismiss (Escape, backdrop click).",
+      table: { category: "Events" },
+    },
+    items: {
+      description: "Array of command items with label, group, icon, and onSelect.",
+      table: { category: "Data" },
+    },
+    placeholder: {
+      description: "Placeholder text in the search input.",
+      table: { category: "Content" },
+    },
+  },
 };
 
 export default meta;
-type Story = StoryObj<typeof CommandPalette>;
 
-const CommandPaletteStory1Render = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const defaultItems = [
+  { label: "Home", group: "Pages", onSelect: () => {} },
+  { label: "Dashboard", group: "Pages", onSelect: () => {} },
+  { label: "Settings", group: "Pages", onSelect: () => {} },
+  { label: "Create New Project", group: "Actions", onSelect: () => {} },
+  { label: "Invite Team Member", group: "Actions", onSelect: () => {} },
+  { label: "Toggle Dark Mode", group: "Actions", onSelect: () => {} },
+  { label: "Button", group: "Components", onSelect: () => {} },
+  { label: "Modal", group: "Components", onSelect: () => {} },
+  { label: "Tooltip", group: "Components", onSelect: () => {} },
+];
 
-  useEffect(() => {
-    const down = (e: KeyboardEvent) => {
-      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault();
-        setIsOpen((open) => !open);
-      }
-    };
-    document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
-  }, []);
-
-  const items = [
-    {
-      id: "new-project",
-      label: "Create New Project",
-      group: "Actions",
-      icon: <Plus className="h-4 w-4" />,
-      shortcut: ["⌘", "N"],
-      onSelect: () => alert("Creating new project..."),
-    },
-    {
-      id: "search-docs",
-      label: "Search Documentation",
-      group: "Actions",
-      icon: <Search className="h-4 w-4" />,
-      shortcut: ["⌘", "D"],
-      onSelect: () => alert("Opening docs..."),
-    },
-    {
-      id: "profile",
-      label: "View Profile",
-      group: "Account",
-      icon: <User className="h-4 w-4" />,
-      onSelect: () => alert("Viewing profile..."),
-    },
-    {
-      id: "settings",
-      label: "Settings",
-      group: "Account",
-      icon: <Settings className="h-4 w-4" />,
-      shortcut: ["⌘", ","],
-      onSelect: () => alert("Opening settings..."),
-    },
-    {
-      id: "dashboard",
-      label: "Dashboard",
-      group: "Pages",
-      icon: <Layout className="h-4 w-4" />,
-      onSelect: () => alert("Navigating to Dashboard"),
-    },
-    {
-      id: "components",
-      label: "Components Library",
-      group: "Pages",
-      icon: <Code className="h-4 w-4" />,
-      onSelect: () => alert("Navigating to Components"),
-    },
-    {
-      id: "github",
-      label: "GitHub Repository",
-      group: "Social",
-      icon: <ExternalLink className="h-4 w-4" />,
-      onSelect: () => window.open("https://github.com/altrugenix/ui", "_blank"),
-    },
-    {
-      id: "twitter",
-      label: "Twitter / X",
-      group: "Social",
-      icon: <ExternalLink className="h-4 w-4" />,
-      onSelect: () => alert("Opening Twitter..."),
-    },
-  ];
-
+const PaletteDemo = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="flex flex-col items-center justify-center gap-6 p-20">
-      <div className="space-y-4 text-center">
-        <h2 className="text-2xl font-bold">Command Palette</h2>
-        <p className="text-muted-foreground">
-          Press{" "}
-          <kbd className="bg-muted text-muted-foreground rounded border px-1.5 font-sans font-medium opacity-100">
-            ⌘K
-          </kbd>{" "}
-          to open the command palette.
-        </p>
-      </div>
-      <Button
-        size="lg"
-        onClick={() => setIsOpen(true)}
-        className="rounded-full px-8"
-      >
-        Open Palette
+    <>
+      <Button variant="outline" onClick={() => setOpen(true)}>
+        Open Command Palette (⌘K)
       </Button>
       <CommandPalette
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        items={items}
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        items={defaultItems}
       />
-    </div>
+    </>
   );
 };
 
-export const Default: Story = {
-  render: () => <CommandPaletteStory1Render />,
+export const Default: StoryObj = {
+  render: () => <PaletteDemo />,
+  parameters: {
+    docs: {
+      description: {
+        story: "Click the button to open the palette. Use arrow keys to navigate and Enter to select.",
+      },
+    },
+  },
 };
 
-const CommandPaletteStory2Render = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const items = Array.from({ length: 50 }).map((_, i) => ({
-    id: `item-${i}`,
-    label: `Result Item ${i + 1}`,
-    group: i < 25 ? "Group A" : "Group B",
-    icon:
-      i % 3 === 0 ? (
-        <FileText className="h-4 w-4" />
-      ) : i % 3 === 1 ? (
-        <Mail className="h-4 w-4" />
-      ) : (
-        <Calendar className="h-4 w-4" />
-      ),
-    onSelect: () => alert(`Selected item ${i + 1}`),
-  }));
-
+const CustomPlaceholderDemo = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="flex flex-col items-center justify-center gap-6 p-20">
-      <Button onClick={() => setIsOpen(true)}>Open with 50 Items</Button>
+    <>
+      <Button variant="outline" onClick={() => setOpen(true)}>
+        Search Documentation
+      </Button>
       <CommandPalette
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        items={items}
-        placeholder="Filter 50+ items..."
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        items={[
+          { label: "Getting Started", group: "Guides", onSelect: () => {} },
+          { label: "Installation", group: "Guides", onSelect: () => {} },
+          { label: "Theming", group: "Guides", onSelect: () => {} },
+          { label: "Changelog", group: "Reference", onSelect: () => {} },
+          { label: "API Reference", group: "Reference", onSelect: () => {} },
+        ]}
+        placeholder="Search docs, components, or guides..."
       />
-    </div>
+    </>
   );
 };
 
-export const LargeDataSet: Story = {
-  render: () => <CommandPaletteStory2Render />,
+export const CustomPlaceholder: StoryObj = {
+  render: () => <CustomPlaceholderDemo />,
+  parameters: {
+    docs: {
+      description: {
+        story: "A documentation search palette with custom placeholder text and different item groups.",
+      },
+    },
+  },
 };

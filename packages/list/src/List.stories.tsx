@@ -1,71 +1,108 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { List, ListItem } from "@altrugenix/list";
-import { Avatar } from "@altrugenix/avatar";
-import { Badge } from "@altrugenix/badge";
-import { Mail, Star, User } from "lucide-react";
+import { Folder, FileText, CheckCircle2 } from "lucide-react";
 
 const meta: Meta<typeof List> = {
   title: "Data Display/List",
   component: List,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A vertical list container for displaying homogeneous data. Supports dividers, ordered/unordered modes, and rich items with leading/trailing elements.",
+      },
+    },
+  },
+  argTypes: {
+    divided: {
+      control: "boolean",
+      description: "Adds a border between list items.",
+      table: { category: "Appearance" },
+    },
+    ordered: {
+      control: "boolean",
+      description: "Renders as an `<ol>` with numbered items.",
+      table: { category: "Appearance" },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof List>;
 
-export const Simple: Story = {
+export const Default: Story = {
   render: () => (
-    <List divided className="rounded-lg border">
-      <ListItem>First item</ListItem>
-      <ListItem>Second item</ListItem>
-      <ListItem>Third item</ListItem>
+    <List className="max-w-md">
+      <ListItem>First item in the list</ListItem>
+      <ListItem>Second item in the list</ListItem>
+      <ListItem>Third item in the list</ListItem>
     </List>
   ),
 };
 
-export const WithLeadingAndTrailing: Story = {
+export const Divided: Story = {
   render: () => (
-    <List divided className="rounded-lg border">
-      <ListItem
-        leading={<Avatar fallback="JD" />}
-        secondary="jane@example.com"
-        trailing={<Badge variant="success">Active</Badge>}
-        interactive
-      >
-        Jane Doe
-      </ListItem>
-      <ListItem
-        leading={<Avatar fallback="AB" />}
-        secondary="alan@example.com"
-        trailing={<Badge variant="warning">Pending</Badge>}
-        interactive
-      >
-        Alan Baker
-      </ListItem>
-      <ListItem
-        leading={<Avatar fallback="SM" />}
-        secondary="sarah@example.com"
-        trailing={<Badge variant="outline">Inactive</Badge>}
-        interactive
-      >
-        Sarah Miller
-      </ListItem>
+    <List divided className="max-w-md border rounded-lg">
+      <ListItem>First item in the list</ListItem>
+      <ListItem>Second item in the list</ListItem>
+      <ListItem>Third item in the list</ListItem>
     </List>
   ),
+  parameters: {
+    docs: {
+      description: {
+        story: "A divided list with a border between each item.",
+      },
+    },
+  },
 };
 
-export const WithIcons: Story = {
+export const Ordered: Story = {
   render: () => (
-    <List divided className="rounded-lg border">
-      <ListItem leading={<User className="h-4 w-4" />} interactive>
-        Profile
+    <List ordered className="max-w-md list-decimal pl-5">
+      <ListItem>Install dependencies</ListItem>
+      <ListItem>Configure environment</ListItem>
+      <ListItem>Run development server</ListItem>
+    </List>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story: "An ordered list. Numbering is handled by CSS list styles.",
+      },
+    },
+  },
+};
+
+export const RichItems: Story = {
+  render: () => (
+    <List divided className="max-w-md border rounded-lg">
+      <ListItem
+        leading={<Folder className="text-blue-500 h-5 w-5" />}
+        trailing={<span className="text-muted-foreground text-xs">Today</span>}
+      >
+        Documents
       </ListItem>
-      <ListItem leading={<Mail className="h-4 w-4" />} interactive>
-        Messages
+      <ListItem
+        leading={<FileText className="text-amber-500 h-5 w-5" />}
+        trailing={<span className="text-muted-foreground text-xs">Yesterday</span>}
+      >
+        Invoice_2026.pdf
       </ListItem>
-      <ListItem leading={<Star className="h-4 w-4" />} interactive>
-        Favorites
+      <ListItem
+        leading={<CheckCircle2 className="text-emerald-500 h-5 w-5" />}
+        trailing={<span className="text-muted-foreground text-xs">Completed</span>}
+      >
+        Task List
       </ListItem>
     </List>
   ),
+  parameters: {
+    docs: {
+      description: {
+        story: "List items using `leading` and `trailing` props for icons and metadata.",
+      },
+    },
+  },
 };

@@ -15,16 +15,23 @@ import {
 } from "lucide-react";
 
 const meta: Meta<typeof List> = {
-  title: "UI/List/Advanced",
+  title: "Data Display/List/Advanced",
   component: List,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Advanced compositions for the List component using subcomponents like `ListItemButton` and `ListItemDecorator`.",
+      },
+    },
+  },
 };
 
 export default meta;
 
 export const InteractiveList: StoryObj = {
   render: () => (
-    <div className="bg-card max-w-sm rounded-xl border">
+    <div className="bg-card max-w-sm rounded-xl border shadow-sm">
       <List divided>
         <ListItemButton>
           <ListItemDecorator>
@@ -56,11 +63,18 @@ export const InteractiveList: StoryObj = {
       </List>
     </div>
   ),
+  parameters: {
+    docs: {
+      description: {
+        story: "An interactive menu using `ListItemButton` for hover/active states, typically used in sidebars or dropdowns.",
+      },
+    },
+  },
 };
 
 export const MixedContent: StoryObj = {
   render: () => (
-    <div className="bg-card max-w-sm rounded-xl border">
+    <div className="bg-card max-w-sm rounded-xl border shadow-sm">
       <List divided>
         <ListItem
           leading={<Settings className="h-5 w-5" />}
@@ -78,4 +92,11 @@ export const MixedContent: StoryObj = {
       </List>
     </div>
   ),
+  parameters: {
+    docs: {
+      description: {
+        story: "List items displaying primary text alongside `secondary` subtitle text.",
+      },
+    },
+  },
 };

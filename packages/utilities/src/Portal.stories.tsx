@@ -7,36 +7,52 @@ const meta: Meta<typeof Portal> = {
   title: "Utilities/Portal",
   component: Portal,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A utility component that teleports its children to `document.body` (or another target). Vital for modals, tooltips, and popovers to escape container stacking contexts (`overflow: hidden` or `z-index` issues).",
+      },
+    },
+  },
+  argTypes: {
+    container: {
+      description: "Optional custom DOM node to portal into. Defaults to document.body.",
+      table: { category: "Configuration" },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Portal>;
 
-const PortalStory1Render = () => {
-  const [show, setShow] = useState(false);
-  return (
-    <div className="bg-muted/20 relative overflow-hidden rounded-xl border p-10">
-      <Typography variant="body2" className="mb-4">
-        This container has <code>overflow: hidden</code>. Click the button to
-        see the portal in action.
-      </Typography>
-      <Button onClick={() => setShow(!show)}>
-        {show ? "Hide Portal" : "Show Portal"}
-      </Button>
-
-      <Portal>
-        {show && (
-          <div className="bg-primary text-primary-foreground fixed top-20 left-1/2 z-[100] -translate-x-1/2 rounded-full px-6 py-4 font-bold shadow-2xl">
-            I am rendered at the end of document.body!
-          </div>
-        )}
-      </Portal>
-    </div>
-  );
-};
-
 export const Default: Story = {
-  render: () => <PortalStory1Render />,
+  render: () => {
+    const [show, setShow] = useState(false);
+    return (
+      <div className="bg-muted/20 relative overflow-hidden rounded-xl border p-10 max-w-md">
+        <p className="mb-4 text-sm">
+          This container has <code>overflow: hidden</code>. If the tooltip wasn't portaled, it would be cut off by the container edges. Click the button to see the portal escape the container.
+        </p>
+        <Button onClick={() => setShow(!show)}>
+          {show ? "Hide Portaled Element" : "Show Portaled Element"}
+        </Button>
+  
+        <Portal>
+          {show && (
+            <div className="bg-primary text-primary-foreground fixed top-20 left-1/2 z-[100] -translate-x-1/2 rounded-full px-6 py-4 font-bold shadow-2xl animate-in slide-in-from-top-10">
+              I am rendered directly inside document.body!
+            </div>
+          )}
+        </Portal>
+      </div>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "A demonstration of an element breaking out of an `overflow: hidden` parent using a React Portal.",
+      },
+    },
+  },
 };
-
-import { Typography } from "@altrugenix/typography";

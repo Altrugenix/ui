@@ -1,78 +1,110 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Carousel } from "@altrugenix/carousel";
 
+const slides = [
+  <div key="1" className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-2xl font-bold text-white">
+    Slide 1 — Welcome
+  </div>,
+  <div key="2" className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-2xl font-bold text-white">
+    Slide 2 — Features
+  </div>,
+  <div key="3" className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-2xl font-bold text-white">
+    Slide 3 — Pricing
+  </div>,
+  <div key="4" className="flex h-64 items-center justify-center rounded-xl bg-gradient-to-r from-rose-500 to-pink-600 text-2xl font-bold text-white">
+    Slide 4 — Get Started
+  </div>,
+];
+
 const meta: Meta<typeof Carousel> = {
-  title: "UI/Carousel",
+  title: "Data Display/Carousel",
   component: Carousel,
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div className="bg-muted/20 h-[400px] w-full max-w-3xl overflow-hidden rounded-2xl border">
+      <div className="max-w-[700px] p-6">
         <Story />
       </div>
     ),
   ],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A smooth-sliding carousel with Framer Motion transitions, auto-play support, navigation arrows, and dot indicators. Supports any React nodes as slide content.",
+      },
+    },
+  },
+  argTypes: {
+    items: {
+      description: "Array of React nodes to display as slides.",
+      table: { category: "Data" },
+    },
+    autoPlayInterval: {
+      control: { type: "number", min: 1000, max: 10000 },
+      description: "Auto-play interval in milliseconds (default: 5000).",
+      table: { category: "Behavior" },
+    },
+    showArrows: {
+      control: "boolean",
+      description: "Whether to show previous/next navigation arrows.",
+      table: { category: "Appearance" },
+    },
+    showDots: {
+      control: "boolean",
+      description: "Whether to show dot indicators.",
+      table: { category: "Appearance" },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Carousel>;
 
-const DemoSlide = ({ color, text }: { color: string; text: string }) => (
-  <div
-    className={`flex h-full w-full items-center justify-center text-4xl font-bold text-white ${color}`}
-  >
-    {text}
-  </div>
-);
-
-const MOCK_ITEMS = [
-  <DemoSlide
-    key="1"
-    color="bg-gradient-to-br from-indigo-500 to-purple-600"
-    text="Slide 1"
-  />,
-  <DemoSlide
-    key="2"
-    color="bg-gradient-to-br from-rose-500 to-orange-500"
-    text="Slide 2"
-  />,
-  <DemoSlide
-    key="3"
-    color="bg-gradient-to-br from-emerald-500 to-teal-600"
-    text="Slide 3"
-  />,
-  <DemoSlide
-    key="4"
-    color="bg-gradient-to-br from-amber-400 to-yellow-600"
-    text="Slide 4"
-  />,
-];
-
 export const Default: Story = {
   args: {
-    items: MOCK_ITEMS,
+    items: slides,
+  },
+};
+
+export const NoArrows: Story = {
+  args: {
+    items: slides,
+    showArrows: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "Navigation arrows hidden — only dots are used for navigation.",
+      },
+    },
+  },
+};
+
+export const NoDots: Story = {
+  args: {
+    items: slides,
+    showDots: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "Dot indicators hidden — only arrows are used for navigation.",
+      },
+    },
   },
 };
 
 export const FastAutoPlay: Story = {
   args: {
-    items: MOCK_ITEMS,
+    items: slides,
     autoPlayInterval: 2000,
   },
-};
-
-export const NavigationOnly: Story = {
-  args: {
-    items: MOCK_ITEMS,
-    showDots: false,
-    autoPlayInterval: 0,
-  },
-};
-
-export const DotsOnly: Story = {
-  args: {
-    items: MOCK_ITEMS,
-    showArrows: false,
-    autoPlayInterval: 0,
+  parameters: {
+    docs: {
+      description: {
+        story: "Fast auto-play cycling every 2 seconds.",
+      },
+    },
   },
 };
