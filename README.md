@@ -54,7 +54,7 @@ yarn install
 To use these packages in another project, add a `.npmrc` file to your project:
 
 ```text
-@altrugenix:registry=https://npm.pkg.github.com
+@altrugenix:registry=https://registry.npmjs.org/
 ```
 
 Then install via:
