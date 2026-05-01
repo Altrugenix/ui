@@ -37,7 +37,7 @@ describe("Sidebar", () => {
   });
 
   it("passes through additional props and className", () => {
-    const { container } = render(
+    render(
       <Sidebar className="custom-sidebar" id="test-sidebar" data-testid="sidebar">
         Content
       </Sidebar>

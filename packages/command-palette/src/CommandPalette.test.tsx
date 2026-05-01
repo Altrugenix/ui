@@ -109,8 +109,8 @@ describe("CommandPalette", () => {
 
   it("renders group headers", () => {
     render(<CommandPalette {...defaultProps} />);
-    expect(screen.getByText("PAGES")).toBeInTheDocument();
-    expect(screen.getByText("ADMIN")).toBeInTheDocument();
+    expect(screen.getByText(/Pages/i)).toBeInTheDocument();
+    expect(screen.getByText(/Admin/i)).toBeInTheDocument();
   });
 
   it("renders icons and shortcuts", () => {

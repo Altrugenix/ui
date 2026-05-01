@@ -1,6 +1,6 @@
 {
   "name": "@altrugenix/transfer-list",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "type": "module",
   "main": "./dist/altrugenix-transfer-list.umd.cjs",

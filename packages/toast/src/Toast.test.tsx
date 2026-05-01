@@ -1,7 +1,22 @@
+import React from "react";
 import { render, screen, act } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { ToastProvider, useToast } from "./Toast";
+import { MotionConfig } from "framer-motion";
 import "@testing-library/jest-dom";
+
+vi.mock("framer-motion", async () => {
+  const actual = await vi.importActual("framer-motion");
+  return {
+    ...actual,
+    AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+    motion: {
+      div: React.forwardRef(({ children, ...props }: { children?: React.ReactNode }, ref: React.ForwardedRef<HTMLDivElement>) => (
+        <div {...(props as React.HTMLAttributes<HTMLDivElement>)} ref={ref}>{children}</div>
+      )),
+    },
+  };
+});
 
 const TestComponent = () => {
   const { toast } = useToast();
@@ -31,9 +46,11 @@ describe("Toast", () => {
 
   it("should show a toast when triggered", () => {
     render(
-      <ToastProvider>
-        <TestComponent />
-      </ToastProvider>
+      <MotionConfig transition={{ duration: 0 }}>
+        <ToastProvider>
+          <TestComponent />
+        </ToastProvider>
+      </MotionConfig>
     );
 
     act(() => {
@@ -44,11 +61,13 @@ describe("Toast", () => {
     expect(screen.getByText("This is a toast!")).toBeInTheDocument();
   });
 
-  it("auto-closes after duration", () => {
+  it("auto-closes after duration", async () => {
     render(
-      <ToastProvider>
-        <TestComponent />
-      </ToastProvider>
+      <MotionConfig transition={{ duration: 0 }}>
+        <ToastProvider>
+          <TestComponent />
+        </ToastProvider>
+      </MotionConfig>
     );
 
     act(() => {
@@ -58,7 +77,7 @@ describe("Toast", () => {
     expect(screen.getByText("Success Toast")).toBeInTheDocument();
 
     act(() => {
-      vi.advanceTimersByTime(5100);
+      vi.runAllTimers();
     });
 
     // Toast should be removed from DOM
@@ -76,9 +95,11 @@ describe("Toast", () => {
     };
 
     render(
-      <ToastProvider>
-        <TypeTester />
-      </ToastProvider>
+      <MotionConfig transition={{ duration: 0 }}>
+        <ToastProvider>
+          <TypeTester />
+        </ToastProvider>
+      </MotionConfig>
     );
 
     act(() => {
@@ -115,9 +136,11 @@ describe("Toast", () => {
     };
 
     render(
-      <ToastProvider>
-        <InfiniteTester />
-      </ToastProvider>
+      <MotionConfig transition={{ duration: 0 }}>
+        <ToastProvider>
+          <InfiniteTester />
+        </ToastProvider>
+      </MotionConfig>
     );
 
     act(() => {

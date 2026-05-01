@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, act } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { Portal } from "./portal/Portal";
 import { ClickAwayListener } from "./click-away-listener/ClickAwayListener";
@@ -73,7 +73,7 @@ describe("Utilities", () => {
 
   describe("NoSsr", () => {
     it("renders fallback initially and then children after mount", () => {
-      const { rerender } = render(
+      render(
         <NoSsr fallback={<div data-testid="fallback">Fallback</div>}>
           <div data-testid="content">Content</div>
         </NoSsr>

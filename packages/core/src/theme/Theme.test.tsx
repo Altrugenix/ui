@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, act } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import "@testing-library/jest-dom";
 import { ThemeProvider } from "./ThemeProvider";
@@ -23,7 +23,7 @@ describe("ThemeProvider", () => {
     // Mock matchMedia
     Object.defineProperty(window, "matchMedia", {
       writable: true,
-      value: vi.fn().mockImplementation(query => ({
+      value: vi.fn().mockImplementation((query: string) => ({
         matches: false,
         media: query,
         onchange: null,
@@ -80,7 +80,7 @@ describe("ThemeProvider", () => {
 
   it("handles system theme correctly", () => {
     // Mock system preference as dark
-    (window.matchMedia as any).mockImplementation(query => ({
+    (window.matchMedia as unknown as { mockImplementation: (fn: (query: string) => unknown) => void }).mockImplementation((query: string) => ({
       matches: query === "(prefers-color-scheme: dark)",
       media: query,
     }));

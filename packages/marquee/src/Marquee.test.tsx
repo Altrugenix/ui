@@ -1,4 +1,3 @@
-import * as React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Marquee } from "./Marquee";
@@ -6,7 +5,7 @@ import "@testing-library/jest-dom";
 
 describe("Marquee", () => {
   it("renders children and duplicates them", () => {
-    const { container } = render(
+    render(
       <Marquee>
         <span data-testid="item">Item</span>
       </Marquee>
@@ -33,7 +32,7 @@ describe("Marquee", () => {
 
   it("can disable pause on hover", () => {
     const { container } = render(<Marquee pauseOnHover={false}>Test</Marquee>);
-    const motionDiv = container.querySelector(".flex-shrink-0");
+    const motionDiv = container.querySelector(".shrink-0");
     expect(motionDiv).not.toHaveClass("group-hover:[animation-play-state:paused]");
   });
 
