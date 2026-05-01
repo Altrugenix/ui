@@ -72,26 +72,28 @@ export const Default: Story = {
   },
 };
 
+const CustomPresetsDemo = () => {
+  const [color, setColor] = useState("#e91e63");
+  return (
+    <ColorPicker
+      value={color}
+      onChange={setColor}
+      presets={[
+        "#f44336",
+        "#e91e63",
+        "#9c27b0",
+        "#2196f3",
+        "#4caf50",
+        "#ff9800",
+        "#795548",
+        "#607d8b",
+      ]}
+    />
+  );
+};
+
 export const CustomPresets: Story = {
-  render: () => {
-    const [color, setColor] = useState("#e91e63");
-    return (
-      <ColorPicker
-        value={color}
-        onChange={setColor}
-        presets={[
-          "#f44336",
-          "#e91e63",
-          "#9c27b0",
-          "#2196f3",
-          "#4caf50",
-          "#ff9800",
-          "#795548",
-          "#607d8b",
-        ]}
-      />
-    );
-  },
+  render: () => <CustomPresetsDemo />,
   parameters: {
     docs: {
       description: {
@@ -113,37 +115,39 @@ export const Disabled: Story = {
   },
 };
 
-export const BrandColorSelector: Story = {
-  render: () => {
-    const [primary, setPrimary] = useState("#3b82f6");
-    const [secondary, setSecondary] = useState("#10b981");
-    return (
-      <div className="space-y-6">
-        <div>
-          <p className="mb-2 text-sm font-medium">Primary Color</p>
-          <ColorPicker value={primary} onChange={setPrimary} />
+const BrandColorSelectorDemo = () => {
+  const [primary, setPrimary] = useState("#3b82f6");
+  const [secondary, setSecondary] = useState("#10b981");
+  return (
+    <div className="space-y-6">
+      <div>
+        <p className="mb-2 text-sm font-medium">Primary Color</p>
+        <ColorPicker value={primary} onChange={setPrimary} />
+      </div>
+      <div>
+        <p className="mb-2 text-sm font-medium">Secondary Color</p>
+        <ColorPicker value={secondary} onChange={setSecondary} />
+      </div>
+      <div className="flex gap-2 pt-2">
+        <div
+          className="rounded-lg px-4 py-2 text-sm font-medium text-white"
+          style={{ backgroundColor: primary }}
+        >
+          Primary
         </div>
-        <div>
-          <p className="mb-2 text-sm font-medium">Secondary Color</p>
-          <ColorPicker value={secondary} onChange={setSecondary} />
-        </div>
-        <div className="flex gap-2 pt-2">
-          <div
-            className="rounded-lg px-4 py-2 text-sm font-medium text-white"
-            style={{ backgroundColor: primary }}
-          >
-            Primary
-          </div>
-          <div
-            className="rounded-lg px-4 py-2 text-sm font-medium text-white"
-            style={{ backgroundColor: secondary }}
-          >
-            Secondary
-          </div>
+        <div
+          className="rounded-lg px-4 py-2 text-sm font-medium text-white"
+          style={{ backgroundColor: secondary }}
+        >
+          Secondary
         </div>
       </div>
-    );
-  },
+    </div>
+  );
+};
+
+export const BrandColorSelector: Story = {
+  render: () => <BrandColorSelectorDemo />,
   parameters: {
     docs: {
       description: {
