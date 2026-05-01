@@ -55,7 +55,7 @@ describe("Modal", () => {
         Content
       </Modal>
     );
-    
+
     const overlay = document.querySelector(".bg-black\\/40");
     fireEvent.click(overlay!);
     expect(handleClose).toHaveBeenCalledTimes(1);
@@ -63,10 +63,10 @@ describe("Modal", () => {
 
   it("associates title and description via ARIA", () => {
     render(
-      <Modal 
-        isOpen={true} 
-        onClose={() => {}} 
-        title="Modal Title" 
+      <Modal
+        isOpen={true}
+        onClose={() => {}}
+        title="Modal Title"
         description="Modal Description"
       >
         Content
@@ -88,7 +88,12 @@ describe("Modal", () => {
 
   it("applies custom className and size classes", () => {
     render(
-      <Modal isOpen={true} onClose={() => {}} size="lg" className="custom-modal">
+      <Modal
+        isOpen={true}
+        onClose={() => {}}
+        size="lg"
+        className="custom-modal"
+      >
         Content
       </Modal>
     );

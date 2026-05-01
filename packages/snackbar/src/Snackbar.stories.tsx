@@ -1,109 +1,134 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Snackbar } from "@altrugenix/snackbar";
-import { useState } from "react";
 import { Button } from "@altrugenix/button";
+import { useState } from "react";
 
 const meta: Meta<typeof Snackbar> = {
-  title: "UI/Snackbar",
+  title: "Feedback/Snackbar",
   component: Snackbar,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A brief notification that appears at the bottom of the screen. Supports action buttons, close buttons, and auto-dismiss with configurable duration. Animated with Framer Motion.",
+      },
+    },
+  },
+  argTypes: {
+    open: {
+      description: "Controls the visibility of the snackbar.",
+      table: { category: "State" },
+    },
+    message: {
+      description: "The message text to display.",
+      table: { category: "Content" },
+    },
+    actionLabel: {
+      description: "Optional action button label.",
+      table: { category: "Content" },
+    },
+    onAction: {
+      description: "Callback triggered when the action button is clicked.",
+      table: { category: "Events" },
+    },
+    onClose: {
+      description: "Callback triggered on dismiss.",
+      table: { category: "Events" },
+    },
+    autoHideDuration: {
+      control: "number",
+      description: "Auto-dismiss delay in milliseconds.",
+      table: { category: "Behavior" },
+    },
+  },
 };
 
 export default meta;
-type Story = StoryObj<typeof Snackbar>;
 
-const SnackbarStory1Render = () => {
+const BasicDemo = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <Button onClick={() => setOpen(true)}>Open Snackbar</Button>
+      <Button onClick={() => setOpen(true)}>Show Snackbar</Button>
       <Snackbar
         open={open}
-        message="Document archived successfully"
-        actionLabel="Undo"
-        onAction={() => setOpen(false)}
+        message="Your changes have been saved."
         onClose={() => setOpen(false)}
-        autoHideDuration={4000}
+        autoHideDuration={3000}
       />
     </>
   );
 };
 
-export const Default: Story = {
-  render: () => <SnackbarStory1Render />,
+export const Default: StoryObj = {
+  render: () => <BasicDemo />,
+  parameters: {
+    docs: {
+      description: {
+        story: "A basic snackbar that auto-dismisses after 3 seconds.",
+      },
+    },
+  },
 };
 
-const VariantsRender = () => {
-  const [open, setOpen] = useState<string | null>(null);
+const WithActionDemo = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="flex gap-4">
-      <Button onClick={() => setOpen("success")}>Success</Button>
-      <Button onClick={() => setOpen("error")} variant="destructive">
-        Error
+    <>
+      <Button variant="destructive" onClick={() => setOpen(true)}>
+        Delete Item
       </Button>
-      <Button onClick={() => setOpen("default")} variant="outline">
-        Default
-      </Button>
-
       <Snackbar
-        open={open === "success"}
-        variant="success"
-        message="Data saved successfully!"
-        onClose={() => setOpen(null)}
-        autoHideDuration={3000}
+        open={open}
+        message="Item deleted successfully."
+        actionLabel="Undo"
+        onAction={() => {
+          setOpen(false);
+        }}
+        onClose={() => setOpen(false)}
+        autoHideDuration={5000}
       />
-      <Snackbar
-        open={open === "error"}
-        variant="error"
-        message="Failed to update record."
-        onClose={() => setOpen(null)}
-        autoHideDuration={3000}
-      />
-      <Snackbar
-        open={open === "default"}
-        variant="default"
-        message="System maintenance in 10 minutes."
-        onClose={() => setOpen(null)}
-        autoHideDuration={3000}
-      />
-    </div>
+    </>
   );
 };
 
-export const Variants: Story = {
-  render: () => <VariantsRender />,
+export const WithAction: StoryObj = {
+  render: () => <WithActionDemo />,
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "A snackbar with an Undo action button — a common pattern for destructive actions.",
+      },
+    },
+  },
 };
 
-const PositionsRender = () => {
-  const [pos, setPos] = useState<
-    | "top-left"
-    | "top-center"
-    | "top-right"
-    | "bottom-left"
-    | "bottom-center"
-    | "bottom-right"
-    | undefined
-  >(undefined);
+const PersistentDemo = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="grid grid-cols-3 gap-4">
-      <Button onClick={() => setPos("top-left")}>Top Left</Button>
-      <Button onClick={() => setPos("top-center")}>Top Center</Button>
-      <Button onClick={() => setPos("top-right")}>Top Right</Button>
-      <Button onClick={() => setPos("bottom-left")}>Bottom Left</Button>
-      <Button onClick={() => setPos("bottom-center")}>Bottom Center</Button>
-      <Button onClick={() => setPos("bottom-right")}>Bottom Right</Button>
-
+    <>
+      <Button variant="outline" onClick={() => setOpen(true)}>
+        Show Persistent Snackbar
+      </Button>
       <Snackbar
-        open={Boolean(pos)}
-        position={pos}
-        message={`Visible at ${pos}`}
-        onClose={() => setPos(undefined)}
-        autoHideDuration={2000}
+        open={open}
+        message="No internet connection detected."
+        onClose={() => setOpen(false)}
       />
-    </div>
+    </>
   );
 };
 
-export const Positions: Story = {
-  render: () => <PositionsRender />,
+export const Persistent: StoryObj = {
+  render: () => <PersistentDemo />,
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "Without `autoHideDuration`, the snackbar stays visible until explicitly dismissed.",
+      },
+    },
+  },
 };

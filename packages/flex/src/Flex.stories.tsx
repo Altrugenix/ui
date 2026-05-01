@@ -1,74 +1,139 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Flex } from "@altrugenix/flex";
 
+const Box = ({ children }: { children: React.ReactNode }) => (
+  <div className="bg-primary/10 text-primary border-primary/20 rounded border px-4 py-2 text-sm font-medium">
+    {children}
+  </div>
+);
+
 const meta: Meta<typeof Flex> = {
   title: "Layout/Flex",
   component: Flex,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A flexbox container with prop-driven direction, alignment, justification, gap, and wrap controls. Eliminates the need for repetitive flex utility classes.",
+      },
+    },
+  },
+  argTypes: {
+    direction: {
+      control: "select",
+      options: ["row", "col", "row-reverse", "col-reverse"],
+      description: "Flex direction.",
+      table: { category: "Layout" },
+    },
+    align: {
+      control: "select",
+      options: ["start", "center", "end", "stretch", "baseline"],
+      description: "Cross-axis alignment.",
+      table: { category: "Layout" },
+    },
+    justify: {
+      control: "select",
+      options: ["start", "center", "end", "between", "around", "evenly"],
+      description: "Main-axis justification.",
+      table: { category: "Layout" },
+    },
+    wrap: {
+      control: "boolean",
+      description: "Allow items to wrap to the next line.",
+      table: { category: "Layout" },
+    },
+    gap: {
+      control: "select",
+      options: ["none", "xs", "sm", "md", "lg", "xl"],
+      description: "Gap between items.",
+      table: { category: "Layout" },
+    },
+    inline: {
+      control: "boolean",
+      description: "Renders as inline-flex instead of flex.",
+      table: { category: "Layout" },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Flex>;
 
-const Swatch = ({ label }: { label: string }) => (
-  <div className="bg-primary/10 flex h-16 w-16 items-center justify-center rounded-lg border text-xs font-medium">
-    {label}
-  </div>
-);
-
 export const Default: Story = {
+  args: {
+    gap: "md",
+    children: (
+      <>
+        <Box>Item 1</Box>
+        <Box>Item 2</Box>
+        <Box>Item 3</Box>
+      </>
+    ),
+  },
+};
+
+export const SpaceBetween: Story = {
+  args: {
+    justify: "between",
+    align: "center",
+    children: (
+      <>
+        <Box>Left</Box>
+        <Box>Center</Box>
+        <Box>Right</Box>
+      </>
+    ),
+  },
+};
+
+export const Column: Story = {
+  args: {
+    direction: "col",
+    gap: "sm",
+    children: (
+      <>
+        <Box>Row 1</Box>
+        <Box>Row 2</Box>
+        <Box>Row 3</Box>
+      </>
+    ),
+  },
+};
+
+export const WrapDemo: Story = {
   render: () => (
-    <Flex gap="md" align="center">
-      <Swatch label="A" />
-      <Swatch label="B" />
-      <Swatch label="C" />
+    <Flex gap="sm" wrap>
+      {Array.from({ length: 12 }, (_, i) => (
+        <Box key={i}>Item {i + 1}</Box>
+      ))}
     </Flex>
   ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "Wrapping flex — items flow to the next line when the container width is exceeded.",
+      },
+    },
+  },
 };
 
-export const Direction: Story = {
+export const Centered: Story = {
   render: () => (
-    <div className="space-y-6">
-      <div>
-        <p className="mb-2 text-sm font-medium">Row (default)</p>
-        <Flex direction="row" gap="sm">
-          <Swatch label="1" />
-          <Swatch label="2" />
-          <Swatch label="3" />
-        </Flex>
-      </div>
-      <div>
-        <p className="mb-2 text-sm font-medium">Column</p>
-        <Flex direction="col" gap="sm">
-          <Swatch label="1" />
-          <Swatch label="2" />
-          <Swatch label="3" />
-        </Flex>
-      </div>
-    </div>
+    <Flex
+      justify="center"
+      align="center"
+      className="border-border h-48 rounded-lg border-2 border-dashed"
+    >
+      <Box>Centered content</Box>
+    </Flex>
   ),
-};
-
-export const JustifyAndAlign: Story = {
-  render: () => (
-    <div className="space-y-4">
-      {(["start", "center", "end", "between"] as const).map((justify) => (
-        <div key={justify}>
-          <p className="text-muted-foreground mb-1 text-xs">
-            justify=&quot;{justify}&quot;
-          </p>
-          <Flex
-            justify={justify}
-            align="center"
-            gap="sm"
-            className="rounded-lg border p-4"
-          >
-            <Swatch label="A" />
-            <Swatch label="B" />
-            <Swatch label="C" />
-          </Flex>
-        </div>
-      ))}
-    </div>
-  ),
+  parameters: {
+    docs: {
+      description: {
+        story: "Using justify and align to perfectly center content.",
+      },
+    },
+  },
 };

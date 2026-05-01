@@ -140,7 +140,11 @@ describe("CommandPalette", () => {
   });
 
   it("uses custom placeholder", () => {
-    render(<CommandPalette {...defaultProps} placeholder="Custom Placeholder" />);
-    expect(screen.getByPlaceholderText("Custom Placeholder")).toBeInTheDocument();
+    render(
+      <CommandPalette {...defaultProps} placeholder="Custom Placeholder" />
+    );
+    expect(
+      screen.getByPlaceholderText("Custom Placeholder")
+    ).toBeInTheDocument();
   });
 });

@@ -6,11 +6,7 @@ import "@testing-library/jest-dom";
 
 describe("Alert", () => {
   it("renders the title and content correctly", () => {
-    render(
-      <Alert title="Alert Title">
-        Alert Content
-      </Alert>
-    );
+    render(<Alert title="Alert Title">Alert Content</Alert>);
     expect(screen.getByText("Alert Title")).toBeInTheDocument();
     expect(screen.getByText("Alert Content")).toBeInTheDocument();
   });
@@ -29,7 +25,7 @@ describe("Alert", () => {
   it("calls onClose when the close button is clicked", () => {
     const onClose = vi.fn();
     render(<Alert onClose={onClose}>Dismissible</Alert>);
-    
+
     const closeButton = screen.getByLabelText("Close alert");
     fireEvent.click(closeButton);
     expect(onClose).toHaveBeenCalledTimes(1);
@@ -43,11 +39,7 @@ describe("Alert", () => {
 
   it("applies custom className and passes through additional props", () => {
     render(
-      <Alert
-        className="custom-alert"
-        data-testid="alert"
-        id="alert-id"
-      >
+      <Alert className="custom-alert" data-testid="alert" id="alert-id">
         Test
       </Alert>
     );

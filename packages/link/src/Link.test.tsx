@@ -23,13 +23,22 @@ describe("Link", () => {
 
   it("forwards ref correctly", () => {
     const ref = React.createRef<HTMLAnchorElement>();
-    render(<Link href="#" ref={ref}>Link</Link>);
+    render(
+      <Link href="#" ref={ref}>
+        Link
+      </Link>
+    );
     expect(ref.current).toBeInstanceOf(HTMLAnchorElement);
   });
 
   it("applies custom className and passes through additional props", () => {
     render(
-      <Link href="#" className="custom-link" data-testid="link" title="Click me">
+      <Link
+        href="#"
+        className="custom-link"
+        data-testid="link"
+        title="Click me"
+      >
         Link
       </Link>
     );

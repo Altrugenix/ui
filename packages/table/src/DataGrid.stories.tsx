@@ -10,9 +10,33 @@ interface UserData {
 }
 
 const meta: Meta<typeof DataGrid<UserData>> = {
-  title: "UI/Table/DataGrid",
+  title: "Data Display/Table/DataGrid",
   component: DataGrid,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A high-performance virtualized data grid suitable for rendering thousands of rows. Uses `VirtualList` under the hood for 60fps scrolling.",
+      },
+    },
+  },
+  argTypes: {
+    columns: {
+      description:
+        "Array of column definitions with header, accessorKey, width, and optional custom cell renderer.",
+      table: { category: "Data" },
+    },
+    data: {
+      description: "Array of raw data items.",
+      table: { category: "Data" },
+    },
+    height: {
+      control: "number",
+      description: "Fixed height of the scrollable grid container.",
+      table: { category: "Layout" },
+    },
+  },
 };
 
 export default meta;
@@ -45,5 +69,13 @@ export const Performance1000Rows: StoryObj = {
     columns: COLUMNS,
     data: DATA,
     height: 500,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "A demonstration of 1,000 rows rendering smoothly thanks to DOM virtualization.",
+      },
+    },
   },
 };

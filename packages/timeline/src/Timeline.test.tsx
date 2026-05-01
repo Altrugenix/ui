@@ -18,12 +18,16 @@ describe("Timeline", () => {
   });
   it("renders custom icons and variants", () => {
     const customItems = [
-      { title: "Success", icon: <span data-testid="success-icon">V</span>, variant: "success" as const },
+      {
+        title: "Success",
+        icon: <span data-testid="success-icon">V</span>,
+        variant: "success" as const,
+      },
       { title: "Destructive", variant: "destructive" as const },
     ];
     render(<Timeline items={customItems} />);
     expect(screen.getByTestId("success-icon")).toBeInTheDocument();
-    
+
     // Check variant classes
     const dots = document.querySelectorAll(".rounded-full");
     // Success icon container has border-success (index 0)

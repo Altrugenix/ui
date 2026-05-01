@@ -1,18 +1,38 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MetricCard } from "@altrugenix/metric-card";
-import { Users, DollarSign, TrendingUp, Activity } from "lucide-react";
+import { Users, DollarSign, Activity } from "lucide-react";
 
 const meta: Meta<typeof MetricCard> = {
-  title: "UI/MetricCard",
+  title: "Data Display/MetricCard",
   component: MetricCard,
   tags: ["autodocs"],
-  decorators: [
-    (Story) => (
-      <div className="bg-muted/20 max-w-[350px] p-6">
-        <Story />
-      </div>
-    ),
-  ],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A specialized card for dashboard metrics. Displays a title, primary value, icon, and optional trend/change indicator.",
+      },
+    },
+  },
+  argTypes: {
+    title: {
+      description: "Metric label (e.g. 'Total Revenue').",
+      table: { category: "Content" },
+    },
+    value: {
+      description: "Primary numeric or formatted value.",
+      table: { category: "Content" },
+    },
+    trend: {
+      description: "Change indicator value (e.g. '+12.5%').",
+      table: { category: "Content" },
+    },
+
+    icon: {
+      description: "Top-right icon representing the metric.",
+      table: { category: "Content" },
+    },
+  },
 };
 
 export default meta;
@@ -20,43 +40,57 @@ type Story = StoryObj<typeof MetricCard>;
 
 export const Default: Story = {
   args: {
-    title: "Total Revenue",
+    title: "Total Users",
+    value: "14,231",
+  },
+};
+
+export const WithTrendUp: Story = {
+  args: {
+    title: "Monthly Revenue",
     value: "$45,231.89",
-    description: "+20.1% from last month",
-    icon: <DollarSign className="h-4 w-4" />,
-    trend: { value: "+20.1%", direction: "up", label: "vs last month" },
+    trend: { value: "+20.1%", direction: "up", label: "from last month" },
+    icon: <DollarSign className="text-muted-foreground h-4 w-4" />,
   },
 };
 
-export const WithSparkline: Story = {
+export const WithTrendDown: Story = {
   args: {
-    title: "Active Users",
-    value: "2,350",
-    description: "Average 120 per hour",
-    icon: <Users className="h-4 w-4" />,
-    trend: { value: "+12.5%", direction: "up" },
-    chartData: [20, 45, 28, 80, 99, 43, 65, 50, 85, 100],
+    title: "Bounce Rate",
+    value: "42.3%",
+    trend: { value: "-4.5%", direction: "down", label: "from last week" },
+    icon: <Activity className="text-muted-foreground h-4 w-4" />,
   },
 };
 
-export const NegativeTrend: Story = {
-  args: {
-    title: "Churn Rate",
-    value: "2.4%",
-    icon: <Activity className="h-4 w-4" />,
-    trend: { value: "-0.5%", direction: "down", label: "reduction" },
-    chartData: [45, 40, 42, 38, 35, 30, 32, 28, 25, 24],
-    chartColor: "hsl(var(--destructive))",
-  },
-};
-
-export const Glass: Story = {
-  args: {
-    variant: "glass",
-    title: "Server Load",
-    value: "42%",
-    icon: <TrendingUp className="h-4 w-4" />,
-    trend: { value: "Stable", direction: "neutral" },
-    chartData: [40, 42, 41, 43, 42, 42, 41, 42, 43, 42],
+export const DashboardGrid: Story = {
+  render: () => (
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+      <MetricCard
+        title="Total Active Users"
+        value="2,420"
+        trend={{ value: "+4.1%", direction: "up" }}
+        icon={<Users className="text-muted-foreground h-4 w-4" />}
+      />
+      <MetricCard
+        title="Avg. Session Duration"
+        value="4m 12s"
+        trend={{ value: "-1.2%", direction: "down" }}
+        icon={<Activity className="text-muted-foreground h-4 w-4" />}
+      />
+      <MetricCard
+        title="Server Uptime"
+        value="99.9%"
+        trend={{ value: "Stable", direction: "neutral" }}
+      />
+    </div>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "A responsive grid of metric cards — the core building block of admin dashboards.",
+      },
+    },
   },
 };

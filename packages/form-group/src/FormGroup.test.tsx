@@ -21,10 +21,14 @@ describe("FormGroup", () => {
   });
 
   it("applies correct spacing classes", () => {
-    const { container: smContainer } = render(<FormGroup spacing="sm">Test</FormGroup>);
+    const { container: smContainer } = render(
+      <FormGroup spacing="sm">Test</FormGroup>
+    );
     expect(smContainer.firstChild).toHaveClass("space-y-3");
 
-    const { container: lgContainer } = render(<FormGroup spacing="lg">Test</FormGroup>);
+    const { container: lgContainer } = render(
+      <FormGroup spacing="lg">Test</FormGroup>
+    );
     expect(lgContainer.firstChild).toHaveClass("space-y-8");
   });
 
@@ -36,7 +40,11 @@ describe("FormGroup", () => {
 
   it("applies custom className and passes through additional props", () => {
     const { container } = render(
-      <FormGroup className="custom-form" id="form-id" onSubmit={(e) => e.preventDefault()}>
+      <FormGroup
+        className="custom-form"
+        id="form-id"
+        onSubmit={(e) => e.preventDefault()}
+      >
         Test
       </FormGroup>
     );

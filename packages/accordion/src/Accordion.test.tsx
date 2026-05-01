@@ -59,10 +59,15 @@ describe("Accordion", () => {
   it("prevents interaction when item is disabled", () => {
     const disabledItems = [
       ...items,
-      { value: "item-3", trigger: "Item 3", content: "Content 3", disabled: true },
+      {
+        value: "item-3",
+        trigger: "Item 3",
+        content: "Content 3",
+        disabled: true,
+      },
     ];
     render(<Accordion items={disabledItems} />);
-    
+
     const trigger = screen.getByText("Item 3");
     fireEvent.click(trigger);
     expect(trigger.closest("button")).toBeDisabled();

@@ -22,13 +22,17 @@ describe("Stack", () => {
 
   it("applies correct direction and spacing classes", () => {
     const { container: verticalContainer } = render(
-      <Stack direction="vertical" spacing="lg">Vertical</Stack>
+      <Stack direction="vertical" spacing="lg">
+        Vertical
+      </Stack>
     );
     expect(verticalContainer.firstChild).toHaveClass("flex-col");
     expect(verticalContainer.firstChild).toHaveClass("space-y-6");
 
     const { container: horizontalContainer } = render(
-      <Stack direction="horizontal" spacing="sm">Horizontal</Stack>
+      <Stack direction="horizontal" spacing="sm">
+        Horizontal
+      </Stack>
     );
     expect(horizontalContainer.firstChild).toHaveClass("flex-row");
     expect(horizontalContainer.firstChild).toHaveClass("space-x-2");

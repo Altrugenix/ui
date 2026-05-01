@@ -48,9 +48,9 @@ describe("VirtualList", () => {
       />
     );
     const scrollContainer = container.firstChild as HTMLElement;
-    
+
     fireEvent.scroll(scrollContainer, { target: { scrollTop: 800 } });
-    
+
     expect(onScroll).toHaveBeenCalledWith(800);
     expect(screen.getByText("Item 20")).toBeInTheDocument();
     expect(screen.queryByText("Item 0")).not.toBeInTheDocument();

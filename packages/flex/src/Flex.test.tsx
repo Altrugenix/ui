@@ -22,12 +22,12 @@ describe("Flex", () => {
 
   it("applies correct layout classes", () => {
     const { container } = render(
-      <Flex 
-        direction="col" 
-        align="center" 
-        justify="between" 
-        wrap={true} 
-        gap="lg" 
+      <Flex
+        direction="col"
+        align="center"
+        justify="between"
+        wrap={true}
+        gap="lg"
         inline={true}
       >
         Flex Content

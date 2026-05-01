@@ -30,7 +30,7 @@ describe("BarChart", () => {
     const { container } = render(<BarChart data={data} />);
     const bars = container.querySelectorAll(".rounded-t-md");
     // Max value is 30, so "Jan" (10) should be 33.33%, "Feb" (20) should be 66.66%, "Mar" (30) 100%
-    
+
     // We use waitFor because of framer-motion animations
     await waitFor(() => {
       const h1 = parseFloat((bars[0] as HTMLElement).style.height);
@@ -43,7 +43,9 @@ describe("BarChart", () => {
   });
 
   it("applies custom className", () => {
-    const { container } = render(<BarChart data={data} className="custom-chart" />);
+    const { container } = render(
+      <BarChart data={data} className="custom-chart" />
+    );
     expect(container.firstChild).toHaveClass("custom-chart");
   });
 });

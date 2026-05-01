@@ -2,9 +2,17 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Skeleton } from "@altrugenix/skeleton";
 
 const meta: Meta<typeof Skeleton> = {
-  title: "Composites/Skeleton/Advanced",
+  title: "Feedback/Skeleton/Advanced",
   component: Skeleton,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "Advanced compositions and animation variations for the Skeleton component.",
+      },
+    },
+  },
 };
 
 export default meta;
@@ -27,13 +35,29 @@ export const AnimationVariants: StoryObj = {
         <Skeleton variant="text" animation="wave" />
         <Skeleton variant="rectangular" height={100} animation="wave" />
       </div>
+
+      <div className="space-y-2">
+        <h4 className="text-muted-foreground text-sm font-bold uppercase">
+          None (Static)
+        </h4>
+        <Skeleton variant="text" animation="none" />
+        <Skeleton variant="rectangular" height={100} animation="none" />
+      </div>
     </div>
   ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "Skeleton supports three animation modes: `pulse`, `wave`, and `none`.",
+      },
+    },
+  },
 };
 
 export const ComplexLoading: StoryObj = {
   render: () => (
-    <div className="bg-card flex max-w-sm items-start gap-4 overflow-hidden rounded-xl border p-4">
+    <div className="bg-card flex max-w-sm items-start gap-4 overflow-hidden rounded-xl border p-4 shadow-sm">
       <Skeleton variant="circular" width={48} height={48} animation="wave" />
       <div className="flex-1 space-y-3">
         <div className="space-y-1">
@@ -48,4 +72,12 @@ export const ComplexLoading: StoryObj = {
       </div>
     </div>
   ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "A complex dashboard card loading state using the `wave` animation.",
+      },
+    },
+  },
 };

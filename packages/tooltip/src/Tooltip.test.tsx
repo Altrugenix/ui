@@ -27,17 +27,17 @@ describe("Tooltip", () => {
         <button>Hover me</button>
       </Tooltip>
     );
-    
+
     const trigger = screen.getByText("Hover me");
     fireEvent.mouseEnter(trigger);
-    
+
     // Still hidden before delay
     expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
-    
+
     act(() => {
       vi.advanceTimersByTime(500);
     });
-    
+
     expect(screen.getByRole("tooltip")).toBeInTheDocument();
     expect(screen.getByText("Tooltip Content")).toBeInTheDocument();
   });
@@ -48,16 +48,16 @@ describe("Tooltip", () => {
         <button>Hover me</button>
       </Tooltip>
     );
-    
+
     const trigger = screen.getByText("Hover me");
     fireEvent.mouseEnter(trigger);
-    
+
     act(() => {
       vi.runAllTimers();
     });
-    
+
     expect(screen.getByRole("tooltip")).toBeInTheDocument();
-    
+
     fireEvent.mouseLeave(trigger);
     expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
   });
@@ -68,16 +68,16 @@ describe("Tooltip", () => {
         <button>Focus me</button>
       </Tooltip>
     );
-    
+
     const trigger = screen.getByText("Focus me");
     fireEvent.focus(trigger);
-    
+
     act(() => {
       vi.runAllTimers();
     });
-    
+
     expect(screen.getByRole("tooltip")).toBeInTheDocument();
-    
+
     fireEvent.blur(trigger);
     expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
   });
@@ -88,12 +88,12 @@ describe("Tooltip", () => {
         <button>Hover me</button>
       </Tooltip>
     );
-    
+
     fireEvent.mouseEnter(screen.getByText("Hover me"));
     act(() => {
       vi.runAllTimers();
     });
-    
+
     const tooltip = screen.getByRole("tooltip");
     expect(tooltip).toHaveClass("left-full");
   });
@@ -104,15 +104,15 @@ describe("Tooltip", () => {
         <button>Hover me</button>
       </Tooltip>
     );
-    
+
     fireEvent.mouseEnter(screen.getByText("Hover me"));
     unmount();
-    
+
     // If it didn't clear, advancing timers might trigger state update on unmounted component
     act(() => {
       vi.advanceTimersByTime(500);
     });
-    
+
     expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
   });
 });

@@ -33,7 +33,9 @@ describe("Marquee", () => {
   it("can disable pause on hover", () => {
     const { container } = render(<Marquee pauseOnHover={false}>Test</Marquee>);
     const motionDiv = container.querySelector(".shrink-0");
-    expect(motionDiv).not.toHaveClass("group-hover:[animation-play-state:paused]");
+    expect(motionDiv).not.toHaveClass(
+      "group-hover:[animation-play-state:paused]"
+    );
   });
 
   it("applies custom gap and className", () => {

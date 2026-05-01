@@ -51,7 +51,10 @@ describe("Textarea", () => {
 
   it("uses custom id if provided", () => {
     render(<Textarea label="Bio" id="custom-textarea" />);
-    expect(screen.getByLabelText(/bio/i)).toHaveAttribute("id", "custom-textarea");
+    expect(screen.getByLabelText(/bio/i)).toHaveAttribute(
+      "id",
+      "custom-textarea"
+    );
   });
 
   it("applies custom className to textarea element", () => {

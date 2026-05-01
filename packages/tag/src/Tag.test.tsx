@@ -10,7 +10,9 @@ describe("Tag", () => {
     expect(screen.getByText("Hello Tag")).toBeInTheDocument();
   });
   it("applies variant styles correctly", () => {
-    const { rerender, container } = render(<Tag variant="success">Success</Tag>);
+    const { rerender, container } = render(
+      <Tag variant="success">Success</Tag>
+    );
     expect(container.firstChild).toHaveClass("bg-success/10");
     expect(container.firstChild).toHaveClass("text-success");
 

@@ -37,7 +37,11 @@ describe("Spinner", () => {
 
   it("applies custom className and passes through additional props", () => {
     render(
-      <Spinner className="custom-spinner" data-testid="spinner" id="spinner-id" />
+      <Spinner
+        className="custom-spinner"
+        data-testid="spinner"
+        id="spinner-id"
+      />
     );
     const spinner = screen.getByTestId("spinner");
     expect(spinner).toHaveClass("custom-spinner");

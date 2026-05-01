@@ -45,7 +45,11 @@ describe("AspectRatio", () => {
 
   it("applies custom className and passes through additional props", () => {
     const { container } = render(
-      <AspectRatio className="custom-aspect" data-testid="aspect" id="aspect-id">
+      <AspectRatio
+        className="custom-aspect"
+        data-testid="aspect"
+        id="aspect-id"
+      >
         Content
       </AspectRatio>
     );

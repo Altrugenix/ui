@@ -17,10 +17,10 @@ describe("RichTextEditor", () => {
     const onChange = vi.fn();
     render(<RichTextEditor onChange={onChange} />);
     const editor = screen.getByRole("textbox");
-    
+
     editor.innerHTML = "New content";
     fireEvent.input(editor);
-    
+
     expect(onChange).toHaveBeenCalledWith("New content");
   });
 
@@ -30,14 +30,14 @@ describe("RichTextEditor", () => {
     }
     const execSpy = vi.spyOn(document, "execCommand");
     render(<RichTextEditor />);
-    
+
     // Find bold button by its icon (or button aria label if it had one)
     // Looking at the code, it uses lucide-react Bold.
     // I'll search for the button.
     const buttons = screen.getAllByRole("button");
     // Bold is the first button in the toolbar
     fireEvent.click(buttons[0]);
-    
+
     expect(execSpy).toHaveBeenCalledWith("bold", false, undefined);
     execSpy.mockRestore();
   });

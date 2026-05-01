@@ -1,8 +1,8 @@
 <div align="center">
   <a href="https://altrugenix.js.org/">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://altrugenix.js.org/logo-dark.png">
-      <img alt="Altrugenix logo" src="https://altrugenix.js.org/logo-light.png" height="128">
+      <source media="(prefers-color-scheme: dark)" srcset="https://avatars.githubusercontent.com/u/272279351">
+      <img alt="Altrugenix logo" src="https://avatars.githubusercontent.com/u/272279351" height="128">
     </picture>
   </a>
   <h1>Altrugenix UI</h1>
@@ -15,7 +15,6 @@
 </div>
 
 # Altrugenix
-
 
 An open-source, scalable, and production-ready UI component library built with React, TypeScript, and Tailwind CSS.
 
@@ -55,7 +54,7 @@ yarn install
 To use these packages in another project, add a `.npmrc` file to your project:
 
 ```text
-@altrugenix:registry=https://npm.pkg.github.com
+@altrugenix:registry=https://registry.npmjs.org/
 ```
 
 Then install via:

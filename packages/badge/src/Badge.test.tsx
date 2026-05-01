@@ -22,7 +22,9 @@ describe("Badge", () => {
   });
 
   it("applies custom className and extra props", () => {
-    const { container } = render(<Badge className="custom-badge" id="badge-id" />);
+    const { container } = render(
+      <Badge className="custom-badge" id="badge-id" />
+    );
     expect(container.firstChild).toHaveClass("custom-badge");
     expect(container.firstChild).toHaveAttribute("id", "badge-id");
   });

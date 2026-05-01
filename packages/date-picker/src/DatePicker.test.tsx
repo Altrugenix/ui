@@ -17,15 +17,15 @@ describe("DatePicker", () => {
   it("opens calendar on click and selects a date", () => {
     const onChange = vi.fn();
     render(<DatePicker onChange={onChange} />);
-    
+
     const trigger = screen.getByRole("button", { name: /pick a date/i });
     fireEvent.click(trigger);
-    
+
     expect(screen.getByRole("dialog")).toBeInTheDocument();
-    
+
     const day15 = screen.getByText("15");
     fireEvent.click(day15);
-    
+
     expect(onChange).toHaveBeenCalled();
     expect(onChange.mock.calls[0][0]).toBeInstanceOf(Date);
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();

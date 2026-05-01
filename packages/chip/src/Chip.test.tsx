@@ -30,17 +30,27 @@ describe("Chip", () => {
   });
 
   it("renders with an avatar", () => {
-    render(<Chip avatar={<span data-testid="avatar">A</span>}>Chip with Avatar</Chip>);
+    render(
+      <Chip avatar={<span data-testid="avatar">A</span>}>Chip with Avatar</Chip>
+    );
     expect(screen.getByTestId("avatar")).toBeInTheDocument();
   });
 
   it("applies variant and size classes correctly", () => {
-    const { rerender } = render(<Chip variant="primary" size="lg">Test</Chip>);
+    const { rerender } = render(
+      <Chip variant="primary" size="lg">
+        Test
+      </Chip>
+    );
     const chip = screen.getByText("Test").parentElement;
     expect(chip).toHaveClass("bg-primary");
     expect(chip).toHaveClass("text-sm");
 
-    rerender(<Chip variant="outline" size="sm">Test</Chip>);
+    rerender(
+      <Chip variant="outline" size="sm">
+        Test
+      </Chip>
+    );
     expect(chip).toHaveClass("border-input");
     expect(chip).toHaveClass("text-[10px]");
   });

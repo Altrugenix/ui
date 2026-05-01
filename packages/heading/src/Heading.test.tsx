@@ -28,7 +28,11 @@ describe("Heading component", () => {
 
   it("forwards ref correctly", () => {
     const ref = React.createRef<HTMLHeadingElement>();
-    render(<Heading level={1} ref={ref}>Test</Heading>);
+    render(
+      <Heading level={1} ref={ref}>
+        Test
+      </Heading>
+    );
     expect(ref.current).toBeInstanceOf(HTMLHeadingElement);
   });
 

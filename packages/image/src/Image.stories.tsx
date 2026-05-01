@@ -2,16 +2,32 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Image } from "@altrugenix/image";
 
 const meta: Meta<typeof Image> = {
-  title: "UI/Image",
+  title: "Data Display/Image",
   component: Image,
   tags: ["autodocs"],
-  decorators: [
-    (Story) => (
-      <div className="bg-muted/20 aspect-video max-w-[500px] overflow-hidden rounded-xl border">
-        <Story />
-      </div>
-    ),
-  ],
+  parameters: {
+    layout: "centered",
+    docs: {
+      description: {
+        component:
+          "An enhanced `<img>` element with loading fade-in animation and automatic fallback when the source fails to load.",
+      },
+    },
+  },
+  argTypes: {
+    src: {
+      description: "Image source URL.",
+      table: { category: "Content" },
+    },
+    alt: {
+      description: "Alternative text for accessibility.",
+      table: { category: "Content" },
+    },
+    fallback: {
+      description: "Fallback image URL used when the primary source fails.",
+      table: { category: "Content" },
+    },
+  },
 };
 
 export default meta;
@@ -19,33 +35,41 @@ type Story = StoryObj<typeof Image>;
 
 export const Default: Story = {
   args: {
-    src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
-    alt: "Nature Landscape",
-    className: "h-full w-full",
+    src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
+    alt: "Mountain landscape",
+    className: "w-80 rounded-lg",
   },
 };
 
 export const WithFallback: Story = {
   args: {
-    src: "https://invalid-image-url.com/nothing.jpg",
+    src: "https://broken-url.example/image.png",
     fallback:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-    alt: "Fallback Image",
-    className: "h-full w-full",
+      "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=400&h=300&fit=crop",
+    alt: "Fallback demo",
+    className: "w-80 rounded-lg",
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "When the primary `src` fails to load, the `fallback` image is displayed instead.",
+      },
+    },
   },
 };
 
-export const Square: Story = {
-  decorators: [
-    (Story) => (
-      <div className="border-primary h-[300px] w-[300px] overflow-hidden rounded-full border-4">
-        <Story />
-      </div>
-    ),
-  ],
+export const Rounded: Story = {
   args: {
-    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80",
-    alt: "Portrait",
-    className: "h-full w-full",
+    src: "https://github.com/shadcn.png",
+    alt: "User avatar",
+    className: "h-24 w-24 rounded-full",
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "An image styled as a circular avatar with `rounded-full`.",
+      },
+    },
   },
 };

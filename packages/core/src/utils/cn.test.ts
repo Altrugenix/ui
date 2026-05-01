@@ -22,7 +22,9 @@ describe("cn utility", () => {
   });
 
   it("handles object inputs", () => {
-    expect(cn({ "bg-red-500": true, "text-white": false, "p-4": true })).toBe("bg-red-500 p-4");
+    expect(cn({ "bg-red-500": true, "text-white": false, "p-4": true })).toBe(
+      "bg-red-500 p-4"
+    );
   });
 
   it("handles array inputs", () => {

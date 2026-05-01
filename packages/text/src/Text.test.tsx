@@ -24,7 +24,11 @@ describe("Text", () => {
   });
 
   it("applies custom className and passes through additional props", () => {
-    render(<Text className="custom-text" id="text-id">Custom</Text>);
+    render(
+      <Text className="custom-text" id="text-id">
+        Custom
+      </Text>
+    );
     const text = screen.getByText("Custom");
     expect(text).toHaveClass("custom-text");
     expect(text).toHaveAttribute("id", "text-id");

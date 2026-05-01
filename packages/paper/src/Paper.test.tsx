@@ -54,7 +54,11 @@ describe("Paper", () => {
   });
 
   it("should pass through additional HTML attributes", () => {
-    render(<Paper data-testid="paper-element" id="test-id">Test</Paper>);
+    render(
+      <Paper data-testid="paper-element" id="test-id">
+        Test
+      </Paper>
+    );
     const element = screen.getByTestId("paper-element");
     expect(element.id).toBe("test-id");
   });

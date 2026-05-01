@@ -71,7 +71,9 @@ describe("Snackbar", () => {
     expect(screen.getByText("Test").parentElement).toHaveClass("top-4 right-4");
 
     rerender(<Snackbar open={true} message="Test" position="bottom-left" />);
-    expect(screen.getByText("Test").parentElement).toHaveClass("bottom-4 left-4");
+    expect(screen.getByText("Test").parentElement).toHaveClass(
+      "bottom-4 left-4"
+    );
   });
 
   it("applies variant classes correctly", () => {
@@ -81,7 +83,9 @@ describe("Snackbar", () => {
     expect(screen.getByText("Test").parentElement).toHaveClass("bg-success");
 
     rerender(<Snackbar open={true} message="Test" variant="error" />);
-    expect(screen.getByText("Test").parentElement).toHaveClass("bg-destructive");
+    expect(screen.getByText("Test").parentElement).toHaveClass(
+      "bg-destructive"
+    );
   });
 
   it("applies custom className and passes through additional props", () => {

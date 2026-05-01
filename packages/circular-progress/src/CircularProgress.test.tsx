@@ -89,14 +89,18 @@ describe("CircularProgress", () => {
     const { container } = render(<CircularProgress value={0} />);
     const progressCircle = container.querySelectorAll("circle")[1];
     const circumference = 2 * Math.PI * 20;
-    const offset = parseFloat(progressCircle.getAttribute("stroke-dashoffset") || "0");
+    const offset = parseFloat(
+      progressCircle.getAttribute("stroke-dashoffset") || "0"
+    );
     expect(offset).toBeCloseTo(circumference, 1);
   });
 
   it("has 0 dashoffset at 100% value", () => {
     const { container } = render(<CircularProgress value={100} />);
     const progressCircle = container.querySelectorAll("circle")[1];
-    const offset = parseFloat(progressCircle.getAttribute("stroke-dashoffset") || "0");
+    const offset = parseFloat(
+      progressCircle.getAttribute("stroke-dashoffset") || "0"
+    );
     expect(offset).toBe(0);
   });
 });

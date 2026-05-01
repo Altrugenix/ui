@@ -36,8 +36,10 @@ describe("Pagination", () => {
   });
 
   it("calls onPageChange when next/prev buttons are clicked", () => {
-    const { rerender } = render(<Pagination {...defaultProps} currentPage={2} />);
-    
+    const { rerender } = render(
+      <Pagination {...defaultProps} currentPage={2} />
+    );
+
     fireEvent.click(screen.getByLabelText("Previous page"));
     expect(defaultProps.onPageChange).toHaveBeenCalledWith(1);
 
@@ -84,7 +86,14 @@ describe("Pagination", () => {
 
   it("respects siblingCount prop", () => {
     // currentPage 5, totalPages 10, siblingCount 0: 1 ... 5 ... 10
-    render(<Pagination {...defaultProps} currentPage={5} totalPages={10} siblingCount={0} />);
+    render(
+      <Pagination
+        {...defaultProps}
+        currentPage={5}
+        totalPages={10}
+        siblingCount={0}
+      />
+    );
     expect(screen.queryByText("4")).not.toBeInTheDocument();
     expect(screen.queryByText("6")).not.toBeInTheDocument();
     expect(screen.getByText("5")).toBeInTheDocument();

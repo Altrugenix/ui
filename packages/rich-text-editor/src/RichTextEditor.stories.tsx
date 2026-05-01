@@ -3,43 +3,91 @@ import { RichTextEditor } from "@altrugenix/rich-text-editor";
 import { useState } from "react";
 
 const meta: Meta<typeof RichTextEditor> = {
-  title: "UI/RichTextEditor",
+  title: "Forms/RichTextEditor",
   component: RichTextEditor,
   tags: ["autodocs"],
-  decorators: [
-    (Story) => (
-      <div className="max-w-[800px] p-6">
-        <Story />
-      </div>
-    ),
-  ],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A WYSIWYG rich text editor with standard formatting controls (bold, italic, lists, etc). Uses a native `contenteditable` element under the hood.",
+      },
+    },
+  },
+  argTypes: {
+    initialValue: {
+      description: "Initial HTML content.",
+      table: { category: "Data" },
+    },
+    onChange: {
+      description: "Callback triggered with raw HTML when content changes.",
+      table: { category: "Events" },
+    },
+    placeholder: {
+      description: "Text shown when the editor is empty.",
+      table: { category: "Content" },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof RichTextEditor>;
 
-const DefaultRender = (args: React.ComponentProps<typeof RichTextEditor>) => {
-  const [content, setContent] = useState("");
+const DefaultDemo = () => {
+  const [html, setHtml] = useState("");
   return (
-    <div className="space-y-4">
-      <RichTextEditor {...args} onChange={setContent} />
-      <div className="bg-muted rounded-lg border p-4">
-        <p className="text-muted-foreground mb-2 text-xs font-bold tracking-wider uppercase">
-          HTML Output:
-        </p>
-        <code className="block text-xs break-all">{content}</code>
+    <div className="max-w-2xl space-y-4">
+      <RichTextEditor onChange={setHtml} />
+      <div className="bg-muted/30 text-muted-foreground rounded-lg p-4 font-mono text-xs break-all">
+        {html || "HTML Output will appear here..."}
       </div>
     </div>
   );
 };
 
 export const Default: Story = {
-  render: (args) => <DefaultRender {...args} />,
+  render: () => <DefaultDemo />,
+};
+
+const PreFilledDemo = () => {
+  const [html, setHtml] = useState(
+    "<p>Hello <b>World</b>!</p><ul><li>One</li><li>Two</li></ul>"
+  );
+  return (
+    <div className="max-w-2xl">
+      <RichTextEditor initialValue={html} onChange={setHtml} />
+    </div>
+  );
 };
 
 export const PreFilled: Story = {
-  args: {
-    initialValue:
-      "<h1>Hello World</h1><p>This is <b>bold</b> and this is <i>italic</i>.</p>",
+  render: () => <PreFilledDemo />,
+  parameters: {
+    docs: {
+      description: {
+        story: "Editor initialized with HTML content.",
+      },
+    },
+  },
+};
+
+export const CommentBox: Story = {
+  render: () => (
+    <div className="max-w-xl space-y-3 rounded-xl border p-4 shadow-sm">
+      <h3 className="font-semibold">Leave a comment</h3>
+      <RichTextEditor placeholder="What are your thoughts?" />
+      <div className="flex justify-end">
+        <button className="bg-primary text-primary-foreground rounded-md px-4 py-2 text-sm font-medium">
+          Post Comment
+        </button>
+      </div>
+    </div>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story: "A real-world comment box composition.",
+      },
+    },
   },
 };

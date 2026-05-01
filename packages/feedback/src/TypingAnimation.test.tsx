@@ -71,7 +71,9 @@ describe("TypingAnimation", () => {
 
   it("repeats the animation if repeat=true", () => {
     vi.useFakeTimers();
-    const { container } = render(<TypingAnimation text="A" speed={100} repeat />);
+    const { container } = render(
+      <TypingAnimation text="A" speed={100} repeat />
+    );
 
     act(() => {
       vi.advanceTimersByTime(100);

@@ -20,12 +20,18 @@ describe("Sidebar", () => {
 
   it("applies custom width and collapsedWidth", () => {
     const { rerender, container } = render(
-      <Sidebar width="200px" collapsedWidth="50px">Content</Sidebar>
+      <Sidebar width="200px" collapsedWidth="50px">
+        Content
+      </Sidebar>
     );
     let aside = container.querySelector("aside");
     expect(aside).toHaveStyle({ width: "200px" });
 
-    rerender(<Sidebar collapsed width="200px" collapsedWidth="50px">Content</Sidebar>);
+    rerender(
+      <Sidebar collapsed width="200px" collapsedWidth="50px">
+        Content
+      </Sidebar>
+    );
     aside = container.querySelector("aside");
     expect(aside).toHaveStyle({ width: "50px" });
   });
@@ -38,7 +44,11 @@ describe("Sidebar", () => {
 
   it("passes through additional props and className", () => {
     render(
-      <Sidebar className="custom-sidebar" id="test-sidebar" data-testid="sidebar">
+      <Sidebar
+        className="custom-sidebar"
+        id="test-sidebar"
+        data-testid="sidebar"
+      >
         Content
       </Sidebar>
     );

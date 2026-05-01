@@ -83,7 +83,7 @@ describe("SpeedDial", () => {
       />
     );
     expect(screen.getByTestId("custom-plus")).toBeInTheDocument();
-    
+
     fireEvent.click(screen.getByRole("button"));
     expect(screen.getByTestId("custom-x")).toBeInTheDocument();
   });

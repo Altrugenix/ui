@@ -2,13 +2,39 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Skeleton } from "@altrugenix/skeleton";
 
 const meta: Meta<typeof Skeleton> = {
-  title: "Composites/Skeleton",
+  title: "Feedback/Skeleton",
   component: Skeleton,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A placeholder loading state component that shows a pulsing animation. Useful for indicating that content is loading without causing layout shifts.",
+      },
+    },
+  },
   argTypes: {
     variant: {
       control: "select",
       options: ["text", "circular", "rectangular", "rounded"],
+      description: "Visual shape of the skeleton.",
+      table: { category: "Appearance" },
+    },
+    width: {
+      control: "text",
+      description: "Width of the skeleton (px or string like '100%').",
+      table: { category: "Appearance" },
+    },
+    height: {
+      control: "text",
+      description: "Height of the skeleton (px or string like '100%').",
+      table: { category: "Appearance" },
+    },
+    animation: {
+      control: "select",
+      options: ["pulse", "wave", "none"],
+      description: "Animation style.",
+      table: { category: "Appearance" },
     },
   },
 };
@@ -16,10 +42,24 @@ const meta: Meta<typeof Skeleton> = {
 export default meta;
 type Story = StoryObj<typeof Skeleton>;
 
-export const Text: Story = {
+export const Default: Story = {
   args: {
     variant: "text",
     width: "80%",
+  },
+};
+
+export const Text: Story = {
+  args: {
+    variant: "text",
+    width: "100%",
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "A standard text skeleton line.",
+      },
+    },
   },
 };
 
@@ -29,6 +69,13 @@ export const Circular: Story = {
     width: 48,
     height: 48,
   },
+  parameters: {
+    docs: {
+      description: {
+        story: "A circular skeleton, typically used for avatars.",
+      },
+    },
+  },
 };
 
 export const Rounded: Story = {
@@ -36,6 +83,14 @@ export const Rounded: Story = {
     variant: "rounded",
     width: "100%",
     height: 120,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "A rounded rectangle skeleton, typically used for cards or images.",
+      },
+    },
   },
 };
 
@@ -56,4 +111,12 @@ export const CardSkeleton: Story = {
       </div>
     </div>
   ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "A complete card skeleton composed of multiple skeleton variants.",
+      },
+    },
+  },
 };

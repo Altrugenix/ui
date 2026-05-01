@@ -10,9 +10,15 @@ const ThemeConsumer = () => {
     <div>
       <div data-testid="theme-value">{theme}</div>
       <div data-testid="is-dark">{isDark.toString()}</div>
-      <button onClick={() => setTheme("light")} data-testid="set-light">Light</button>
-      <button onClick={() => setTheme("dark")} data-testid="set-dark">Dark</button>
-      <button onClick={toggleTheme} data-testid="toggle-theme">Toggle</button>
+      <button onClick={() => setTheme("light")} data-testid="set-light">
+        Light
+      </button>
+      <button onClick={() => setTheme("dark")} data-testid="set-dark">
+        Dark
+      </button>
+      <button onClick={toggleTheme} data-testid="toggle-theme">
+        Toggle
+      </button>
     </div>
   );
 };
@@ -54,9 +60,9 @@ describe("ThemeProvider", () => {
         <ThemeConsumer />
       </ThemeProvider>
     );
-    
+
     fireEvent.click(screen.getByTestId("set-dark"));
-    
+
     expect(screen.getByTestId("theme-value")).toHaveTextContent("dark");
     expect(document.documentElement).toHaveClass("dark");
     expect(window.localStorage.getItem("Altrugenix-ui-theme")).toBe("dark");
@@ -68,7 +74,7 @@ describe("ThemeProvider", () => {
         <ThemeConsumer />
       </ThemeProvider>
     );
-    
+
     fireEvent.click(screen.getByTestId("toggle-theme"));
     expect(screen.getByTestId("theme-value")).toHaveTextContent("dark");
     expect(document.documentElement).toHaveClass("dark");
@@ -80,7 +86,11 @@ describe("ThemeProvider", () => {
 
   it("handles system theme correctly", () => {
     // Mock system preference as dark
-    (window.matchMedia as unknown as { mockImplementation: (fn: (query: string) => unknown) => void }).mockImplementation((query: string) => ({
+    (
+      window.matchMedia as unknown as {
+        mockImplementation: (fn: (query: string) => unknown) => void;
+      }
+    ).mockImplementation((query: string) => ({
       matches: query === "(prefers-color-scheme: dark)",
       media: query,
     }));

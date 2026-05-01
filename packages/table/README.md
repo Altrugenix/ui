@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://altrugenix.js.org/">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://altrugenix.js.org/logo-dark.png">
+      <source media="(prefers-color-scheme: dark)" srcset="https://avatars.githubusercontent.com/u/272279351">
       <img alt="Altrugenix logo" src="https://avatars.githubusercontent.com/u/272279351" height="128">
     </picture>
   </a>

@@ -39,7 +39,13 @@ describe("Backdrop", () => {
   });
 
   it("applies custom className", () => {
-    render(<Backdrop open={true} className="custom-backdrop" data-testid="backdrop" />);
+    render(
+      <Backdrop
+        open={true}
+        className="custom-backdrop"
+        data-testid="backdrop"
+      />
+    );
     expect(screen.getByTestId("backdrop")).toHaveClass("custom-backdrop");
   });
 });

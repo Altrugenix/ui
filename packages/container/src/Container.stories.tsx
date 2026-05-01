@@ -5,47 +5,62 @@ const meta: Meta<typeof Container> = {
   title: "Layout/Container",
   component: Container,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A responsive wrapper that constrains content width to a maximum size preset. Supports six max-width breakpoints and optional horizontal centering.",
+      },
+    },
+  },
+  argTypes: {
+    size: {
+      control: "select",
+      options: ["sm", "md", "lg", "xl", "2xl", "full"],
+      description: "Maximum width preset.",
+      table: { category: "Appearance" },
+    },
+    centered: {
+      control: "boolean",
+      description: "Center the container horizontally with auto margins.",
+      table: { category: "Appearance" },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Container>;
 
 export const Default: Story = {
-  render: () => (
-    <Container className="bg-card rounded-lg border p-8">
-      <h2 className="text-lg font-semibold">Default Container (XL)</h2>
-      <p className="text-muted-foreground mt-2 text-sm">
-        Content is centered and constrained to max-w-screen-xl by default.
-      </p>
-    </Container>
-  ),
+  args: {
+    size: "lg",
+    centered: true,
+    children: (
+      <div className="border-border bg-muted/30 rounded-lg border-2 border-dashed p-8 text-center text-sm">
+        Content constrained to <code className="font-mono">lg</code> width
+      </div>
+    ),
+  },
 };
 
-export const Sizes: Story = {
+export const AllSizes: Story = {
   render: () => (
-    <div className="space-y-6">
-      {(["sm", "md", "lg", "xl", "full"] as const).map((size) => (
-        <Container
-          key={size}
-          size={size}
-          className="bg-card/50 rounded border p-4"
-        >
-          <p className="text-sm font-medium">size=&quot;{size}&quot;</p>
+    <div className="space-y-4">
+      {(["sm", "md", "lg", "xl", "2xl", "full"] as const).map((size) => (
+        <Container key={size} size={size} centered>
+          <div className="bg-muted/20 rounded border p-4 text-center font-mono text-sm">
+            size=&quot;{size}&quot;
+          </div>
         </Container>
       ))}
     </div>
   ),
-};
-
-export const NotCentered: Story = {
-  args: {
-    centered: false,
-    size: "md",
-    className: "rounded-lg border bg-card p-6",
-    children: (
-      <p className="text-muted-foreground text-sm">
-        This container is left-aligned (centered=false).
-      </p>
-    ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "All six container sizes shown stacked — each one is wider than the previous. Resize your browser to see the difference.",
+      },
+    },
   },
 };

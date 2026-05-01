@@ -78,7 +78,7 @@ describe("Utilities", () => {
           <div data-testid="content">Content</div>
         </NoSsr>
       );
-      
+
       // In RTL, mount happens immediately in useEffect.
       // To test the "server" state, we'd need to mock it, but standard render is client.
       expect(screen.getByTestId("content")).toBeInTheDocument();
@@ -91,7 +91,7 @@ describe("Utilities", () => {
       const onChange = vi.fn();
       render(<TextareaAutosize data-testid="textarea" onChange={onChange} />);
       const textarea = screen.getByTestId("textarea");
-      
+
       fireEvent.change(textarea, { target: { value: "New content" } });
       expect(onChange).toHaveBeenCalled();
     });
