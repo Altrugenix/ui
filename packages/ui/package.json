@@ -11,7 +11,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/altrugenix/ui.git"
+    "url": "https://github.com/Altrugenix/ui.git",
+    "directory": "packages/ui"
   },
   "exports": {
     ".": {
@@ -256,5 +257,6 @@
     "vite": "^8.0.10",
     "vite-plugin-dts": "^5.0.0",
     "vitest": "^4.1.5"
-  }
+  },
+  "homepage": "https://altrugenix.js.org/"
 }

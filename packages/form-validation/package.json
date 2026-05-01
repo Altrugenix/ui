@@ -53,5 +53,11 @@
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0",
     "tailwindcss": "^3.0.0 || ^4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Altrugenix/ui.git",
+    "directory": "packages/form-validation"
+  },
+  "homepage": "https://altrugenix.js.org/"
 }

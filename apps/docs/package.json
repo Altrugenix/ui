@@ -32,5 +32,11 @@
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.59.1",
     "vite": "^8.0.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Altrugenix/ui.git",
+    "directory": "apps/docs"
+  },
+  "homepage": "https://altrugenix.js.org/"
 }
