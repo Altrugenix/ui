@@ -6,7 +6,7 @@ import {
   Divider,
 } from "@altrugenix/ui";
 import { handleThemeSwitch } from "./lib/theme-utils";
-import { ThemeTokens, ThemeType } from "./constants/themes";
+import type { ThemeTokens, ThemeType } from "./types/themes";
 import {
   Header,
   HeroSection,

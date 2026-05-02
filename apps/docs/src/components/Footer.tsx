@@ -21,7 +21,7 @@ export function Footer() {
           </Heading>
           <div className="flex flex-col gap-2">
             <Link
-              href="#"
+              href="/storybook"
               className="text-muted-foreground hover:text-primary text-sm transition-colors"
             >
               Components
@@ -46,19 +46,19 @@ export function Footer() {
           </Heading>
           <div className="flex flex-col gap-2">
             <Link
-              href="#"
+              href="https://github.com/chesteralan"
               className="text-muted-foreground hover:text-primary text-sm transition-colors"
             >
               About Us
             </Link>
             <Link
-              href="#"
+              href="https://github.com/chesteralan"
               className="text-muted-foreground hover:text-primary text-sm transition-colors"
             >
               Contact
             </Link>
             <Link
-              href="#"
+              href="https://github.com/Altrugenix/ui"
               className="text-muted-foreground hover:text-primary text-sm transition-colors"
             >
               GitHub

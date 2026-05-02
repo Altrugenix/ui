@@ -1,6 +1,6 @@
 import { Button, useTheme } from "@altrugenix/ui";
 import { Sun, Moon } from "lucide-react";
-import { ThemeTokens, ThemeType } from "../constants/themes";
+import type { ThemeTokens, ThemeType } from "@/types/themes";
 
 interface HeaderProps {
   tokens: ThemeTokens | undefined;
@@ -46,7 +46,9 @@ export function Header({ tokens, onSwitchTheme }: HeaderProps) {
             <Button
               size="sm"
               variant={
-                tokens?.colors?.primary === "142 71% 45%" ? "secondary" : "ghost"
+                tokens?.colors?.primary === "142 71% 45%"
+                  ? "secondary"
+                  : "ghost"
               }
               onClick={() => onSwitchTheme("emerald")}
               className="rounded-full"
@@ -56,7 +58,9 @@ export function Header({ tokens, onSwitchTheme }: HeaderProps) {
             <Button
               size="sm"
               variant={
-                tokens?.colors?.primary === "262 83% 58%" ? "secondary" : "ghost"
+                tokens?.colors?.primary === "262 83% 58%"
+                  ? "secondary"
+                  : "ghost"
               }
               onClick={() => onSwitchTheme("violet")}
               className="rounded-full"
