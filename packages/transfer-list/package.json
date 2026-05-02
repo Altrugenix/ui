@@ -61,7 +61,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Altrugenix/ui.git",
+    "url": "git+https://github.com/Altrugenix/ui.git",
     "directory": "packages/transfer-list"
   },
   "homepage": "https://altrugenix.js.org/",
