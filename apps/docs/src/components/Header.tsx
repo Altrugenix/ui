@@ -1,5 +1,5 @@
 import { Button, useTheme } from "@altrugenix/ui";
-import { Layers, Sun, Moon } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 
 interface ThemeTokens {
   colors?: {
@@ -23,9 +23,11 @@ export function Header({ tokens, onSwitchTheme }: HeaderProps) {
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-2">
-            <div className="bg-primary text-primary-foreground shadow-primary/20 flex h-8 w-8 items-center justify-center rounded-lg shadow-lg">
-              <Layers className="h-5 w-5" />
-            </div>
+            <img
+              src="/favicon-32x32.png"
+              alt="Altrugenix Logo"
+              className="h-8 w-8"
+            />
             <span className="text-xl font-bold tracking-tight">Altrugenix</span>
           </div>
         </div>

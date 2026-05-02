@@ -3,6 +3,7 @@ export { HeroSection } from "./HeroSection";
 export { FoundationsSection } from "./FoundationsSection";
 export { FormControlsSection } from "./FormControlsSection";
 export { DataFeedbackSection } from "./DataFeedbackSection";
+export { ComplexComponentsSection } from "./ComplexComponentsSection";
 export { AdvancedDemoSection } from "./AdvancedDemoSection";
 export { CTASection } from "./CTASection";
 export { Footer } from "./Footer";

@@ -11,6 +11,7 @@ import {
   FoundationsSection,
   FormControlsSection,
   DataFeedbackSection,
+  ComplexComponentsSection,
   AdvancedDemoSection,
   CTASection,
   Footer,
@@ -93,6 +94,9 @@ function AppContent({
 
         <Divider label="Data & Feedback" />
         <DataFeedbackSection />
+
+        <Divider label="Complex Components" />
+        <ComplexComponentsSection />
 
         <Divider label="Advanced Demo" />
         <AdvancedDemoSection />
