@@ -8,7 +8,6 @@ import {
   MetricCard,
   Stepper,
   TransferList,
-  Divider,
 } from "@altrugenix/ui";
 import { TrendingUp, Users, DollarSign, Activity } from "lucide-react";
 

@@ -6,7 +6,7 @@ import {
   DropdownMenuSeparator,
 } from "@altrugenix/ui";
 import { Sun, Moon, Palette } from "lucide-react";
-import type { ThemeTokens, ThemeType } from "@/types/themes";
+import type { ThemeConfig, ThemeTokens, ThemeType } from "@/types/themes";
 import { THEMES } from "@/constants/themes";
 
 interface HeaderProps {
@@ -44,7 +44,7 @@ export function Header({ tokens, onSwitchTheme }: HeaderProps) {
               Select Theme
             </div>
             <DropdownMenuSeparator />
-            {(Object.entries(THEMES) as [ThemeType, any][]).map(
+            {(Object.entries(THEMES) as [ThemeType, ThemeConfig][]).map(
               ([type, config]) => (
                 <DropdownMenuItem
                   key={type}
