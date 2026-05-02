@@ -63,5 +63,15 @@
     "url": "https://github.com/Altrugenix/ui.git",
     "directory": "packages/form-validation"
   },
-  "homepage": "https://altrugenix.js.org/"
+  "homepage": "https://altrugenix.js.org/",
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "altrugenix",
+    "accessibility",
+    "design-system",
+    "tailwind",
+    "form-validation"
+  ]
 }

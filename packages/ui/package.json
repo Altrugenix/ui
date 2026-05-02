@@ -258,5 +258,14 @@
     "vite-plugin-dts": "^5.0.0",
     "vitest": "^4.1.5"
   },
-  "homepage": "https://altrugenix.js.org/"
+  "homepage": "https://altrugenix.js.org/",
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "altrugenix",
+    "accessibility",
+    "design-system",
+    "tailwind"
+  ]
 }

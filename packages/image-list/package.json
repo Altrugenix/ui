@@ -55,5 +55,15 @@
     "url": "https://github.com/Altrugenix/ui.git",
     "directory": "packages/image-list"
   },
-  "homepage": "https://altrugenix.js.org/"
+  "homepage": "https://altrugenix.js.org/",
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "altrugenix",
+    "accessibility",
+    "design-system",
+    "tailwind",
+    "image-list"
+  ]
 }

@@ -64,5 +64,15 @@
     "url": "https://github.com/Altrugenix/ui.git",
     "directory": "packages/transfer-list"
   },
-  "homepage": "https://altrugenix.js.org/"
+  "homepage": "https://altrugenix.js.org/",
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "altrugenix",
+    "accessibility",
+    "design-system",
+    "tailwind",
+    "transfer-list"
+  ]
 }
