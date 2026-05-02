@@ -7,7 +7,22 @@ export interface ThemeTokens {
   radius?: string;
 }
 
-export type ThemeType = "default" | "crimson" | "emerald" | "violet" | "amber";
+export type ThemeType =
+  | "default"
+  | "crimson"
+  | "emerald"
+  | "violet"
+  | "amber"
+  | "slate"
+  | "rose"
+  | "orange"
+  | "sky"
+  | "indigo"
+  | "teal"
+  | "lime"
+  | "fuchsia"
+  | "cyan"
+  | "yellow";
 
 export interface ThemeConfig {
   tokens: ThemeTokens;
