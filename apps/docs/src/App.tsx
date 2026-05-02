@@ -5,6 +5,8 @@ import {
   useToast,
   Divider,
 } from "@altrugenix/ui";
+import { handleThemeSwitch } from "./lib/theme-utils";
+import { ThemeTokens, ThemeType } from "./constants/themes";
 import {
   Header,
   HeroSection,
@@ -17,16 +19,6 @@ import {
   Footer,
   Overlays,
 } from "./components";
-
-/* ─── Types ─── */
-interface ThemeTokens {
-  colors?: {
-    primary?: string;
-    secondary?: string;
-    ring?: string;
-  };
-  radius?: string;
-}
 
 /* ─── Main App Content ─── */
 function AppContent({
@@ -41,31 +33,8 @@ function AppContent({
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isPaletteOpen, setIsPaletteOpen] = useState(false);
 
-  const switchTheme = (type: "default" | "crimson") => {
-    if (type === "crimson") {
-      setTokens({
-        colors: { primary: "0 72% 51%", ring: "0 72% 51%" },
-        radius: "0rem",
-      });
-      toast({
-        type: "success",
-        title: "Theme Updated",
-        description: "Enterprise Crimson mode activated.",
-      });
-    } else {
-      setTokens({
-        colors: {
-          primary: "199 89% 48%",
-          ring: "222.2 84% 4.9%",
-        },
-        radius: "0.5rem",
-      });
-      toast({
-        type: "success",
-        title: "Theme Restored",
-        description: "Default Altrugenix Blue restored.",
-      });
-    }
+  const switchTheme = (type: ThemeType) => {
+    handleThemeSwitch(type, setTokens, toast);
   };
 
   useEffect(() => {

@@ -18,6 +18,9 @@
 
 An open-source, scalable, and production-ready UI component library built with React, TypeScript, and Tailwind CSS.
 
+> [!NOTE]
+> This project is built and maintained with the assistance of **AI code agents**, leveraging state-of-the-art agentic workflows for rapid development and high-quality implementation.
+
 ## Features
 
 - 💎 **Modern Design**: Modern aesthetics with glassmorphism, smooth animations, and curated color palettes.
@@ -49,21 +52,19 @@ An open-source, scalable, and production-ready UI component library built with R
 yarn install
 ```
 
-### Using GitHub Packages
+### Installation & Usage
 
-To use these packages in another project, add a `.npmrc` file to your project:
-
-```text
-@altrugenix:registry=https://registry.npmjs.org/
-```
-
-Then install via:
+To use these packages in another project, you can install them directly from **NPM**:
 
 ```bash
 yarn add @altrugenix/ui
 ```
 
-The package is also available on **NPM** for public use.
+If you are using the scoped packages individually, you can also install them like this:
+
+```bash
+yarn add @altrugenix/button
+```
 
 ## Releasing
 
@@ -77,7 +78,7 @@ We use [Changesets](https://github.com/changesets/changesets) for versioning and
 3.  Commit the generated changeset file.
 4.  Push to `main`.
 5.  A "Version Packages" PR will be automatically created/updated.
-6.  Merging this PR will trigger an automatic release to both NPM and GitHub Packages.
+6.  Merging this PR will trigger an automatic release to **NPM**.
 
 ### Development
 
@@ -106,26 +107,24 @@ yarn test
 ## Folder Structure
 
 ```text
-src/
-├── components/
-│   ├── ui/             # Core UI primitives (Button, Input, etc.)
-│   ├── composites/     # Complex components (Features, Hero)
-│   ├── layout/         # Layout components (Nav, Footer)
-│   ├── feedback/       # Hooks-driven feedback (Toast)
-│   └── overlays/       # Overlays (Modal)
-├── hooks/              # Custom React hooks
-├── lib/
-│   └── utils/          # Utility functions (cn.ts)
-├── styles/             # Global CSS and Tailwind directives
-├── theme/              # Design tokens and ThemeProvider
-├── types/              # Global TS definitions
-└── stories/            # Storybook कहानियाँ (Stories)
+.
+├── apps/
+│   └── docs/           # Documentation application (Vite + React)
+├── packages/
+│   ├── ui/             # Main entry point and aggregator for the UI library
+│   ├── core/           # Core design tokens, ThemeProvider, and base types
+│   ├── utilities/      # Shared animation wrappers and utility components
+│   └── [component]/    # Scoped packages (e.g., button, accordion, modal, etc.)
+├── .github/
+│   └── workflows/      # CI/CD pipelines (Release, Deploy, Linting, etc.)
+├── .changeset/         # Version management and changelog configuration
+└── .yarn/              # Yarn Modern (v4) configuration
 ```
 
 ## Component Example (Button)
 
 ```tsx
-import { Button } from "@/components/ui/button";
+import { Button } from "@altrugenix/ui";
 import { Mail } from "lucide-react";
 
 export const MyComponent = () => (
