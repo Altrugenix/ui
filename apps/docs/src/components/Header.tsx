@@ -1,5 +1,11 @@
-import { Button, useTheme } from "@altrugenix/ui";
-import { Sun, Moon } from "lucide-react";
+import {
+  Button,
+  useTheme,
+  DropdownMenu,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "@altrugenix/ui";
+import { Sun, Moon, Palette } from "lucide-react";
 import type { ThemeTokens, ThemeType } from "@/types/themes";
 import { THEMES } from "@/constants/themes";
 
@@ -25,25 +31,44 @@ export function Header({ tokens, onSwitchTheme }: HeaderProps) {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <div className="hidden max-w-2xl items-center gap-1 overflow-x-auto px-2 md:flex">
+          <DropdownMenu
+            align="right"
+            trigger={
+              <Button variant="ghost" size="sm" className="gap-2 rounded-full">
+                <Palette className="h-4 w-4" />
+                <span>Themes</span>
+              </Button>
+            }
+          >
+            <div className="px-2 py-1.5 text-sm font-semibold">
+              Select Theme
+            </div>
+            <DropdownMenuSeparator />
             {(Object.entries(THEMES) as [ThemeType, any][]).map(
               ([type, config]) => (
-                <Button
+                <DropdownMenuItem
                   key={type}
-                  size="sm"
-                  variant={
-                    tokens?.colors?.primary === config.tokens.colors?.primary
-                      ? "secondary"
-                      : "ghost"
-                  }
                   onClick={() => onSwitchTheme(type)}
-                  className="rounded-full capitalize"
+                  className="capitalize"
                 >
+                  <div
+                    className="mr-2 h-2 w-2 rounded-full"
+                    style={{
+                      backgroundColor: `hsl(${config.tokens.colors?.primary})`,
+                    }}
+                  />
                   {type}
-                </Button>
+                  {tokens?.colors?.primary ===
+                    config.tokens.colors?.primary && (
+                    <span className="ml-auto text-[10px] uppercase opacity-50">
+                      Active
+                    </span>
+                  )}
+                </DropdownMenuItem>
               )
             )}
-          </div>
+          </DropdownMenu>
+
           <div className="bg-border mx-2 h-4 w-px" />
           <Button
             variant="ghost"
