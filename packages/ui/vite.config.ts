@@ -26,7 +26,9 @@ const packageAliases = packages.reduce(
   {} as Record<string, string>
 );
 
-const packageExternals = packages.filter(pkg => pkg !== "ui").map((pkg) => `@altrugenix/${pkg}`);
+const packageExternals = packages
+  .filter((pkg) => pkg !== "ui")
+  .map((pkg) => `@altrugenix/${pkg}`);
 
 const packageGlobals = packages.reduce(
   (acc, pkg) => {
